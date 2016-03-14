@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/git/</link>
+    <description>Recent content in Git on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Tue, 29 Apr 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Git ile Sürüm Takibi Semineri</title>
+      <link>https://omerozkan.net/git-ile-surum-takibi-semineri/</link>
+      <pubDate>Tue, 29 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/git-ile-surum-takibi-semineri/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://www.ozguryazilimgunleri.org.tr/2014/&#34;&gt;Özgür Yazılım ve Linux Günleri 2014&lt;/a&gt;, İstanbul Bahçeşehir Üniversite&amp;rsquo;sinde gerçekleşti.&lt;/p&gt;
+
+&lt;p&gt;Bu etkinliğe ben de &amp;ldquo;Git ile Sürüm Takibi&amp;rdquo; başlıklı sunumum ile katıldım.&lt;/p&gt;
+
+&lt;h3 id=&#34;konu-özeti:b564fd3e9d582c7db3f459c6b697741a&#34;&gt;Konu Özeti&lt;/h3&gt;
+
+&lt;p&gt;Yazılım projelerinde sürüm takip/kontrol sistemi (VCS) araçları olmazsa olmaz araçlardır.
+En popüler özgür sürüm takip sistemlerinden biri olan GIT ile nasıl sürüm takip yapıldığını,
+merkezi ve dağıtık sürüm takip sistemlerini, dağıtık yapısı,geliştiricilerin kendi yerellerinde de commit yapabilmesi,
+çalışma akışı, git ve svn karşılaştırması, conflict çözümü, uzak sunucu ile nasıl çalışıldığı,
+git ile çalışma yöntemleri,en sık kullanılan komutları, karşılaşılan bazı problemlerin çözümleri,
+özgür araçları ve Gitlab konuları anlatılmıştır.&lt;/p&gt;
+
+&lt;p&gt;Sunum dosyasına aşağıdaki bağlantılardan ulaşabilirsiniz:&lt;/p&gt;
+
+&lt;h3 id=&#34;pdf:b564fd3e9d582c7db3f459c6b697741a&#34;&gt;PDF&lt;/h3&gt;
+
+&lt;p&gt;Pdf dosyasını indirmek için &lt;a href=&#34;https://omerozkan.net/sunumlar/git-ile-surum-takibi.pdf&#34; target=&#34;_blank&#34;&gt;buraya&lt;/a&gt; tıklayınız.&lt;/p&gt;
+
+&lt;h3 id=&#34;slideshare:b564fd3e9d582c7db3f459c6b697741a&#34;&gt;Slideshare&lt;/h3&gt;
+
+&lt;p&gt;&lt;div class=&#34;ui embed&#34;&gt;
+    &lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/HxzDuKwnXS5vvD&#34; width=&#34;595&#34; height=&#34;485&#34;
+            frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
+            style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;ui hidden divider&#34;&gt;&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Github Depolarının Redmine&#39;a Entegre Edilmesi</title>
+      <link>https://omerozkan.net/github-deposunun-redminea-baglanmasi/</link>
+      <pubDate>Mon, 02 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/github-deposunun-redminea-baglanmasi/</guid>
+      <description>&lt;p&gt;İş takip sistemi Redmine&amp;rsquo;ı ve sürüm takip sistemi git&amp;rsquo;i kullanıyorum. Git, SVN gibi sürüm takip sistemlerindeki depoları
+redmine&amp;rsquo;a bağlayabiliyorsunuz. Github ise açık kaynak projelere ücretsiz alan sağlıyor.
+Github&amp;rsquo;daki bir projemi Redmine&amp;rsquo;a bağlamak istedim. Kendi uğraşımdan sonra &lt;a href=&#34;https://eventualis.org/&#34;&gt;Samed Beyribey&lt;/a&gt;&amp;lsquo;den yardım istedim.
+Kendisi nasıl entegre edebileceğimi anlattı. Sizler için de faydalı olacağını düşünerekten bu yazıyı paylaşmak istedim.&lt;/p&gt;
+
+&lt;p&gt;Github depolarınızı Redmine&amp;rsquo;a entegre etmek için aşağıdaki adımları uygulamanız yeterlidir.&lt;/p&gt;
+
+&lt;p&gt;Öncelikle Github deposunu Redmine&amp;rsquo;ın kurulu olduğu sunucuda dilediğiniz bir dizine git projenizi mirror parametresi ile klonlayın.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git clone https://github.com/omerozkan/vipera.git --mirror&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Eğer projeniz private ise http yerine ssh ile klonlayabilirsiniz.
+Klonlama işleminden sonra redmine panelinden Yönetim -&amp;gt; Ayarlar sayfasına gidin ve Depolar sekmesinden bir API Key oluşturun.&lt;/p&gt;
+
+&lt;p&gt;Eklemek istediğiniz projeye gidip projede Ayarlar -&amp;gt; Depolar &amp;lsquo;a tıklayıp yeni bir depo oluşturun.
+Burda &amp;ldquo;Path to repository&amp;rdquo; değerine klonladığınız git dizininin tam yolunu yazın.
+Klonladığınız git dizinine redmine&amp;rsquo;nın sistemdeki kullanıcısının erişebilmesi gerekiyor. İzinleri ona göre yapılandırın.
+Bu işlemi gerçekleştirdikten sonra git deposundaki son değişiklikleri alması ve redmine&amp;rsquo;ın bu değişiklikleri okuması için cron oluşturmak gerekiyor.
+Cron oluşturmak için&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;crontab -e&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;komutunu girdiğinizde karşınıza vi editoru çıkacaktır. Cron ayarlarınızı vi editorüne girip kaydedebilirsiniz.
+Örneğin her saat başı güncellemeleri almak istiyorsanız aşağıdaki cron ayarlarını kullanabilirsiniz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/1d0ecc2af86e3d4eb312.js?file=cron&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Böylelikle github projenizi redmine&amp;rsquo;a entegre etmiş olursunuz.
+Standart olarak &amp;ldquo;refs #işnumarası&amp;rdquo; şeklinde gönderdiğiniz commitler redmine&amp;rsquo;da o işe bağlanacaktır.&lt;/p&gt;
+
+&lt;p&gt;Bir sonraki yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

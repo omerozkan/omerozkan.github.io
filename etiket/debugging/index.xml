@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debugging on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/debugging/</link>
+    <description>Recent content in Debugging on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Tue, 30 Apr 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/debugging/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Test Güdümlü Geliştirmenin Etkileri</title>
+      <link>https://omerozkan.net/test-gudumlu-gelistirmenin-etkileri/</link>
+      <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/test-gudumlu-gelistirmenin-etkileri/</guid>
+      <description>
+
+&lt;p&gt;Test güdümlü yazılım geliştirme, öğrenmek istediğim en önemli konulardan biriydi.
+Bu konuda JUnit in Action ve Test Driven Development By Example kitaplarını bitirdim. Özellikle Test Driven Development
+By Example kitabı baya eğlenceli hem de bir o kadar öğretici bir kitaptı.
+Kent Beck’in diğer kitaplarını okumak için can atıyorum. Daha önce de bu konu hakkında bir yazı paylaşmıştım.
+Test güdümlü yazılım geliştirmenin faydaları, genelde duyduğum ve mantıken düşündüğümde kabul ettiğim faydalardı.
+Ama birçoğunu kendi tecrübelerimde de yaşamış oldum. Yazılım geliştirmeyi seviyorsanız inanın TDD hayatınıza renk katacaktır.
+TDD ile ilgili kendi tecrübelerim ve yaşadıklarımdan çıkardığım bazı özelliklerini yazacağım.&lt;/p&gt;
+
+&lt;img class=&#34;ui right floated bordered medium image content-image&#34; src=&#34;https://omerozkan.net/images/post/tdd/development.jpg&#34;
+     alt=&#34;TDD&amp;#39;nin development&amp;#39;ı kolaylaştırması&#34; /&gt;
+
+&lt;h3 id=&#34;daha-kolay-geliştirme:7b6d2cd657f12b2a7c8ff451369c4d79&#34;&gt;Daha Kolay Geliştirme&lt;/h3&gt;
+
+&lt;p&gt;TDD ile  bilinmesi gereken en önemli konulardan birisi asıl amacın test etmek olmadığıdır. Test etmek sadece bunun bir parçasıdır.
+Bununla beraber birçok avantajları beraberinde getirir. Dikkatimi çeken ilk şey yazılım geliştirmeyi kolaylaştırmasıydı.
+Çünkü aşama aşama kod yazıyorsunuz. Örneğin bir sınıf yazdığınızı düşünelim. Bu sınıftan beklentilerinizin bir listesini çıkarıyorsunuz.
+Tabi daha sonra bu listede ekle/sil yapabilirsiniz. Listedeki bazı beklentilerin çözümü karmaşık bazıları ise çok açıktır.
+Daha sonra listeye bakıp en kolay en rahat yapabileceğiniz birini seçip birim testi oluşturuyorsunuz.
+Zaten en kolayını seçtiğiniz için implementasyonu da kolay olacaktır.
+Daha sonra listeden farklı bir beklentiyi seçip yine aynı şekilde gerçekleştiriyorsunuz.
+Daha karmaşık beklentiler  ise gittikçe daha da kolaylaşacak ve çözümleri daha açık hale gelmeye başlayacaktır.
+Aşama aşama gittiğiniz için sadece tek bir sorunu düşünürsünüz. Aynı zamanda kendinizi de planlamış olursunuz.
+Bu sayede zaman da kazanırsınız ve söylediğim gibi karmaşık çözümleri de daha kolay bulmanızı sağlayacaktır.
+Bu özelliğinden dolayı yazılım geliştirmeyi daha da kolaylaştırır.&lt;/p&gt;
+
+&lt;img class=&#34;ui left floated bordered medium image content-image&#34; src=&#34;https://omerozkan.net/images/post/tdd/tdd_cycle.jpg&#34;
+     alt=&#34;Test güdümlü geliştirme hayat döngüsü&#34; /&gt;
+
+&lt;h3 id=&#34;refactoring:7b6d2cd657f12b2a7c8ff451369c4d79&#34;&gt;Refactoring&lt;/h3&gt;
+
+&lt;p&gt;Önce bir test yazarsınız. O test doğal olarak olumlu sonuç vermez. Yani testleriniz kırmızıdır.
+Testleri yeşile çevirmek için olabilecek en basit çözümü uygularsınız ve testler yeşile döner.
+Yeşil aslında size güvence verir.
+Daha sonra testin yeşil olmasından daha da cesaret alarak kodlarınızı düzenleyip en uygun implementasyonu gerçekleştirirsiniz.
+Sonra tekrar bakarsınız yine yeşil ise bir sonraki teste geçersiniz.
+Eğer kırmızı ise ve sorunu çözemiyorsanız hemen yaptığınız değişiklikleri geri alarak tekrar yeşile dönüp
+başka bir şekilde implementasyon yapabilirsiniz.
+Ayrıca her aşamanın sonunda kodlarınızın temiz olup olmadığını kontrol edersiniz.
+Örneğin DRY prensibine uygun değilse ona göre refactor edebilirsiniz.
+Veya yazdığınız bir algoritmanın daha performanslı çalışacağını düşünüp rahatça değişiklik yapabilirsiniz.
+Refactor sonunda kodlarınızın dış davranışını bozarsanız testleri çalıştırarak rahatça anlayabilir ona göre davranabilirsiniz.
+Testlerin hepsini gerçekleştirdikten sonra da kodun bakımını yapabilirsiniz fakat bu işinizi daha da zorlaştırır
+veya daha kötü kodlar yazmanıza sebep olabilir. O yüzden her testten sonra kod bakımı yapmak daha uygundur.
+Bu sayede sonraki aşama için temiz bir ortam sunarsınız. (Kırık cam prensibi)&lt;/p&gt;
+
+&lt;h3 id=&#34;daha-düzenli-ve-temiz-kodlama:7b6d2cd657f12b2a7c8ff451369c4d79&#34;&gt;Daha Düzenli ve Temiz Kodlama&lt;/h3&gt;
+
+&lt;p&gt;MVC öğrenmek için geliştirdiğim küçük bir php uygulama çatısı vardı: Çizgi.
+Çizgi’yi tekrardan test güdümlü yazılım ile geliştirmek istedim.
+Sebebi ise öğrendiğim teorik konuları uygulayarak TDD tecrübesi kazanmaktı.
+Ayrıca TDD’yi sürekli Java ile öğrendiğim için başka bir programlama dili ile de uygulamanın faydalı olacağını düşündüm.
+Geliştirirken dikkatimi çeken en önemli faydası temiz kodlar yazmak oldu. Eski kodlarıma baktığımda ne kadar kötü yazdığımı gördüm.
+Tabiki artı 1 yıllık çalıştığım konuların, edindiğim tecrübelerin de etkisi var.
+Fakat yazdığım kötü kodları testi tamamladıktan sonra daha okunabilir hale getirdim.
+Bu da herşeyin sonucunda eskisine göre daha güzel kod yazmama sebep oldu.&lt;/p&gt;
+
+&lt;h3 id=&#34;esneklik:7b6d2cd657f12b2a7c8ff451369c4d79&#34;&gt;Esneklik&lt;/h3&gt;
+
+&lt;p&gt;Dikkat ettiğim diğer faydası ise esnekliğe katkıda bulunmasıydı.
+Tasarım şablonları konusunda fazla tecrübeli olmasam bile TDD sayesinde esnek olma konusunda daha iyi geliştirme yaptığımı farkettim.
+Birim testler ile bir sınıfı test ederken diğer sınıflardan bağımsız halde test etmeniz gerekiyor.
+Bu da size mecburen esnek yapılar oluşturmanızı sağlamış oluyor.
+Örneğin birçok yerde &lt;a href=&#34;http://en.wikipedia.org/wiki/Inversion_of_control&#34;&gt;“Inversion of Control”&lt;/a&gt; şablonunu uygulamak zorunda kaldım.
+Tabiki bu konuda çok yeterli olduğumu düşünmesem de ilerde tasarım prensipleri ve şablonlara daha iyi hakim olduğumda bununla beraber
+TDD ile gerçekten güzel işler çıkartabileceğimi düşünüyorum.&lt;/p&gt;
+
+&lt;p&gt;Çizgi’nin bir sınıfını geliştirirken birkaç metod yazmıştım ki birşey farkettim.
+Yazdığım metodlar tanımladığım sınıfın asıl yapması gerekenler değildi.
+Hatta o sınıfın başka bir işi daha yaptığını ve bir sorumluluk daha yüklediğimi farkettim.
+Bu da önemli prensiplerden birini “Single Responsibility” yani “Tek Sorumluluk” prensibini daha önce defalarca ihlal ettiğim anlamına geliyordu.
+Tek sorumluluk prensibi yazdığınız bir sınıfın sadece ve sadece bir tek sorumluluğu olması gerektiğini belirtir.
+Eğer birden fazla sorumluluk yüklerseniz o sınıfın kırılması için birden fazla sebep yükleyeceksiniz.
+Aynı şekilde o sınıfın nesnelerini kullanan diğer sınıflar ise bundan kolayca etkilenecek ve
+bu yüzden bir değişiklik yaptığınızda fazladan düzeltmeler yapmış olacaksınız.
+Bu prensibe uymak için hemen yeni bir sınıf oluşturup, metodları o sınıfa taşıdım.
+TDD esnek yapılar oluşturmama büyük ölçüde katkı sağlıyordu.&lt;/p&gt;
+
+&lt;h3 id=&#34;daha-az-hata-ayıklama:7b6d2cd657f12b2a7c8ff451369c4d79&#34;&gt;Daha Az Hata Ayıklama&lt;/h3&gt;
+
+&lt;p&gt;TDD’nin bana diğer katkısı da tabiki de doğru çalışan sınıflar yazmış olmamdı.
+Bir php projesinin büyük bir kısmını herhangi bir sunucu uygulamasını (Apache, Lighthttp vs) çalıştırmadan geliştirdim.
+PhpUnit sayesinde yazdığım kodların doğru çalıştığını biliyordum.
+Daha sonra uygulamayı gerçek ortamda yani Apache sunucu da çalıştırdığımda gerçekten olumlu sonuç aldım.
+Eskiden geliştirdiğimde yazdığım kodun bir de hata ayıklaması ile uğraşırdım.
+Eğer debugging yapmayı sevmiyorsanız ki bunu sevenin çok olduğunu düşünmüyorum, TDD tam size göre.
+TDD sayesinde daha az debugging (hata ayıklama) yaparsınız.
+Çünkü TDD ile hem aşama aşama hem de önce testleri yazdığınız ve çalışmasını sağladığınız için birçok hatayı önlemiş olursunuz.
+Bu da uygulamanızın daha az hata ayıklama ile çalışmasını sağlar. Bu arada birim testleri (unit test) tek başına yeterli değildir.
+Mutlaka entegrasyon testlerinin ve diğer test konseptlerinin de uygulanması gerekir.
+Çünkü yukarda bahsettiğim gibi birim testler diğer sınıflardan bağımsız şekilde yapılmalıdır.
+Fakat sistemi entegre ettiğinizde doğru çalışacağının garantisini vermez.
+Bu yüzden entegrasyon ve diğer test konseptlerinin de uygulanması gereklidir. Ama birim testler birçok hatayı başlangıçta önler.&lt;/p&gt;
+
+&lt;h3 id=&#34;hızlı-sonuç:7b6d2cd657f12b2a7c8ff451369c4d79&#34;&gt;Hızlı Sonuç&lt;/h3&gt;
+
+&lt;p&gt;Birim testlerinin en önemli avantajı ise sunucu dışında ve diğer servislerden bağımsız çalışabilmesidir.
+Bu da sizin uygulamayı hızlıca test etmenizi sağlar. Bu php projeleri için pek sorun olmayabilir.
+Çünkü php derleme gerektirmeyen, sunucu içerisinde bir dosyada değişiklik yapıp kaydettiğinizde hızlıca sonucunu görebileceğiniz bir teknolojidir.
+Fakat Java ve özellikle kurumsal projelerde bu sizin için büyük sorun olabilir.&lt;/p&gt;
+
+&lt;h3 id=&#34;katalar:7b6d2cd657f12b2a7c8ff451369c4d79&#34;&gt;Katalar&lt;/h3&gt;
+
+&lt;p&gt;Test güdümlü yazılım geliştirme ile ilgili kitaplarla beraber kataların da oldukça önemi vardır.
+Katalar size pratik yapmayı sağlar. Kataları özellikle TDD ile yaparsanız, birçok konuda öğrendiklerinizi tazelemiş olursunuz.
+Ayrıca kullandığınız geliştirme araçlarına da hakim olmanızı sağlar.
+Katalara ilk başladığımda bana bu kadar fayda sağlayacağını düşünmemiştim.
+Birçok usta yazılımcı her gün düzenli olarak kata yapar. TDD’ye başlamak istiyorsanız katalar ile başlayabilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;Test güdümlü yazılım ile yazılım geliştirmeyi daha çok sevmeye başladım. Çünkü gerçekten daha zevkli bir hale getiriyor.
+TDD birçok sorunu gölgede bıraktığı için de geliştirmekten daha çok zevk almanızı sağlıyor.&lt;/p&gt;
+
+&lt;p&gt;Başka bir yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

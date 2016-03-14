@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yarışma on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/yar%C4%B1%C5%9Fma/</link>
+    <description>Recent content in Yarışma on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Wed, 24 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/yar%C4%B1%C5%9Fma/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bir Proje Hikayesi: Vipera</title>
+      <link>https://omerozkan.net/bir-proje-hikayesi-vipera/</link>
+      <pubDate>Wed, 24 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/bir-proje-hikayesi-vipera/</guid>
+      <description>
+
+&lt;p&gt;Öncelikle Vipera&amp;rsquo;nın ne olduğundan bahsedeyim. Vipera, bir sağlık sistemidir.
+Çeşitli tıbbi cihazlar ile üretilen sağlık verilerini bir API üzerinden sisteme girilmesini sağlar.
+Girilen bu verileri hekimlere sunarak hekimlerin hastalar hakkında karar vermesinde yardımcı olur.
+Bir karar destek sistemidir. Hekimler kendi panellerinden grafikler üreterek hastanın sağlık durumunu takip eder.
+Vipera, tanımlanan acil durum kuralları sayesinde de istenilen bildirim yöntemi ile (SMS ve Android Push Bildirimi halihazırda çalışmaktadır)
+hekimlere bildirim gönderir.&lt;/p&gt;
+
+&lt;p&gt;Aslında hedefim Vipera&amp;rsquo;nın hekimin yerine karar vermesini sağlamak yani bir uzman sistem oluşturmaktı.
+Fakat bunu yapabilmek oldukça zor ve maliyetli bir işti.
+O yüzden üzerinde yapay zeka yöntemlerinin uygulanabileceği verileri öncelikle saklamak gerektiğine karar verdim.&lt;/p&gt;
+
+&lt;h3 id=&#34;teknik-hedef:76ab7a0392d682cc69cc876ca4838d28&#34;&gt;Teknik Hedef&lt;/h3&gt;
+
+&lt;p&gt;Projenin bir de teknik bir hedefi vardı.
+Java teknolojileri ile geliştirilmiş tamamen özgür teknolojilere sahip, esnek ve katmanlı bir mimariye sahip bir proje geliştirmekti.
+Öğrendiğim yazılım araçlarını da etkin kullanmayı da hedeflemiştim.&lt;br /&gt;
+Bitirme projesini bu şekilde yapmayı istedim. Proje konusunu ise danışmanım belirledi.&lt;/p&gt;
+
+&lt;p&gt;Proje için Spring&amp;rsquo;i tercih ettim. Bunun asıl sebebi Spring&amp;rsquo;i öğrenmek istememdi.
+Aynı zamanda Spring ile geliştireceğim proje Lightweight bir proje olacaktı.
+Bununla birlikte gösterim katmanında JSF ve Primefaces, veri katmanında ise JPA&amp;rsquo;nın Hibernate implementasyonunu tercih ettim.
+Defacto olan maven ve diğer araçları da kullandım.
+Veritabanı olarak gömülü bir veritabanı yönetim sistemi olan HSQLDB&amp;rsquo;yi, asıl veritabanı yönetim sistemi  tercihim ise PostgreSQL oldu.
+Veritabanı bağımsız olduğu için herhangi bir RDBMS kullanabilirdim.&lt;/p&gt;
+
+&lt;h3 id=&#34;vipera:76ab7a0392d682cc69cc876ca4838d28&#34;&gt;Vipera?&lt;/h3&gt;
+
+&lt;p&gt;Neden &amp;ldquo;Vipera&amp;rdquo; adını verdiğimi merak edenleriniz olabilir. Vipera, latince Engerek yılanı cinsi anlamına gelir.
+Biyolojik bir isimdir. Sağlık ile ilgili bir proje geliştirdiğimden yılanların latince isimlerinden birini verebileceğimi düşündüm.
+&amp;ldquo;Vipera&amp;rdquo; adını görünce proje adını belirledim.&lt;/p&gt;
+
+&lt;h3 id=&#34;geliştirme-süreci:76ab7a0392d682cc69cc876ca4838d28&#34;&gt;Geliştirme Süreci&lt;/h3&gt;
+
+&lt;p&gt;Okul dönemin uzun bir zamanında yarı zamanlı olarak çalıştığım için projeye zaman ayırmam mümkün olmadı.
+İlk dönem sonunda sadece giriş ekranını kodlayabilmiştim. Bahar döneminin sonuna projenin bitmesi gerekiyordu.
+Projeye başlarken kullanıcı hikayeleri ve görevler listesi oluşturdum. Daha sonra bunları önceliklendirdim.
+Daha sonra kullanıcı hikayelerinin implementasyonuna başladım. Katmanlı mimari oluşturmak pek zor olmasa da
+birçok teknolojiyi bir arada kullanmak başlangıçta bazı problemlere sebep oldu.
+Başlangıçta test güdümlü geliştirsem de zaman ve projenin birçok kısmı basit ve net çözümler olduğundan
+test güdümlü geliştirmeyi bıraktım. Fakat birçok yerde temiz kod yazmaya çalıştım.
+%100 e yakın dökümantasyon yazdım.&lt;/p&gt;
+
+&lt;h3 id=&#34;tubitak-yarışması:76ab7a0392d682cc69cc876ca4838d28&#34;&gt;Tubitak Yarışması&lt;/h3&gt;
+
+&lt;p&gt;Zaman darlığında projeyi tamamlayamayacağımı düşünürken danışmanım
+TUBİTAK tarafından düzenlenen Yazılım Projeleri Yarışması&amp;rsquo;na da katılmamı istedi.
+Ben birçok kez katılmamayı düşünürken başvuru tarihinin sonuna yakın bir gecemi harcayarak ilgili belgeleri
+hazırladım ve yarışmaya başvurdum.&lt;/p&gt;
+
+&lt;p&gt;Yarışma için projenin yetişmeyeceğine kesin karar vermişken bir taraftan mezun olabilmek için sınavları geçmem gerekiyordu.
+Ayrıca Vipera, bitirme projesi olduğundan bu dersi de geçmem gerekiyordu.
+Projenin TUBİTAK&amp;rsquo;a teslimine 2 hafta kalmıştı.
+O iki hafta sonunda finaller, ödevler, tez hazırlama gibi şeylerle karşılaşacağımdan kalan zamanım sadece 2 haftaydı.
+Yarışma ile kendimi motive ederek projeyi tamamlamaya karar verdim.
+Vizelerin yorgunluğunu henüz atamamışken gece gündüz projeyi kodlamaya devam ettim.
+Son günde projeyi tamamladım fakat yarışma için video ve rapor hazırlamak gerekiyordu.
+Video&amp;rsquo;yu montajlayıp izleyemeden TUBİTAK&amp;rsquo;a gönderdim. Rapor ise çok kötü haldeydi.
+Elimden gelen bu kadar diyerek kötü internet bağlantısına ve verilen süreyi aşmama rağmen projeyi teslim etmeyi başardım.
+Halen videoyu izleyip kendime gülüyorum :)&lt;/p&gt;
+
+&lt;h3 id=&#34;bir-yarışma-hikayesi:76ab7a0392d682cc69cc876ca4838d28&#34;&gt;Bir Yarışma Hikayesi&lt;/h3&gt;
+
+&lt;p&gt;Bitirme projesinin sunumundan bir gün önce final sergisine çağrıldığımı öğrendim. Final sergisine 1 hafta vardı.
+Finallerin yorgunluğunu yine atamamışken bu sefer tekrar girişip bildirim sistemini geliştirdim.
+Ayrıca afiş tasarımı vs. yaklaşık iki günümü almıştı.
+Daha önce android e bulaşmaktan hep kaçmış biri olarak ilk defa bir android uygulaması geliştirdim ve
+Vipera&amp;rsquo;nın bildirim sisteminin istemci tarafını yazdım.&lt;/p&gt;
+
+&lt;p&gt;Yarışma açık kaynak kodlu uygulamalar kategorisinde yarışıyordum.
+Bu kategorideki projeler, diğer kategorilere ve yarışmalara göre daha düşük kalıyordu.
+Teknik  ve açık kaynak felsefesi açısından değerlendirildiğinde benim proje diğer projelerden üstündü.
+Sunum için bize yaklaşık 7dk süre verildi. 45dklık bir semineri 75dk&amp;rsquo;da verebilen biri için oldukça kısa bir süreydi.
+Üzerinde zaman harcayarak bu sürede sunumu tamamlamayı başardım. Sunumun sadece juriye yapılması,
+serginin değerlendirilmemesi gibi yarışma birçok açıdan kalitesizdi.
+Sunumu merak edenler yazının sonundaki slideshare sunumundan inceleyebilirler.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;25 Haziran&amp;rsquo;da yapılan ödül töreninde sonuçlar açıklandı ve Vipera üçüncü sırada yer aldı.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;teknik-açıdan-sonuçlar:76ab7a0392d682cc69cc876ca4838d28&#34;&gt;Teknik Açıdan Sonuçlar&lt;/h3&gt;
+
+&lt;p&gt;Vipera, geliştirmiş olduğum ilk proje olması sebebi ile benim için önemli bir yere sahip.
+Yarışmada ödül almasından daha çok böyle bir projeyi kısa sürede geliştirebilmek benim için oldukça büyük bir öneme sahip.
+Esnek bir yapıda geliştirme yaptığımdan dolayı yeni öğreneceğim Java teknolojilerini de bu proje üzerinde deneme şansım olacak.
+Yine benim için en önemli avantajı, hatalarımı görmem oldu. Gördüğüm başlıca eksiklikler şöyle:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Gösterim katmanındaki Controller ile işletme katmanının görevlerini karıştırmak,&lt;/li&gt;
+&lt;li&gt;LOG yazmak konusunda nerdeyse hiç birşey bilmiyor olmam,&lt;/li&gt;
+&lt;li&gt;Nerede test yazılması ve nerede yazılmaması gerektiği konusunda eksiklikler,&lt;/li&gt;
+&lt;li&gt;Tasarım desenleri,&lt;/li&gt;
+&lt;li&gt;Temiz kod!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Böyle bir projeyi geliştirmek zor olsa da beni motive ettiğini ve bugüne kadarki yazılım çalışmalarımın meyvesini aldığımı söyleyebilirim.&lt;/p&gt;
+
+&lt;p&gt;TUBİTAK yarışmasına katılmayı düşünenler için de en önemli tavsiyem mutlaka bilimsel bir proje ile başvurulması.
+Jüri, projenin bilimsel olmasına herşeyden daha çok önem veriyor.&lt;/p&gt;
+
+&lt;h3 id=&#34;güncelleme:76ab7a0392d682cc69cc876ca4838d28&#34;&gt;Güncelleme&lt;/h3&gt;
+
+&lt;p&gt;Bu yazının bu kısmını 7 Mart 2016&amp;rsquo;da yazıyorum. Projenin üzerinden nerdeyse 2 yıl geçmiş. Vipera benim üniversitede
+öğrenmek istediğim konuları öğrendiğimin bir göstergesi oldu. Yukarda da bahsettiğim proje hatalarla dolu. Ne de olsa
+o zamanlar mezun bile değildim. Projeyi öğrenme amacı ile inceleyecek olan arkadaşlar dikkatli olsunlar.&lt;/p&gt;
+
+&lt;p&gt;Kendi başınıza proje geliştirmenin birçok avantajı bulunmaktadır. Herşeyden önce kendi hatalarınızı kendiniz
+görmüş olursunuz. Proje geliştirirken birçok bilgi de beraberinde gelir. Ekip halinde çalışırken ekibe uyumlu olmak
+zorundasınız. Birşeyleri değiştirmeniz kolay olmaz veya doğru bildiğiniz konuları hem siz yanlış uygulayabilirsiniz
+hem de danıştığınız kişiler yanlış biliyor olabilir. O yüzden mutlaka kendi başınıza bir proje geliştirin.&lt;/p&gt;
+
+&lt;p&gt;Biraz gelecekten gelmiş gibi olacağım ama :) Merak edenler varsa yukardaki eksiklikler konusunda ne olduğunu da yazayım.
+Gösterim katmanı ve İşletme katmanı sorunlarını projeden hemen sonra anladım. Kısaca özetlersem gösterim katmanı sadece
+io olmalı. Asıl işleri işletme katmanı yapmalı. Log yazmak konusu da projeden projeye değişen bir durum. Fakat veri
+değiştiren işlemlerde mutlaka info seviyesinde log yazmalısınız. Test konusunda da oldukça rahatım. Tasarım desenleri
+projeden sonra çalıştığım ilk konu oldu. Tasarım desenlerini sorsanız şu an en çok kullanılanları anlatırım.
+Fakat tasarım desenlerine tam olarak hakim olmak için tecrübe gerekiyor. Bu konuda ne seviyedeyim ben de bilmiyorum.&lt;/p&gt;
+
+&lt;p&gt;Temiz kod ise yine oldukça önemli. Bu konuda herhangi bir sorun yaşamıyorum. Hatta Akademik Bilişim 16 da &amp;ldquo;Temiz Kod&amp;rdquo;
+kursu verdim.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/omerozkan/vipera&#34;&gt;Projenin Kaynak Kodu&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&#34;ui embed&#34;&gt;
+    &lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/9b7ywcaut6Jz2j&#34; width=&#34;595&#34; height=&#34;485&#34;
+            frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
+            style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;ui hidden divider&#34;&gt;&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

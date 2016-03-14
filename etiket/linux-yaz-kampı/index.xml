@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux Yaz Kampı on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/linux-yaz-kamp%C4%B1/</link>
+    <description>Recent content in Linux Yaz Kampı on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Sun, 15 Jul 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/linux-yaz-kamp%C4%B1/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Linux Yaz Kampı - 2</title>
+      <link>https://omerozkan.net/linux-yaz-kampi-2/</link>
+      <pubDate>Sun, 15 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/linux-yaz-kampi-2/</guid>
+      <description>&lt;p&gt;Bolu&amp;rsquo;da yaz kamp devam ederken, teorik eğitim sona ermişti. Artık kod yazmanın zamanı gelmişti.
+Yazacağımız uygulama Tekir ön muhasebe projesiydi. Bu arada sınıftaki öğrenci sayısı da azalmaya başlamıştı.
+Daha sonra ekiplere ayrıldık. Toplam 5 ekip vardı. Ben de controller (Java) sınıfı yazmak istediğim için ekip4&amp;rsquo;te yer almak istedim.
+Proje içerisinde kod satırı / gün sayısı hesabına göre az iş yapsak da Scrum çevik yöntemini uyguladık.
+Ekip olarak biz de çok az iş vardı. Öncelikle basit bir temel ayar sayfası ve JournalEntry nesnelerini kontrol eden bir Api yazacaktık.
+Ben tabiki Api yazan ekipte yer aldım. Ekibimiz 10 kişiydi, 6 kişi Api, diğer 4 kişi ise ekran sayfası üzerine yoğunlaştılar.
+Başlangıçta çok hevesliydim. Teorik kısımda kafamda soru işaretleri olduğu için ekip içerisinde aktif olmak istedim.
+İşe başlamadan önce  JournalEntry sınıfı ve ilişkili bütün sınıfların UML diyagramlarını çizerek Hakan Hoca&amp;rsquo;nın yanına gittim.
+Detaylı bir şekilde neleri kontrol edip edemeyeceğimizi öğrendik.
+Aslına bakarsanız oturup tek başıma 20dk da belki de daha kısa sürede bitirebileceğim bir işti :)
+Fakat diğer ekip arkadaşlarımın daha iyi öğrenmesi amacı ile ben kod yazmak istemedim. 6 kişi ile bir yumurta taşıyacaktık.
+Neyse işleri tam orta yerinden 2&amp;rsquo;ye böldük. 6 kişi, 3 er kişilik alt ekiplere bölünmüştü. Mehmet ve Nursel bizim ekipteydiler.
+Öncelikle Nursel&amp;rsquo;i bilgisayar başına geçirdik. Mehmet ve ben de yanında yazdırmaya devam ediyorduk.
+Nursel&amp;rsquo;den sonra Mehmet bilgisayar başına geçti ve işi kısa sürede bitirdik. Diğer alt ekip halen devam ediyordu.
+Bu sefer ben geçtim bilgisayar başına refactoring konusunda sadece fikir sahibi olmama rağmen kendi kodlarımıza refactoring uyguladım.
+Daha anlaşılır ve daha sade bir kod yapısı oluştu.&lt;/p&gt;
+
+&lt;p&gt;Diğer alt ekipte kendi kodlarını tamamladıktan sonra sınıfımız oluşmuş oldu.
+Fakat bu controller sınıfının (JournalEntryApi) doğru yazıp yazmadığımızı test etmemiz gerekliydi.
+Bunun için birim testleri uygulayacaktık (JUnit).
+Test güdümlü yazılımı (Test Driven Development) çok merak ettiğim için baya sevinmiştim.
+JournalEntryApi sınıfı ile ilgili bir detaya yer vermek istiyorum.
+Hataları bir liste içerisinde tutuyorduk ki ekip5 de verilerin XML, SOAP, MQ gibi servislerle import edilmesini sağlıyordu.
+Sonuçta hata varsa, hata kodlarına göre işlem yapmaları gerekmekteydi.
+Hem testlerde rahat edebilmemiz için hem de ekip5&amp;rsquo;in işini biraz daha kolaylaştırmak amacı ile kendi hata modelimizi yazdık.
+Bu modelimiz basit bir şekilde bir hata numarası ve hata açıklaması vardı. Testleri yaparken de sadece hata numarası ile yapacaktık elbette.
+Hata modelini yazarken bir ekip arkadaşımız, bana laf sokmaya kalkınca moralim baya bir bozuldu. Sonuçta ben de bir yazılım geliştiricisi olmak için çalışan biriyim.
+Yanlış da yapabilirim ki birçok hatam vardı elbette. Ama yine de kendi mesleğime,
+kişiliğime laf sokulması kesinlikle kabul edemeyeceğim bir olaydır. Yine kendisini rezil etmemek için olayı açıklamayacağım.&lt;/p&gt;
+
+&lt;p&gt;Moralim bozulunca geri çekildim ve ne yapabilecekler diye uzaktan bekledim.
+Ekip içerisindeki heyecanımın yok olduğunu ekiptekilerin bir kısmı farketti. Mehmet, JUnit ile ilgili güzel veriler edindi.
+Kafama takılan birkaç şeyi ona sordum. Sami ise JUnit testi yazmaya çalışıyordu. Bu arada Hakan hoca JUnit&amp;rsquo;i nasıl kullanacağımızı basitçe anlatmıştı.
+Günün sonunda kodları incelediğimde çok az kişinin uğraş verdiğini gördüm. Ben ise hayatımda hiç JUnit testleri yazmamıştım.
+Kendi kendime bu iş başa düştü dedim. Tabiki Mehmet ve Nursel&amp;rsquo;e de (kendi ekibime) gelin başlayalım dedim.
+Onların da işleri vardı. Saat akşam 8 civarıydı. Sen yaz sonra bize anlatırsın dediler.
+Ben de oturdum, kendi test sınıfımı yazmaya başladım. Tüm sınıfın testini yapacaktım.
+Fakat ekipteki arkadaşlar, &amp;ldquo;Tüm işi sen yaptın, bize bir iş bırakmadın.&amp;rdquo; dememeleri için kendi sınıfımı sürüm takip sistemine göndermedim.
+Test sınıfını yazarken birçok hata düzelttim. Bunları gecenin 2sinde sürüm takip sistemine gönderdim.
+Moralim bozulduğu için ayrıca ekipte bir sıkıntı çıkmasın diye başka iş almak istemedim.
+Tabi bu konuda kampın son günü Hakan hocadan fırça da yedik.&lt;/p&gt;
+
+&lt;p&gt;Yurttaki ortamımız da güzeldi. Oda arkadaşlarım ile güzel güzel sohbetler ettik, espriler yaptık.
+Hatta ekip içerisindeki yaşadığım olayı onlara da anlattım baya bir güldük :)
+Hepsine buradan çok teşekkür ederim onlardan çok şey öğrendim.
+Bu arada öğrenci hayatım boyunca ilk defa bir yurtta kalmış oldum :)&lt;/p&gt;
+
+&lt;p&gt;Başta yazılıma bakış açımı değiştiren Hakan Uygun ve kamp etkinliğini başlatan Mustafa Akgül hocamıza,
+organizasyonda emeği geçen herkese, yaşadığım sorunlarla uğraşmaktan bıkmayan,
+kurs içerisinde büyük sabır gösteren Deniz Korkmaz ve Umuthan Uyan&amp;rsquo;a,
+özellikle kendi ekibimde ve beraber takıldığım Mehmet,
+Sami ve Nursel&amp;rsquo;e bu güzel ortamı bana yaşattıkları için çok teşekkür ederim.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linux Yaz Kampı - 1</title>
+      <link>https://omerozkan.net/linux-yaz-kampi-1/</link>
+      <pubDate>Thu, 28 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/linux-yaz-kampi-1/</guid>
+      <description>&lt;p&gt;Fatih projesinde yapacağım staja başlamadan önce faydalı olması amacı ile Linux Yaz Kampı&amp;rsquo;nda Java EE eğitimine başvurmuştum.
+Sonuç olumlu olunca İskenderun&amp;rsquo;dan Bolu&amp;rsquo;ya yolculuk başladı. Otobüste tanıştığım İsmail Abi ile sohbetlerimiz sayesinde yol daha az sıkıcı oldu.
+12 saat yolun ardından İzzet Baysal Üniversitesi&amp;rsquo;ne ulaştım.&lt;/p&gt;
+
+&lt;p&gt;Kampın ilk günü tanışma, neler yapılacak vs. ile geçti.
+2. gün ise Java EE&amp;rsquo;na giriş yaptık. Dersi anlatan Hakan Uygun, JSP, JPA, Hibernate, JSF gibi konuları teorik olarak anlattı.
+Daha sonraki günler EJB, Maven, JBoss Seam gibi teknolojiler hakkında bilgi sahibi olduk.
+Proje geliştirme sürecinde kullanacağımız araçları, Git, Redmine, Sonar gibi uygulamaları inceledik.
+Eğitimin ilk 4 günü bu şekilde geçti. Zend Framework ile çalıştığım MVC sistemi sayesinde bazı konuları kolayca anladım.
+Aslına bakarsanız birçok konuyu güzel bir şekilde anlasam da Java EE mimarisini tam olarak kavrayamadım.
+Umarım proje geliştirirken bütün bu soru işaretleri yok olur.&lt;/p&gt;
+
+&lt;p&gt;Bolu hakkında da açıkçası beğendiğim tek şeyi iklimi oldu. Serin ve güzel bir havası var. Yaz için ideal bir şehir.
+Fakat kampüs içinde yemekler gerçekten çok kötü. Zaten çok fazla alternatif yokç İnsanların damak tadı mı kötü bilemiyorum.
+Üstelik yemekler bir hayli pahalı. Belki de Hatay gibi yemekleri çok güzel olan bir yerden geldiğim için de bana öyle gelmiş olabilir.
+Bugün Abant gölüne gittik gezmek için. Piknik yapmak için güzel bir yer. Fakat baya sıkıldık.
+Piknik yapmadığımız için 6 saat fazla geldi. Yemekleri üniversitedekilerden daha da pahalıydı.&lt;/p&gt;
+
+&lt;p&gt;Java EE eğitimi ön muhasebe yazılımı geliştirme ile devam edeceğiz. Proje geliştirirken çevik yöntemler (Scrum) kullanacağız.
+Umarım en iyi şekilde katkı sağlarım.&lt;/p&gt;
+
+&lt;p&gt;Bolu ve kamp hakkında ilk izlenimlerim bunlar. Daha sonra yazmaya devam edeceğim.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

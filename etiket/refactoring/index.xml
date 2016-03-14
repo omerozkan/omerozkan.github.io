@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Refactoring on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/refactoring/</link>
+    <description>Recent content in Refactoring on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Sat, 02 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/refactoring/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AB 16 Temiz Kod Kursu</title>
+      <link>https://omerozkan.net/ab-16-temiz-kod-kursu/</link>
+      <pubDate>Sat, 02 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/ab-16-temiz-kod-kursu/</guid>
+      <description>
+
+&lt;p&gt;Merhabalar&lt;/p&gt;
+
+&lt;p&gt;Bu yıl &lt;a href=&#34;http://sadikcetin.net/&#34;&gt;Sadık Çetin&lt;/a&gt; ile beraber, 30 Ocak – 2 Şubat arasında Aydın&amp;rsquo;da düzenlenecek
+Akademik Bilişim konferans öncesi kurslar kapsamında Temiz Kod kursu vereceğiz.
+Kurs tamamen ücretsiz olup herkese açıktır. Katılımcılar dilerlerse KYK yurtlarında da konaklayabilirler.
+Kurs genel olarak clean code, refactoring ve test driven development konularını içermektedir.&lt;/p&gt;
+
+&lt;p&gt;Kayıt için: &lt;a href=&#34;https://kayit.ab.org.tr&#34;&gt;https://kayit.ab.org.tr&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Kurs hakkında detaylı bilgiyi yazının devamında bulabilirsiniz.&lt;/p&gt;
+
+&lt;h3 id=&#34;kurs-hakkında:71bbf2088587004e82981ef7c8a5324f&#34;&gt;Kurs Hakkında&lt;/h3&gt;
+
+&lt;p&gt;Bir yazılımın bakımını yapmak geliştirmekten daha zordur. Kod altyapısının temiz olması ürünün bakımını kolaylaştırır.
+Bu açıdan temiz kod akımı yazılımda oldukça önemli ve popüler bir hale gelmiştir.&lt;/p&gt;
+
+&lt;p&gt;Temiz kod üretebilmek ve yeniden yapılandırmak (refactoring) için gerekli kurallar ve teknikler Java programlama dili ve araçları
+kullanılarak uygulamalı olarak anlatılacaktır.&lt;/p&gt;
+
+&lt;h3 id=&#34;katılımcılar-için-ön-şartlar:71bbf2088587004e82981ef7c8a5324f&#34;&gt;Katılımcılar İçin Ön Şartlar&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Temel düzeyde nesne yönelimli programlama (OOP) bilgisi olan&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Okuduğunu anlayacak düzeyde İngilizce bilgisi olan&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Temiz kod ve yeniden yapılandırma (refactoring) gibi kavramlara meraklı&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Herhangi bir nesne yönelimli bir dil ile proje geliştiren,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Tercihen Java programlama diline hakim kişiler hedeflenmiştir.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;katılımcılardan-istenenler:71bbf2088587004e82981ef7c8a5324f&#34;&gt;Katılımcılardan İstenenler&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Dizüstü bilgisayarlarının yanında getirmeleri,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Sistemlerine JDK 8 (Java Development Kit) ve Eclipse for JavaEE (Mars) kurmaları gerekmektedir,
+(Dileyenler IntellijIdea&amp;rsquo;nın topluluk versiyonunu kullanabilirler.)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;kontenjan:71bbf2088587004e82981ef7c8a5324f&#34;&gt;Kontenjan&lt;/h3&gt;
+
+&lt;p&gt;Kontenjan 16 kişi ile sınırlıdır.&lt;/p&gt;
+
+&lt;h3 id=&#34;konular:71bbf2088587004e82981ef7c8a5324f&#34;&gt;Konular&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-gün:71bbf2088587004e82981ef7c8a5324f&#34;&gt;1. Gün&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Temiz kod nedir?&lt;/li&gt;
+&lt;li&gt;Kod Konvansiyonu (Code Convention)&lt;/li&gt;
+&lt;li&gt;İsimlendirme&lt;/li&gt;
+&lt;li&gt;Fonksiyonlar / Metodlar&lt;/li&gt;
+&lt;li&gt;Yorum Satırları&lt;/li&gt;
+&lt;li&gt;Kod Stili&lt;/li&gt;
+&lt;li&gt;Nesneler ve Veri Yapıları&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-gün:71bbf2088587004e82981ef7c8a5324f&#34;&gt;2. Gün&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Exception / Error Handling&lt;/li&gt;
+&lt;li&gt;Sınıflar&lt;/li&gt;
+&lt;li&gt;Üçüncü parti bağımlılıklar&lt;/li&gt;
+&lt;li&gt;Yeniden yapılandırma (Refactoring)&lt;/li&gt;
+&lt;li&gt;Temel yeniden yapılandırma teknikleri&lt;/li&gt;
+&lt;li&gt;Eclipse ile yeniden yapılandırma&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;3-gün:71bbf2088587004e82981ef7c8a5324f&#34;&gt;3. Gün&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Testler ve JUnit&lt;/li&gt;
+&lt;li&gt;Temiz Testler&lt;/li&gt;
+&lt;li&gt;Test Güdümlü Geliştirme&lt;/li&gt;
+&lt;li&gt;Örnek Uygulama: Bowling Oyunu&lt;/li&gt;
+&lt;li&gt;Test prensipleri (FIRST)&lt;/li&gt;
+&lt;li&gt;Örnek Uygulama: Video Store&lt;/li&gt;
+&lt;li&gt;Testlerin temizlenmesi&lt;/li&gt;
+&lt;li&gt;Ürün kodunun temizlenmesi&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-gün:71bbf2088587004e82981ef7c8a5324f&#34;&gt;4. Gün&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Kodu gözden geçirme (Code Review)&lt;/li&gt;
+&lt;li&gt;Sistemler&lt;/li&gt;
+&lt;li&gt;Temiz Mimari&lt;/li&gt;
+&lt;li&gt;Eşli Programlama (Pair Programming)&lt;/li&gt;
+&lt;li&gt;Eşli Programlama Uygulaması: Roma Rakamları, Tenis Oyunu&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Test Güdümlü Geliştirmenin Etkileri</title>
+      <link>https://omerozkan.net/test-gudumlu-gelistirmenin-etkileri/</link>
+      <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/test-gudumlu-gelistirmenin-etkileri/</guid>
+      <description>
+
+&lt;p&gt;Test güdümlü yazılım geliştirme, öğrenmek istediğim en önemli konulardan biriydi.
+Bu konuda JUnit in Action ve Test Driven Development By Example kitaplarını bitirdim. Özellikle Test Driven Development
+By Example kitabı baya eğlenceli hem de bir o kadar öğretici bir kitaptı.
+Kent Beck’in diğer kitaplarını okumak için can atıyorum. Daha önce de bu konu hakkında bir yazı paylaşmıştım.
+Test güdümlü yazılım geliştirmenin faydaları, genelde duyduğum ve mantıken düşündüğümde kabul ettiğim faydalardı.
+Ama birçoğunu kendi tecrübelerimde de yaşamış oldum. Yazılım geliştirmeyi seviyorsanız inanın TDD hayatınıza renk katacaktır.
+TDD ile ilgili kendi tecrübelerim ve yaşadıklarımdan çıkardığım bazı özelliklerini yazacağım.&lt;/p&gt;
+
+&lt;img class=&#34;ui right floated bordered medium image content-image&#34; src=&#34;https://omerozkan.net/images/post/tdd/development.jpg&#34;
+     alt=&#34;TDD&amp;#39;nin development&amp;#39;ı kolaylaştırması&#34; /&gt;
+
+&lt;h3 id=&#34;daha-kolay-geliştirme:7b6d2cd657f12b2a7c8ff451369c4d79&#34;&gt;Daha Kolay Geliştirme&lt;/h3&gt;
+
+&lt;p&gt;TDD ile  bilinmesi gereken en önemli konulardan birisi asıl amacın test etmek olmadığıdır. Test etmek sadece bunun bir parçasıdır.
+Bununla beraber birçok avantajları beraberinde getirir. Dikkatimi çeken ilk şey yazılım geliştirmeyi kolaylaştırmasıydı.
+Çünkü aşama aşama kod yazıyorsunuz. Örneğin bir sınıf yazdığınızı düşünelim. Bu sınıftan beklentilerinizin bir listesini çıkarıyorsunuz.
+Tabi daha sonra bu listede ekle/sil yapabilirsiniz. Listedeki bazı beklentilerin çözümü karmaşık bazıları ise çok açıktır.
+Daha sonra listeye bakıp en kolay en rahat yapabileceğiniz birini seçip birim testi oluşturuyorsunuz.
+Zaten en kolayını seçtiğiniz için implementasyonu da kolay olacaktır.
+Daha sonra listeden farklı bir beklentiyi seçip yine aynı şekilde gerçekleştiriyorsunuz.
+Daha karmaşık beklentiler  ise gittikçe daha da kolaylaşacak ve çözümleri daha açık hale gelmeye başlayacaktır.
+Aşama aşama gittiğiniz için sadece tek bir sorunu düşünürsünüz. Aynı zamanda kendinizi de planlamış olursunuz.
+Bu sayede zaman da kazanırsınız ve söylediğim gibi karmaşık çözümleri de daha kolay bulmanızı sağlayacaktır.
+Bu özelliğinden dolayı yazılım geliştirmeyi daha da kolaylaştırır.&lt;/p&gt;
+
+&lt;img class=&#34;ui left floated bordered medium image content-image&#34; src=&#34;https://omerozkan.net/images/post/tdd/tdd_cycle.jpg&#34;
+     alt=&#34;Test güdümlü geliştirme hayat döngüsü&#34; /&gt;
+
+&lt;h3 id=&#34;refactoring:7b6d2cd657f12b2a7c8ff451369c4d79&#34;&gt;Refactoring&lt;/h3&gt;
+
+&lt;p&gt;Önce bir test yazarsınız. O test doğal olarak olumlu sonuç vermez. Yani testleriniz kırmızıdır.
+Testleri yeşile çevirmek için olabilecek en basit çözümü uygularsınız ve testler yeşile döner.
+Yeşil aslında size güvence verir.
+Daha sonra testin yeşil olmasından daha da cesaret alarak kodlarınızı düzenleyip en uygun implementasyonu gerçekleştirirsiniz.
+Sonra tekrar bakarsınız yine yeşil ise bir sonraki teste geçersiniz.
+Eğer kırmızı ise ve sorunu çözemiyorsanız hemen yaptığınız değişiklikleri geri alarak tekrar yeşile dönüp
+başka bir şekilde implementasyon yapabilirsiniz.
+Ayrıca her aşamanın sonunda kodlarınızın temiz olup olmadığını kontrol edersiniz.
+Örneğin DRY prensibine uygun değilse ona göre refactor edebilirsiniz.
+Veya yazdığınız bir algoritmanın daha performanslı çalışacağını düşünüp rahatça değişiklik yapabilirsiniz.
+Refactor sonunda kodlarınızın dış davranışını bozarsanız testleri çalıştırarak rahatça anlayabilir ona göre davranabilirsiniz.
+Testlerin hepsini gerçekleştirdikten sonra da kodun bakımını yapabilirsiniz fakat bu işinizi daha da zorlaştırır
+veya daha kötü kodlar yazmanıza sebep olabilir. O yüzden her testten sonra kod bakımı yapmak daha uygundur.
+Bu sayede sonraki aşama için temiz bir ortam sunarsınız. (Kırık cam prensibi)&lt;/p&gt;
+
+&lt;h3 id=&#34;daha-düzenli-ve-temiz-kodlama:7b6d2cd657f12b2a7c8ff451369c4d79&#34;&gt;Daha Düzenli ve Temiz Kodlama&lt;/h3&gt;
+
+&lt;p&gt;MVC öğrenmek için geliştirdiğim küçük bir php uygulama çatısı vardı: Çizgi.
+Çizgi’yi tekrardan test güdümlü yazılım ile geliştirmek istedim.
+Sebebi ise öğrendiğim teorik konuları uygulayarak TDD tecrübesi kazanmaktı.
+Ayrıca TDD’yi sürekli Java ile öğrendiğim için başka bir programlama dili ile de uygulamanın faydalı olacağını düşündüm.
+Geliştirirken dikkatimi çeken en önemli faydası temiz kodlar yazmak oldu. Eski kodlarıma baktığımda ne kadar kötü yazdığımı gördüm.
+Tabiki artı 1 yıllık çalıştığım konuların, edindiğim tecrübelerin de etkisi var.
+Fakat yazdığım kötü kodları testi tamamladıktan sonra daha okunabilir hale getirdim.
+Bu da herşeyin sonucunda eskisine göre daha güzel kod yazmama sebep oldu.&lt;/p&gt;
+
+&lt;h3 id=&#34;esneklik:7b6d2cd657f12b2a7c8ff451369c4d79&#34;&gt;Esneklik&lt;/h3&gt;
+
+&lt;p&gt;Dikkat ettiğim diğer faydası ise esnekliğe katkıda bulunmasıydı.
+Tasarım şablonları konusunda fazla tecrübeli olmasam bile TDD sayesinde esnek olma konusunda daha iyi geliştirme yaptığımı farkettim.
+Birim testler ile bir sınıfı test ederken diğer sınıflardan bağımsız halde test etmeniz gerekiyor.
+Bu da size mecburen esnek yapılar oluşturmanızı sağlamış oluyor.
+Örneğin birçok yerde &lt;a href=&#34;http://en.wikipedia.org/wiki/Inversion_of_control&#34;&gt;“Inversion of Control”&lt;/a&gt; şablonunu uygulamak zorunda kaldım.
+Tabiki bu konuda çok yeterli olduğumu düşünmesem de ilerde tasarım prensipleri ve şablonlara daha iyi hakim olduğumda bununla beraber
+TDD ile gerçekten güzel işler çıkartabileceğimi düşünüyorum.&lt;/p&gt;
+
+&lt;p&gt;Çizgi’nin bir sınıfını geliştirirken birkaç metod yazmıştım ki birşey farkettim.
+Yazdığım metodlar tanımladığım sınıfın asıl yapması gerekenler değildi.
+Hatta o sınıfın başka bir işi daha yaptığını ve bir sorumluluk daha yüklediğimi farkettim.
+Bu da önemli prensiplerden birini “Single Responsibility” yani “Tek Sorumluluk” prensibini daha önce defalarca ihlal ettiğim anlamına geliyordu.
+Tek sorumluluk prensibi yazdığınız bir sınıfın sadece ve sadece bir tek sorumluluğu olması gerektiğini belirtir.
+Eğer birden fazla sorumluluk yüklerseniz o sınıfın kırılması için birden fazla sebep yükleyeceksiniz.
+Aynı şekilde o sınıfın nesnelerini kullanan diğer sınıflar ise bundan kolayca etkilenecek ve
+bu yüzden bir değişiklik yaptığınızda fazladan düzeltmeler yapmış olacaksınız.
+Bu prensibe uymak için hemen yeni bir sınıf oluşturup, metodları o sınıfa taşıdım.
+TDD esnek yapılar oluşturmama büyük ölçüde katkı sağlıyordu.&lt;/p&gt;
+
+&lt;h3 id=&#34;daha-az-hata-ayıklama:7b6d2cd657f12b2a7c8ff451369c4d79&#34;&gt;Daha Az Hata Ayıklama&lt;/h3&gt;
+
+&lt;p&gt;TDD’nin bana diğer katkısı da tabiki de doğru çalışan sınıflar yazmış olmamdı.
+Bir php projesinin büyük bir kısmını herhangi bir sunucu uygulamasını (Apache, Lighthttp vs) çalıştırmadan geliştirdim.
+PhpUnit sayesinde yazdığım kodların doğru çalıştığını biliyordum.
+Daha sonra uygulamayı gerçek ortamda yani Apache sunucu da çalıştırdığımda gerçekten olumlu sonuç aldım.
+Eskiden geliştirdiğimde yazdığım kodun bir de hata ayıklaması ile uğraşırdım.
+Eğer debugging yapmayı sevmiyorsanız ki bunu sevenin çok olduğunu düşünmüyorum, TDD tam size göre.
+TDD sayesinde daha az debugging (hata ayıklama) yaparsınız.
+Çünkü TDD ile hem aşama aşama hem de önce testleri yazdığınız ve çalışmasını sağladığınız için birçok hatayı önlemiş olursunuz.
+Bu da uygulamanızın daha az hata ayıklama ile çalışmasını sağlar. Bu arada birim testleri (unit test) tek başına yeterli değildir.
+Mutlaka entegrasyon testlerinin ve diğer test konseptlerinin de uygulanması gerekir.
+Çünkü yukarda bahsettiğim gibi birim testler diğer sınıflardan bağımsız şekilde yapılmalıdır.
+Fakat sistemi entegre ettiğinizde doğru çalışacağının garantisini vermez.
+Bu yüzden entegrasyon ve diğer test konseptlerinin de uygulanması gereklidir. Ama birim testler birçok hatayı başlangıçta önler.&lt;/p&gt;
+
+&lt;h3 id=&#34;hızlı-sonuç:7b6d2cd657f12b2a7c8ff451369c4d79&#34;&gt;Hızlı Sonuç&lt;/h3&gt;
+
+&lt;p&gt;Birim testlerinin en önemli avantajı ise sunucu dışında ve diğer servislerden bağımsız çalışabilmesidir.
+Bu da sizin uygulamayı hızlıca test etmenizi sağlar. Bu php projeleri için pek sorun olmayabilir.
+Çünkü php derleme gerektirmeyen, sunucu içerisinde bir dosyada değişiklik yapıp kaydettiğinizde hızlıca sonucunu görebileceğiniz bir teknolojidir.
+Fakat Java ve özellikle kurumsal projelerde bu sizin için büyük sorun olabilir.&lt;/p&gt;
+
+&lt;h3 id=&#34;katalar:7b6d2cd657f12b2a7c8ff451369c4d79&#34;&gt;Katalar&lt;/h3&gt;
+
+&lt;p&gt;Test güdümlü yazılım geliştirme ile ilgili kitaplarla beraber kataların da oldukça önemi vardır.
+Katalar size pratik yapmayı sağlar. Kataları özellikle TDD ile yaparsanız, birçok konuda öğrendiklerinizi tazelemiş olursunuz.
+Ayrıca kullandığınız geliştirme araçlarına da hakim olmanızı sağlar.
+Katalara ilk başladığımda bana bu kadar fayda sağlayacağını düşünmemiştim.
+Birçok usta yazılımcı her gün düzenli olarak kata yapar. TDD’ye başlamak istiyorsanız katalar ile başlayabilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;Test güdümlü yazılım ile yazılım geliştirmeyi daha çok sevmeye başladım. Çünkü gerçekten daha zevkli bir hale getiriyor.
+TDD birçok sorunu gölgede bıraktığı için de geliştirmekten daha çok zevk almanızı sağlıyor.&lt;/p&gt;
+
+&lt;p&gt;Başka bir yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Test Güdümlü Yazılım Geliştirmeye Merhaba</title>
+      <link>https://omerozkan.net/test-gudumlu-yazilim-gelistirmeye-merhaba/</link>
+      <pubDate>Fri, 12 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/test-gudumlu-yazilim-gelistirmeye-merhaba/</guid>
+      <description>&lt;p&gt;&amp;ldquo;Test Driven Development&amp;rdquo; yani Türkçe söylersem &amp;ldquo;Test Güdümlü Yazılım Geliştirme&amp;rdquo; ile birkaç ay öncesinde tanıştım.
+Fakat bu konuda halen öğrenmeye devam ediyorum. Bu konuda bildiğim temel bilgileri paylaşmak istiyorum.
+Aynı zamanda bu konuda kendimi geliştirdikten sonra geri dönüp düşüncelerime tekrar bakmak istiyorum.
+Aslında blog tutmamın en sevdiğim yanı da budur. Yazılım ile ilgili düşüncelerim sürekli değişmektedir.
+Bu değişimi takip etmenin bir yolu da blog yazmaktır.&lt;/p&gt;
+
+&lt;p&gt;Öncelikle yazılım yapmak demek sadece kod yazmak anlamına gelmez. Kod yazmak işin sadece bir kısmıdır.
+Yazılımda testler de oldukça önemlidir. Çünkü yazdığınız kodların düzgün çalışıp çalışmadığını ancak testler ile anlayabilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;Başta ben herşeyin önceden yapıldığını ve kod yazmanın işin hep son aşaması olarak düşünürdüm.
+Kendimi geliştirmek için yazmaya başladığım projelerde öncelikle detaylı bir tasarım yapardım.
+İnşaat mühendislerinin yaptığı gibi yazılımı önce çizip tasarlayarak sonra kodlamaya geçerdim.
+Tasarım prensiplerine hakim olmamamın da etkisi olsa da hep hesaplamadığım şeyler ortaya çıkıyordu.
+Tasarımım da esnek olmadığı için projeyi kodlarken acayip rahatsızlık hissediyor ve bir sürü kötü kodlama yapıyordum.
+Bu da beni olağanüstü mutsuz ediyordu. Birşeylerin eksik olduğunu farkettiğimde tasarım ile ilgili dökümanlar aramaya başlamıştım.
+Bu sayede Özcan Acar ile tanışma fırsatı buldum. KurumsalJava blogunu incelediğimde Özcan Acar&amp;rsquo;ın test güdümlü geliştirmenin
+çok önemli olduğunu yazılarında ve seminerlerinde gördüm. Sadece tasarım değil öğrenmem gereken bir sürü şey olduğunu farkettim.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;ui right floated bordered medium image content-image&#34; src=&#34;https://omerozkan.net/images/post/tdd/tdd_cycle.jpg&#34;
+     alt=&#34;Test güdümlü geliştirme hayat döngüsü&#34; /&gt;
+Birim testleri için Java da JUnit kullanılıyor. JUnit ile ilk Linux yaz kampında tanışmıştım.
+Fakat orda test güdümlü yazılım yapmadık sadece yazdığımız kodları test ettik.
+Test güdümlü yazılım geliştirmek demek sadece yazılan kodları test etmek anlamına gelmez.
+Yazılımda niyetiniz önemlidir. Kodlamaya başlamadan önce testler yazılır.
+Daha sonra bu testlerin çalışması için gereken kodlar yazılır. Bu sayede adım adım kodlama yapılmış olur.
+Bu başlangıçta zaman kaybı gibi gözükebilir. Çünkü yazılımın gereken kodların yanı sıra bir de test yazmak zorundasınız.
+Bazen iki yazılımcı aynı iş için çalışır. Bir yazılımcı testleri yazarken diğeri de testlerin çalışması için gereken kodları yazar.
+Test yazmak başlangıçta zaman kaybı olarak görülebilir olsa da aslında durum tam tersidir.
+Test yazdığınız zaman yazdığınız kodlar %100 test edilmiş olur. Bu sayede yaptığınız yazılım sorunsuz çalışır.
+Otomatik çalışan testleriniz olmadığı zaman kodları test etmek bir hayli zordur.
+Bu da zaman kaybettirir. Bunun yanı sıra gereksiz kodlar yazmanızı engeller. Bu sayede yine zaman kazanmış olursunuz.
+Düşünün bir sınıfınız var ve o sınıfa refactoring uyguladınız veya optimizasyon yaptınız.
+Yaptığınız değişikliklerin eskisi gibi düzgün çalıştığını nasıl anlarsınız? Bunun için testleri çalıştırmanız yeterli olacaktır.
+Yazılımınız daha tutarlı bir hale gelmiş olacaktır. Özellikle refactoring yapmak için otomatik çalışan testlerinizin olması şarttır.&lt;/p&gt;
+
+&lt;p&gt;Paul Graham&amp;rsquo;ın &amp;ldquo;Hackers and Painters&amp;rdquo; kitabından bir alıntı yapmak istiyorum:
+&lt;em&gt;&amp;ldquo;Programlar yazılırken şekillendirilmelidir; tıpkı yazarlar, ressamlar ve mimarların yaptığı gibi.&amp;rdquo;&lt;/em&gt;.
+Bu söze kesinlikle katılıyorum. Programları yazarken şekillendirmek için ise öncelikle amacımızın yani niyetimizin belirli olması gerekir.
+Test güdümlü yazılım geliştirmek aynı zamanda bunu sağlamış olur.&lt;/p&gt;
+
+&lt;p&gt;Test güdümlü yazılım ile ilgili bildiklerimi aktardıktan sonra bir örnek vermek istiyorum.
+Çok sevdiğim bir kod katası olan Roman Rakamları katasından örnek vereceğim.
+Dilerseniz &lt;a href=&#34;http://kodkata.com/roma-rakamlari-katasi/&#34;&gt;http://kodkata.com/roma-rakamlari-katasi/&lt;/a&gt; adresinden katayı izleyebilirsiniz.
+Kata hakkında bilgi almak için ise &lt;a href=&#34;http://www.kurumsaljava.com/2012/04/07/kod-kata-ve-pratik-yapmanin-onemi/&#34; title=&#34;Kata&#34;&gt;buraya&lt;/a&gt; tıklayabilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;Öncelikle RomanNumeral sınıfı için test sınıfı (RomanNumeralTest) oluşturuyoruz ve bir test metodu yazıyoruz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Anlaşılacağı gibi &amp;ldquo;I&amp;rdquo; değerini verdiğimde sonuç olarak 1 değerini döndermesi gerekir. Bunu için assertThat metodunu kullandım.
+İlk parametre olarak test etmek istediğimiz metodu, ikinci parametre olarak beklediğimiz değeri giriyoruz.
+Burda kodun okunmasını kolaylaştırmak amacı ile CoreMatchers.is ve CoreMatchers.equalTo  statik metodlarını kullandım.&lt;/p&gt;
+
+&lt;p&gt;Henüz ortada RomanNumeral adlı sınıfımız yok. Öncelikle bu sınıfı oluşturup içerisine convert metodunu oluşturuyoruz.
+Test kodlarını çalıştırdığımızda başarısız olduğunu görüyoruz. Bu testi geçmek için çok detaylı diğer roman rakamlarını da düşünerek kod yazmıyoruz.
+Sadece bu testin gerçekleşmesi için gereken kodu yazıyoruz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/bef51d11659da5f094d.js?file=romanNumeral1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;code&gt;return 1&lt;/code&gt; ifadesini eklemek testlerin başarılı olmasını sağlayacaktır. Bunu gerçekleştirdikten sonra 2. bir test daha ekliyoruz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Burda dikkat ederseniz roman nesnesini yerel değişken olarak kullanmak yerine sınıf değişkeni yani &amp;ldquo;field&amp;rdquo; olarak kullanıyorum.
+Çünkü aynı kodu her test için yazmak zorunda değiliz. Bu sayede DRY(Don&amp;rsquo;t Repeat Yourself) prensibine uymuş oluyoruz.
+2. testimizde gördüğünüz gibi &amp;ldquo;V&amp;rdquo; değerini gönderdiğimizde 5 değerini almak istiyoruz.
+Yukarda bahsettiğim gibi öncelikle niyetimizi yazıyoruz.
+convert metodunda değişiklik yaparken bu sefer her 2 testin de çalışmasına dikkat etmemiz gerekiyor.
+O yüzden RomanNumeral sınıfımız aşağıdaki gibi olacaktır.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;metodumuza bir if ekleyerek 2 testin de başarılı olmasını sağladık. Aynı şeyi &amp;ldquo;X&amp;rdquo; -&amp;gt; 10 için de yapıyoruz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest3.java&#34;&gt;&lt;/script&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral3.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;3. testimizi yazıp gereken değişiklikleri yaptık. convert metoduna baktığımızda istenmeyen bir durum görüyoruz.
+Her yeni test için sürekli bir &lt;code&gt;if&lt;/code&gt; ekleyemeyiz. O yüzden RomanNumeral sınıfını &lt;code&gt;Map&lt;/code&gt; kullanarak aşağıdaki şekilde düzenliyoruz.
+Böylece metodu tek satıra düşürebiliriz.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral3Refactor.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Burada adım adım giderek refactoring işlemlerini de adım adım yaptık. Test güdümlü geliştirdiğimiz için testlerden
+yola çıkarak geliştirdik. Katanın devamı için &lt;a href=&#34;http://kodkata.com/roma-rakamlari-katasi/&#34; title=&#34;Roman Rakamlari Katası&#34;&gt;video&lt;/a&gt;&amp;lsquo;yu izleyebilirsiniz..&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hedef on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/hedef/</link>
+    <description>Recent content in Hedef on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Sun, 12 Aug 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/hedef/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Hedefim Kurumsal Java</title>
+      <link>https://omerozkan.net/hedefim-kurumsal-java/</link>
+      <pubDate>Sun, 12 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/hedefim-kurumsal-java/</guid>
+      <description>&lt;p&gt;Bilgisayar mühendisliği okuyan her öğrencinin veya mezunun bir alan seçmesi ve o alanda uzmanlaşması gerekir.
+Her alanda uzmanlaşmak mümkün değildir. Bilgisayar mühendisliği çok genel bir alan.
+Üniversitelerimizde malesef herşeyin temeli anlatılıyor.
+Uzmanlaşmak için bir alan seçip o alanda okuldan bağımsız bir şekilde ilerlemek gerekiyor.
+Mezun olduğumuzda ise 0. basamaktan başlıyoruz. Bütün bunların farkına varınca benim de bir seçim yapmam gerekti.
+Bazı alanlarda çalışıp birşeyler öğrenmeye çalışınca hiç bir alanda ilerleme kaydedemediğimi farkettim.&lt;/p&gt;
+
+&lt;p&gt;2. Sınıfın başlangıcında böyle bir arayışa girdim. “Hangi alanı seçmeliyim?”  sorusunu bütün bir yıl boyunca kendime sordum.
+Seçim yaparken genelde mühendisler, piyasada en çok kullanılan teknolojilere, programlama dillerine doğru yöneliyorlar.
+Tabiki de haklılar. Beni de piyasa oldukça etkiledi. Fakat bunun önünde seçmem gereken alan sevdiğim bir alan olması gerekiyordu.
+Sevmediğim bir işte olgunlaşmam mümkün değildir. 3. sınıfa başlamadan kararımı verdim.&lt;/p&gt;
+
+&lt;p&gt;İlk teknik serviste çalışmaya başlamıştım. Başta oldukça zevkli gelse de bir süre sonra sıkılmaya başladım.
+Ardından web siteleri yayınlamaya başladım. Daha sonra ilk “Merhaba Dünya”yı PHP ile yazdım.
+Hemen ardından MySQL ile CRUD işlemleri gerçekleştirdim. Web o zamandan beridir benim için vazgeçilmez oldu.
+O zamanlar web ve masaüstü programcılığı popülerdi. Nedense masaüstü programcılığına pek ilgim olmadı.
+Web sayfaları oluşturmak daha zevkli geliyordu. Yine o zamanlar, GNU/Linux’a ilgi duymaya başladım.
+Tabiki GNU/Linux’un içerisine girince açık kaynaklı ve özgür yazılımları kullanmaya başladım.
+GNU/Linux, Windows işletim sistemine göre daha cazip geliyordu.
+Başta alışmak için zorluk çeksemde performansı ve esnekliği ile benim için vazgeçilmez oldu.
+Seçimlerimi etkileyen 2 önemli faktör; birincisi web ikincisi ise GNU/Linux oldu.
+Bu yüzden Microsoft’un teknolojileri hiç ilgimi çekmedi. Java’nın ne olduğunu neler yapılabildiğini öğrendim.
+Bu dil o zamanlar öğrenmek istediğim programlama diliydi. Lise hayatı böyle geçti.
+Web sayfaları geliştirdiğim için HTML, CSS ve Javascript gibi teknolojileri de öğrenmek zorunda kaldım ve aynı zamanda web tasarım da yaptım.&lt;/p&gt;
+
+&lt;p&gt;Üniversiteye başladığım ilk yılda nesne yönemli programlama (Object-Oriented Programming) öğrenmeye başladım. C++ ile algoritmamı daha da geliştirdim.
+C++ sevdiğim keyif aldığım programlama dillerinden biridir.
+Veritabanı sistemleri çok ilgimi çektiğinden veritabanı ile ilgili bir dalda uzmanlaşmayı düşünüyordum.
+Daha sonra mobil programlama öğrenmek istedim. Fakat çalışacak zaman ayırmadığım için mobil konusunda herhangi bir çalışma yapmadım.
+Aslında bunun sebebi Java’yı bilmememden kaynaklanıyordu. Java ortamını ve programlama dilini öğrenmeye başladım.
+Okulda öğrendiğim C# .Net hiç ilgimi çekmedi. Aynı şekilde masaüstü programcılığı da. O zamanlar Python da ilgimi çekmeye başlamıştı.
+Hatta 6 bölüm Python kitabı okudum :) Java dili öğrenmeye devam ederken. Php ile MVC öğrenmeye başladım.
+Zend Framework’ü tercih ettim. İşlerin ne kadar kolaylaştığını gördüm. Kararımı vermiştim: Java, Python, Ruby ve PHP.
+2. Sınıfın bitmesine yakın bu kadar programlama dili yerine tek bir dil öğrenmeye karar verdim. Bu kararım Java oldu.
+Java ile birçok şey öğrenirken Özcan Acar‘ı takip etmeye başladım.
+Test güdümlü yazılım, refactoring, çevik yöntemler, tasarım şablonları vs derken yazılıma bakış açım değişmeye başlamıştı ve
+katıldığım Linux yaz kampında JavaEE’yi yakından tanıma fırsatı buldum. Yazılıma bakış açım artık tamamen değişti.
+Kendimi hiç böyle mutlu hissetmemiştim. Öğrenecek bir sürü güzel şeyler var.
+Bir sürü programlama dili öğrenmek yerine kurumsal java ve java web teknolojilerinde uzmanlaşmak, kurumsal javanın derin sularında yüzmek istiyorum.
+Proje yöneticiliği gibi alanları da düşündüm. İlerde bu alanda da belki çalışabilirim ama kesinlikle yazılımı bırakacağımı düşünmüyorum.&lt;/p&gt;
+
+&lt;p&gt;Kararım tabiki kurumsal java oldu. Okul döneminin geri kalanında olmazsa olmaz yazılım prensipleri, test güdümlü yazılım,
+çevik yöntemler, refactoring gibi konulara ayıracağım. JavaEE konusunda öğrenmeye devam edeceğim.
+Veritabanı konusunda da fazla detaya girmeden PostgreSQL öğrenmek istiyorum.
+Aynı şekilde JVM üzerinde çalışan Groovy programlama dilini de öğrenmek istiyorum.
+Java ile geliştirirken groovy işime yarayabilecek araçlardan biri olduğunu düşünüyorum.
+Programlama dillerini dostum olarak görürüm. En iyi dostum ise Java.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

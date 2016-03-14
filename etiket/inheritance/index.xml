@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Inheritance on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/inheritance/</link>
+    <description>Recent content in Inheritance on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Sat, 03 Nov 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/inheritance/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>OOP: Kalıtım</title>
+      <link>https://omerozkan.net/oop-kalitim/</link>
+      <pubDate>Sat, 03 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/oop-kalitim/</guid>
+      <description>&lt;p&gt;Bir önceki yazımda OOP konusuna giriş yapmış ve kapsüllemeyi anlatmıştım.
+Bu yazımda ise &amp;ldquo;Kalıtım&amp;rdquo; konusundan bahsetmek istiyorum.
+Kalıtım (inheritance) kelimesi aslında biyolojide anlamı ile aynıdır.
+Adından da anlaşılacağı gibi bir sınıfın özelliklerini diğer sınıfa olduğu gibi aktarmasıdır.&lt;/p&gt;
+
+&lt;p&gt;Peki böyle bir özelliğe neden ihtiyaç duyarız.
+Bir üniversitedeki öğretim görevlilerini ve öğrencileri modelleyen iki sınıf tanımlayalım.
+Öğrenci sınıfı öğrencinin adını, soyadını, okul numarasını, T.C. kimlik numarasını, bölümünü içersin.
+Öğretim görevlisi sınıfı ise öğretim görevlisinin adını, soyadını, hangi bölümün kadrosunda yer aldığını,
+T.C. kimlik numarasını ve akademik ünvanını içersin. Bunu Java kodları ile ifade edersek:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=lecturer1.java&#34;&gt;&lt;/script&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=student1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;Student&lt;/strong&gt; ve &lt;strong&gt;Lecturer&lt;/strong&gt; adında Java sınıflarımız var.
+Bu sınıflar gördüğünüz gibi basit bir şekilde getter ve setter metodlarından oluşuyor.
+Bu iki sınıf arasındaki benzerlikleri düşünelim. id (T.C. Kimlik No) , name, surname, department değerleri aynı.
+Örneğin bir de üniversitede çalışan memurları modellersek yine aynı verileri tekrarlamak zorundayız. Bu da tekrarlı koda (duplicated code)
+sebep olur. Bu durum &lt;strong&gt;DRY (Don&amp;rsquo;t Repeat Yourself)&lt;/strong&gt; prensibine aykırı.&lt;/p&gt;
+
+&lt;p&gt;Bu sorunu kalıtım (inheritance) kullanarak çözebiliriz. Bunun için öncelikle Person adlı bir sınıf tanımlıyoruz ve bu sınıfa
+&lt;strong&gt;Lecturer&lt;/strong&gt; ve &lt;strong&gt;Student&lt;/strong&gt; sınıfların ortak özelliklerini yerleştiriyoruz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=person.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Gördüğünüz gibi Person sınıfımız önceki tanımladığımızın iki sınıfın özelliklerini içeriyor.
+Burada dikkat ederseniz bölümü eklemedim. Bunun sebebi uygulamamıza ekleyeceğimiz diğer personeller herhangi bir bölümde olmayabilirler.
+Ama her personelin T.C kimlik numarası, adı ve soyadı olmak zorunda.
+Student ve Lecturer sınıflarını aşağıdaki gibi değiştirebiliriz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=lecturer2.java&#34;&gt;&lt;/script&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=student2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Student ve Lecturer sınıflarının tanımlarına dikkat edersek &lt;strong&gt;extends Person&lt;/strong&gt; ifadesini görüyoruz.
+Java&amp;rsquo;da kalıtım &lt;strong&gt;extends&lt;/strong&gt; anahtar kelimesi ile yapılır.
+Kalıtım ile Person sınıfının bütün özelliklerine hem Student hem de Lecturer sınıfı sahip oldu.
+Yani Student ve Lecturer sınıfı da id, name, surname alanlarına ve getter/setter metodlarına sahip.
+Bu sayede kod tekrarından kurtulmuş olduk.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Not:&lt;/strong&gt; Önceki yazımda erişim belirleyicilerinden bahsetmiştim.
+private ile tanımlanan metodlar veya alanlara sınıf dışından erişilemez.
+Burada name, surname ve id alanlarına direkt olarak erişemeyiz.
+Fakat public olan getter ve setter metodları sayesinde bu değişkenlere erişmemiz mümkün.
+Sadece genişletilen (türetilen) sınıflardan (Student ve Lecturer) erişmek isteseydik name, surname ve id alanlarını
+ &lt;strong&gt;protected&lt;/strong&gt; erişim belirleyicisi ile tanımlamamız yeterli olacaktır.
+ &lt;strong&gt;protected&lt;/strong&gt; ile tanımlanan alanlar ve metodlar aynı zamanda aynı paket içerisindeki diğer sınıflar tarafından da erişilebilir.&lt;/p&gt;
+
+&lt;p&gt;Kalıtımın diğer sağladığı bir özellik OOP&amp;rsquo;de polimorfizme imkan sağlamasıdır. Bunun için &lt;a href=&#34;https://omerozkan.net/oop-polimorfizm/&#34;&gt;OOP: Polimorfizm yazısını&lt;/a&gt; okuyabilirsiniz.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

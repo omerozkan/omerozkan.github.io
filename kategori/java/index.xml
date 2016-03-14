@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Java on Ömer Özkan</title>
+    <link>https://omerozkan.net/kategori/java/</link>
+    <description>Recent content in Java on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Fri, 03 Jan 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/kategori/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Powermock ve Mockito ile JSF Sınıflarını Test Etmek</title>
+      <link>https://omerozkan.net/powermock-ve-mockito-ile-jsf-siniflarini-test-etmek/</link>
+      <pubDate>Fri, 03 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/powermock-ve-mockito-ile-jsf-siniflarini-test-etmek/</guid>
+      <description>&lt;p&gt;JSF Bean sınıflarında FacesContext gibi nesneler kullandığınızda ve bu sınıflara mock nesneler ile birim testleri yazdığınızda
+&lt;a href=&#34;https://github.com/mockito/mockito&#34;&gt;Mockito&lt;/a&gt;, JMock gibi araçlar yeterli olmayacaktır. Örnek olarak aşağıdaki metodu inceleyelim.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginAction.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu metod basit bir login işlemi gerçekleştirmektedir.
+Anlaşılacağı gibi xhtml sayfasında bir buton üzerinde actionListener parametresinde tanımlanmaktadır.
+Öncelikle kullanıcı adı ve parolanın boş bırakılıp bırakılmadığını kontrol etmekte eğer alanlar boş değilse
+business katmanı ile login işlemini gerçekleştirmektedir.&lt;/p&gt;
+
+&lt;p&gt;Şimdi kodları inceleyelim.  &lt;strong&gt;2&lt;/strong&gt;. satır da JSF sayfasına mesaj göndermek için FacesContext nesnesini &lt;code&gt;FacesContext.getCurrentInstance()&lt;/code&gt;
+statik metodu ile almaktadır. &lt;strong&gt;3&lt;/strong&gt;. satırda bir sınıf değişkeni yer almakta bu değişken sayesinde başka bir metod oturum açma işlemini gerçekleştirmektedir.&lt;br /&gt;
+&lt;strong&gt;4&lt;/strong&gt;. satırdaki koşul kullanıcı adı ve parola alanlarının boş bırakılıp bırakılmadığını kontrol etmektedir.
+&lt;strong&gt;8&lt;/strong&gt;. satır da ise loginManager nesnesi iş katmanının bir nesnesi olup DI (Dependency Injection) ile enjekte edilmektedir.
+LoginManager bir interface&amp;rsquo;dir. Bu sayede LoginBean sınıfının iş katmanına bağımlılığı esnek olur.
+Aynı zamanda test edebilmek için kolayca mock nesneleri oluşturabiliriz.
+Alt katmandan gelen sonuç ise bir &lt;strong&gt;LoginResult&lt;/strong&gt; nesnesidir.&lt;/p&gt;
+
+&lt;p&gt;Burdaki temel sorun &lt;strong&gt;2&lt;/strong&gt;. satırdaki FacesContext nesnesinin statik bir metod aracılığı ile alınmış olmasıdır.
+Statik metodları Mockito gibi araçlarla taklid edemeyiz.
+Burda benim aklıma gelen ilk çözüm, bir Java anotasyonu oluşturup, setter injection ile uygulama bir servlet container
+içerisinde çalıştığında gerçek FacesContext nesnesini enjekte etmesini sağlamak ve test edildiğinde ise kolayca mock
+nesneyi enjekte edebilmekti. Diğer çözümler için internette arama yaparken &lt;a href=&#34;https://github.com/jayway/powermock&#34;&gt;PowerMock&lt;/a&gt; ile karşılaştım.
+PowerMock ile statik metodlara hatta private alanlara müdahale edebiliyorsunuz.&lt;/p&gt;
+
+&lt;p&gt;Örnekte PowerMock ile Mockito araçlarını beraber kullandım. Mockito yerine dilediğiniz test aracını kullanabilirsiniz. (JMock, EasyMock vs.)&lt;/p&gt;
+
+&lt;p&gt;Öncelikle bir setUp metodu oluşturalım:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginBeanTest.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;32&lt;/strong&gt;. satır da FacesContext sınıfı Mockito ile mock&amp;rsquo;lanmaktadır. 37. satırda benzer şekilde LoginManager sınıfı mocklanmaktadır.
+&lt;strong&gt;36&lt;/strong&gt;. satır da test edilecek olan sınıfın nesnesi üretilmektedir.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;33&lt;/strong&gt;. satır da &lt;strong&gt;mockStatic()&lt;/strong&gt; metodu kullanılarak FacesContext nesnesinin statik metodları mock&amp;rsquo;lanmış oldu.
+&lt;strong&gt;34-35&lt;/strong&gt;. satırlarda PowerMockito.doReturn() metodu ile &lt;em&gt;FacesContex.getCurrentInstance()&lt;/em&gt; statik metodunun davranışı değiştirilmiştir.
+Bu sayede birim testlerimizi çalıştırabiliriz. Örnek olarak bir test metodu ekleyelim:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginWithEmptyUsername.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;4-6&lt;/strong&gt;. satırlarda gerekli test verileri girilip login işlemi gerçekleştirilmiştir. &lt;strong&gt;7&lt;/strong&gt;. satırda ise Mockito ile
+&lt;code&gt;context.addMessage(null, INVALID_LOGIN)&lt;/code&gt; yani doğru metodun çağrılmasının testi yapılmıştır.&lt;/p&gt;
+
+&lt;p&gt;Bu şekilde testler çalıştırıldığında olumsuz sonuç alırız.
+PowerMockito&amp;rsquo;nun gereken sınıfları taklit etmesi için test sınıfının başına aşağıdaki gibi anotasyonlar tanımlanmalıdır:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginBeanTest2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; satırda testlerin PowerMockRunner ile çalışmasını ve &lt;strong&gt;2&lt;/strong&gt;. satırda ise &lt;strong&gt;FacesContext&lt;/strong&gt; sınıfına ait statik metodun mock&amp;rsquo;lanmasını sağladık.
+Bu sayede testlerimiz çalışır hale gelmektedir.&lt;/p&gt;
+
+&lt;p&gt;Bir başka yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OOP: Polimorfizm</title>
+      <link>https://omerozkan.net/oop-polimorfizm/</link>
+      <pubDate>Tue, 13 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/oop-polimorfizm/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;https://omerozkan.net/oop-kapsulleme/&#34;&gt;Kapsülleme&lt;/a&gt; ve &lt;a href=&#34;https://omerozkan.net/oop-kalitim/&#34;&gt;kalıtım&lt;/a&gt; konularından sonra sıra geldi polimorfizme.
+Polimorfizm, Türkçe&amp;rsquo;de çok biçimlilik olarak çevriliyor.
+Polimorfizmi anlatmak için JUnit in Action kitabında gördüğüm güzel bir örneği vereceğim.
+Bu örnek sayesinde polimorfizm&amp;rsquo;in kullanım amacını da göstermiş olacağım. Örnek göstererek anlatmayı daha uygun buldum.
+Ben önce örnekleri inceleyip sonra açıklamaları okurdum. Bu sayede daha kolay kavrıyorum.
+Aynı yöntemi burda da uygulayacağım. Bu konuyu kavramanız için kalıtım konusuna hakim olmanız gerekmektedir.&lt;/p&gt;
+
+&lt;p&gt;Örneğimizde bir yazıcımız var. Bu yazıcı kelime işlemci ve pdf belgelerini basabiliyor.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf1.java&#34;&gt;&lt;/script&gt;
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=word1.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;PDF ve Word sınıfları getPrintableText() isimli bir metodu içeriyor. Şimdi de yazıcı (Printer) sınıfımıza bakalım.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printer1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Printer sınıfımızın ise iki metodu var. printPDF metodu PDF dökümanını, printWord metodu ise word dökümanını yazdırıyor.
+Bu metodlar bu nesneleri parametre olarak alıp, PDF ve Word sınıflarının getPrintableText metodunu kullanarak ekrana yazabiliyor.&lt;/p&gt;
+
+&lt;p&gt;Bu tasarım başlangıçta güzel gözükse de aslında bir çok problemi beraberinde getiriyor. &lt;strong&gt;printPDF&lt;/strong&gt; ve &lt;strong&gt;printWord&lt;/strong&gt; metotları
+nerdeyse birbirinin aynısı. Yani duplicated kod barındırıyor. Diğer bir problem diyelim ki müşteriniz Excel tablolarını
+da yazdırmak istedi. Ne yapmanız gerekiyor. Öncelikle bir Excel sınıfı ekleyip ardından &lt;strong&gt;Printer&lt;/strong&gt; sınıfına &lt;strong&gt;printExcel()&lt;/strong&gt; adlı
+yine aynı işi yapan bir metot eklemeniz gerekiyor. Bu sefer üç tane metod aynı işi yapmış olacak. Yer yeni bir belge türü
+eklediğimizde Printer sınıfını sürekli değiştirmemiz gerekiyor. Bu durum Open-Close (Açık-Kapalı) prensibine aykırı bir durum.
+Open-Close prensibi yazdığımız sınıfların gelişime açık fakat değişime kapalı olması gerektiğini tanımlar. Bu durumu
+polimorfizm ile düzeltebiliriz.&lt;/p&gt;
+
+&lt;p&gt;Öncelikle daha önceden öğrendiğimiz kalıtımı(yemek tarifi gibi oldu :)) kullanarak sınıflarımızı yeniden yapılandıralım.
+&lt;strong&gt;PDF&lt;/strong&gt; sınıfıda &lt;strong&gt;Word&lt;/strong&gt; sınıfıda aslında birer belge yani &lt;strong&gt;Document&lt;/strong&gt; özelliğini taşıyor.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=document.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Şimdi Word ve PDF sınıflarını Document sınıfını &lt;strong&gt;extend&lt;/strong&gt; edebilir.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=word2.java&#34;&gt;&lt;/script&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Override anotasyonunu (annotation) görüyorsunuz. Anotasyonlar Java 1.5&amp;rsquo;ten sonra gelen bir özelliktir.
+Buradaki Override anotasyonu, Word ve PDF&amp;rsquo;te bulunan getPrintableText metodlarının ata sınıfın (Document) print metodunun değiştirildiği anlamına gelir.&lt;/p&gt;
+
+&lt;p&gt;Şimdi &lt;strong&gt;Printer&lt;/strong&gt; sınıfını da yeniden düzenleyelim.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printer2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Şimdi daha iyi anlamanız için bir test sınıfı yazalım.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printerTest.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Eğer sonucu görmediyseniz lütfen sonucu tahmin etmeye çalışın.&lt;/p&gt;
+
+&lt;p&gt;Bu kodun ekran çıktısı aşağıdaki gibi olacaktır.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;This is a document&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;This is a PDF document&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;This is a Word document&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;4. satırda yeni bir yazıcı sınıfı ürettik.
+6. satırda bir döküman nesnesini yazdırdık. Beklediğimiz gibi Document sınıfında tanımladığımız metni yazdırdı.
+8. satırda ise bir pdf belgesini yazdırmak istedik. Printer sınıfının parametre referans tipine baktığınızda Document olduğunu
+görüyorsunuz. PDF de bir document nesnesi olduğu için bu nesneyi bu metoda geçirebildik(passing). Bu polimorfizmin birinci
+durumu. Yani Document sınıfını extend eden herhangi bir nesneyi Document referansı ile kullabiliriz. Bunu şu şekilde de
+tanımlayabilirdik.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Document document = new PDF()&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Yani Document dışında farklı sınıfların nesnelerini de Document referansı ile tanımlayabiliriz. Bunu polimorfizm sağlar.
+Polimorfizmin sağladı diğer bir güzellik ise ekranda gördüğünüz &amp;ldquo;This is a PDF document&amp;rdquo; yazısıdır. Document sınıfında
+tanımlanan varsayılan davranış yerine PDF sınıfında bu davranışı değiştirerek farklı metin yazmasına sebep olduk. Bu şekilde
+her nesnenin bir metod veya herhangi bir interface(java&amp;rsquo;daki interface&amp;rsquo;leri kastetmiyorum) için farklı davranış göstermesine &lt;strong&gt;polimorfizm&lt;/strong&gt; diyoruz.&lt;/p&gt;
+
+&lt;p&gt;10. satırda aynı durum Word sınıfı için geçerli. Ayrıca Printer sınıfının tek bağımlılığı Document sınıfına oldu. Yani
+Printer ve Document sınıfını bir jar içerisinde müşteriye teslim edebiliriz. Bu da bize esnek bir yapı sağlar.&lt;/p&gt;
+
+&lt;p&gt;Şimdi gelelim müşterinin isteğine, müşteri bir Excel dosyası yazdırmak istemişti. Artık Printer sınıfına dokunmamıza bile gerek yok.
+Yeni bir Excel sınıfı ekleyelim.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=excel.java&#34;&gt;&lt;/script&gt;
+
+&lt;h3 id=&#34;super-anahtar-kelimesi:1e4f0b0da4b93aa40114849c5b8e437e&#34;&gt;super anahtar kelimesi&lt;/h3&gt;
+
+&lt;p&gt;Java&amp;rsquo;da nesneyi üst sınıfın interface i ile kullanmak isterseniz. &lt;code&gt;super&lt;/code&gt; anahtar kelisini (keyword) kullanabilirsiniz.
+Örneğimize bakarsak PDF sınıfı Document&amp;rsquo;in print metodunun üzerine kendi &lt;strong&gt;getPrintableText()&lt;/strong&gt; metodunu deği davranışını
+değiştirmiş oldu ve Document sınıfında tanımlanan print metodunun davranışını iptal etti.
+Peki PDF sınıfı atasından (Document) aldığı &lt;strong&gt;getPrintableText()&lt;/strong&gt; metodunu kullanmak isterse ne yapmalıyız?
+İşte burda super anahtar kelimesini kullanabiliriz. PDF sınıfını aşağıdaki şekilde değiştirelim.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf3.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Bunun sonucunda &lt;strong&gt;getPrintableText()&lt;/strong&gt; metodu &amp;ldquo;This is a document\nThis is a PDF document\n&amp;rdquo; değerlerini döndermiş olur.&lt;/p&gt;
+
+&lt;p&gt;Polimorfizm kavrami OOP&amp;rsquo;ye özgür bir özellik değildir. OOP ile uygulanabilir.&lt;/p&gt;
+
+&lt;p&gt;Bu yazımda polimorfizmi yüzeysel olarak anlatmaya çalıştım. Umarım faydalı olmuştur.&lt;/p&gt;
+
+&lt;p&gt;Bir sonraki yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OOP: Kalıtım</title>
+      <link>https://omerozkan.net/oop-kalitim/</link>
+      <pubDate>Sat, 03 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/oop-kalitim/</guid>
+      <description>&lt;p&gt;Bir önceki yazımda OOP konusuna giriş yapmış ve kapsüllemeyi anlatmıştım.
+Bu yazımda ise &amp;ldquo;Kalıtım&amp;rdquo; konusundan bahsetmek istiyorum.
+Kalıtım (inheritance) kelimesi aslında biyolojide anlamı ile aynıdır.
+Adından da anlaşılacağı gibi bir sınıfın özelliklerini diğer sınıfa olduğu gibi aktarmasıdır.&lt;/p&gt;
+
+&lt;p&gt;Peki böyle bir özelliğe neden ihtiyaç duyarız.
+Bir üniversitedeki öğretim görevlilerini ve öğrencileri modelleyen iki sınıf tanımlayalım.
+Öğrenci sınıfı öğrencinin adını, soyadını, okul numarasını, T.C. kimlik numarasını, bölümünü içersin.
+Öğretim görevlisi sınıfı ise öğretim görevlisinin adını, soyadını, hangi bölümün kadrosunda yer aldığını,
+T.C. kimlik numarasını ve akademik ünvanını içersin. Bunu Java kodları ile ifade edersek:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=lecturer1.java&#34;&gt;&lt;/script&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=student1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;Student&lt;/strong&gt; ve &lt;strong&gt;Lecturer&lt;/strong&gt; adında Java sınıflarımız var.
+Bu sınıflar gördüğünüz gibi basit bir şekilde getter ve setter metodlarından oluşuyor.
+Bu iki sınıf arasındaki benzerlikleri düşünelim. id (T.C. Kimlik No) , name, surname, department değerleri aynı.
+Örneğin bir de üniversitede çalışan memurları modellersek yine aynı verileri tekrarlamak zorundayız. Bu da tekrarlı koda (duplicated code)
+sebep olur. Bu durum &lt;strong&gt;DRY (Don&amp;rsquo;t Repeat Yourself)&lt;/strong&gt; prensibine aykırı.&lt;/p&gt;
+
+&lt;p&gt;Bu sorunu kalıtım (inheritance) kullanarak çözebiliriz. Bunun için öncelikle Person adlı bir sınıf tanımlıyoruz ve bu sınıfa
+&lt;strong&gt;Lecturer&lt;/strong&gt; ve &lt;strong&gt;Student&lt;/strong&gt; sınıfların ortak özelliklerini yerleştiriyoruz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=person.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Gördüğünüz gibi Person sınıfımız önceki tanımladığımızın iki sınıfın özelliklerini içeriyor.
+Burada dikkat ederseniz bölümü eklemedim. Bunun sebebi uygulamamıza ekleyeceğimiz diğer personeller herhangi bir bölümde olmayabilirler.
+Ama her personelin T.C kimlik numarası, adı ve soyadı olmak zorunda.
+Student ve Lecturer sınıflarını aşağıdaki gibi değiştirebiliriz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=lecturer2.java&#34;&gt;&lt;/script&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=student2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Student ve Lecturer sınıflarının tanımlarına dikkat edersek &lt;strong&gt;extends Person&lt;/strong&gt; ifadesini görüyoruz.
+Java&amp;rsquo;da kalıtım &lt;strong&gt;extends&lt;/strong&gt; anahtar kelimesi ile yapılır.
+Kalıtım ile Person sınıfının bütün özelliklerine hem Student hem de Lecturer sınıfı sahip oldu.
+Yani Student ve Lecturer sınıfı da id, name, surname alanlarına ve getter/setter metodlarına sahip.
+Bu sayede kod tekrarından kurtulmuş olduk.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Not:&lt;/strong&gt; Önceki yazımda erişim belirleyicilerinden bahsetmiştim.
+private ile tanımlanan metodlar veya alanlara sınıf dışından erişilemez.
+Burada name, surname ve id alanlarına direkt olarak erişemeyiz.
+Fakat public olan getter ve setter metodları sayesinde bu değişkenlere erişmemiz mümkün.
+Sadece genişletilen (türetilen) sınıflardan (Student ve Lecturer) erişmek isteseydik name, surname ve id alanlarını
+ &lt;strong&gt;protected&lt;/strong&gt; erişim belirleyicisi ile tanımlamamız yeterli olacaktır.
+ &lt;strong&gt;protected&lt;/strong&gt; ile tanımlanan alanlar ve metodlar aynı zamanda aynı paket içerisindeki diğer sınıflar tarafından da erişilebilir.&lt;/p&gt;
+
+&lt;p&gt;Kalıtımın diğer sağladığı bir özellik OOP&amp;rsquo;de polimorfizme imkan sağlamasıdır. Bunun için &lt;a href=&#34;https://omerozkan.net/oop-polimorfizm/&#34;&gt;OOP: Polimorfizm yazısını&lt;/a&gt; okuyabilirsiniz.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>OOP: Kapsülleme</title>
+      <link>https://omerozkan.net/oop-kapsulleme/</link>
+      <pubDate>Fri, 02 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/oop-kapsulleme/</guid>
+      <description>
+
+&lt;p&gt;Blogumda yazılım ile ilgili pek bir yazı olmadığından artık bazı konularda yazılar yazmaya karar verdim.
+Bu yüzden programlamanın en temel ve en önemli konularından biri olan Nesne Yönelimli Programlama&amp;rsquo;yı elimden geldiği kadar anlatmaya çalışacağım.
+Object Oriented Programming bir programlama yaklaşımıdır. Nesneye yönelik programlama, nesneye dayalı programlama,
+nesne tabanlı programlama, nesne esaslı programlama gibi bir çok çevirisi vardır. Ben de Türkçe de daha çok yaygın olan nesne
+yönelimli programlamayı kullanıyorum. Fakat genelde bahsederken OOP olarak kısaltacağım.&lt;/p&gt;
+
+&lt;p&gt;Yazılım gereksinimleri arttıkça prosedürel programlama bir çok sorunu beraberinde getiriyordu.
+Bu sorunlara kod karmaşıklığının artması, bakımın oldukça zor olması, ekip halinde çalışmayı zorlaştırması,
+maliyetlerin artması örnek olarak verilebilir. Bütün bu sorunların sonucu olarak da &amp;ldquo;Nesne Yönelimli Programlama&amp;rdquo; ortaya çıkmıştır.
+OOP ilk olarak 60&amp;rsquo;lı yıllarda Norveç&amp;rsquo;te geliştirilen &lt;strong&gt;&amp;ldquo;Simula&amp;rdquo;&lt;/strong&gt; programlama dili ile ortaya çıkmıştır. Simula ise &lt;strong&gt;ALGOL&lt;/strong&gt; tabanlı
+bir programlama dilidir. Günümüzde hemen hemen bütün modern diller OOP desteklemektedir. OOP&amp;rsquo;nin bu kadar popüler olmasının
+bir sebebi var. Merak edenler için &amp;ldquo;SOLID&amp;rdquo; anahtar kelimesini vereyim.
+Fakat bu yazı dizisinde OOP&amp;rsquo;nin en temel özelliklerini anlatacağım.
+OOP&amp;rsquo;yi anlatırken Java&amp;rsquo;da sınıflar ve nesneler konusunda bilgi sahibi olduğunuzu varsayacağım.&lt;/p&gt;
+
+&lt;p&gt;OOP denilince akla üç (bazı kaynaklara göre dört) özellik geliyor. Bunlar:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Encapsulation (Kapsülleme)&lt;/li&gt;
+&lt;li&gt;Inheritance (Kalıtım)&lt;/li&gt;
+&lt;li&gt;Polymorphism (Polimorfizm veya Çok biçimlilik)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bazı kaynaklar Abstraction (Soyutlama)&amp;lsquo;ı da dahil etmektedir. Daha önce ben de bu şekilde tanımlardım.
+Soyutlama ise çok daha geniş bir konu olduğundan üç özellik olarak tanımlamayı tercih ediyorum. Bu yazı dizisinde
+soyutlamaya da yer vereceğim.&lt;/p&gt;
+
+&lt;h2 id=&#34;encapsulation-kapsülleme:ec6c8a1cc144b0e8e50636ff4e409a35&#34;&gt;Encapsulation (Kapsülleme)&lt;/h2&gt;
+
+&lt;p&gt;Kapsülleme de aslında bir çok şekilde yapılabilir. Fakat basit olması amacı ile en kolay yönden tanımlayacağım.&lt;/p&gt;
+
+&lt;p&gt;Kapsüllemeyi kısaca tanımlarsak bir nesnenin iç yapısını (verilerini ve özelliklerini) dış dünyadan doğrudan erişime kapatılması anlamına gelir.
+Bu sayede nesneye ait veriler değer ataması yapılırken yanlış kullanımdan korunmuş olur. İç yapısının dışarıya açık olmaması
+aynı zamanda iç yapı ile ilgili değişikliklerin dış dünyanın etkilenmemesini de sağlamış olur. Bu açıdan çok önemlidir.&lt;/p&gt;
+
+&lt;p&gt;Java programlama dilinde nesne elemanlarının dışarıya kapatılması için &lt;strong&gt;private&lt;/strong&gt; erişim belirteci kullanılır.
+Java&amp;rsquo;da dört &lt;em&gt;erişim belirleyicisi (access modifier)&lt;/em&gt; vardır. Bunları kısaca tanımlarsak:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;public&lt;/strong&gt;: public kelimesi halka açık veya kamu anlamına gelmektedir.
+Bu erişim belirleyicisi ile tanımlanan herşey diğer bütün sınıflar tarafından erişilebilir.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;private&lt;/strong&gt;: özel veya gizli anlamına gelir.
+Bu erişim belirleyicisi ile tanımlanan herhangi bir eleman sadece ve sadece aynı sınıf içerisinden erişilebilir. Yani diğer sınıflar
+hiç bir şekilde erişemez.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;package-private&lt;/strong&gt;: Adı üstünde paket anlamına gelir. Bu erişim belirleyicisi ile işaretlenen herşey sadece ve sadece
+aynı paket içerisinde tanımlanan sınıflar tarafından erişilebilir. Farklı paketlerde bulunan sınıflar erişemez.
+Java&amp;rsquo;da değişkenleri, metodları vs. diğer erişim belirleyicisilerle tanımlamazsanız, &lt;em&gt;package-private&lt;/em&gt; olarak tanımlamış
+olursunuz. Yani package veya package-private gibi kelimeler kullanılmaz.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;protected&lt;/strong&gt;: Korumalı anlamına gelir. Bu erişim belirleyicisi ile herhangi bir eleman türetilmiş olan ve aynı paket içerisinde olan sınıflar içerisinden erişilebilir.
+(Kalıtım konusunda anlatılacaktır.)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bunlara kullanarak örnek bir sınıf tasarlayalım.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=accessModifierTest.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Payı (numerator) ve paydası (denominator) olan basit bir Rational (rasyonel) sınıfı tanımlayalım.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rational.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu sınıfın iki değişkeni var: &lt;strong&gt;&lt;em&gt;numerator&lt;/em&gt;&lt;/strong&gt; ve &lt;strong&gt;&lt;em&gt;denominator&lt;/em&gt;&lt;/strong&gt;.
+Bu iki değişken sınıfa ait olduğu için alan (field) olarak tanımlayabiliriz.
+Bu iki alanın erişim belirleyicisini &lt;strong&gt;private&lt;/strong&gt; olarak belirledik.
+Bu sayede sınıf dışından erişimi kapatmış olduk.
+Örneğin başka bir sınıftan aşağıdaki gibi bir kullanım hatalı olacaktır.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rationalClient.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Ayrıca dikkatlice incelerseniz &lt;strong&gt;&lt;em&gt;Rational&lt;/em&gt;&lt;/strong&gt; sınıfında &lt;strong&gt;&lt;em&gt;IllegalDenominator&lt;/em&gt;&lt;/strong&gt; sınıfı da tanımlanmış. Bu tür sınıflara
+&lt;strong&gt;inner-class&lt;/strong&gt; diyoruz. Bu sınıfında bir erişim belirteci var. public olması sebebi ile bu sınıfa dışarıdan herkes erişebilir.&lt;/p&gt;
+
+&lt;p&gt;Rational sınıfına dikkat ederseniz getter ve setter metodlarımnız var (Örneğin: getNumerator(), setNumerator()).
+Bu metodların erişim belirleyicisi de &lt;strong&gt;&lt;em&gt;public&lt;/em&gt;&lt;/strong&gt; yani dışardan erişime açık.
+Bu sayede numerator ve denominator değişkenlerine bu metodlar aracılığı ile değer atanabilir. Aşağıdaki kullanım doğru olacaktır.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rationalClient2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;setNumerator&lt;/em&gt;&lt;/strong&gt; ve &lt;strong&gt;&lt;em&gt;setDenominator&lt;/em&gt;&lt;/strong&gt; sayesinde numerator ve denominator değişkenlerine değer atanmış oldu.
+Burada gördüğünüz set ile başlayan metodlara &lt;strong&gt;setter&lt;/strong&gt; adı verilir.
+Aynı şekilde bu alanların değerlerine erişmek için &lt;strong&gt;&lt;em&gt;getNumerator&lt;/em&gt;&lt;/strong&gt; ve &lt;strong&gt;&lt;em&gt;getDenominator&lt;/em&gt;&lt;/strong&gt; metodlarını kullanabiliriz.
+Bu şekilde tanımlanan metodlara da &lt;strong&gt;getter&lt;/strong&gt; adı verilir.&lt;/p&gt;
+
+&lt;p&gt;setDenominator metodunu detaylı inceleyelim. 15. satırda bir koşul olduğunu görüyorsunuz.
+Eğer denominator&amp;rsquo;e yani paydaya 0 değeri atanmaya çalışıldığında,
+bu metod Exception fırlatarak paydanın 0 olmasını engellemiş oluyor.
+Bu sayede yanlış kullanımı engellemiş olduk. Bu sayede veri bütünlüğü ve kontrolü sağlanmış oldu.
+Genelde bütün alanlar geçerli bir sebep olmadıkça private olarak tanımlanır. Yani dışarıya kapatılmalıdır.
+Her alan için getter ve setter metodları tanımlamak zorundayız diye de düşünmeyin.
+Böyle bir zorunluluk yok. getter ve setter metodlar olmadan farklı metodlar aracılığı ile de erişimi kontrol altına alabilirsiniz.
+Örneğin sınıfımıza 3 tane constructor metod ekleyelim.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rational2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu tasarımımız da farklı bir örnek oldu. Dikkat ederseniz bu tasarımımızda setter metodları kaldırdık.
+Bu sınıfı kullanan istemci artık sadece nesne üretirkendeğerleri verebilecek nesne üretildikten sonra değerini değiştiremeyecektir.
+nominator ve denominator değişkenleriniprivate olarak tanımladığımız için istemcinin doğrudan ne de dolaylı olarak
+değerini değiştiremez. Bu tarz sınıflara &lt;strong&gt;immutable&lt;/strong&gt; sınıf adı verilir.&lt;/p&gt;
+
+&lt;p&gt;Bu yazıda kısaca encapsulation yani kapsüllemeyi anlattım. Bir sonraki yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

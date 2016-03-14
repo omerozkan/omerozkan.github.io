@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+<head lang="tr">
+    <title>Linux Yaz Kampı - 2</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="2012&#39;de Bolu&#39;da  düzenlenen Linux Yaz Kampı macerası">
+    <meta name="keywords"
+          content="linux,yaz,kampı,,eğitim,,kurs,,java,,javaee">
+    <meta name="author" content="Ömer Özkan">
+    <meta property="og:site_name" content="Ömer Özkan"/>
+    <meta property="og:title" content="Ömer Özkan"/>
+    <meta property="og:description" content="2012&#39;de Bolu&#39;da  düzenlenen Linux Yaz Kampı macerası"/>
+    <meta property="og:url" content="https://omerozkan.net/linux-yaz-kampi-2/">
+    <meta property="og:type" content="blog"/>
+    <meta property="og:image" content="linux-yaz-kampi.jpg" />
+    <meta name="generator" content="Hugo 0.15" />
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/semantic.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://omerozkan.net/js/semantic.min.js"></script>
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="https://omerozkan.net/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://omerozkan.net/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://omerozkan.net/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://omerozkan.net/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://omerozkan.net/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://omerozkan.net/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://omerozkan.net/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://omerozkan.net/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://omerozkan.net/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://omerozkan.net/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://omerozkan.net/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://omerozkan.net/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://omerozkan.net/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://omerozkan.net/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#009688">
+    <meta name="msapplication-TileImage" content="https://omerozkan.net/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#009688">
+</head>
+<body>
+<section id="main">
+    <section id="header-container" class="ui grid">
+        <header class="ten wide mobile ten wide tablet eight wide computer column centered">
+            <div class="row">
+                <div class="ui grid">
+                    <section id="header"
+                             class="ten wide mobile three wide tablet three wide computer centered column">
+                        <div class="row">
+                            <h1>
+                                <a href="https://omerozkan.net/">Ömer Özkan .net</a>
+                            </h1>
+                        </div>
+                    </section>
+                    <div class="nine wide computer only column right aligned">
+                        <section id="menu" class="row">
+                            <nav class="ui teal compact inverted menu">
+                                
+                                <a href="https://omerozkan.net/hakkimda/" class="link item">
+                                    Hakkımda
+                                </a>
+                                
+                                <a href="https://omerozkan.net/iletisim/" class="link item">
+                                    İletişim
+                                </a>
+                                
+                            </nav>
+                        </section>
+                        <section id="media-links" class="row">
+                            <nav class="ui icon secondary inverted menu">
+                                <div class="right menu">
+                                
+                                    <a class="item" href="https://twitter.com/omerozkan_" target="_blank">
+                                        <i class="twitter icon"></i>
+                                    </a>
+                                
+                                    <a class="item" href="https://www.linkedin.com/in/omerozkan" target="_blank">
+                                        <i class="linkedin icon"></i>
+                                    </a>
+                                
+                                    <a class="item" href="https://www.facebook.com/omerozkan" target="_blank">
+                                        <i class="facebook icon"></i>
+                                    </a>
+                                
+                                    <a class="item" href="https://github.com/omerozkan" target="_blank">
+                                        <i class="github icon"></i>
+                                    </a>
+                                
+                                </div>
+                            </nav>
+                        </section>
+                    </div>
+                    <div class="two wide mobile nine wide tablet only column right aligned">
+                        <button id="menu-button" class="ui teal icon button" data-transition="overlay">
+                            <i id="menu-icon" class="sidebar icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <nav id="mobile-menu" class="ui right floating sidebar green inverted vertical menu">
+        
+            <a class="header item" href="https://omerozkan.net/hakkimda/">Hakkımda</a>
+        
+            <a class="header item" href="https://omerozkan.net/iletisim/">İletişim</a>
+        
+        
+            <a class="item" href="https://omerozkan.net/kategori/etkinlikler/">Etkinlikler</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/genel-konular/">Genel Konular</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/java/">Java</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/linux/">Linux</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/seyir-defteri/">Seyir Defteri</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/sunumlar/">Sunumlar</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/videolar/">Videolar</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/yazilim-metotlari/">Yazılım Metotları</a>
+        
+    </nav>
+
+    <section id="navbar" class="ui grid">
+        <div class="tablet mobile only column empty-nav"></div>
+        <nav class="eight wide computer only column centered">
+            <div class="ui inverted menu nav-menu">
+                
+                <a class="item" href="https://omerozkan.net/kategori/etkinlikler/">
+                    Etkinlikler
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/genel-konular/">
+                    Genel Konular
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/java/">
+                    Java
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/linux/">
+                    Linux
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/seyir-defteri/">
+                    Seyir Defteri
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/sunumlar/">
+                    Sunumlar
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/videolar/">
+                    Videolar
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/yazilim-metotlari/">
+                    Yazılım Metotları
+                </a>
+                
+            </div>
+        </nav>
+    </section>
+<section id="content-main" class="ui internally grid centered">
+    <article class="ten wide mobile ten wide tablet eight wide computer column single">
+        <div class="ui basic segment">
+            <h1 class="ui green header">Linux Yaz Kampı - 2</h1>
+            
+            <p class="metadata">
+                
+                <a class="ui image label">
+                    <img src="http://s.gravatar.com/avatar/deb32ea991fee11136e3c72aee30be78?s=150">
+                    Ömer Özkan
+                </a>
+                
+
+                <a class="ui label">
+                    <i class="calendar icon"></i>
+                    15.07.2012
+                </a>
+            </p>
+            
+
+            
+            
+            <img class="ui right floated top aligned rounded medium image bordered right"
+                 src="https://omerozkan.net/images/thumb/linux-yaz-kampi.jpg"
+                 alt="Linux Yaz Kampı - 2"/>
+            
+            
+
+            <p>Bolu&rsquo;da yaz kamp devam ederken, teorik eğitim sona ermişti. Artık kod yazmanın zamanı gelmişti.
+Yazacağımız uygulama Tekir ön muhasebe projesiydi. Bu arada sınıftaki öğrenci sayısı da azalmaya başlamıştı.
+Daha sonra ekiplere ayrıldık. Toplam 5 ekip vardı. Ben de controller (Java) sınıfı yazmak istediğim için ekip4&rsquo;te yer almak istedim.
+Proje içerisinde kod satırı / gün sayısı hesabına göre az iş yapsak da Scrum çevik yöntemini uyguladık.
+Ekip olarak biz de çok az iş vardı. Öncelikle basit bir temel ayar sayfası ve JournalEntry nesnelerini kontrol eden bir Api yazacaktık.
+Ben tabiki Api yazan ekipte yer aldım. Ekibimiz 10 kişiydi, 6 kişi Api, diğer 4 kişi ise ekran sayfası üzerine yoğunlaştılar.
+Başlangıçta çok hevesliydim. Teorik kısımda kafamda soru işaretleri olduğu için ekip içerisinde aktif olmak istedim.
+İşe başlamadan önce  JournalEntry sınıfı ve ilişkili bütün sınıfların UML diyagramlarını çizerek Hakan Hoca&rsquo;nın yanına gittim.
+Detaylı bir şekilde neleri kontrol edip edemeyeceğimizi öğrendik.
+Aslına bakarsanız oturup tek başıma 20dk da belki de daha kısa sürede bitirebileceğim bir işti :)
+Fakat diğer ekip arkadaşlarımın daha iyi öğrenmesi amacı ile ben kod yazmak istemedim. 6 kişi ile bir yumurta taşıyacaktık.
+Neyse işleri tam orta yerinden 2&rsquo;ye böldük. 6 kişi, 3 er kişilik alt ekiplere bölünmüştü. Mehmet ve Nursel bizim ekipteydiler.
+Öncelikle Nursel&rsquo;i bilgisayar başına geçirdik. Mehmet ve ben de yanında yazdırmaya devam ediyorduk.
+Nursel&rsquo;den sonra Mehmet bilgisayar başına geçti ve işi kısa sürede bitirdik. Diğer alt ekip halen devam ediyordu.
+Bu sefer ben geçtim bilgisayar başına refactoring konusunda sadece fikir sahibi olmama rağmen kendi kodlarımıza refactoring uyguladım.
+Daha anlaşılır ve daha sade bir kod yapısı oluştu.</p>
+
+<p>Diğer alt ekipte kendi kodlarını tamamladıktan sonra sınıfımız oluşmuş oldu.
+Fakat bu controller sınıfının (JournalEntryApi) doğru yazıp yazmadığımızı test etmemiz gerekliydi.
+Bunun için birim testleri uygulayacaktık (JUnit).
+Test güdümlü yazılımı (Test Driven Development) çok merak ettiğim için baya sevinmiştim.
+JournalEntryApi sınıfı ile ilgili bir detaya yer vermek istiyorum.
+Hataları bir liste içerisinde tutuyorduk ki ekip5 de verilerin XML, SOAP, MQ gibi servislerle import edilmesini sağlıyordu.
+Sonuçta hata varsa, hata kodlarına göre işlem yapmaları gerekmekteydi.
+Hem testlerde rahat edebilmemiz için hem de ekip5&rsquo;in işini biraz daha kolaylaştırmak amacı ile kendi hata modelimizi yazdık.
+Bu modelimiz basit bir şekilde bir hata numarası ve hata açıklaması vardı. Testleri yaparken de sadece hata numarası ile yapacaktık elbette.
+Hata modelini yazarken bir ekip arkadaşımız, bana laf sokmaya kalkınca moralim baya bir bozuldu. Sonuçta ben de bir yazılım geliştiricisi olmak için çalışan biriyim.
+Yanlış da yapabilirim ki birçok hatam vardı elbette. Ama yine de kendi mesleğime,
+kişiliğime laf sokulması kesinlikle kabul edemeyeceğim bir olaydır. Yine kendisini rezil etmemek için olayı açıklamayacağım.</p>
+
+<p>Moralim bozulunca geri çekildim ve ne yapabilecekler diye uzaktan bekledim.
+Ekip içerisindeki heyecanımın yok olduğunu ekiptekilerin bir kısmı farketti. Mehmet, JUnit ile ilgili güzel veriler edindi.
+Kafama takılan birkaç şeyi ona sordum. Sami ise JUnit testi yazmaya çalışıyordu. Bu arada Hakan hoca JUnit&rsquo;i nasıl kullanacağımızı basitçe anlatmıştı.
+Günün sonunda kodları incelediğimde çok az kişinin uğraş verdiğini gördüm. Ben ise hayatımda hiç JUnit testleri yazmamıştım.
+Kendi kendime bu iş başa düştü dedim. Tabiki Mehmet ve Nursel&rsquo;e de (kendi ekibime) gelin başlayalım dedim.
+Onların da işleri vardı. Saat akşam 8 civarıydı. Sen yaz sonra bize anlatırsın dediler.
+Ben de oturdum, kendi test sınıfımı yazmaya başladım. Tüm sınıfın testini yapacaktım.
+Fakat ekipteki arkadaşlar, &ldquo;Tüm işi sen yaptın, bize bir iş bırakmadın.&rdquo; dememeleri için kendi sınıfımı sürüm takip sistemine göndermedim.
+Test sınıfını yazarken birçok hata düzelttim. Bunları gecenin 2sinde sürüm takip sistemine gönderdim.
+Moralim bozulduğu için ayrıca ekipte bir sıkıntı çıkmasın diye başka iş almak istemedim.
+Tabi bu konuda kampın son günü Hakan hocadan fırça da yedik.</p>
+
+<p>Yurttaki ortamımız da güzeldi. Oda arkadaşlarım ile güzel güzel sohbetler ettik, espriler yaptık.
+Hatta ekip içerisindeki yaşadığım olayı onlara da anlattım baya bir güldük :)
+Hepsine buradan çok teşekkür ederim onlardan çok şey öğrendim.
+Bu arada öğrenci hayatım boyunca ilk defa bir yurtta kalmış oldum :)</p>
+
+<p>Başta yazılıma bakış açımı değiştiren Hakan Uygun ve kamp etkinliğini başlatan Mustafa Akgül hocamıza,
+organizasyonda emeği geçen herkese, yaşadığım sorunlarla uğraşmaktan bıkmayan,
+kurs içerisinde büyük sabır gösteren Deniz Korkmaz ve Umuthan Uyan&rsquo;a,
+özellikle kendi ekibimde ve beraber takıldığım Mehmet,
+Sami ve Nursel&rsquo;e bu güzel ortamı bana yaşattıkları için çok teşekkür ederim.</p>
+
+
+            <div class="clear"></div>
+            
+            <section id="comment">
+                <div class="ui section divider"></div>
+                <div id="disqus_thread"></div>
+<script>
+     var disqus_config = function () {
+     this.page.url = 'https:\/\/omerozkan.net\/linux-yaz-kampi-2\/'; 
+     this.page.identifier = 'linux-yaz-kampi-2';
+     };
+    (function() {
+        var d = document, s = d.createElement('script');
+
+        var disqus_shortname = 'omerozkan';
+        s.src = '//' + disqus_shortname +'.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </section>
+            
+            <div class="ui section divider"></div>
+            
+            
+            <div class="ui tag labels">
+                
+                <span class="ui teal label">
+                    linux yaz kampı
+                </span>
+                
+                <span class="ui teal label">
+                    eğitim
+                </span>
+                
+                <span class="ui teal label">
+                    kurs
+                </span>
+                
+                <span class="ui teal label">
+                    java
+                </span>
+                
+                <span class="ui teal label">
+                    javaee
+                </span>
+                
+                <span class="ui teal label">
+                    etkinlik
+                </span>
+                
+            </div>
+            
+        </div>
+
+    </article>
+</section>
+</section>
+
+<section class="footer-container">
+    <footer class="ui grid">
+        <div class="ten wide mobile ten wide tablet eight wide computer column centered">
+            <div class="ui grid">
+                <div class="twelve wide mobile two wide tablet two wide computer centered column center aligned">
+                    <img id="footer-logo" src="https://omerozkan.net/img/footer-logo.png" alt="Footer lan ne bakiyon" class="ui image">
+                </div>
+                <div class="twelve wide mobile eight wide tablet eight wide computer middle aligned centered column center aligned">
+                    © 2008 Ömer Özkan. Tüm hakları saklıdır. <br/><a href="https://omerozkan.net">Ömer Özkan</a> is licensed under a <a
+                        href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License.</a>
+                </div>
+                <div class="twelve wide mobile two wide tablet two wide computer middle aligned centered column">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                        <img id="cc-logo" alt="Creative Commons License" style="border-width:0"
+                             class="ui image centered"
+                             src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+
+<script src="https://omerozkan.net/js/scripts.js"></script>
+</body>
+</html>

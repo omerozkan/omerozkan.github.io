@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kata on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/kata/</link>
+    <description>Recent content in Kata on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Mon, 09 Jun 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/kata/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bowling Katası</title>
+      <link>https://omerozkan.net/bowling-katasi/</link>
+      <pubDate>Mon, 09 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/bowling-katasi/</guid>
+      <description>
+
+&lt;p&gt;Robert C. Martin (Uncle Bob)&amp;lsquo;un hazırladığı bowling oyunu katasının videosunu hazırladım.
+Zaman buldukça yeni katalar üretmeye ve videolarını hazırlamaya çalışacağım.&lt;/p&gt;
+
+&lt;h3 id=&#34;bowling-oyununun-kuralları:7a957442c0f0cbc9e8daa6c7cecd2dea&#34;&gt;Bowling Oyununun Kuralları&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://omerozkan.net/images/post/bowling-kata/bowling-score.jpg&#34; alt=&#34;Bowling Skor Tablosu&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Oyunda toplamda 10 frame bulunmaktadır.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Her frame de ise 10 tane labutu vurmak için 2 atış hakkı bulunmaktadır.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Her frame’de vurulan toplam labut sayısı skoru gösterir.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Her frame’in başında eğer ilk atışta 10 adet labut birden vurulursa strike yapılmış olunur
+ve sonraki iki atışta vurulan labut sayısı kadar bonus skor kazanılır.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Her frame’de 10 pin iki atışta vurulursa spare yapılmış olunur ve sonraki atıştaki vurulan labut sayısı kadar bonus kazanılır.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;10. frame diğerlerinden farklıdır. Bir sonraki atış olmayacağı için son frame’de strike yapılırsa &lt;strong&gt;2&lt;/strong&gt;, spare yapılırsa &lt;strong&gt;1&lt;/strong&gt; atış hakkı daha kazanılır.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Kurallara göre Bowling’de en yüksek skor, 12 strike ile 300’dür.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Üstteki resimde örnek bir skor tablosu gösterilmiştir. Daha detaylı bilgi için &lt;a href=&#34;https://tr.wikipedia.org/wiki/Bovling&#34;&gt;Wikipedi&lt;/a&gt;&amp;lsquo;den bilgi alabilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;Video &lt;a href=&#34;http://kodkata.com/bowling-game/&#34;&gt;Kod Kata&lt;/a&gt; sitesinde de yayınlanmıştır.&lt;/p&gt;
+
+&lt;h3 id=&#34;video:7a957442c0f0cbc9e8daa6c7cecd2dea&#34;&gt;Video&lt;/h3&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/rklz35GWtrQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>

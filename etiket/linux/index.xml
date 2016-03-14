@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/linux/</link>
+    <description>Recent content in Linux on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Mon, 02 Dec 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Github Depolarının Redmine&#39;a Entegre Edilmesi</title>
+      <link>https://omerozkan.net/github-deposunun-redminea-baglanmasi/</link>
+      <pubDate>Mon, 02 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/github-deposunun-redminea-baglanmasi/</guid>
+      <description>&lt;p&gt;İş takip sistemi Redmine&amp;rsquo;ı ve sürüm takip sistemi git&amp;rsquo;i kullanıyorum. Git, SVN gibi sürüm takip sistemlerindeki depoları
+redmine&amp;rsquo;a bağlayabiliyorsunuz. Github ise açık kaynak projelere ücretsiz alan sağlıyor.
+Github&amp;rsquo;daki bir projemi Redmine&amp;rsquo;a bağlamak istedim. Kendi uğraşımdan sonra &lt;a href=&#34;https://eventualis.org/&#34;&gt;Samed Beyribey&lt;/a&gt;&amp;lsquo;den yardım istedim.
+Kendisi nasıl entegre edebileceğimi anlattı. Sizler için de faydalı olacağını düşünerekten bu yazıyı paylaşmak istedim.&lt;/p&gt;
+
+&lt;p&gt;Github depolarınızı Redmine&amp;rsquo;a entegre etmek için aşağıdaki adımları uygulamanız yeterlidir.&lt;/p&gt;
+
+&lt;p&gt;Öncelikle Github deposunu Redmine&amp;rsquo;ın kurulu olduğu sunucuda dilediğiniz bir dizine git projenizi mirror parametresi ile klonlayın.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git clone https://github.com/omerozkan/vipera.git --mirror&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Eğer projeniz private ise http yerine ssh ile klonlayabilirsiniz.
+Klonlama işleminden sonra redmine panelinden Yönetim -&amp;gt; Ayarlar sayfasına gidin ve Depolar sekmesinden bir API Key oluşturun.&lt;/p&gt;
+
+&lt;p&gt;Eklemek istediğiniz projeye gidip projede Ayarlar -&amp;gt; Depolar &amp;lsquo;a tıklayıp yeni bir depo oluşturun.
+Burda &amp;ldquo;Path to repository&amp;rdquo; değerine klonladığınız git dizininin tam yolunu yazın.
+Klonladığınız git dizinine redmine&amp;rsquo;nın sistemdeki kullanıcısının erişebilmesi gerekiyor. İzinleri ona göre yapılandırın.
+Bu işlemi gerçekleştirdikten sonra git deposundaki son değişiklikleri alması ve redmine&amp;rsquo;ın bu değişiklikleri okuması için cron oluşturmak gerekiyor.
+Cron oluşturmak için&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;crontab -e&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;komutunu girdiğinizde karşınıza vi editoru çıkacaktır. Cron ayarlarınızı vi editorüne girip kaydedebilirsiniz.
+Örneğin her saat başı güncellemeleri almak istiyorsanız aşağıdaki cron ayarlarını kullanabilirsiniz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/1d0ecc2af86e3d4eb312.js?file=cron&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Böylelikle github projenizi redmine&amp;rsquo;a entegre etmiş olursunuz.
+Standart olarak &amp;ldquo;refs #işnumarası&amp;rdquo; şeklinde gönderdiğiniz commitler redmine&amp;rsquo;da o işe bağlanacaktır.&lt;/p&gt;
+
+&lt;p&gt;Bir sonraki yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linux&#39;da Fare Butonlarına İşlev Atama</title>
+      <link>https://omerozkan.net/linuxda-fare-butonlarina-islev-atama/</link>
+      <pubDate>Sun, 16 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/linuxda-fare-butonlarina-islev-atama/</guid>
+      <description>&lt;p&gt;Uzun süreden beri Logitech fare kullanıyorum. Farenin standart tuşları dışında scroll&amp;rsquo;un sağ ve solunda iki ayrı tuşu daha vardı.
+Film izlerken VLC player ile filmi ileri geri alabiliyordum. Fakat bunun dışında bu iki tuşu kullanmadığımı farkettim.
+VLC dışındaki bir uygulama ile film izlerken sürekli ses kısıp açma ihtiyacım oldu.
+Bu ihtiyaçtan dolayı ki bu iki tuşa ses azaltma ve arttırma özelliği ekledim.
+Siz de aşağıdaki adımları uygulayarak fare tuşlarınıza işlev atayabilirsiniz.
+Kullandığım Linux dağıtımı Fedora 18, fakat diğer dağıtımlar için de aynı şekilde yapılır.
+Öncelikle &lt;code&gt;xbindkeys&lt;/code&gt; ve &lt;code&gt;xev&lt;/code&gt; uygulamalarını kuralım.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Redhat tabanlı dağıtımlar için&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;yum install xbindkeys xev&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Debian(Ubuntu,Mint etc) tabanlı dağıtımlar için&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo apt-get install xbindkeys xev&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;komutları ile xev ve xbindkeys uygulamalarını sistemimize yükleyelim. Daha sonra xbindkeys komutunu çalıştıralım:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;xbindkeys&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu komutu çalıştırdıktan sonra aşağıdaki gibi bir hata alabilirsiniz:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Error : /home/omer/.xbindkeysrc not found or reading not allowed.
+please, create one with &amp;lsquo;xbindkeys –defaults &amp;gt; /home/omer/.xbindkeysrc&amp;rsquo;.
+or, if you want scheme configuration style,
+with &amp;lsquo;xbindkeys –defaults-guile &amp;gt; /home/omer/.xbindkeysrc.scm&amp;rsquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;.xbindkeysrc dosyasını bulamadığından dolayı böyle bir hataya rastlayabilirsiniz. Dosya oluşturmak için yukardaki çıktıda gördüğnüz gibi:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;xbindkeys –defaults &amp;gt; .xbindkeysrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu komutu girdikten sonra .xindkeysrc dosyası oluşacaktır. Fare butonlarına işlev atamadan önce butonların numaralarını öğrenelim.
+Bunun için xen uygulamasından faydalanacağız.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;xen&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu komutu girdiğinizde karşınıza bir &amp;ldquo;Event Tester&amp;rdquo; penceresi açılacaktır.
+Bu pencere üzerinde fare ile bastığınız her tuşun numarasını uçbirim ekranından görebilirsiniz. Örneğin sola tıkladığımda:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;ButtonRelease event, serial 28, synthetic NO, window 0x2a00001,
+  root 0x1db, subw 0x2a00002, time 7219539, (43,47), root:(293,488),
+  state 0x100, button 1, same_screen YES&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Aşağıda button 1 yazısı farenin sol tuşun numarasının 1 olduğunu gösterir.
+Örneğin benim atama yapmak istediğim scroll&amp;rsquo;un tuşların numarası 6 ve 7&amp;rsquo;dir.
+Sizin de aynı olmayabilir. Bu tuşlara işlev atamak için .xbindkeysrc dosyasını istediğiniz bir editörle açabilirsiniz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0846f89e4223f2481eb8.js?file=xbindkeysrc&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Burada &amp;ldquo;komut&amp;rdquo; yerine neyi gerçekleştirmesini istiyorsanız onu giriyorsunuz.
+Bu satırı eklediğimde 6. butona bastığımda istediğim komutu gerçekleştirecektir.
+Ben 6. buton için ses azaltma, 7. buton için ses arttırma özelliklerini ekledim:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0846f89e4223f2481eb8.js?file=xbindkeysrcfinal&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Dosyayı kaydedip kapattığınızda eğer xbindkeys uygulaması çalışmıyorsa, xbindkeys komutunu tekrar girebilirsiniz.
+Eğer sisteminiz her açıldığında xbindkeys uygulamasının aktif olmasını istiyorsanız.
+Aşağıdaki komutu girerek karşınıza çıkan pencerede xbindkeys i ekleyerek bu işlemi gerçekleştirebilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;gnome-session-properties&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://omerozkan.net/images/post/linux/gnomesessionproperties.png&#34; alt=&#34;Gnome Session Properties&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu komut sadece gnome tabanlı masaüstü yöneticilerinde çalışacaktır. KDE kullanıyorsanız, nasıl yapıldığını öğrenmeniz gerekir.&lt;/p&gt;
+
+&lt;p&gt;Bir başka yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Bir Linux Hikayesi</title>
+      <link>https://omerozkan.net/bir-linux-hikayesi/</link>
+      <pubDate>Sun, 03 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/bir-linux-hikayesi/</guid>
+      <description>&lt;p&gt;Merhabalar&lt;/p&gt;
+
+&lt;p&gt;Uzun zamandır böyle bir yazı yazmayı planlıyordum. Özellikle çevremdeki insanlar neden Windows işletim sistemini kullanmadığımı,
+ neden açık kaynak fanatiği olduğumu soruyorlar. Belki bu yazı biraz olsun bu sorulara cevap verebilir.
+ Bilgisayar ile tanışmam aslında yaklaşık 3-4 yaşlarında oldu. O zamanlar babam askerlik şubesinde memur olarak çalışıyordu.
+ Dolayısıyla bilgisayar kullanıyordu. İlk bilgisayarı orda görmüştüm.
+ Babamın yanına gittiğimde oturup uzun uzun bilgisayar ekranına hayranlıkla bakardım.
+ Aklımda kalan tek şey var o da bilgisayar mühendisliği mesleğini duymamdır.
+ Çok net hatırlıyorum ki o zaman bilgisayar mühendisi olmaya karar vermiştim.
+ Sonradan öğrendim ki o bilgisayarlarda Unix işletim sistemi çalışıyormuş.
+ Çocukluğumda en sevdiğim oyuncağım Atari 2600 oldu. Özellikle babam River Raid oyununun hastasıydı. Merak edenler &lt;a href=&#34;https://www.youtube.com/watch?v=pmPjsBDN9Xw&#34;&gt;buraya&lt;/a&gt;
+ tıklayabilirler.
+ İkinci sınıfa geldiğimde o zamanın en güzel oyuncağı Nintendo’nun 8 bit işlemcili NES oyun konsollarından birine sahiptim.
+ Goal 3, en sevdiğim oyunlardan biridir. Arada sırada halen oynuyorum :)&lt;/p&gt;
+
+&lt;p&gt;Bilgisayar ile çok küçük yaşta tanışmama rağmen ekonomik sıkıntılar yüzünden çocukluğum bilgisayar ile geçmedi.
+Hayalimde hep bir bilgisayar sahibi olmak vardı. Nitekim bu hayalim 2005 yılında gerçekleşti.
+Ben o zamanlar lisede hazırlık okuyordum. O zamanlar Windows’un XP SP2 versiyonu vardı.
+Bilgisayarımda da bu işletim sistemi yüklüydü. Derken 3. gün işletim sistemi göçtü :)
+Aslında bu bana güzel bir işaret olmalıydı. Windows’la benim anlaşmam çok zor oluyordu.
+Internet kullanmadığım halde sürekli windows işletim sistemi ile ilgili hep problem yaşıyordum.
+Her seferinde kasayı alıp, windows kurdurmak yerine bu işi kendim yapmam gerektiğini anladım
+ve işletim sistemini kendim kurmaya başladım.&lt;/p&gt;
+
+&lt;p&gt;Kurulumu kendim yapmam da bu sefer benim canımı sıkmaya başlamıştı. Sürekli iş çıkıyordu bana.
+Hem biraz donanım öğrenmek hem de bu tür sorunları yaşamamak için bir teknik serviste çalışmaya başladım.
+Teknik serviste de işleri kavramam uzun sürmedi. Ayrıca bu sayede interneti de kullanmaya başlamıştım.
+Özellikle hazırlık sınıfını çok verimli geçirdiğim için İngilizce sitelerde dolaşmak da çok zor olmuyordu.
+Windows ile yaşadığım sıkıntılar başka çözümler aramamı sağladı. Yedek alma ve yükleme işlemleri yapmaya başladım.
+Yanlışlıkla bütün HDD’yi sildiğim de olmuştur. Teknik serviste çalışırken bir bilgisayara bir Gelecek Linux kurmam istenmişti.
+Yine dergilerden Linux’un bazı dağıtımları vardı. Bu CD’ler kurulan değil çalışan CD’lerdi.
+Gelecek Linux’tan sonra Knoppix, Turkix gibi işletim sistemlerini denedim. Malesef her seferinde tekrar windows’a döndüm.
+O zamanlar Türk işletim sistemi Pardus’u duymuştum. Özellikle veri kurtarmak için kullanıyordum.
+Bilgisayarıma defalarca Linux dağıtımı kurdum fakat evimde internet bağlantımın olmaması yüzünden tekrar windowsa dönüyordum.&lt;/p&gt;
+
+&lt;p&gt;O zamanlar teknik serviste çalışırken web programlamaya ilgim vardı. Ücretsiz hosting servisleri alıp bu servislere Joomla ve Mambo kuruyordum.
+O zamanlar Joomla, daha yeni Mambo’dan çatallanmıştı. Joomla’yı sevdiğim için PHP öğrenmeye karar verdim.
+Joomla ile bir süre haşır neşir olduktan sonra babamın tayini çıktı.
+Yeni çevre ve arkadaş da olmadığı için fırsat bu fırsatttır diyip 2 hafta boyunca bilgisayar başından kalmayarak PHP öğrendim.
+PHP öğrenirken bir taraftan HTML diğer taraftan da SQL öğreniyordum.
+İnternetim olmadığı için de internet cafelere gidip Php ile ilgili yaşadığım sorunlara çözüm arardım.
+Bazen fonksiyon isimlerini alır USB belleğe atardım veya not defterime kaydederdim.
+Eve gelip not aldığım şeyleri tekrar tekrar denerdim.
+Şimdiki internete sahip ama hiçbir şeyi araştırmadan soru soranlara gerçekten çok üzülüyorum.&lt;/p&gt;
+
+&lt;p&gt;Lise döneminde bir proje yarışmasına katılacaktım. Proje web tabanlı bir projeydi.
+Fakat tek başıma yapacağım için CSS ve JavaScript öğrenmem gerekiyordu.
+Yine dökümanları toplayıp Internet Explorer 6 üzerinde çalışmaya başladım.
+Fakat ne acıdır ki bir türlü CSS öğrenemedim. Meğerki yazdığım kodlar yüzünden değil IE6 nın düzgün çalışmaması yüzündenmiş.
+O projeyi sırf bu yüzden yapamadım. Hatta web programcılığından da baya bir soğumuştum.
+CSS öğrenmem sırf IE6 yüzünden 2 yıl gecikmiş oldu.
+Windows ile ilgili bir sürü dert olması da bunlara eklenince Microsoft firmasından nefret etmeye başladım.
+O zamanlar da şunu düşünüyordum. Neden bir işletim sistemi kendini koruyamıyor? Neden antivirus vs gibi ek araçlara ihtiyacım var?
+Hem bu kadar para ödeyip de neden bu kadar sıkıntı yaşıyorum derken bu sorular “Neden Linux kullanmıyorsun?” sorusuna geldi.
+Fakat bunu başarmam için evimde internet bağlantısının olması gerekiyordu. Çünkü pardus u defalarca denemiştim.
+Fakat internetin olmaması yüzünden pek etkin bir şekilde kullanamıyordum.&lt;/p&gt;
+
+&lt;p&gt;İnternet ile bu kadar iş yapmama rağmen evimde internet bağlantım yoktu. Bu sorunu liseden mezun olunca çözdüm.
+Fakat bir süre windows kullanmaya devam ettim. Windows, daha interneti doğru düzgün kullanamadan birkaç defa daha çöktü :)
+Bilgisayarıma Windows ile beraber Pardus kurmuştum. Linux’a yeni başlayanlara hep Pardus öneriliyordu. Ben de bu öneriye kulak verdim.
+Pardus’u yaklaşık 1 hafta boyunca kullanadım. Fakat Pardus’u da sevmedim.
+Aslında bunun tek sebebi KDE’ydi.
+Daha sonra Ubuntu 8.4 sürümünü edindim. 8.4 ve 8.10 derken sürekli windows kullandığımı bunun bana bir yararı olmadığını farkettim.
+Linux’u hem öğrenmek hem de alışmak için kendi kendime 6 ay boyunca windows açmamaya söz verdim.
+Linux’a bu sayede daha da aşina olacaktım. Ubuntu o zamanlar varsayılan olarak Gnome 2 ile geliyordu.
+Gnome masaüstü yöneticisini gerçekten çok sevmiştim. Bilgisayarımda geçirdiğim o 6 ay bana birçok şey öğretmişti.
+İşletim sisteminde aldığım hataların çözümlerini bulmak zor olmadı.
+Bir de işin güzel tarafı işletim sistemini istediğim şekilde değişiklik yapabiliyordum. Yani bir nevi özgürdüm.
+Özellikle terminalden işletim sistemi ile iligli işlemleri yapabilmek daha da sevdirmişti.
+Nitekim artık bir Linux kullanıcısı olmuştum. Php ile yaptığım geliştirmeleri, linux ortamından yapıyordum.
+Ayrıca bilgisayarımın donanımsal özellikleri iyi olmamasına rağmen işletim sistemi çok performanslı çalışıyordu.
+Ayrıca virus derdi yoktu. Sürekli çöken, zamanla performans kaybı olan bir işletim sistemi de değildi.
+Tabiki bir güzel tarafı daha vardı. O da ücretsiz olması.&lt;/p&gt;
+
+&lt;p&gt;Linux kullanırken özgür ve açık kaynak bir işletim sistemi kullandığımı bilmiyordum.
+Bilgisayar mühendisliği bölümünü okumaya başladığımda bilgisayarımdaki Ubuntu ve Windows 7 işletim sistemi vardı.
+2010 yılında Bilmök etkinliğine katıldım. Hakan Uygun‘un “Özgür yazılım öğrencilere ne kazandırır?”
+başlıklı konuşması beni etkilemiş ve Linux’u da çok sevdiğimden özgür yazılımcı olmaya karar vermiştim.
+Nitekim bu kararım beni özgür ve açık kaynak teknolojileri öğrenmeye yönlendirdi.
+Bu teknolojilerin en güzel tarafı genellikle çoğu araçlar ücretsiz olmasıydı.
+Aynı zamanda bu teknolojiler daha kaliteliydi. Linux işletim sisteminde Windows kadar sorun yaşamıyordum.
+Diğer güzel bir tarafı bu teknolojilerin platform bağımsız olması her işletim sistemlerinde çalışabilmesidir.
+Bu da benim için ayrı bir avantaj. 2. sınıfta .net öğrenmek yerine Java’yı tercih ettim.
+Özellikle Java uzun zamandır öğrenmek istediğim bir teknolojiydi.
+Özellikle web ortamını da sevdiğimden kurumsal java geliştiricisi olmaya karar verdim.
+ Sınıfımda sadece Linux kullanan benden başka kimse yok. Ayrıca windows kullanmamam bazı kişilerden tepki de almama sebep oldu.
+ Özgür yazılımı tercih ettiğim için de. Neymiş özgür yazılımcılar para kazanamıyormuş.
+ Ben kazanayım da görsünler :) Bir yazılımın özgür olması ücretsiz olacağı anlamına gelmez.
+ Fakat ben kimseyi dinlemedim. Şu an bilgisayarımda sadece linux işletim sistemi var. Gerçekten çok memnunum.&lt;/p&gt;
+
+&lt;p&gt;Linux ile ilgili herkesin bir hikayesi vardır. Ben de kendi hikayemi anlatmaya çalıştım.
+ Özgür yazılımı tercih etmek konusunda da herkesin görüşü aynı değil. Kimisi politik, kimisi ücretsiz olması,
+ kimisi kaliteli olması gibi tercih etme sebebi var. Benim tercih sebebim ise bütün sebeplerin hemen hemen hepsidir.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

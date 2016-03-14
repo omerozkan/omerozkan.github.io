@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Package Private on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/package-private/</link>
+    <description>Recent content in Package Private on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Fri, 02 Nov 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/package-private/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>OOP: Kapsülleme</title>
+      <link>https://omerozkan.net/oop-kapsulleme/</link>
+      <pubDate>Fri, 02 Nov 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/oop-kapsulleme/</guid>
+      <description>
+
+&lt;p&gt;Blogumda yazılım ile ilgili pek bir yazı olmadığından artık bazı konularda yazılar yazmaya karar verdim.
+Bu yüzden programlamanın en temel ve en önemli konularından biri olan Nesne Yönelimli Programlama&amp;rsquo;yı elimden geldiği kadar anlatmaya çalışacağım.
+Object Oriented Programming bir programlama yaklaşımıdır. Nesneye yönelik programlama, nesneye dayalı programlama,
+nesne tabanlı programlama, nesne esaslı programlama gibi bir çok çevirisi vardır. Ben de Türkçe de daha çok yaygın olan nesne
+yönelimli programlamayı kullanıyorum. Fakat genelde bahsederken OOP olarak kısaltacağım.&lt;/p&gt;
+
+&lt;p&gt;Yazılım gereksinimleri arttıkça prosedürel programlama bir çok sorunu beraberinde getiriyordu.
+Bu sorunlara kod karmaşıklığının artması, bakımın oldukça zor olması, ekip halinde çalışmayı zorlaştırması,
+maliyetlerin artması örnek olarak verilebilir. Bütün bu sorunların sonucu olarak da &amp;ldquo;Nesne Yönelimli Programlama&amp;rdquo; ortaya çıkmıştır.
+OOP ilk olarak 60&amp;rsquo;lı yıllarda Norveç&amp;rsquo;te geliştirilen &lt;strong&gt;&amp;ldquo;Simula&amp;rdquo;&lt;/strong&gt; programlama dili ile ortaya çıkmıştır. Simula ise &lt;strong&gt;ALGOL&lt;/strong&gt; tabanlı
+bir programlama dilidir. Günümüzde hemen hemen bütün modern diller OOP desteklemektedir. OOP&amp;rsquo;nin bu kadar popüler olmasının
+bir sebebi var. Merak edenler için &amp;ldquo;SOLID&amp;rdquo; anahtar kelimesini vereyim.
+Fakat bu yazı dizisinde OOP&amp;rsquo;nin en temel özelliklerini anlatacağım.
+OOP&amp;rsquo;yi anlatırken Java&amp;rsquo;da sınıflar ve nesneler konusunda bilgi sahibi olduğunuzu varsayacağım.&lt;/p&gt;
+
+&lt;p&gt;OOP denilince akla üç (bazı kaynaklara göre dört) özellik geliyor. Bunlar:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Encapsulation (Kapsülleme)&lt;/li&gt;
+&lt;li&gt;Inheritance (Kalıtım)&lt;/li&gt;
+&lt;li&gt;Polymorphism (Polimorfizm veya Çok biçimlilik)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bazı kaynaklar Abstraction (Soyutlama)&amp;lsquo;ı da dahil etmektedir. Daha önce ben de bu şekilde tanımlardım.
+Soyutlama ise çok daha geniş bir konu olduğundan üç özellik olarak tanımlamayı tercih ediyorum. Bu yazı dizisinde
+soyutlamaya da yer vereceğim.&lt;/p&gt;
+
+&lt;h2 id=&#34;encapsulation-kapsülleme:ec6c8a1cc144b0e8e50636ff4e409a35&#34;&gt;Encapsulation (Kapsülleme)&lt;/h2&gt;
+
+&lt;p&gt;Kapsülleme de aslında bir çok şekilde yapılabilir. Fakat basit olması amacı ile en kolay yönden tanımlayacağım.&lt;/p&gt;
+
+&lt;p&gt;Kapsüllemeyi kısaca tanımlarsak bir nesnenin iç yapısını (verilerini ve özelliklerini) dış dünyadan doğrudan erişime kapatılması anlamına gelir.
+Bu sayede nesneye ait veriler değer ataması yapılırken yanlış kullanımdan korunmuş olur. İç yapısının dışarıya açık olmaması
+aynı zamanda iç yapı ile ilgili değişikliklerin dış dünyanın etkilenmemesini de sağlamış olur. Bu açıdan çok önemlidir.&lt;/p&gt;
+
+&lt;p&gt;Java programlama dilinde nesne elemanlarının dışarıya kapatılması için &lt;strong&gt;private&lt;/strong&gt; erişim belirteci kullanılır.
+Java&amp;rsquo;da dört &lt;em&gt;erişim belirleyicisi (access modifier)&lt;/em&gt; vardır. Bunları kısaca tanımlarsak:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;public&lt;/strong&gt;: public kelimesi halka açık veya kamu anlamına gelmektedir.
+Bu erişim belirleyicisi ile tanımlanan herşey diğer bütün sınıflar tarafından erişilebilir.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;private&lt;/strong&gt;: özel veya gizli anlamına gelir.
+Bu erişim belirleyicisi ile tanımlanan herhangi bir eleman sadece ve sadece aynı sınıf içerisinden erişilebilir. Yani diğer sınıflar
+hiç bir şekilde erişemez.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;package-private&lt;/strong&gt;: Adı üstünde paket anlamına gelir. Bu erişim belirleyicisi ile işaretlenen herşey sadece ve sadece
+aynı paket içerisinde tanımlanan sınıflar tarafından erişilebilir. Farklı paketlerde bulunan sınıflar erişemez.
+Java&amp;rsquo;da değişkenleri, metodları vs. diğer erişim belirleyicisilerle tanımlamazsanız, &lt;em&gt;package-private&lt;/em&gt; olarak tanımlamış
+olursunuz. Yani package veya package-private gibi kelimeler kullanılmaz.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;protected&lt;/strong&gt;: Korumalı anlamına gelir. Bu erişim belirleyicisi ile herhangi bir eleman türetilmiş olan ve aynı paket içerisinde olan sınıflar içerisinden erişilebilir.
+(Kalıtım konusunda anlatılacaktır.)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bunlara kullanarak örnek bir sınıf tasarlayalım.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=accessModifierTest.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Payı (numerator) ve paydası (denominator) olan basit bir Rational (rasyonel) sınıfı tanımlayalım.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rational.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu sınıfın iki değişkeni var: &lt;strong&gt;&lt;em&gt;numerator&lt;/em&gt;&lt;/strong&gt; ve &lt;strong&gt;&lt;em&gt;denominator&lt;/em&gt;&lt;/strong&gt;.
+Bu iki değişken sınıfa ait olduğu için alan (field) olarak tanımlayabiliriz.
+Bu iki alanın erişim belirleyicisini &lt;strong&gt;private&lt;/strong&gt; olarak belirledik.
+Bu sayede sınıf dışından erişimi kapatmış olduk.
+Örneğin başka bir sınıftan aşağıdaki gibi bir kullanım hatalı olacaktır.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rationalClient.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Ayrıca dikkatlice incelerseniz &lt;strong&gt;&lt;em&gt;Rational&lt;/em&gt;&lt;/strong&gt; sınıfında &lt;strong&gt;&lt;em&gt;IllegalDenominator&lt;/em&gt;&lt;/strong&gt; sınıfı da tanımlanmış. Bu tür sınıflara
+&lt;strong&gt;inner-class&lt;/strong&gt; diyoruz. Bu sınıfında bir erişim belirteci var. public olması sebebi ile bu sınıfa dışarıdan herkes erişebilir.&lt;/p&gt;
+
+&lt;p&gt;Rational sınıfına dikkat ederseniz getter ve setter metodlarımnız var (Örneğin: getNumerator(), setNumerator()).
+Bu metodların erişim belirleyicisi de &lt;strong&gt;&lt;em&gt;public&lt;/em&gt;&lt;/strong&gt; yani dışardan erişime açık.
+Bu sayede numerator ve denominator değişkenlerine bu metodlar aracılığı ile değer atanabilir. Aşağıdaki kullanım doğru olacaktır.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rationalClient2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;setNumerator&lt;/em&gt;&lt;/strong&gt; ve &lt;strong&gt;&lt;em&gt;setDenominator&lt;/em&gt;&lt;/strong&gt; sayesinde numerator ve denominator değişkenlerine değer atanmış oldu.
+Burada gördüğünüz set ile başlayan metodlara &lt;strong&gt;setter&lt;/strong&gt; adı verilir.
+Aynı şekilde bu alanların değerlerine erişmek için &lt;strong&gt;&lt;em&gt;getNumerator&lt;/em&gt;&lt;/strong&gt; ve &lt;strong&gt;&lt;em&gt;getDenominator&lt;/em&gt;&lt;/strong&gt; metodlarını kullanabiliriz.
+Bu şekilde tanımlanan metodlara da &lt;strong&gt;getter&lt;/strong&gt; adı verilir.&lt;/p&gt;
+
+&lt;p&gt;setDenominator metodunu detaylı inceleyelim. 15. satırda bir koşul olduğunu görüyorsunuz.
+Eğer denominator&amp;rsquo;e yani paydaya 0 değeri atanmaya çalışıldığında,
+bu metod Exception fırlatarak paydanın 0 olmasını engellemiş oluyor.
+Bu sayede yanlış kullanımı engellemiş olduk. Bu sayede veri bütünlüğü ve kontrolü sağlanmış oldu.
+Genelde bütün alanlar geçerli bir sebep olmadıkça private olarak tanımlanır. Yani dışarıya kapatılmalıdır.
+Her alan için getter ve setter metodları tanımlamak zorundayız diye de düşünmeyin.
+Böyle bir zorunluluk yok. getter ve setter metodlar olmadan farklı metodlar aracılığı ile de erişimi kontrol altına alabilirsiniz.
+Örneğin sınıfımıza 3 tane constructor metod ekleyelim.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rational2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu tasarımımız da farklı bir örnek oldu. Dikkat ederseniz bu tasarımımızda setter metodları kaldırdık.
+Bu sınıfı kullanan istemci artık sadece nesne üretirkendeğerleri verebilecek nesne üretildikten sonra değerini değiştiremeyecektir.
+nominator ve denominator değişkenleriniprivate olarak tanımladığımız için istemcinin doğrudan ne de dolaylı olarak
+değerini değiştiremez. Bu tarz sınıflara &lt;strong&gt;immutable&lt;/strong&gt; sınıf adı verilir.&lt;/p&gt;
+
+&lt;p&gt;Bu yazıda kısaca encapsulation yani kapsüllemeyi anlattım. Bir sonraki yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

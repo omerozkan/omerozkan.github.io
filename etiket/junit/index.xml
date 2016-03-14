@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Junit on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/junit/</link>
+    <description>Recent content in Junit on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Mon, 09 Jun 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/junit/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bowling Katası</title>
+      <link>https://omerozkan.net/bowling-katasi/</link>
+      <pubDate>Mon, 09 Jun 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/bowling-katasi/</guid>
+      <description>
+
+&lt;p&gt;Robert C. Martin (Uncle Bob)&amp;lsquo;un hazırladığı bowling oyunu katasının videosunu hazırladım.
+Zaman buldukça yeni katalar üretmeye ve videolarını hazırlamaya çalışacağım.&lt;/p&gt;
+
+&lt;h3 id=&#34;bowling-oyununun-kuralları:7a957442c0f0cbc9e8daa6c7cecd2dea&#34;&gt;Bowling Oyununun Kuralları&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://omerozkan.net/images/post/bowling-kata/bowling-score.jpg&#34; alt=&#34;Bowling Skor Tablosu&#34; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Oyunda toplamda 10 frame bulunmaktadır.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Her frame de ise 10 tane labutu vurmak için 2 atış hakkı bulunmaktadır.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Her frame’de vurulan toplam labut sayısı skoru gösterir.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Her frame’in başında eğer ilk atışta 10 adet labut birden vurulursa strike yapılmış olunur
+ve sonraki iki atışta vurulan labut sayısı kadar bonus skor kazanılır.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Her frame’de 10 pin iki atışta vurulursa spare yapılmış olunur ve sonraki atıştaki vurulan labut sayısı kadar bonus kazanılır.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;10. frame diğerlerinden farklıdır. Bir sonraki atış olmayacağı için son frame’de strike yapılırsa &lt;strong&gt;2&lt;/strong&gt;, spare yapılırsa &lt;strong&gt;1&lt;/strong&gt; atış hakkı daha kazanılır.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Kurallara göre Bowling’de en yüksek skor, 12 strike ile 300’dür.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Üstteki resimde örnek bir skor tablosu gösterilmiştir. Daha detaylı bilgi için &lt;a href=&#34;https://tr.wikipedia.org/wiki/Bovling&#34;&gt;Wikipedi&lt;/a&gt;&amp;lsquo;den bilgi alabilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;Video &lt;a href=&#34;http://kodkata.com/bowling-game/&#34;&gt;Kod Kata&lt;/a&gt; sitesinde de yayınlanmıştır.&lt;/p&gt;
+
+&lt;h3 id=&#34;video:7a957442c0f0cbc9e8daa6c7cecd2dea&#34;&gt;Video&lt;/h3&gt;
+
+
+&lt;div style=&#34;position: relative; padding-bottom: 56.25%; padding-top: 30px; height: 0; overflow: hidden;&#34;&gt;
+  &lt;iframe src=&#34;//www.youtube.com/embed/rklz35GWtrQ&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%;&#34; allowfullscreen frameborder=&#34;0&#34;&gt;&lt;/iframe&gt;
+ &lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
+      <title>Powermock ve Mockito ile JSF Sınıflarını Test Etmek</title>
+      <link>https://omerozkan.net/powermock-ve-mockito-ile-jsf-siniflarini-test-etmek/</link>
+      <pubDate>Fri, 03 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/powermock-ve-mockito-ile-jsf-siniflarini-test-etmek/</guid>
+      <description>&lt;p&gt;JSF Bean sınıflarında FacesContext gibi nesneler kullandığınızda ve bu sınıflara mock nesneler ile birim testleri yazdığınızda
+&lt;a href=&#34;https://github.com/mockito/mockito&#34;&gt;Mockito&lt;/a&gt;, JMock gibi araçlar yeterli olmayacaktır. Örnek olarak aşağıdaki metodu inceleyelim.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginAction.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu metod basit bir login işlemi gerçekleştirmektedir.
+Anlaşılacağı gibi xhtml sayfasında bir buton üzerinde actionListener parametresinde tanımlanmaktadır.
+Öncelikle kullanıcı adı ve parolanın boş bırakılıp bırakılmadığını kontrol etmekte eğer alanlar boş değilse
+business katmanı ile login işlemini gerçekleştirmektedir.&lt;/p&gt;
+
+&lt;p&gt;Şimdi kodları inceleyelim.  &lt;strong&gt;2&lt;/strong&gt;. satır da JSF sayfasına mesaj göndermek için FacesContext nesnesini &lt;code&gt;FacesContext.getCurrentInstance()&lt;/code&gt;
+statik metodu ile almaktadır. &lt;strong&gt;3&lt;/strong&gt;. satırda bir sınıf değişkeni yer almakta bu değişken sayesinde başka bir metod oturum açma işlemini gerçekleştirmektedir.&lt;br /&gt;
+&lt;strong&gt;4&lt;/strong&gt;. satırdaki koşul kullanıcı adı ve parola alanlarının boş bırakılıp bırakılmadığını kontrol etmektedir.
+&lt;strong&gt;8&lt;/strong&gt;. satır da ise loginManager nesnesi iş katmanının bir nesnesi olup DI (Dependency Injection) ile enjekte edilmektedir.
+LoginManager bir interface&amp;rsquo;dir. Bu sayede LoginBean sınıfının iş katmanına bağımlılığı esnek olur.
+Aynı zamanda test edebilmek için kolayca mock nesneleri oluşturabiliriz.
+Alt katmandan gelen sonuç ise bir &lt;strong&gt;LoginResult&lt;/strong&gt; nesnesidir.&lt;/p&gt;
+
+&lt;p&gt;Burdaki temel sorun &lt;strong&gt;2&lt;/strong&gt;. satırdaki FacesContext nesnesinin statik bir metod aracılığı ile alınmış olmasıdır.
+Statik metodları Mockito gibi araçlarla taklid edemeyiz.
+Burda benim aklıma gelen ilk çözüm, bir Java anotasyonu oluşturup, setter injection ile uygulama bir servlet container
+içerisinde çalıştığında gerçek FacesContext nesnesini enjekte etmesini sağlamak ve test edildiğinde ise kolayca mock
+nesneyi enjekte edebilmekti. Diğer çözümler için internette arama yaparken &lt;a href=&#34;https://github.com/jayway/powermock&#34;&gt;PowerMock&lt;/a&gt; ile karşılaştım.
+PowerMock ile statik metodlara hatta private alanlara müdahale edebiliyorsunuz.&lt;/p&gt;
+
+&lt;p&gt;Örnekte PowerMock ile Mockito araçlarını beraber kullandım. Mockito yerine dilediğiniz test aracını kullanabilirsiniz. (JMock, EasyMock vs.)&lt;/p&gt;
+
+&lt;p&gt;Öncelikle bir setUp metodu oluşturalım:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginBeanTest.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;32&lt;/strong&gt;. satır da FacesContext sınıfı Mockito ile mock&amp;rsquo;lanmaktadır. 37. satırda benzer şekilde LoginManager sınıfı mocklanmaktadır.
+&lt;strong&gt;36&lt;/strong&gt;. satır da test edilecek olan sınıfın nesnesi üretilmektedir.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;33&lt;/strong&gt;. satır da &lt;strong&gt;mockStatic()&lt;/strong&gt; metodu kullanılarak FacesContext nesnesinin statik metodları mock&amp;rsquo;lanmış oldu.
+&lt;strong&gt;34-35&lt;/strong&gt;. satırlarda PowerMockito.doReturn() metodu ile &lt;em&gt;FacesContex.getCurrentInstance()&lt;/em&gt; statik metodunun davranışı değiştirilmiştir.
+Bu sayede birim testlerimizi çalıştırabiliriz. Örnek olarak bir test metodu ekleyelim:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginWithEmptyUsername.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;4-6&lt;/strong&gt;. satırlarda gerekli test verileri girilip login işlemi gerçekleştirilmiştir. &lt;strong&gt;7&lt;/strong&gt;. satırda ise Mockito ile
+&lt;code&gt;context.addMessage(null, INVALID_LOGIN)&lt;/code&gt; yani doğru metodun çağrılmasının testi yapılmıştır.&lt;/p&gt;
+
+&lt;p&gt;Bu şekilde testler çalıştırıldığında olumsuz sonuç alırız.
+PowerMockito&amp;rsquo;nun gereken sınıfları taklit etmesi için test sınıfının başına aşağıdaki gibi anotasyonlar tanımlanmalıdır:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginBeanTest2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; satırda testlerin PowerMockRunner ile çalışmasını ve &lt;strong&gt;2&lt;/strong&gt;. satırda ise &lt;strong&gt;FacesContext&lt;/strong&gt; sınıfına ait statik metodun mock&amp;rsquo;lanmasını sağladık.
+Bu sayede testlerimiz çalışır hale gelmektedir.&lt;/p&gt;
+
+&lt;p&gt;Bir başka yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Test Güdümlü Yazılım Geliştirmeye Merhaba</title>
+      <link>https://omerozkan.net/test-gudumlu-yazilim-gelistirmeye-merhaba/</link>
+      <pubDate>Fri, 12 Oct 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/test-gudumlu-yazilim-gelistirmeye-merhaba/</guid>
+      <description>&lt;p&gt;&amp;ldquo;Test Driven Development&amp;rdquo; yani Türkçe söylersem &amp;ldquo;Test Güdümlü Yazılım Geliştirme&amp;rdquo; ile birkaç ay öncesinde tanıştım.
+Fakat bu konuda halen öğrenmeye devam ediyorum. Bu konuda bildiğim temel bilgileri paylaşmak istiyorum.
+Aynı zamanda bu konuda kendimi geliştirdikten sonra geri dönüp düşüncelerime tekrar bakmak istiyorum.
+Aslında blog tutmamın en sevdiğim yanı da budur. Yazılım ile ilgili düşüncelerim sürekli değişmektedir.
+Bu değişimi takip etmenin bir yolu da blog yazmaktır.&lt;/p&gt;
+
+&lt;p&gt;Öncelikle yazılım yapmak demek sadece kod yazmak anlamına gelmez. Kod yazmak işin sadece bir kısmıdır.
+Yazılımda testler de oldukça önemlidir. Çünkü yazdığınız kodların düzgün çalışıp çalışmadığını ancak testler ile anlayabilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;Başta ben herşeyin önceden yapıldığını ve kod yazmanın işin hep son aşaması olarak düşünürdüm.
+Kendimi geliştirmek için yazmaya başladığım projelerde öncelikle detaylı bir tasarım yapardım.
+İnşaat mühendislerinin yaptığı gibi yazılımı önce çizip tasarlayarak sonra kodlamaya geçerdim.
+Tasarım prensiplerine hakim olmamamın da etkisi olsa da hep hesaplamadığım şeyler ortaya çıkıyordu.
+Tasarımım da esnek olmadığı için projeyi kodlarken acayip rahatsızlık hissediyor ve bir sürü kötü kodlama yapıyordum.
+Bu da beni olağanüstü mutsuz ediyordu. Birşeylerin eksik olduğunu farkettiğimde tasarım ile ilgili dökümanlar aramaya başlamıştım.
+Bu sayede Özcan Acar ile tanışma fırsatı buldum. KurumsalJava blogunu incelediğimde Özcan Acar&amp;rsquo;ın test güdümlü geliştirmenin
+çok önemli olduğunu yazılarında ve seminerlerinde gördüm. Sadece tasarım değil öğrenmem gereken bir sürü şey olduğunu farkettim.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;ui right floated bordered medium image content-image&#34; src=&#34;https://omerozkan.net/images/post/tdd/tdd_cycle.jpg&#34;
+     alt=&#34;Test güdümlü geliştirme hayat döngüsü&#34; /&gt;
+Birim testleri için Java da JUnit kullanılıyor. JUnit ile ilk Linux yaz kampında tanışmıştım.
+Fakat orda test güdümlü yazılım yapmadık sadece yazdığımız kodları test ettik.
+Test güdümlü yazılım geliştirmek demek sadece yazılan kodları test etmek anlamına gelmez.
+Yazılımda niyetiniz önemlidir. Kodlamaya başlamadan önce testler yazılır.
+Daha sonra bu testlerin çalışması için gereken kodlar yazılır. Bu sayede adım adım kodlama yapılmış olur.
+Bu başlangıçta zaman kaybı gibi gözükebilir. Çünkü yazılımın gereken kodların yanı sıra bir de test yazmak zorundasınız.
+Bazen iki yazılımcı aynı iş için çalışır. Bir yazılımcı testleri yazarken diğeri de testlerin çalışması için gereken kodları yazar.
+Test yazmak başlangıçta zaman kaybı olarak görülebilir olsa da aslında durum tam tersidir.
+Test yazdığınız zaman yazdığınız kodlar %100 test edilmiş olur. Bu sayede yaptığınız yazılım sorunsuz çalışır.
+Otomatik çalışan testleriniz olmadığı zaman kodları test etmek bir hayli zordur.
+Bu da zaman kaybettirir. Bunun yanı sıra gereksiz kodlar yazmanızı engeller. Bu sayede yine zaman kazanmış olursunuz.
+Düşünün bir sınıfınız var ve o sınıfa refactoring uyguladınız veya optimizasyon yaptınız.
+Yaptığınız değişikliklerin eskisi gibi düzgün çalıştığını nasıl anlarsınız? Bunun için testleri çalıştırmanız yeterli olacaktır.
+Yazılımınız daha tutarlı bir hale gelmiş olacaktır. Özellikle refactoring yapmak için otomatik çalışan testlerinizin olması şarttır.&lt;/p&gt;
+
+&lt;p&gt;Paul Graham&amp;rsquo;ın &amp;ldquo;Hackers and Painters&amp;rdquo; kitabından bir alıntı yapmak istiyorum:
+&lt;em&gt;&amp;ldquo;Programlar yazılırken şekillendirilmelidir; tıpkı yazarlar, ressamlar ve mimarların yaptığı gibi.&amp;rdquo;&lt;/em&gt;.
+Bu söze kesinlikle katılıyorum. Programları yazarken şekillendirmek için ise öncelikle amacımızın yani niyetimizin belirli olması gerekir.
+Test güdümlü yazılım geliştirmek aynı zamanda bunu sağlamış olur.&lt;/p&gt;
+
+&lt;p&gt;Test güdümlü yazılım ile ilgili bildiklerimi aktardıktan sonra bir örnek vermek istiyorum.
+Çok sevdiğim bir kod katası olan Roman Rakamları katasından örnek vereceğim.
+Dilerseniz &lt;a href=&#34;http://kodkata.com/roma-rakamlari-katasi/&#34;&gt;http://kodkata.com/roma-rakamlari-katasi/&lt;/a&gt; adresinden katayı izleyebilirsiniz.
+Kata hakkında bilgi almak için ise &lt;a href=&#34;http://www.kurumsaljava.com/2012/04/07/kod-kata-ve-pratik-yapmanin-onemi/&#34; title=&#34;Kata&#34;&gt;buraya&lt;/a&gt; tıklayabilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;Öncelikle RomanNumeral sınıfı için test sınıfı (RomanNumeralTest) oluşturuyoruz ve bir test metodu yazıyoruz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Anlaşılacağı gibi &amp;ldquo;I&amp;rdquo; değerini verdiğimde sonuç olarak 1 değerini döndermesi gerekir. Bunu için assertThat metodunu kullandım.
+İlk parametre olarak test etmek istediğimiz metodu, ikinci parametre olarak beklediğimiz değeri giriyoruz.
+Burda kodun okunmasını kolaylaştırmak amacı ile CoreMatchers.is ve CoreMatchers.equalTo  statik metodlarını kullandım.&lt;/p&gt;
+
+&lt;p&gt;Henüz ortada RomanNumeral adlı sınıfımız yok. Öncelikle bu sınıfı oluşturup içerisine convert metodunu oluşturuyoruz.
+Test kodlarını çalıştırdığımızda başarısız olduğunu görüyoruz. Bu testi geçmek için çok detaylı diğer roman rakamlarını da düşünerek kod yazmıyoruz.
+Sadece bu testin gerçekleşmesi için gereken kodu yazıyoruz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/bef51d11659da5f094d.js?file=romanNumeral1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;code&gt;return 1&lt;/code&gt; ifadesini eklemek testlerin başarılı olmasını sağlayacaktır. Bunu gerçekleştirdikten sonra 2. bir test daha ekliyoruz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Burda dikkat ederseniz roman nesnesini yerel değişken olarak kullanmak yerine sınıf değişkeni yani &amp;ldquo;field&amp;rdquo; olarak kullanıyorum.
+Çünkü aynı kodu her test için yazmak zorunda değiliz. Bu sayede DRY(Don&amp;rsquo;t Repeat Yourself) prensibine uymuş oluyoruz.
+2. testimizde gördüğünüz gibi &amp;ldquo;V&amp;rdquo; değerini gönderdiğimizde 5 değerini almak istiyoruz.
+Yukarda bahsettiğim gibi öncelikle niyetimizi yazıyoruz.
+convert metodunda değişiklik yaparken bu sefer her 2 testin de çalışmasına dikkat etmemiz gerekiyor.
+O yüzden RomanNumeral sınıfımız aşağıdaki gibi olacaktır.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;metodumuza bir if ekleyerek 2 testin de başarılı olmasını sağladık. Aynı şeyi &amp;ldquo;X&amp;rdquo; -&amp;gt; 10 için de yapıyoruz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest3.java&#34;&gt;&lt;/script&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral3.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;3. testimizi yazıp gereken değişiklikleri yaptık. convert metoduna baktığımızda istenmeyen bir durum görüyoruz.
+Her yeni test için sürekli bir &lt;code&gt;if&lt;/code&gt; ekleyemeyiz. O yüzden RomanNumeral sınıfını &lt;code&gt;Map&lt;/code&gt; kullanarak aşağıdaki şekilde düzenliyoruz.
+Böylece metodu tek satıra düşürebiliriz.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral3Refactor.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Burada adım adım giderek refactoring işlemlerini de adım adım yaptık. Test güdümlü geliştirdiğimiz için testlerden
+yola çıkarak geliştirdik. Katanın devamı için &lt;a href=&#34;http://kodkata.com/roma-rakamlari-katasi/&#34; title=&#34;Roman Rakamlari Katası&#34;&gt;video&lt;/a&gt;&amp;lsquo;yu izleyebilirsiniz..&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

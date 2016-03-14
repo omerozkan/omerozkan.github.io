@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mockito on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/mockito/</link>
+    <description>Recent content in Mockito on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Fri, 03 Jan 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/mockito/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Powermock ve Mockito ile JSF Sınıflarını Test Etmek</title>
+      <link>https://omerozkan.net/powermock-ve-mockito-ile-jsf-siniflarini-test-etmek/</link>
+      <pubDate>Fri, 03 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/powermock-ve-mockito-ile-jsf-siniflarini-test-etmek/</guid>
+      <description>&lt;p&gt;JSF Bean sınıflarında FacesContext gibi nesneler kullandığınızda ve bu sınıflara mock nesneler ile birim testleri yazdığınızda
+&lt;a href=&#34;https://github.com/mockito/mockito&#34;&gt;Mockito&lt;/a&gt;, JMock gibi araçlar yeterli olmayacaktır. Örnek olarak aşağıdaki metodu inceleyelim.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginAction.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu metod basit bir login işlemi gerçekleştirmektedir.
+Anlaşılacağı gibi xhtml sayfasında bir buton üzerinde actionListener parametresinde tanımlanmaktadır.
+Öncelikle kullanıcı adı ve parolanın boş bırakılıp bırakılmadığını kontrol etmekte eğer alanlar boş değilse
+business katmanı ile login işlemini gerçekleştirmektedir.&lt;/p&gt;
+
+&lt;p&gt;Şimdi kodları inceleyelim.  &lt;strong&gt;2&lt;/strong&gt;. satır da JSF sayfasına mesaj göndermek için FacesContext nesnesini &lt;code&gt;FacesContext.getCurrentInstance()&lt;/code&gt;
+statik metodu ile almaktadır. &lt;strong&gt;3&lt;/strong&gt;. satırda bir sınıf değişkeni yer almakta bu değişken sayesinde başka bir metod oturum açma işlemini gerçekleştirmektedir.&lt;br /&gt;
+&lt;strong&gt;4&lt;/strong&gt;. satırdaki koşul kullanıcı adı ve parola alanlarının boş bırakılıp bırakılmadığını kontrol etmektedir.
+&lt;strong&gt;8&lt;/strong&gt;. satır da ise loginManager nesnesi iş katmanının bir nesnesi olup DI (Dependency Injection) ile enjekte edilmektedir.
+LoginManager bir interface&amp;rsquo;dir. Bu sayede LoginBean sınıfının iş katmanına bağımlılığı esnek olur.
+Aynı zamanda test edebilmek için kolayca mock nesneleri oluşturabiliriz.
+Alt katmandan gelen sonuç ise bir &lt;strong&gt;LoginResult&lt;/strong&gt; nesnesidir.&lt;/p&gt;
+
+&lt;p&gt;Burdaki temel sorun &lt;strong&gt;2&lt;/strong&gt;. satırdaki FacesContext nesnesinin statik bir metod aracılığı ile alınmış olmasıdır.
+Statik metodları Mockito gibi araçlarla taklid edemeyiz.
+Burda benim aklıma gelen ilk çözüm, bir Java anotasyonu oluşturup, setter injection ile uygulama bir servlet container
+içerisinde çalıştığında gerçek FacesContext nesnesini enjekte etmesini sağlamak ve test edildiğinde ise kolayca mock
+nesneyi enjekte edebilmekti. Diğer çözümler için internette arama yaparken &lt;a href=&#34;https://github.com/jayway/powermock&#34;&gt;PowerMock&lt;/a&gt; ile karşılaştım.
+PowerMock ile statik metodlara hatta private alanlara müdahale edebiliyorsunuz.&lt;/p&gt;
+
+&lt;p&gt;Örnekte PowerMock ile Mockito araçlarını beraber kullandım. Mockito yerine dilediğiniz test aracını kullanabilirsiniz. (JMock, EasyMock vs.)&lt;/p&gt;
+
+&lt;p&gt;Öncelikle bir setUp metodu oluşturalım:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginBeanTest.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;32&lt;/strong&gt;. satır da FacesContext sınıfı Mockito ile mock&amp;rsquo;lanmaktadır. 37. satırda benzer şekilde LoginManager sınıfı mocklanmaktadır.
+&lt;strong&gt;36&lt;/strong&gt;. satır da test edilecek olan sınıfın nesnesi üretilmektedir.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;33&lt;/strong&gt;. satır da &lt;strong&gt;mockStatic()&lt;/strong&gt; metodu kullanılarak FacesContext nesnesinin statik metodları mock&amp;rsquo;lanmış oldu.
+&lt;strong&gt;34-35&lt;/strong&gt;. satırlarda PowerMockito.doReturn() metodu ile &lt;em&gt;FacesContex.getCurrentInstance()&lt;/em&gt; statik metodunun davranışı değiştirilmiştir.
+Bu sayede birim testlerimizi çalıştırabiliriz. Örnek olarak bir test metodu ekleyelim:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginWithEmptyUsername.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;4-6&lt;/strong&gt;. satırlarda gerekli test verileri girilip login işlemi gerçekleştirilmiştir. &lt;strong&gt;7&lt;/strong&gt;. satırda ise Mockito ile
+&lt;code&gt;context.addMessage(null, INVALID_LOGIN)&lt;/code&gt; yani doğru metodun çağrılmasının testi yapılmıştır.&lt;/p&gt;
+
+&lt;p&gt;Bu şekilde testler çalıştırıldığında olumsuz sonuç alırız.
+PowerMockito&amp;rsquo;nun gereken sınıfları taklit etmesi için test sınıfının başına aşağıdaki gibi anotasyonlar tanımlanmalıdır:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginBeanTest2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; satırda testlerin PowerMockRunner ile çalışmasını ve &lt;strong&gt;2&lt;/strong&gt;. satırda ise &lt;strong&gt;FacesContext&lt;/strong&gt; sınıfına ait statik metodun mock&amp;rsquo;lanmasını sağladık.
+Bu sayede testlerimiz çalışır hale gelmektedir.&lt;/p&gt;
+
+&lt;p&gt;Bir başka yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

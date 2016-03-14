@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+<head lang="tr">
+    <title>Powermock ve Mockito ile JSF Sınıflarını Test Etmek</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="Powermockito ile JSF sınıfları nasıl test edilir">
+    <meta name="keywords"
+          content="jsf,powermock,mockito,mock,java,test,junit">
+    <meta name="author" content="Ömer Özkan">
+    <meta property="og:site_name" content="Ömer Özkan"/>
+    <meta property="og:title" content="Ömer Özkan"/>
+    <meta property="og:description" content="Powermockito ile JSF sınıfları nasıl test edilir"/>
+    <meta property="og:url" content="https://omerozkan.net/powermock-ve-mockito-ile-jsf-siniflarini-test-etmek/">
+    <meta property="og:type" content="blog"/>
+    <meta property="og:image" content="powermock-ve-mockito-ile-jsf-siniflarini-test-etmek.jpg" />
+    <meta name="generator" content="Hugo 0.15" />
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/semantic.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://omerozkan.net/js/semantic.min.js"></script>
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="https://omerozkan.net/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://omerozkan.net/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://omerozkan.net/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://omerozkan.net/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://omerozkan.net/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://omerozkan.net/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://omerozkan.net/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://omerozkan.net/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://omerozkan.net/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://omerozkan.net/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://omerozkan.net/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://omerozkan.net/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://omerozkan.net/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://omerozkan.net/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#009688">
+    <meta name="msapplication-TileImage" content="https://omerozkan.net/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#009688">
+</head>
+<body>
+<section id="main">
+    <section id="header-container" class="ui grid">
+        <header class="ten wide mobile ten wide tablet eight wide computer column centered">
+            <div class="row">
+                <div class="ui grid">
+                    <section id="header"
+                             class="ten wide mobile three wide tablet three wide computer centered column">
+                        <div class="row">
+                            <h1>
+                                <a href="https://omerozkan.net/">Ömer Özkan .net</a>
+                            </h1>
+                        </div>
+                    </section>
+                    <div class="nine wide computer only column right aligned">
+                        <section id="menu" class="row">
+                            <nav class="ui teal compact inverted menu">
+                                
+                                <a href="https://omerozkan.net/hakkimda/" class="link item">
+                                    Hakkımda
+                                </a>
+                                
+                                <a href="https://omerozkan.net/iletisim/" class="link item">
+                                    İletişim
+                                </a>
+                                
+                            </nav>
+                        </section>
+                        <section id="media-links" class="row">
+                            <nav class="ui icon secondary inverted menu">
+                                <div class="right menu">
+                                
+                                    <a class="item" href="https://twitter.com/omerozkan_" target="_blank">
+                                        <i class="twitter icon"></i>
+                                    </a>
+                                
+                                    <a class="item" href="https://www.linkedin.com/in/omerozkan" target="_blank">
+                                        <i class="linkedin icon"></i>
+                                    </a>
+                                
+                                    <a class="item" href="https://www.facebook.com/omerozkan" target="_blank">
+                                        <i class="facebook icon"></i>
+                                    </a>
+                                
+                                    <a class="item" href="https://github.com/omerozkan" target="_blank">
+                                        <i class="github icon"></i>
+                                    </a>
+                                
+                                </div>
+                            </nav>
+                        </section>
+                    </div>
+                    <div class="two wide mobile nine wide tablet only column right aligned">
+                        <button id="menu-button" class="ui teal icon button" data-transition="overlay">
+                            <i id="menu-icon" class="sidebar icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <nav id="mobile-menu" class="ui right floating sidebar green inverted vertical menu">
+        
+            <a class="header item" href="https://omerozkan.net/hakkimda/">Hakkımda</a>
+        
+            <a class="header item" href="https://omerozkan.net/iletisim/">İletişim</a>
+        
+        
+            <a class="item" href="https://omerozkan.net/kategori/etkinlikler/">Etkinlikler</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/genel-konular/">Genel Konular</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/java/">Java</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/linux/">Linux</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/seyir-defteri/">Seyir Defteri</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/sunumlar/">Sunumlar</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/videolar/">Videolar</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/yazilim-metotlari/">Yazılım Metotları</a>
+        
+    </nav>
+
+    <section id="navbar" class="ui grid">
+        <div class="tablet mobile only column empty-nav"></div>
+        <nav class="eight wide computer only column centered">
+            <div class="ui inverted menu nav-menu">
+                
+                <a class="item" href="https://omerozkan.net/kategori/etkinlikler/">
+                    Etkinlikler
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/genel-konular/">
+                    Genel Konular
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/java/">
+                    Java
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/linux/">
+                    Linux
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/seyir-defteri/">
+                    Seyir Defteri
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/sunumlar/">
+                    Sunumlar
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/videolar/">
+                    Videolar
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/yazilim-metotlari/">
+                    Yazılım Metotları
+                </a>
+                
+            </div>
+        </nav>
+    </section>
+<section id="content-main" class="ui internally grid centered">
+    <article class="ten wide mobile ten wide tablet eight wide computer column single">
+        <div class="ui basic segment">
+            <h1 class="ui green header">Powermock ve Mockito ile JSF Sınıflarını Test Etmek</h1>
+            
+            <p class="metadata">
+                
+                <a class="ui image label">
+                    <img src="http://s.gravatar.com/avatar/deb32ea991fee11136e3c72aee30be78?s=150">
+                    Ömer Özkan
+                </a>
+                
+
+                <a class="ui label">
+                    <i class="calendar icon"></i>
+                    03.01.2014
+                </a>
+            </p>
+            
+
+            
+            
+            <img class="ui right floated top aligned rounded medium image bordered right"
+                 src="https://omerozkan.net/images/thumb/powermock-ve-mockito-ile-jsf-siniflarini-test-etmek.jpg"
+                 alt="Powermock ve Mockito ile JSF Sınıflarını Test Etmek"/>
+            
+            
+
+            <p>JSF Bean sınıflarında FacesContext gibi nesneler kullandığınızda ve bu sınıflara mock nesneler ile birim testleri yazdığınızda
+<a href="https://github.com/mockito/mockito">Mockito</a>, JMock gibi araçlar yeterli olmayacaktır. Örnek olarak aşağıdaki metodu inceleyelim.</p>
+
+<div class="clear"></div>
+<script src="//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginAction.java"></script>
+
+<p>Bu metod basit bir login işlemi gerçekleştirmektedir.
+Anlaşılacağı gibi xhtml sayfasında bir buton üzerinde actionListener parametresinde tanımlanmaktadır.
+Öncelikle kullanıcı adı ve parolanın boş bırakılıp bırakılmadığını kontrol etmekte eğer alanlar boş değilse
+business katmanı ile login işlemini gerçekleştirmektedir.</p>
+
+<p>Şimdi kodları inceleyelim.  <strong>2</strong>. satır da JSF sayfasına mesaj göndermek için FacesContext nesnesini <code>FacesContext.getCurrentInstance()</code>
+statik metodu ile almaktadır. <strong>3</strong>. satırda bir sınıf değişkeni yer almakta bu değişken sayesinde başka bir metod oturum açma işlemini gerçekleştirmektedir.<br />
+<strong>4</strong>. satırdaki koşul kullanıcı adı ve parola alanlarının boş bırakılıp bırakılmadığını kontrol etmektedir.
+<strong>8</strong>. satır da ise loginManager nesnesi iş katmanının bir nesnesi olup DI (Dependency Injection) ile enjekte edilmektedir.
+LoginManager bir interface&rsquo;dir. Bu sayede LoginBean sınıfının iş katmanına bağımlılığı esnek olur.
+Aynı zamanda test edebilmek için kolayca mock nesneleri oluşturabiliriz.
+Alt katmandan gelen sonuç ise bir <strong>LoginResult</strong> nesnesidir.</p>
+
+<p>Burdaki temel sorun <strong>2</strong>. satırdaki FacesContext nesnesinin statik bir metod aracılığı ile alınmış olmasıdır.
+Statik metodları Mockito gibi araçlarla taklid edemeyiz.
+Burda benim aklıma gelen ilk çözüm, bir Java anotasyonu oluşturup, setter injection ile uygulama bir servlet container
+içerisinde çalıştığında gerçek FacesContext nesnesini enjekte etmesini sağlamak ve test edildiğinde ise kolayca mock
+nesneyi enjekte edebilmekti. Diğer çözümler için internette arama yaparken <a href="https://github.com/jayway/powermock">PowerMock</a> ile karşılaştım.
+PowerMock ile statik metodlara hatta private alanlara müdahale edebiliyorsunuz.</p>
+
+<p>Örnekte PowerMock ile Mockito araçlarını beraber kullandım. Mockito yerine dilediğiniz test aracını kullanabilirsiniz. (JMock, EasyMock vs.)</p>
+
+<p>Öncelikle bir setUp metodu oluşturalım:</p>
+
+<div class="clear"></div>
+<script src="//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginBeanTest.java"></script>
+
+<p><strong>32</strong>. satır da FacesContext sınıfı Mockito ile mock&rsquo;lanmaktadır. 37. satırda benzer şekilde LoginManager sınıfı mocklanmaktadır.
+<strong>36</strong>. satır da test edilecek olan sınıfın nesnesi üretilmektedir.</p>
+
+<p><strong>33</strong>. satır da <strong>mockStatic()</strong> metodu kullanılarak FacesContext nesnesinin statik metodları mock&rsquo;lanmış oldu.
+<strong>34-35</strong>. satırlarda PowerMockito.doReturn() metodu ile <em>FacesContex.getCurrentInstance()</em> statik metodunun davranışı değiştirilmiştir.
+Bu sayede birim testlerimizi çalıştırabiliriz. Örnek olarak bir test metodu ekleyelim:</p>
+
+<div class="clear"></div>
+<script src="//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginWithEmptyUsername.java"></script>
+
+<p><strong>4-6</strong>. satırlarda gerekli test verileri girilip login işlemi gerçekleştirilmiştir. <strong>7</strong>. satırda ise Mockito ile
+<code>context.addMessage(null, INVALID_LOGIN)</code> yani doğru metodun çağrılmasının testi yapılmıştır.</p>
+
+<p>Bu şekilde testler çalıştırıldığında olumsuz sonuç alırız.
+PowerMockito&rsquo;nun gereken sınıfları taklit etmesi için test sınıfının başına aşağıdaki gibi anotasyonlar tanımlanmalıdır:</p>
+
+<div class="clear"></div>
+<script src="//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginBeanTest2.java"></script>
+
+<p><strong>1.</strong> satırda testlerin PowerMockRunner ile çalışmasını ve <strong>2</strong>. satırda ise <strong>FacesContext</strong> sınıfına ait statik metodun mock&rsquo;lanmasını sağladık.
+Bu sayede testlerimiz çalışır hale gelmektedir.</p>
+
+<p>Bir başka yazıda görüşmek üzere&hellip;</p>
+
+
+            <div class="clear"></div>
+            
+            <section id="comment">
+                <div class="ui section divider"></div>
+                <div id="disqus_thread"></div>
+<script>
+     var disqus_config = function () {
+     this.page.url = 'https:\/\/omerozkan.net\/powermock-ve-mockito-ile-jsf-siniflarini-test-etmek\/'; 
+     this.page.identifier = 'powermock-ve-mockito-ile-jsf-siniflarini-test-etmek';
+     };
+    (function() {
+        var d = document, s = d.createElement('script');
+
+        var disqus_shortname = 'omerozkan';
+        s.src = '//' + disqus_shortname +'.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </section>
+            
+            <div class="ui section divider"></div>
+            
+            
+            <div class="ui tag labels">
+                
+                <span class="ui teal label">
+                    jsf
+                </span>
+                
+                <span class="ui teal label">
+                    powermock
+                </span>
+                
+                <span class="ui teal label">
+                    mockito
+                </span>
+                
+                <span class="ui teal label">
+                    mock
+                </span>
+                
+                <span class="ui teal label">
+                    java
+                </span>
+                
+                <span class="ui teal label">
+                    test
+                </span>
+                
+                <span class="ui teal label">
+                    junit
+                </span>
+                
+            </div>
+            
+        </div>
+
+    </article>
+</section>
+</section>
+
+<section class="footer-container">
+    <footer class="ui grid">
+        <div class="ten wide mobile ten wide tablet eight wide computer column centered">
+            <div class="ui grid">
+                <div class="twelve wide mobile two wide tablet two wide computer centered column center aligned">
+                    <img id="footer-logo" src="https://omerozkan.net/img/footer-logo.png" alt="Footer lan ne bakiyon" class="ui image">
+                </div>
+                <div class="twelve wide mobile eight wide tablet eight wide computer middle aligned centered column center aligned">
+                    © 2008 Ömer Özkan. Tüm hakları saklıdır. <br/><a href="https://omerozkan.net">Ömer Özkan</a> is licensed under a <a
+                        href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License.</a>
+                </div>
+                <div class="twelve wide mobile two wide tablet two wide computer middle aligned centered column">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                        <img id="cc-logo" alt="Creative Commons License" style="border-width:0"
+                             class="ui image centered"
+                             src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+
+<script src="https://omerozkan.net/js/scripts.js"></script>
+</body>
+</html>

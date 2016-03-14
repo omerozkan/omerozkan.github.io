@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Eskişehir on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/eski%C5%9Fehir/</link>
+    <description>Recent content in Eskişehir on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Tue, 30 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/eski%C5%9Fehir/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AB 15 Java 101 Kursu</title>
+      <link>https://omerozkan.net/akademik-bilisim-15-java-101-kursu/</link>
+      <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/akademik-bilisim-15-java-101-kursu/</guid>
+      <description>
+
+&lt;p&gt;Her yıl farklı bir üniversitede gerçekleşen Akademik Bilişim etkinliğine bu yıl Eskişehir Anadolu Üniversitesi ev sahipliği yapıyor.
+Etkinlik 31 Ocak – 6 Şubat tarihleri arasında düzenlenecek. Konferans öncesi kurslar ise 31 Ocak – 3 Şubat arasında&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Bu yıl Akademik Bilişim&amp;rsquo;de Java 101 başlıklı Java&amp;rsquo;ya başlangıç yapmak isteyenler için kurs vereceğim. Katılım tamamen ücretsizdir.
+Katılımcılar isterlerse KYK&amp;rsquo;da konaklayabilirler.&lt;/p&gt;
+
+&lt;h3 id=&#34;hedef-kitle:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;Hedef Kitle&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Temel algoritma, veri yapıları ve temel düzeyde nesne yönelimli programlama bilgisi olan,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Başka bir programlama dilini bilen ve Java&amp;rsquo;ya başlangıç yapmak isteyen,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Uzun zaman önce Java ile tanışmış fakat ilerleyememiş, temiz ve hızlı bir başlangıç yapmak isteyenler kişiler için hedeflenmiştir.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Kurs sonunda katılımcılar nesne yönelimli programlama (Object oriented programming) öğrenip,
+Java ile ilgili teknolojilerde kendilerini geliştirebilmek için temel oluşturacak bilgi birikimine sahip olacaktır.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;katılımcılardan-istenenler:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;Katılımcılardan İstenenler&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Herhangi bir linux dağıtımı yüklü dizüstü bilgisayarını getirmesi (Sanal makine tercih edilmemelidir.
+Mümkünse OpenSuse, Ubuntu veya Fedora dağıtımlardan biri tercih edilmelidir )&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Sistemlerine OpenJDK 7(veya üzeri) yüklemeleri&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Eclipse Luna (veya bir önceki sürümü Kepler) yüklemeleri gerekmektedir.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Not: Kurs sırasında herhangi bir yükleme işlemi yapılmayacaktır. O yüzden mutlaka yazılımların yüklü olması gerekmektedir.
+Yazılım yüklemeleri için gereken döküman katılımcılara özel olarak eposta gönderilecektir.&lt;/p&gt;
+
+&lt;h3 id=&#34;kontenjan-ve-kursiyer-seçimi:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;Kontenjan ve Kursiyer Seçimi&lt;/h3&gt;
+
+&lt;p&gt;Katılımcı sayısı 30 ile sınırlandırılmıştır. Başvuru sayısı fazla olması halinde adaylara 3 gün içerisinde doldurması gereken anket gönderilecektir.
+Cevaplanan anketler sonucunda kursa uygun olan katılımcılar seçilecektir.&lt;/p&gt;
+
+&lt;h3 id=&#34;konular:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;Konular&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-gün:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;1. Gün&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Java&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;JDK, JRE, JVM, Java Versiyonları&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Java ile İlk Program&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Veri Tipleri, Operatörler, String&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Döngü ve Koşul&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Sınıflar, Nesneler&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Construction&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Nesne Yönelimli Programlamaya Giriş&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Kapsülleme (Encapsulation)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Kalıtım (Inheritance)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-gün:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;2. Gün&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Polimorfizm&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Soyutlama (Abstraction)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Casting&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Interface &amp;amp; Abstract Sınıflar&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Statik ve Final&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;3-gün:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;3. Gün&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Exception Handling (Checked &amp;amp; Unchecked)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Diziler (Array)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Generic&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-gün:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;4. Gün&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Collections (List, Set, Map, Iteration)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Enumeration&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Mutable &amp;amp; Immutable&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Inner Class&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;String &amp;amp; StringBuilder&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;SOLID&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kursa kayıt olmak için 1 Ocak 2015 tarihinden itibaren &lt;a href=&#34;http://ab2015.anadolu.edu.tr/&#34;&gt;http://ab2015.anadolu.edu.tr/&lt;/a&gt; adresinden yapabilirsiniz.
+Kurs ile ilgili sorularınızı eposta ile sorabilirsiniz.&lt;/p&gt;
+
+&lt;h3 id=&#34;diğer-kurslar:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;Diğer Kurslar&lt;/h3&gt;
+
+&lt;p&gt;Akademik Bilişim&amp;rsquo;de 40&amp;rsquo;a yakın kurs düzenlenecektir.
+Kurslarla ilgili detaylı bilgiyi &lt;a href=&#34;http://ab.org.tr/ab15/kurs.html&#34;&gt;http://ab.org.tr/ab15/kurs.html&lt;/a&gt; adresinden edinebilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;Eskişehir&amp;rsquo;de görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

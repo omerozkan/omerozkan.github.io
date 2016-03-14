@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on Ömer Özkan</title>
+    <link>https://omerozkan.net/kategori/linux/</link>
+    <description>Recent content in Linux on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Mon, 02 Dec 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/kategori/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Github Depolarının Redmine&#39;a Entegre Edilmesi</title>
+      <link>https://omerozkan.net/github-deposunun-redminea-baglanmasi/</link>
+      <pubDate>Mon, 02 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/github-deposunun-redminea-baglanmasi/</guid>
+      <description>&lt;p&gt;İş takip sistemi Redmine&amp;rsquo;ı ve sürüm takip sistemi git&amp;rsquo;i kullanıyorum. Git, SVN gibi sürüm takip sistemlerindeki depoları
+redmine&amp;rsquo;a bağlayabiliyorsunuz. Github ise açık kaynak projelere ücretsiz alan sağlıyor.
+Github&amp;rsquo;daki bir projemi Redmine&amp;rsquo;a bağlamak istedim. Kendi uğraşımdan sonra &lt;a href=&#34;https://eventualis.org/&#34;&gt;Samed Beyribey&lt;/a&gt;&amp;lsquo;den yardım istedim.
+Kendisi nasıl entegre edebileceğimi anlattı. Sizler için de faydalı olacağını düşünerekten bu yazıyı paylaşmak istedim.&lt;/p&gt;
+
+&lt;p&gt;Github depolarınızı Redmine&amp;rsquo;a entegre etmek için aşağıdaki adımları uygulamanız yeterlidir.&lt;/p&gt;
+
+&lt;p&gt;Öncelikle Github deposunu Redmine&amp;rsquo;ın kurulu olduğu sunucuda dilediğiniz bir dizine git projenizi mirror parametresi ile klonlayın.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git clone https://github.com/omerozkan/vipera.git --mirror&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Eğer projeniz private ise http yerine ssh ile klonlayabilirsiniz.
+Klonlama işleminden sonra redmine panelinden Yönetim -&amp;gt; Ayarlar sayfasına gidin ve Depolar sekmesinden bir API Key oluşturun.&lt;/p&gt;
+
+&lt;p&gt;Eklemek istediğiniz projeye gidip projede Ayarlar -&amp;gt; Depolar &amp;lsquo;a tıklayıp yeni bir depo oluşturun.
+Burda &amp;ldquo;Path to repository&amp;rdquo; değerine klonladığınız git dizininin tam yolunu yazın.
+Klonladığınız git dizinine redmine&amp;rsquo;nın sistemdeki kullanıcısının erişebilmesi gerekiyor. İzinleri ona göre yapılandırın.
+Bu işlemi gerçekleştirdikten sonra git deposundaki son değişiklikleri alması ve redmine&amp;rsquo;ın bu değişiklikleri okuması için cron oluşturmak gerekiyor.
+Cron oluşturmak için&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;crontab -e&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;komutunu girdiğinizde karşınıza vi editoru çıkacaktır. Cron ayarlarınızı vi editorüne girip kaydedebilirsiniz.
+Örneğin her saat başı güncellemeleri almak istiyorsanız aşağıdaki cron ayarlarını kullanabilirsiniz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/1d0ecc2af86e3d4eb312.js?file=cron&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Böylelikle github projenizi redmine&amp;rsquo;a entegre etmiş olursunuz.
+Standart olarak &amp;ldquo;refs #işnumarası&amp;rdquo; şeklinde gönderdiğiniz commitler redmine&amp;rsquo;da o işe bağlanacaktır.&lt;/p&gt;
+
+&lt;p&gt;Bir sonraki yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linux&#39;da Fare Butonlarına İşlev Atama</title>
+      <link>https://omerozkan.net/linuxda-fare-butonlarina-islev-atama/</link>
+      <pubDate>Sun, 16 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/linuxda-fare-butonlarina-islev-atama/</guid>
+      <description>&lt;p&gt;Uzun süreden beri Logitech fare kullanıyorum. Farenin standart tuşları dışında scroll&amp;rsquo;un sağ ve solunda iki ayrı tuşu daha vardı.
+Film izlerken VLC player ile filmi ileri geri alabiliyordum. Fakat bunun dışında bu iki tuşu kullanmadığımı farkettim.
+VLC dışındaki bir uygulama ile film izlerken sürekli ses kısıp açma ihtiyacım oldu.
+Bu ihtiyaçtan dolayı ki bu iki tuşa ses azaltma ve arttırma özelliği ekledim.
+Siz de aşağıdaki adımları uygulayarak fare tuşlarınıza işlev atayabilirsiniz.
+Kullandığım Linux dağıtımı Fedora 18, fakat diğer dağıtımlar için de aynı şekilde yapılır.
+Öncelikle &lt;code&gt;xbindkeys&lt;/code&gt; ve &lt;code&gt;xev&lt;/code&gt; uygulamalarını kuralım.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Redhat tabanlı dağıtımlar için&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;yum install xbindkeys xev&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Debian(Ubuntu,Mint etc) tabanlı dağıtımlar için&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo apt-get install xbindkeys xev&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;komutları ile xev ve xbindkeys uygulamalarını sistemimize yükleyelim. Daha sonra xbindkeys komutunu çalıştıralım:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;xbindkeys&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu komutu çalıştırdıktan sonra aşağıdaki gibi bir hata alabilirsiniz:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Error : /home/omer/.xbindkeysrc not found or reading not allowed.
+please, create one with &amp;lsquo;xbindkeys –defaults &amp;gt; /home/omer/.xbindkeysrc&amp;rsquo;.
+or, if you want scheme configuration style,
+with &amp;lsquo;xbindkeys –defaults-guile &amp;gt; /home/omer/.xbindkeysrc.scm&amp;rsquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;.xbindkeysrc dosyasını bulamadığından dolayı böyle bir hataya rastlayabilirsiniz. Dosya oluşturmak için yukardaki çıktıda gördüğnüz gibi:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;xbindkeys –defaults &amp;gt; .xbindkeysrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu komutu girdikten sonra .xindkeysrc dosyası oluşacaktır. Fare butonlarına işlev atamadan önce butonların numaralarını öğrenelim.
+Bunun için xen uygulamasından faydalanacağız.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;xen&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu komutu girdiğinizde karşınıza bir &amp;ldquo;Event Tester&amp;rdquo; penceresi açılacaktır.
+Bu pencere üzerinde fare ile bastığınız her tuşun numarasını uçbirim ekranından görebilirsiniz. Örneğin sola tıkladığımda:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;ButtonRelease event, serial 28, synthetic NO, window 0x2a00001,
+  root 0x1db, subw 0x2a00002, time 7219539, (43,47), root:(293,488),
+  state 0x100, button 1, same_screen YES&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Aşağıda button 1 yazısı farenin sol tuşun numarasının 1 olduğunu gösterir.
+Örneğin benim atama yapmak istediğim scroll&amp;rsquo;un tuşların numarası 6 ve 7&amp;rsquo;dir.
+Sizin de aynı olmayabilir. Bu tuşlara işlev atamak için .xbindkeysrc dosyasını istediğiniz bir editörle açabilirsiniz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0846f89e4223f2481eb8.js?file=xbindkeysrc&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Burada &amp;ldquo;komut&amp;rdquo; yerine neyi gerçekleştirmesini istiyorsanız onu giriyorsunuz.
+Bu satırı eklediğimde 6. butona bastığımda istediğim komutu gerçekleştirecektir.
+Ben 6. buton için ses azaltma, 7. buton için ses arttırma özelliklerini ekledim:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0846f89e4223f2481eb8.js?file=xbindkeysrcfinal&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Dosyayı kaydedip kapattığınızda eğer xbindkeys uygulaması çalışmıyorsa, xbindkeys komutunu tekrar girebilirsiniz.
+Eğer sisteminiz her açıldığında xbindkeys uygulamasının aktif olmasını istiyorsanız.
+Aşağıdaki komutu girerek karşınıza çıkan pencerede xbindkeys i ekleyerek bu işlemi gerçekleştirebilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;gnome-session-properties&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://omerozkan.net/images/post/linux/gnomesessionproperties.png&#34; alt=&#34;Gnome Session Properties&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu komut sadece gnome tabanlı masaüstü yöneticilerinde çalışacaktır. KDE kullanıyorsanız, nasıl yapıldığını öğrenmeniz gerekir.&lt;/p&gt;
+
+&lt;p&gt;Bir başka yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

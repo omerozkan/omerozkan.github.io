@@ -1,0 +1,419 @@
+<!doctype html>
+<html>
+<head lang="tr">
+    <title>Bir Proje Hikayesi: Vipera</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="Bitirme projem Vipera&#39;yı geliştirme macerası">
+    <meta name="keywords"
+          content="proje,vipera,java,tubitak,yarışma,ödül,teknik,eleştiri">
+    <meta name="author" content="Ömer Özkan">
+    <meta property="og:site_name" content="Ömer Özkan"/>
+    <meta property="og:title" content="Ömer Özkan"/>
+    <meta property="og:description" content="Bitirme projem Vipera&#39;yı geliştirme macerası"/>
+    <meta property="og:url" content="https://omerozkan.net/bir-proje-hikayesi-vipera/">
+    <meta property="og:type" content="blog"/>
+    <meta property="og:image" content="vipera.jpg" />
+    <meta name="generator" content="Hugo 0.15" />
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/semantic.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://omerozkan.net/js/semantic.min.js"></script>
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="https://omerozkan.net/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://omerozkan.net/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://omerozkan.net/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://omerozkan.net/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://omerozkan.net/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://omerozkan.net/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://omerozkan.net/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://omerozkan.net/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://omerozkan.net/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://omerozkan.net/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://omerozkan.net/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://omerozkan.net/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://omerozkan.net/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://omerozkan.net/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#009688">
+    <meta name="msapplication-TileImage" content="https://omerozkan.net/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#009688">
+</head>
+<body>
+<section id="main">
+    <section id="header-container" class="ui grid">
+        <header class="ten wide mobile ten wide tablet eight wide computer column centered">
+            <div class="row">
+                <div class="ui grid">
+                    <section id="header"
+                             class="ten wide mobile three wide tablet three wide computer centered column">
+                        <div class="row">
+                            <h1>
+                                <a href="https://omerozkan.net/">Ömer Özkan .net</a>
+                            </h1>
+                        </div>
+                    </section>
+                    <div class="nine wide computer only column right aligned">
+                        <section id="menu" class="row">
+                            <nav class="ui teal compact inverted menu">
+                                
+                                <a href="https://omerozkan.net/hakkimda/" class="link item">
+                                    Hakkımda
+                                </a>
+                                
+                                <a href="https://omerozkan.net/iletisim/" class="link item">
+                                    İletişim
+                                </a>
+                                
+                            </nav>
+                        </section>
+                        <section id="media-links" class="row">
+                            <nav class="ui icon secondary inverted menu">
+                                <div class="right menu">
+                                
+                                    <a class="item" href="https://twitter.com/omerozkan_" target="_blank">
+                                        <i class="twitter icon"></i>
+                                    </a>
+                                
+                                    <a class="item" href="https://www.linkedin.com/in/omerozkan" target="_blank">
+                                        <i class="linkedin icon"></i>
+                                    </a>
+                                
+                                    <a class="item" href="https://www.facebook.com/omerozkan" target="_blank">
+                                        <i class="facebook icon"></i>
+                                    </a>
+                                
+                                    <a class="item" href="https://github.com/omerozkan" target="_blank">
+                                        <i class="github icon"></i>
+                                    </a>
+                                
+                                </div>
+                            </nav>
+                        </section>
+                    </div>
+                    <div class="two wide mobile nine wide tablet only column right aligned">
+                        <button id="menu-button" class="ui teal icon button" data-transition="overlay">
+                            <i id="menu-icon" class="sidebar icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <nav id="mobile-menu" class="ui right floating sidebar green inverted vertical menu">
+        
+            <a class="header item" href="https://omerozkan.net/hakkimda/">Hakkımda</a>
+        
+            <a class="header item" href="https://omerozkan.net/iletisim/">İletişim</a>
+        
+        
+            <a class="item" href="https://omerozkan.net/kategori/etkinlikler/">Etkinlikler</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/genel-konular/">Genel Konular</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/java/">Java</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/linux/">Linux</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/seyir-defteri/">Seyir Defteri</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/sunumlar/">Sunumlar</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/videolar/">Videolar</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/yazilim-metotlari/">Yazılım Metotları</a>
+        
+    </nav>
+
+    <section id="navbar" class="ui grid">
+        <div class="tablet mobile only column empty-nav"></div>
+        <nav class="eight wide computer only column centered">
+            <div class="ui inverted menu nav-menu">
+                
+                <a class="item" href="https://omerozkan.net/kategori/etkinlikler/">
+                    Etkinlikler
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/genel-konular/">
+                    Genel Konular
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/java/">
+                    Java
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/linux/">
+                    Linux
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/seyir-defteri/">
+                    Seyir Defteri
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/sunumlar/">
+                    Sunumlar
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/videolar/">
+                    Videolar
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/yazilim-metotlari/">
+                    Yazılım Metotları
+                </a>
+                
+            </div>
+        </nav>
+    </section>
+<section id="content-main" class="ui internally grid centered">
+    <article class="ten wide mobile ten wide tablet eight wide computer column single">
+        <div class="ui basic segment">
+            <h1 class="ui green header">Bir Proje Hikayesi: Vipera</h1>
+            
+            <p class="metadata">
+                
+                <a class="ui image label">
+                    <img src="http://s.gravatar.com/avatar/deb32ea991fee11136e3c72aee30be78?s=150">
+                    Ömer Özkan
+                </a>
+                
+
+                <a class="ui label">
+                    <i class="calendar icon"></i>
+                    24.09.2014
+                </a>
+            </p>
+            
+
+            
+            
+            <img class="ui right floated top aligned rounded medium image bordered right"
+                 src="https://omerozkan.net/images/thumb/vipera.jpg"
+                 alt="Bir Proje Hikayesi: Vipera"/>
+            
+            
+
+            
+
+<p>Öncelikle Vipera&rsquo;nın ne olduğundan bahsedeyim. Vipera, bir sağlık sistemidir.
+Çeşitli tıbbi cihazlar ile üretilen sağlık verilerini bir API üzerinden sisteme girilmesini sağlar.
+Girilen bu verileri hekimlere sunarak hekimlerin hastalar hakkında karar vermesinde yardımcı olur.
+Bir karar destek sistemidir. Hekimler kendi panellerinden grafikler üreterek hastanın sağlık durumunu takip eder.
+Vipera, tanımlanan acil durum kuralları sayesinde de istenilen bildirim yöntemi ile (SMS ve Android Push Bildirimi halihazırda çalışmaktadır)
+hekimlere bildirim gönderir.</p>
+
+<p>Aslında hedefim Vipera&rsquo;nın hekimin yerine karar vermesini sağlamak yani bir uzman sistem oluşturmaktı.
+Fakat bunu yapabilmek oldukça zor ve maliyetli bir işti.
+O yüzden üzerinde yapay zeka yöntemlerinin uygulanabileceği verileri öncelikle saklamak gerektiğine karar verdim.</p>
+
+<h3 id="teknik-hedef:76ab7a0392d682cc69cc876ca4838d28">Teknik Hedef</h3>
+
+<p>Projenin bir de teknik bir hedefi vardı.
+Java teknolojileri ile geliştirilmiş tamamen özgür teknolojilere sahip, esnek ve katmanlı bir mimariye sahip bir proje geliştirmekti.
+Öğrendiğim yazılım araçlarını da etkin kullanmayı da hedeflemiştim.<br />
+Bitirme projesini bu şekilde yapmayı istedim. Proje konusunu ise danışmanım belirledi.</p>
+
+<p>Proje için Spring&rsquo;i tercih ettim. Bunun asıl sebebi Spring&rsquo;i öğrenmek istememdi.
+Aynı zamanda Spring ile geliştireceğim proje Lightweight bir proje olacaktı.
+Bununla birlikte gösterim katmanında JSF ve Primefaces, veri katmanında ise JPA&rsquo;nın Hibernate implementasyonunu tercih ettim.
+Defacto olan maven ve diğer araçları da kullandım.
+Veritabanı olarak gömülü bir veritabanı yönetim sistemi olan HSQLDB&rsquo;yi, asıl veritabanı yönetim sistemi  tercihim ise PostgreSQL oldu.
+Veritabanı bağımsız olduğu için herhangi bir RDBMS kullanabilirdim.</p>
+
+<h3 id="vipera:76ab7a0392d682cc69cc876ca4838d28">Vipera?</h3>
+
+<p>Neden &ldquo;Vipera&rdquo; adını verdiğimi merak edenleriniz olabilir. Vipera, latince Engerek yılanı cinsi anlamına gelir.
+Biyolojik bir isimdir. Sağlık ile ilgili bir proje geliştirdiğimden yılanların latince isimlerinden birini verebileceğimi düşündüm.
+&ldquo;Vipera&rdquo; adını görünce proje adını belirledim.</p>
+
+<h3 id="geliştirme-süreci:76ab7a0392d682cc69cc876ca4838d28">Geliştirme Süreci</h3>
+
+<p>Okul dönemin uzun bir zamanında yarı zamanlı olarak çalıştığım için projeye zaman ayırmam mümkün olmadı.
+İlk dönem sonunda sadece giriş ekranını kodlayabilmiştim. Bahar döneminin sonuna projenin bitmesi gerekiyordu.
+Projeye başlarken kullanıcı hikayeleri ve görevler listesi oluşturdum. Daha sonra bunları önceliklendirdim.
+Daha sonra kullanıcı hikayelerinin implementasyonuna başladım. Katmanlı mimari oluşturmak pek zor olmasa da
+birçok teknolojiyi bir arada kullanmak başlangıçta bazı problemlere sebep oldu.
+Başlangıçta test güdümlü geliştirsem de zaman ve projenin birçok kısmı basit ve net çözümler olduğundan
+test güdümlü geliştirmeyi bıraktım. Fakat birçok yerde temiz kod yazmaya çalıştım.
+%100 e yakın dökümantasyon yazdım.</p>
+
+<h3 id="tubitak-yarışması:76ab7a0392d682cc69cc876ca4838d28">Tubitak Yarışması</h3>
+
+<p>Zaman darlığında projeyi tamamlayamayacağımı düşünürken danışmanım
+TUBİTAK tarafından düzenlenen Yazılım Projeleri Yarışması&rsquo;na da katılmamı istedi.
+Ben birçok kez katılmamayı düşünürken başvuru tarihinin sonuna yakın bir gecemi harcayarak ilgili belgeleri
+hazırladım ve yarışmaya başvurdum.</p>
+
+<p>Yarışma için projenin yetişmeyeceğine kesin karar vermişken bir taraftan mezun olabilmek için sınavları geçmem gerekiyordu.
+Ayrıca Vipera, bitirme projesi olduğundan bu dersi de geçmem gerekiyordu.
+Projenin TUBİTAK&rsquo;a teslimine 2 hafta kalmıştı.
+O iki hafta sonunda finaller, ödevler, tez hazırlama gibi şeylerle karşılaşacağımdan kalan zamanım sadece 2 haftaydı.
+Yarışma ile kendimi motive ederek projeyi tamamlamaya karar verdim.
+Vizelerin yorgunluğunu henüz atamamışken gece gündüz projeyi kodlamaya devam ettim.
+Son günde projeyi tamamladım fakat yarışma için video ve rapor hazırlamak gerekiyordu.
+Video&rsquo;yu montajlayıp izleyemeden TUBİTAK&rsquo;a gönderdim. Rapor ise çok kötü haldeydi.
+Elimden gelen bu kadar diyerek kötü internet bağlantısına ve verilen süreyi aşmama rağmen projeyi teslim etmeyi başardım.
+Halen videoyu izleyip kendime gülüyorum :)</p>
+
+<h3 id="bir-yarışma-hikayesi:76ab7a0392d682cc69cc876ca4838d28">Bir Yarışma Hikayesi</h3>
+
+<p>Bitirme projesinin sunumundan bir gün önce final sergisine çağrıldığımı öğrendim. Final sergisine 1 hafta vardı.
+Finallerin yorgunluğunu yine atamamışken bu sefer tekrar girişip bildirim sistemini geliştirdim.
+Ayrıca afiş tasarımı vs. yaklaşık iki günümü almıştı.
+Daha önce android e bulaşmaktan hep kaçmış biri olarak ilk defa bir android uygulaması geliştirdim ve
+Vipera&rsquo;nın bildirim sisteminin istemci tarafını yazdım.</p>
+
+<p>Yarışma açık kaynak kodlu uygulamalar kategorisinde yarışıyordum.
+Bu kategorideki projeler, diğer kategorilere ve yarışmalara göre daha düşük kalıyordu.
+Teknik  ve açık kaynak felsefesi açısından değerlendirildiğinde benim proje diğer projelerden üstündü.
+Sunum için bize yaklaşık 7dk süre verildi. 45dklık bir semineri 75dk&rsquo;da verebilen biri için oldukça kısa bir süreydi.
+Üzerinde zaman harcayarak bu sürede sunumu tamamlamayı başardım. Sunumun sadece juriye yapılması,
+serginin değerlendirilmemesi gibi yarışma birçok açıdan kalitesizdi.
+Sunumu merak edenler yazının sonundaki slideshare sunumundan inceleyebilirler.</p>
+
+<p><strong>25 Haziran&rsquo;da yapılan ödül töreninde sonuçlar açıklandı ve Vipera üçüncü sırada yer aldı.</strong></p>
+
+<h3 id="teknik-açıdan-sonuçlar:76ab7a0392d682cc69cc876ca4838d28">Teknik Açıdan Sonuçlar</h3>
+
+<p>Vipera, geliştirmiş olduğum ilk proje olması sebebi ile benim için önemli bir yere sahip.
+Yarışmada ödül almasından daha çok böyle bir projeyi kısa sürede geliştirebilmek benim için oldukça büyük bir öneme sahip.
+Esnek bir yapıda geliştirme yaptığımdan dolayı yeni öğreneceğim Java teknolojilerini de bu proje üzerinde deneme şansım olacak.
+Yine benim için en önemli avantajı, hatalarımı görmem oldu. Gördüğüm başlıca eksiklikler şöyle:</p>
+
+<ul>
+<li>Gösterim katmanındaki Controller ile işletme katmanının görevlerini karıştırmak,</li>
+<li>LOG yazmak konusunda nerdeyse hiç birşey bilmiyor olmam,</li>
+<li>Nerede test yazılması ve nerede yazılmaması gerektiği konusunda eksiklikler,</li>
+<li>Tasarım desenleri,</li>
+<li>Temiz kod!</li>
+</ul>
+
+<p>Böyle bir projeyi geliştirmek zor olsa da beni motive ettiğini ve bugüne kadarki yazılım çalışmalarımın meyvesini aldığımı söyleyebilirim.</p>
+
+<p>TUBİTAK yarışmasına katılmayı düşünenler için de en önemli tavsiyem mutlaka bilimsel bir proje ile başvurulması.
+Jüri, projenin bilimsel olmasına herşeyden daha çok önem veriyor.</p>
+
+<h3 id="güncelleme:76ab7a0392d682cc69cc876ca4838d28">Güncelleme</h3>
+
+<p>Bu yazının bu kısmını 7 Mart 2016&rsquo;da yazıyorum. Projenin üzerinden nerdeyse 2 yıl geçmiş. Vipera benim üniversitede
+öğrenmek istediğim konuları öğrendiğimin bir göstergesi oldu. Yukarda da bahsettiğim proje hatalarla dolu. Ne de olsa
+o zamanlar mezun bile değildim. Projeyi öğrenme amacı ile inceleyecek olan arkadaşlar dikkatli olsunlar.</p>
+
+<p>Kendi başınıza proje geliştirmenin birçok avantajı bulunmaktadır. Herşeyden önce kendi hatalarınızı kendiniz
+görmüş olursunuz. Proje geliştirirken birçok bilgi de beraberinde gelir. Ekip halinde çalışırken ekibe uyumlu olmak
+zorundasınız. Birşeyleri değiştirmeniz kolay olmaz veya doğru bildiğiniz konuları hem siz yanlış uygulayabilirsiniz
+hem de danıştığınız kişiler yanlış biliyor olabilir. O yüzden mutlaka kendi başınıza bir proje geliştirin.</p>
+
+<p>Biraz gelecekten gelmiş gibi olacağım ama :) Merak edenler varsa yukardaki eksiklikler konusunda ne olduğunu da yazayım.
+Gösterim katmanı ve İşletme katmanı sorunlarını projeden hemen sonra anladım. Kısaca özetlersem gösterim katmanı sadece
+io olmalı. Asıl işleri işletme katmanı yapmalı. Log yazmak konusu da projeden projeye değişen bir durum. Fakat veri
+değiştiren işlemlerde mutlaka info seviyesinde log yazmalısınız. Test konusunda da oldukça rahatım. Tasarım desenleri
+projeden sonra çalıştığım ilk konu oldu. Tasarım desenlerini sorsanız şu an en çok kullanılanları anlatırım.
+Fakat tasarım desenlerine tam olarak hakim olmak için tecrübe gerekiyor. Bu konuda ne seviyedeyim ben de bilmiyorum.</p>
+
+<p>Temiz kod ise yine oldukça önemli. Bu konuda herhangi bir sorun yaşamıyorum. Hatta Akademik Bilişim 16 da &ldquo;Temiz Kod&rdquo;
+kursu verdim.</p>
+
+<p><a href="https://github.com/omerozkan/vipera">Projenin Kaynak Kodu</a></p>
+
+<div class="ui embed">
+    <iframe src="//www.slideshare.net/slideshow/embed_code/key/9b7ywcaut6Jz2j" width="595" height="485"
+            frameborder="0" marginwidth="0" marginheight="0" scrolling="no"
+            style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen>
+    </iframe>
+</div>
+
+<div class="ui hidden divider"></div>
+
+
+            <div class="clear"></div>
+            
+            <section id="comment">
+                <div class="ui section divider"></div>
+                <div id="disqus_thread"></div>
+<script>
+     var disqus_config = function () {
+     this.page.url = 'https:\/\/omerozkan.net\/bir-proje-hikayesi-vipera\/'; 
+     this.page.identifier = 'bir-proje-hikayesi-vipera';
+     };
+    (function() {
+        var d = document, s = d.createElement('script');
+
+        var disqus_shortname = 'omerozkan';
+        s.src = '//' + disqus_shortname +'.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </section>
+            
+            <div class="ui section divider"></div>
+            
+            
+            <div class="ui tag labels">
+                
+                <span class="ui teal label">
+                    proje
+                </span>
+                
+                <span class="ui teal label">
+                    vipera
+                </span>
+                
+                <span class="ui teal label">
+                    java
+                </span>
+                
+                <span class="ui teal label">
+                    tubitak
+                </span>
+                
+                <span class="ui teal label">
+                    yarışma
+                </span>
+                
+                <span class="ui teal label">
+                    ödül
+                </span>
+                
+                <span class="ui teal label">
+                    teknik eleştiri
+                </span>
+                
+            </div>
+            
+        </div>
+
+    </article>
+</section>
+</section>
+
+<section class="footer-container">
+    <footer class="ui grid">
+        <div class="ten wide mobile ten wide tablet eight wide computer column centered">
+            <div class="ui grid">
+                <div class="twelve wide mobile two wide tablet two wide computer centered column center aligned">
+                    <img id="footer-logo" src="https://omerozkan.net/img/footer-logo.png" alt="Footer lan ne bakiyon" class="ui image">
+                </div>
+                <div class="twelve wide mobile eight wide tablet eight wide computer middle aligned centered column center aligned">
+                    © 2008 Ömer Özkan. Tüm hakları saklıdır. <br/><a href="https://omerozkan.net">Ömer Özkan</a> is licensed under a <a
+                        href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License.</a>
+                </div>
+                <div class="twelve wide mobile two wide tablet two wide computer middle aligned centered column">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                        <img id="cc-logo" alt="Creative Commons License" style="border-width:0"
+                             class="ui image centered"
+                             src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+
+<script src="https://omerozkan.net/js/scripts.js"></script>
+</body>
+</html>

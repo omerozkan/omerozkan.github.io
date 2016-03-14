@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Github on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/github/</link>
+    <description>Recent content in Github on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Mon, 02 Dec 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Github Depolarının Redmine&#39;a Entegre Edilmesi</title>
+      <link>https://omerozkan.net/github-deposunun-redminea-baglanmasi/</link>
+      <pubDate>Mon, 02 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/github-deposunun-redminea-baglanmasi/</guid>
+      <description>&lt;p&gt;İş takip sistemi Redmine&amp;rsquo;ı ve sürüm takip sistemi git&amp;rsquo;i kullanıyorum. Git, SVN gibi sürüm takip sistemlerindeki depoları
+redmine&amp;rsquo;a bağlayabiliyorsunuz. Github ise açık kaynak projelere ücretsiz alan sağlıyor.
+Github&amp;rsquo;daki bir projemi Redmine&amp;rsquo;a bağlamak istedim. Kendi uğraşımdan sonra &lt;a href=&#34;https://eventualis.org/&#34;&gt;Samed Beyribey&lt;/a&gt;&amp;lsquo;den yardım istedim.
+Kendisi nasıl entegre edebileceğimi anlattı. Sizler için de faydalı olacağını düşünerekten bu yazıyı paylaşmak istedim.&lt;/p&gt;
+
+&lt;p&gt;Github depolarınızı Redmine&amp;rsquo;a entegre etmek için aşağıdaki adımları uygulamanız yeterlidir.&lt;/p&gt;
+
+&lt;p&gt;Öncelikle Github deposunu Redmine&amp;rsquo;ın kurulu olduğu sunucuda dilediğiniz bir dizine git projenizi mirror parametresi ile klonlayın.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;git clone https://github.com/omerozkan/vipera.git --mirror&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Eğer projeniz private ise http yerine ssh ile klonlayabilirsiniz.
+Klonlama işleminden sonra redmine panelinden Yönetim -&amp;gt; Ayarlar sayfasına gidin ve Depolar sekmesinden bir API Key oluşturun.&lt;/p&gt;
+
+&lt;p&gt;Eklemek istediğiniz projeye gidip projede Ayarlar -&amp;gt; Depolar &amp;lsquo;a tıklayıp yeni bir depo oluşturun.
+Burda &amp;ldquo;Path to repository&amp;rdquo; değerine klonladığınız git dizininin tam yolunu yazın.
+Klonladığınız git dizinine redmine&amp;rsquo;nın sistemdeki kullanıcısının erişebilmesi gerekiyor. İzinleri ona göre yapılandırın.
+Bu işlemi gerçekleştirdikten sonra git deposundaki son değişiklikleri alması ve redmine&amp;rsquo;ın bu değişiklikleri okuması için cron oluşturmak gerekiyor.
+Cron oluşturmak için&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;crontab -e&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;komutunu girdiğinizde karşınıza vi editoru çıkacaktır. Cron ayarlarınızı vi editorüne girip kaydedebilirsiniz.
+Örneğin her saat başı güncellemeleri almak istiyorsanız aşağıdaki cron ayarlarını kullanabilirsiniz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/1d0ecc2af86e3d4eb312.js?file=cron&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Böylelikle github projenizi redmine&amp;rsquo;a entegre etmiş olursunuz.
+Standart olarak &amp;ldquo;refs #işnumarası&amp;rdquo; şeklinde gönderdiğiniz commitler redmine&amp;rsquo;da o işe bağlanacaktır.&lt;/p&gt;
+
+&lt;p&gt;Bir sonraki yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

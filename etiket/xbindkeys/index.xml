@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Xbindkeys on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/xbindkeys/</link>
+    <description>Recent content in Xbindkeys on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Sun, 16 Jun 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/xbindkeys/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Linux&#39;da Fare Butonlarına İşlev Atama</title>
+      <link>https://omerozkan.net/linuxda-fare-butonlarina-islev-atama/</link>
+      <pubDate>Sun, 16 Jun 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/linuxda-fare-butonlarina-islev-atama/</guid>
+      <description>&lt;p&gt;Uzun süreden beri Logitech fare kullanıyorum. Farenin standart tuşları dışında scroll&amp;rsquo;un sağ ve solunda iki ayrı tuşu daha vardı.
+Film izlerken VLC player ile filmi ileri geri alabiliyordum. Fakat bunun dışında bu iki tuşu kullanmadığımı farkettim.
+VLC dışındaki bir uygulama ile film izlerken sürekli ses kısıp açma ihtiyacım oldu.
+Bu ihtiyaçtan dolayı ki bu iki tuşa ses azaltma ve arttırma özelliği ekledim.
+Siz de aşağıdaki adımları uygulayarak fare tuşlarınıza işlev atayabilirsiniz.
+Kullandığım Linux dağıtımı Fedora 18, fakat diğer dağıtımlar için de aynı şekilde yapılır.
+Öncelikle &lt;code&gt;xbindkeys&lt;/code&gt; ve &lt;code&gt;xev&lt;/code&gt; uygulamalarını kuralım.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Redhat tabanlı dağıtımlar için&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;yum install xbindkeys xev&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Debian(Ubuntu,Mint etc) tabanlı dağıtımlar için&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;sudo apt-get install xbindkeys xev&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;komutları ile xev ve xbindkeys uygulamalarını sistemimize yükleyelim. Daha sonra xbindkeys komutunu çalıştıralım:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;xbindkeys&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu komutu çalıştırdıktan sonra aşağıdaki gibi bir hata alabilirsiniz:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;Error : /home/omer/.xbindkeysrc not found or reading not allowed.
+please, create one with &amp;lsquo;xbindkeys –defaults &amp;gt; /home/omer/.xbindkeysrc&amp;rsquo;.
+or, if you want scheme configuration style,
+with &amp;lsquo;xbindkeys –defaults-guile &amp;gt; /home/omer/.xbindkeysrc.scm&amp;rsquo;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;.xbindkeysrc dosyasını bulamadığından dolayı böyle bir hataya rastlayabilirsiniz. Dosya oluşturmak için yukardaki çıktıda gördüğnüz gibi:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;xbindkeys –defaults &amp;gt; .xbindkeysrc&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu komutu girdikten sonra .xindkeysrc dosyası oluşacaktır. Fare butonlarına işlev atamadan önce butonların numaralarını öğrenelim.
+Bunun için xen uygulamasından faydalanacağız.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;xen&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu komutu girdiğinizde karşınıza bir &amp;ldquo;Event Tester&amp;rdquo; penceresi açılacaktır.
+Bu pencere üzerinde fare ile bastığınız her tuşun numarasını uçbirim ekranından görebilirsiniz. Örneğin sola tıkladığımda:&lt;/p&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;ButtonRelease event, serial 28, synthetic NO, window 0x2a00001,
+  root 0x1db, subw 0x2a00002, time 7219539, (43,47), root:(293,488),
+  state 0x100, button 1, same_screen YES&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Aşağıda button 1 yazısı farenin sol tuşun numarasının 1 olduğunu gösterir.
+Örneğin benim atama yapmak istediğim scroll&amp;rsquo;un tuşların numarası 6 ve 7&amp;rsquo;dir.
+Sizin de aynı olmayabilir. Bu tuşlara işlev atamak için .xbindkeysrc dosyasını istediğiniz bir editörle açabilirsiniz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0846f89e4223f2481eb8.js?file=xbindkeysrc&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Burada &amp;ldquo;komut&amp;rdquo; yerine neyi gerçekleştirmesini istiyorsanız onu giriyorsunuz.
+Bu satırı eklediğimde 6. butona bastığımda istediğim komutu gerçekleştirecektir.
+Ben 6. buton için ses azaltma, 7. buton için ses arttırma özelliklerini ekledim:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0846f89e4223f2481eb8.js?file=xbindkeysrcfinal&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Dosyayı kaydedip kapattığınızda eğer xbindkeys uygulaması çalışmıyorsa, xbindkeys komutunu tekrar girebilirsiniz.
+Eğer sisteminiz her açıldığında xbindkeys uygulamasının aktif olmasını istiyorsanız.
+Aşağıdaki komutu girerek karşınıza çıkan pencerede xbindkeys i ekleyerek bu işlemi gerçekleştirebilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;gnome-session-properties&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&#34;https://omerozkan.net/images/post/linux/gnomesessionproperties.png&#34; alt=&#34;Gnome Session Properties&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu komut sadece gnome tabanlı masaüstü yöneticilerinde çalışacaktır. KDE kullanıyorsanız, nasıl yapıldığını öğrenmeniz gerekir.&lt;/p&gt;
+
+&lt;p&gt;Bir başka yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

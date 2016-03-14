@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Akademik Bilişim on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/akademik-bili%C5%9Fim/</link>
+    <description>Recent content in Akademik Bilişim on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Sat, 02 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/akademik-bili%C5%9Fim/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AB 16 Temiz Kod Kursu</title>
+      <link>https://omerozkan.net/ab-16-temiz-kod-kursu/</link>
+      <pubDate>Sat, 02 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/ab-16-temiz-kod-kursu/</guid>
+      <description>
+
+&lt;p&gt;Merhabalar&lt;/p&gt;
+
+&lt;p&gt;Bu yıl &lt;a href=&#34;http://sadikcetin.net/&#34;&gt;Sadık Çetin&lt;/a&gt; ile beraber, 30 Ocak – 2 Şubat arasında Aydın&amp;rsquo;da düzenlenecek
+Akademik Bilişim konferans öncesi kurslar kapsamında Temiz Kod kursu vereceğiz.
+Kurs tamamen ücretsiz olup herkese açıktır. Katılımcılar dilerlerse KYK yurtlarında da konaklayabilirler.
+Kurs genel olarak clean code, refactoring ve test driven development konularını içermektedir.&lt;/p&gt;
+
+&lt;p&gt;Kayıt için: &lt;a href=&#34;https://kayit.ab.org.tr&#34;&gt;https://kayit.ab.org.tr&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Kurs hakkında detaylı bilgiyi yazının devamında bulabilirsiniz.&lt;/p&gt;
+
+&lt;h3 id=&#34;kurs-hakkında:71bbf2088587004e82981ef7c8a5324f&#34;&gt;Kurs Hakkında&lt;/h3&gt;
+
+&lt;p&gt;Bir yazılımın bakımını yapmak geliştirmekten daha zordur. Kod altyapısının temiz olması ürünün bakımını kolaylaştırır.
+Bu açıdan temiz kod akımı yazılımda oldukça önemli ve popüler bir hale gelmiştir.&lt;/p&gt;
+
+&lt;p&gt;Temiz kod üretebilmek ve yeniden yapılandırmak (refactoring) için gerekli kurallar ve teknikler Java programlama dili ve araçları
+kullanılarak uygulamalı olarak anlatılacaktır.&lt;/p&gt;
+
+&lt;h3 id=&#34;katılımcılar-için-ön-şartlar:71bbf2088587004e82981ef7c8a5324f&#34;&gt;Katılımcılar İçin Ön Şartlar&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Temel düzeyde nesne yönelimli programlama (OOP) bilgisi olan&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Okuduğunu anlayacak düzeyde İngilizce bilgisi olan&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Temiz kod ve yeniden yapılandırma (refactoring) gibi kavramlara meraklı&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Herhangi bir nesne yönelimli bir dil ile proje geliştiren,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Tercihen Java programlama diline hakim kişiler hedeflenmiştir.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;katılımcılardan-istenenler:71bbf2088587004e82981ef7c8a5324f&#34;&gt;Katılımcılardan İstenenler&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Dizüstü bilgisayarlarının yanında getirmeleri,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Sistemlerine JDK 8 (Java Development Kit) ve Eclipse for JavaEE (Mars) kurmaları gerekmektedir,
+(Dileyenler IntellijIdea&amp;rsquo;nın topluluk versiyonunu kullanabilirler.)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;kontenjan:71bbf2088587004e82981ef7c8a5324f&#34;&gt;Kontenjan&lt;/h3&gt;
+
+&lt;p&gt;Kontenjan 16 kişi ile sınırlıdır.&lt;/p&gt;
+
+&lt;h3 id=&#34;konular:71bbf2088587004e82981ef7c8a5324f&#34;&gt;Konular&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-gün:71bbf2088587004e82981ef7c8a5324f&#34;&gt;1. Gün&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Temiz kod nedir?&lt;/li&gt;
+&lt;li&gt;Kod Konvansiyonu (Code Convention)&lt;/li&gt;
+&lt;li&gt;İsimlendirme&lt;/li&gt;
+&lt;li&gt;Fonksiyonlar / Metodlar&lt;/li&gt;
+&lt;li&gt;Yorum Satırları&lt;/li&gt;
+&lt;li&gt;Kod Stili&lt;/li&gt;
+&lt;li&gt;Nesneler ve Veri Yapıları&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-gün:71bbf2088587004e82981ef7c8a5324f&#34;&gt;2. Gün&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Exception / Error Handling&lt;/li&gt;
+&lt;li&gt;Sınıflar&lt;/li&gt;
+&lt;li&gt;Üçüncü parti bağımlılıklar&lt;/li&gt;
+&lt;li&gt;Yeniden yapılandırma (Refactoring)&lt;/li&gt;
+&lt;li&gt;Temel yeniden yapılandırma teknikleri&lt;/li&gt;
+&lt;li&gt;Eclipse ile yeniden yapılandırma&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;3-gün:71bbf2088587004e82981ef7c8a5324f&#34;&gt;3. Gün&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Testler ve JUnit&lt;/li&gt;
+&lt;li&gt;Temiz Testler&lt;/li&gt;
+&lt;li&gt;Test Güdümlü Geliştirme&lt;/li&gt;
+&lt;li&gt;Örnek Uygulama: Bowling Oyunu&lt;/li&gt;
+&lt;li&gt;Test prensipleri (FIRST)&lt;/li&gt;
+&lt;li&gt;Örnek Uygulama: Video Store&lt;/li&gt;
+&lt;li&gt;Testlerin temizlenmesi&lt;/li&gt;
+&lt;li&gt;Ürün kodunun temizlenmesi&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-gün:71bbf2088587004e82981ef7c8a5324f&#34;&gt;4. Gün&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Kodu gözden geçirme (Code Review)&lt;/li&gt;
+&lt;li&gt;Sistemler&lt;/li&gt;
+&lt;li&gt;Temiz Mimari&lt;/li&gt;
+&lt;li&gt;Eşli Programlama (Pair Programming)&lt;/li&gt;
+&lt;li&gt;Eşli Programlama Uygulaması: Roma Rakamları, Tenis Oyunu&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>AB 15 Java 101 Kursu</title>
+      <link>https://omerozkan.net/akademik-bilisim-15-java-101-kursu/</link>
+      <pubDate>Tue, 30 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/akademik-bilisim-15-java-101-kursu/</guid>
+      <description>
+
+&lt;p&gt;Her yıl farklı bir üniversitede gerçekleşen Akademik Bilişim etkinliğine bu yıl Eskişehir Anadolu Üniversitesi ev sahipliği yapıyor.
+Etkinlik 31 Ocak – 6 Şubat tarihleri arasında düzenlenecek. Konferans öncesi kurslar ise 31 Ocak – 3 Şubat arasında&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;Bu yıl Akademik Bilişim&amp;rsquo;de Java 101 başlıklı Java&amp;rsquo;ya başlangıç yapmak isteyenler için kurs vereceğim. Katılım tamamen ücretsizdir.
+Katılımcılar isterlerse KYK&amp;rsquo;da konaklayabilirler.&lt;/p&gt;
+
+&lt;h3 id=&#34;hedef-kitle:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;Hedef Kitle&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Temel algoritma, veri yapıları ve temel düzeyde nesne yönelimli programlama bilgisi olan,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Başka bir programlama dilini bilen ve Java&amp;rsquo;ya başlangıç yapmak isteyen,&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Uzun zaman önce Java ile tanışmış fakat ilerleyememiş, temiz ve hızlı bir başlangıç yapmak isteyenler kişiler için hedeflenmiştir.&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Kurs sonunda katılımcılar nesne yönelimli programlama (Object oriented programming) öğrenip,
+Java ile ilgili teknolojilerde kendilerini geliştirebilmek için temel oluşturacak bilgi birikimine sahip olacaktır.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;katılımcılardan-istenenler:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;Katılımcılardan İstenenler&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Herhangi bir linux dağıtımı yüklü dizüstü bilgisayarını getirmesi (Sanal makine tercih edilmemelidir.
+Mümkünse OpenSuse, Ubuntu veya Fedora dağıtımlardan biri tercih edilmelidir )&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Sistemlerine OpenJDK 7(veya üzeri) yüklemeleri&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Eclipse Luna (veya bir önceki sürümü Kepler) yüklemeleri gerekmektedir.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Not: Kurs sırasında herhangi bir yükleme işlemi yapılmayacaktır. O yüzden mutlaka yazılımların yüklü olması gerekmektedir.
+Yazılım yüklemeleri için gereken döküman katılımcılara özel olarak eposta gönderilecektir.&lt;/p&gt;
+
+&lt;h3 id=&#34;kontenjan-ve-kursiyer-seçimi:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;Kontenjan ve Kursiyer Seçimi&lt;/h3&gt;
+
+&lt;p&gt;Katılımcı sayısı 30 ile sınırlandırılmıştır. Başvuru sayısı fazla olması halinde adaylara 3 gün içerisinde doldurması gereken anket gönderilecektir.
+Cevaplanan anketler sonucunda kursa uygun olan katılımcılar seçilecektir.&lt;/p&gt;
+
+&lt;h3 id=&#34;konular:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;Konular&lt;/h3&gt;
+
+&lt;h4 id=&#34;1-gün:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;1. Gün&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Java&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;JDK, JRE, JVM, Java Versiyonları&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Java ile İlk Program&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Veri Tipleri, Operatörler, String&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Döngü ve Koşul&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Sınıflar, Nesneler&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Construction&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Nesne Yönelimli Programlamaya Giriş&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Kapsülleme (Encapsulation)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Kalıtım (Inheritance)&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;2-gün:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;2. Gün&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Polimorfizm&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Soyutlama (Abstraction)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Casting&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Interface &amp;amp; Abstract Sınıflar&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Statik ve Final&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;3-gün:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;3. Gün&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Exception Handling (Checked &amp;amp; Unchecked)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Diziler (Array)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Generic&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;4-gün:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;4. Gün&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Collections (List, Set, Map, Iteration)&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Enumeration&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Mutable &amp;amp; Immutable&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Inner Class&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;String &amp;amp; StringBuilder&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;SOLID&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kursa kayıt olmak için 1 Ocak 2015 tarihinden itibaren &lt;a href=&#34;http://ab2015.anadolu.edu.tr/&#34;&gt;http://ab2015.anadolu.edu.tr/&lt;/a&gt; adresinden yapabilirsiniz.
+Kurs ile ilgili sorularınızı eposta ile sorabilirsiniz.&lt;/p&gt;
+
+&lt;h3 id=&#34;diğer-kurslar:9a905544edc0e3221aa5eb3d7e338cbf&#34;&gt;Diğer Kurslar&lt;/h3&gt;
+
+&lt;p&gt;Akademik Bilişim&amp;rsquo;de 40&amp;rsquo;a yakın kurs düzenlenecektir.
+Kurslarla ilgili detaylı bilgiyi &lt;a href=&#34;http://ab.org.tr/ab15/kurs.html&#34;&gt;http://ab.org.tr/ab15/kurs.html&lt;/a&gt; adresinden edinebilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;Eskişehir&amp;rsquo;de görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Akademik Bilişim 2013</title>
+      <link>https://omerozkan.net/akademik-bilisim-13/</link>
+      <pubDate>Tue, 29 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/akademik-bilisim-13/</guid>
+      <description>&lt;p&gt;Akademik Bilişim, 1999 yılından beri INETD tarafından her yıl organize ediliyor.
+Seminerler ve konferanslardan önce 4 günlük kurslar düzenleniyor.
+Ben de bu yıl akademik bilişimde yerimi aldım.&lt;/p&gt;
+
+&lt;p&gt;Akademik Bilişim 13, Antalya Akdeniz Üniversitesi’nde yapıldı. Katılmayı çok istediğim etkinliklerden biriydi.
+Yalnız bütünleme sınavları ile çakışması bizler için büyük bir problem oldu.
+Fakat Akademik Bilişim için riske değer diye bazı bütünlemeleri bıraktım ve akademik bilişime katılmayı tercih ettim.
+Kurs konusunda da kararsızdım. Çünkü birçok güzel kurslar vardı. Kurslar paralel olarak yapılıyor.
+Bu yüzden sadece birini seçmek zorundasınız. Zamanda yolculuk yapabilsem muhtemelen geriye dönüp bütün kurslara katılmayı tercih ederdim :).
+Kurslardan 3 tanesi uygun geldi: PostgreSQL, Android ve Clojure. Bir yazılımcı olduğum için Android ve Clojure daha ağır basıyordu.
+Bir yandan da PostgreSQL öğrenmek istiyorum. Çünkü bitirme projemin veritabanı postgres olacak.
+Android ise Javacı olmama rağmen framework’ünü sevmemiştim.
+Android’i bu şekilde eledim. Fakat yine kararsız kaldım.
+Ben de uzunca düşündüm ve veritabanı yöneticisi (DBA) olmak isteyen arkadaşların önünü kapatmama düşüncesi ile Clojure’u tercih ettim.
+Özellikle fonksiyonel programlamayı öğrenmek istiyordum. Clojure zaten öğrenmek istediğim programlama dillerinden biridir.
+Postgres’i de hem Devrim Gündüz’ü tanımak hem de veritabanını geliştirmek için düşünüyordum.
+Clojure’a kayıt oldum fakat yeterli sayıda olmadığı için tekrar bir tercih yapmam gerekiyordu.
+Hiç düşünmeden postgresi tercih ettim.&lt;/p&gt;
+
+&lt;p&gt;Antalya’ya birkaç arkadaş gidecektik fakat bütünleme sınavları ve diğer nedenlerden dolayı bana sadece İlhan* eşlik etti.
+Oraya ulaşmak için otobüsü tercih ettik. Hep Antalya yolundan (Hatay-Antalya) kötü diye bahsederlerdi. Gerçekten öyleymiş.
+Yol baya yorucu geçti. Antalya’ya vardığımızda Linux yaz kampında tanıştığım Nursel* ve arkadaşı Duygu* ile buluştuk.
+Kayıt, yurda yerleşme vs derken, yağmurda baya bir ıslandık. Gece doğru düzgün uyuyamadığım için yorgun düşmüştüm.
+Fakat bütün sınavlarım o gece açıklanması ve sonuçların olumlu olması kursa daha rahat katılmamı sağladı.&lt;/p&gt;
+
+&lt;p&gt;Öncelikle kurstan bahsedersem Devrim hoca sayesinde kurs baya eğlenceli geçti. Hem eğlendik hem öğrendik.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;ui left floated bordered medium image content-image&#34; src=&#34;https://omerozkan.net/images/post/akademik-bilisim-13/postgres-kursu1.jpg&#34;
+     alt=&#34;Postgresql sınıfı&#34; /&gt;
+Benim açımdan postgres kursu yazılımdan farklı konuları ele aldığımız için çok güzel geçti. Çünkü yeni şeyler öğrendim.
+Bu arada PostgreSQL’in kısa adı POSTGRES’tir. “Postgre” diye isimlendirenler ceza aldılar :)
+Kurs içeriği SQL veya veritabanı tasarımı değildi. SQL komutlarına az çok hakimim zaten.
+Tasarım da zaten bilgim olan konulardan biriydi. Böyle olması benim de işime geldi.
+Veritabanı yöneticiliği sandığımdan da farklı bir olaymış. Ama zevkli tarafı da var.
+Bir de oraya tıkla, şunu ekle, bunu yap yerine sadece terminalden işlemleri gerçekleştirdik. psql gerçekten çok güzel bir araç.
+Kursun sonunda da asenkron replikasyon yaptık. Postgresql in mimarisi hakkında da bilgi sahibi olduk.
+Benim açımdan dediğim gibi çok zevkli ve çok verimli geçti. Anlamakta hiç zorlanmadım.&lt;/p&gt;
+
+&lt;p&gt;Malesef yorgunluktan dolayı sadece üç seminere katılabildim. Zaten seminerlerin son gününe katılamayacaktık.
+İlk gün Linux sunucu yönetimi kursuna katıldım. Malesef bildiğim konulardı.
+Daha sonra sesini duymayı özlediğim Hakan Uygun’un alfresco seminerine katıldım.
+Elektronik imza da konu olduğu için baya zevkli geçti. Diğer seminer de tabiki Melih Sakarya’nın kurumsal java seminerleriydi.
+Gelmişken Melih Sakarya ile tanışmadan gitmeyelim dedik. Otobüsümüz ile seminer bitişi arasında 1 saat vardı.
+Melih Sakarya tanışmak istediğim Javacılardan biriydi. Bu sayede tanışmış oldum.
+Aynı zamanda seminer de kurumsal teknolojilerle beraber PrimeFaces’i tanımış olduk.
+JSF ve Primefaces konusunda ilerlemeye karar verdim. Melih hoca ile sohbetimiz yarım saate mal oldu.
+Otobüse zar zor yetiştik ama değdi.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;ui right floated bordered medium image content-image&#34; src=&#34;https://omerozkan.net/images/post/akademik-bilisim-13/postgres-kursu2.jpg&#34;
+     alt=&#34;Postgresql sınıfı&#34; /&gt;
+Antalya ise kışın havanın tutarsızlığı dışında çok güzel bir şehir.
+O sahili, denizi gördükten sonra İskenderun’daki ne diye düşündüm :).
+Kurslardan fazla gezmeye fırsatımız olmadı. Açıkçası yorgunluk yüzünden pek de gezmek istemedim.
+Benim aklım daha çok teknolojideydi her zamanki gibi. Ama nerdeyse hiç bir zamanımızı boş geçirmedik.
+Bu yüzden de seminerler için baya yorgun düştük. Daha sonra aramıza Adem* ve son gün Vahdet* katıldı.
+Nursel ile de nerdeyse her gün kavga ettik :) . Korelilerle sohbetimiz de güzeldi ;)&lt;/p&gt;
+
+&lt;p&gt;Akademik bilişim benim için gerçekten çok eğlenceli geçti. Özellikle okulun ve sınavların bütün stresini atmamı sağladı.
+Aynı zamanda yeni arkadaşlar edindik. Bu tür etkinlikler benim için çok faydalı ve çok eğlenceli geçiyor.
+Okulda yaşadığım bütün stresin, sıkıntının değeceğini görüyorum.
+Bu arada Özgür Yazılım A.Ş. yöneticileri (Hakan Uygun ve Doruk Fişek) benimle özel olarak ilgilendiler.
+İlgilerinden dolayı gerçekten onur duydum. Postgresql kursundan sonra yazılım geliştirmeyi ne kadar çok sevdiğimi farkettim.
+Kariyerim konusunda doğru bir tercih yaptığım için mutluyum. Özellikle Java seminerinde bunu daha çok anladım.
+Tabiki veritabanı yöneticiliği de benim için yazılım geliştirmek kadar olmasa da çok zevkli bir meslek.
+Zamanım kalırsa bu konuda da uzmanlaşmaya çalışacağım.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gradle on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/gradle/</link>
+    <description>Recent content in Gradle on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Thu, 09 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/gradle/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Gradle ile Proje İnşası Semineri</title>
+      <link>https://omerozkan.net/gradle-ile-proje-insasi-semineri/</link>
+      <pubDate>Thu, 09 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/gradle-ile-proje-insasi-semineri/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://www.ozguryazilimgunleri.org.tr/2015&#34;&gt;Özgür Yazılım ve Linux Günleri 2015&lt;/a&gt;, İstanbul Bilgi Üniversite&amp;rsquo;sinde gerçekleşti.&lt;/p&gt;
+
+&lt;p&gt;Bu etkinliğe ben de &amp;ldquo;Gradle ile Proje İnşası&amp;rdquo; başlıklı sunumum ile katıldım.&lt;/p&gt;
+
+&lt;h3 id=&#34;konu-özeti:a5b41cfc4337942d13e42c5c56de025f&#34;&gt;Konu Özeti&lt;/h3&gt;
+
+&lt;p&gt;Gradle, Java dünyasının popüler inşa sistemlerinden biridir.
+Popüler inşa sistemleri Ant ve Maven ile uyumlu olmakla beraber, bir programlama dili Groovy ile yapılandırılması sağlanarak esnek bir sistem sunar.
+Gradle&amp;rsquo;ın getirdiği yenilikler, bağımlılık yönetimi, derleme ve paketlemenin nasıl yapıldığı, esnek yapısı,
+maven ve ant ile kıyaslanması, task&amp;rsquo;ların nasıl yazıldığı, avantajları ve dezavantajları konular örneklerle anlatılmıştır.&lt;/p&gt;
+
+&lt;p&gt;Sunum dosyasına aşağıdaki bağlantılardan ulaşabilirsiniz:&lt;/p&gt;
+
+&lt;h3 id=&#34;slideshare:a5b41cfc4337942d13e42c5c56de025f&#34;&gt;Slideshare&lt;/h3&gt;
+
+&lt;div class=&#34;ui embed&#34;&gt;
+    &lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/69EIZbNvE07HIH&#34; width=&#34;595&#34; height=&#34;485&#34;
+            frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
+            style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;ui hidden divider&#34;&gt;&lt;/div&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

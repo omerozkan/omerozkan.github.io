@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Işletim Sistemi on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/i%C5%9Fletim-sistemi/</link>
+    <description>Recent content in Işletim Sistemi on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Sun, 03 Feb 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/i%C5%9Fletim-sistemi/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Bir Linux Hikayesi</title>
+      <link>https://omerozkan.net/bir-linux-hikayesi/</link>
+      <pubDate>Sun, 03 Feb 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/bir-linux-hikayesi/</guid>
+      <description>&lt;p&gt;Merhabalar&lt;/p&gt;
+
+&lt;p&gt;Uzun zamandır böyle bir yazı yazmayı planlıyordum. Özellikle çevremdeki insanlar neden Windows işletim sistemini kullanmadığımı,
+ neden açık kaynak fanatiği olduğumu soruyorlar. Belki bu yazı biraz olsun bu sorulara cevap verebilir.
+ Bilgisayar ile tanışmam aslında yaklaşık 3-4 yaşlarında oldu. O zamanlar babam askerlik şubesinde memur olarak çalışıyordu.
+ Dolayısıyla bilgisayar kullanıyordu. İlk bilgisayarı orda görmüştüm.
+ Babamın yanına gittiğimde oturup uzun uzun bilgisayar ekranına hayranlıkla bakardım.
+ Aklımda kalan tek şey var o da bilgisayar mühendisliği mesleğini duymamdır.
+ Çok net hatırlıyorum ki o zaman bilgisayar mühendisi olmaya karar vermiştim.
+ Sonradan öğrendim ki o bilgisayarlarda Unix işletim sistemi çalışıyormuş.
+ Çocukluğumda en sevdiğim oyuncağım Atari 2600 oldu. Özellikle babam River Raid oyununun hastasıydı. Merak edenler &lt;a href=&#34;https://www.youtube.com/watch?v=pmPjsBDN9Xw&#34;&gt;buraya&lt;/a&gt;
+ tıklayabilirler.
+ İkinci sınıfa geldiğimde o zamanın en güzel oyuncağı Nintendo’nun 8 bit işlemcili NES oyun konsollarından birine sahiptim.
+ Goal 3, en sevdiğim oyunlardan biridir. Arada sırada halen oynuyorum :)&lt;/p&gt;
+
+&lt;p&gt;Bilgisayar ile çok küçük yaşta tanışmama rağmen ekonomik sıkıntılar yüzünden çocukluğum bilgisayar ile geçmedi.
+Hayalimde hep bir bilgisayar sahibi olmak vardı. Nitekim bu hayalim 2005 yılında gerçekleşti.
+Ben o zamanlar lisede hazırlık okuyordum. O zamanlar Windows’un XP SP2 versiyonu vardı.
+Bilgisayarımda da bu işletim sistemi yüklüydü. Derken 3. gün işletim sistemi göçtü :)
+Aslında bu bana güzel bir işaret olmalıydı. Windows’la benim anlaşmam çok zor oluyordu.
+Internet kullanmadığım halde sürekli windows işletim sistemi ile ilgili hep problem yaşıyordum.
+Her seferinde kasayı alıp, windows kurdurmak yerine bu işi kendim yapmam gerektiğini anladım
+ve işletim sistemini kendim kurmaya başladım.&lt;/p&gt;
+
+&lt;p&gt;Kurulumu kendim yapmam da bu sefer benim canımı sıkmaya başlamıştı. Sürekli iş çıkıyordu bana.
+Hem biraz donanım öğrenmek hem de bu tür sorunları yaşamamak için bir teknik serviste çalışmaya başladım.
+Teknik serviste de işleri kavramam uzun sürmedi. Ayrıca bu sayede interneti de kullanmaya başlamıştım.
+Özellikle hazırlık sınıfını çok verimli geçirdiğim için İngilizce sitelerde dolaşmak da çok zor olmuyordu.
+Windows ile yaşadığım sıkıntılar başka çözümler aramamı sağladı. Yedek alma ve yükleme işlemleri yapmaya başladım.
+Yanlışlıkla bütün HDD’yi sildiğim de olmuştur. Teknik serviste çalışırken bir bilgisayara bir Gelecek Linux kurmam istenmişti.
+Yine dergilerden Linux’un bazı dağıtımları vardı. Bu CD’ler kurulan değil çalışan CD’lerdi.
+Gelecek Linux’tan sonra Knoppix, Turkix gibi işletim sistemlerini denedim. Malesef her seferinde tekrar windows’a döndüm.
+O zamanlar Türk işletim sistemi Pardus’u duymuştum. Özellikle veri kurtarmak için kullanıyordum.
+Bilgisayarıma defalarca Linux dağıtımı kurdum fakat evimde internet bağlantımın olmaması yüzünden tekrar windowsa dönüyordum.&lt;/p&gt;
+
+&lt;p&gt;O zamanlar teknik serviste çalışırken web programlamaya ilgim vardı. Ücretsiz hosting servisleri alıp bu servislere Joomla ve Mambo kuruyordum.
+O zamanlar Joomla, daha yeni Mambo’dan çatallanmıştı. Joomla’yı sevdiğim için PHP öğrenmeye karar verdim.
+Joomla ile bir süre haşır neşir olduktan sonra babamın tayini çıktı.
+Yeni çevre ve arkadaş da olmadığı için fırsat bu fırsatttır diyip 2 hafta boyunca bilgisayar başından kalmayarak PHP öğrendim.
+PHP öğrenirken bir taraftan HTML diğer taraftan da SQL öğreniyordum.
+İnternetim olmadığı için de internet cafelere gidip Php ile ilgili yaşadığım sorunlara çözüm arardım.
+Bazen fonksiyon isimlerini alır USB belleğe atardım veya not defterime kaydederdim.
+Eve gelip not aldığım şeyleri tekrar tekrar denerdim.
+Şimdiki internete sahip ama hiçbir şeyi araştırmadan soru soranlara gerçekten çok üzülüyorum.&lt;/p&gt;
+
+&lt;p&gt;Lise döneminde bir proje yarışmasına katılacaktım. Proje web tabanlı bir projeydi.
+Fakat tek başıma yapacağım için CSS ve JavaScript öğrenmem gerekiyordu.
+Yine dökümanları toplayıp Internet Explorer 6 üzerinde çalışmaya başladım.
+Fakat ne acıdır ki bir türlü CSS öğrenemedim. Meğerki yazdığım kodlar yüzünden değil IE6 nın düzgün çalışmaması yüzündenmiş.
+O projeyi sırf bu yüzden yapamadım. Hatta web programcılığından da baya bir soğumuştum.
+CSS öğrenmem sırf IE6 yüzünden 2 yıl gecikmiş oldu.
+Windows ile ilgili bir sürü dert olması da bunlara eklenince Microsoft firmasından nefret etmeye başladım.
+O zamanlar da şunu düşünüyordum. Neden bir işletim sistemi kendini koruyamıyor? Neden antivirus vs gibi ek araçlara ihtiyacım var?
+Hem bu kadar para ödeyip de neden bu kadar sıkıntı yaşıyorum derken bu sorular “Neden Linux kullanmıyorsun?” sorusuna geldi.
+Fakat bunu başarmam için evimde internet bağlantısının olması gerekiyordu. Çünkü pardus u defalarca denemiştim.
+Fakat internetin olmaması yüzünden pek etkin bir şekilde kullanamıyordum.&lt;/p&gt;
+
+&lt;p&gt;İnternet ile bu kadar iş yapmama rağmen evimde internet bağlantım yoktu. Bu sorunu liseden mezun olunca çözdüm.
+Fakat bir süre windows kullanmaya devam ettim. Windows, daha interneti doğru düzgün kullanamadan birkaç defa daha çöktü :)
+Bilgisayarıma Windows ile beraber Pardus kurmuştum. Linux’a yeni başlayanlara hep Pardus öneriliyordu. Ben de bu öneriye kulak verdim.
+Pardus’u yaklaşık 1 hafta boyunca kullanadım. Fakat Pardus’u da sevmedim.
+Aslında bunun tek sebebi KDE’ydi.
+Daha sonra Ubuntu 8.4 sürümünü edindim. 8.4 ve 8.10 derken sürekli windows kullandığımı bunun bana bir yararı olmadığını farkettim.
+Linux’u hem öğrenmek hem de alışmak için kendi kendime 6 ay boyunca windows açmamaya söz verdim.
+Linux’a bu sayede daha da aşina olacaktım. Ubuntu o zamanlar varsayılan olarak Gnome 2 ile geliyordu.
+Gnome masaüstü yöneticisini gerçekten çok sevmiştim. Bilgisayarımda geçirdiğim o 6 ay bana birçok şey öğretmişti.
+İşletim sisteminde aldığım hataların çözümlerini bulmak zor olmadı.
+Bir de işin güzel tarafı işletim sistemini istediğim şekilde değişiklik yapabiliyordum. Yani bir nevi özgürdüm.
+Özellikle terminalden işletim sistemi ile iligli işlemleri yapabilmek daha da sevdirmişti.
+Nitekim artık bir Linux kullanıcısı olmuştum. Php ile yaptığım geliştirmeleri, linux ortamından yapıyordum.
+Ayrıca bilgisayarımın donanımsal özellikleri iyi olmamasına rağmen işletim sistemi çok performanslı çalışıyordu.
+Ayrıca virus derdi yoktu. Sürekli çöken, zamanla performans kaybı olan bir işletim sistemi de değildi.
+Tabiki bir güzel tarafı daha vardı. O da ücretsiz olması.&lt;/p&gt;
+
+&lt;p&gt;Linux kullanırken özgür ve açık kaynak bir işletim sistemi kullandığımı bilmiyordum.
+Bilgisayar mühendisliği bölümünü okumaya başladığımda bilgisayarımdaki Ubuntu ve Windows 7 işletim sistemi vardı.
+2010 yılında Bilmök etkinliğine katıldım. Hakan Uygun‘un “Özgür yazılım öğrencilere ne kazandırır?”
+başlıklı konuşması beni etkilemiş ve Linux’u da çok sevdiğimden özgür yazılımcı olmaya karar vermiştim.
+Nitekim bu kararım beni özgür ve açık kaynak teknolojileri öğrenmeye yönlendirdi.
+Bu teknolojilerin en güzel tarafı genellikle çoğu araçlar ücretsiz olmasıydı.
+Aynı zamanda bu teknolojiler daha kaliteliydi. Linux işletim sisteminde Windows kadar sorun yaşamıyordum.
+Diğer güzel bir tarafı bu teknolojilerin platform bağımsız olması her işletim sistemlerinde çalışabilmesidir.
+Bu da benim için ayrı bir avantaj. 2. sınıfta .net öğrenmek yerine Java’yı tercih ettim.
+Özellikle Java uzun zamandır öğrenmek istediğim bir teknolojiydi.
+Özellikle web ortamını da sevdiğimden kurumsal java geliştiricisi olmaya karar verdim.
+ Sınıfımda sadece Linux kullanan benden başka kimse yok. Ayrıca windows kullanmamam bazı kişilerden tepki de almama sebep oldu.
+ Özgür yazılımı tercih ettiğim için de. Neymiş özgür yazılımcılar para kazanamıyormuş.
+ Ben kazanayım da görsünler :) Bir yazılımın özgür olması ücretsiz olacağı anlamına gelmez.
+ Fakat ben kimseyi dinlemedim. Şu an bilgisayarımda sadece linux işletim sistemi var. Gerçekten çok memnunum.&lt;/p&gt;
+
+&lt;p&gt;Linux ile ilgili herkesin bir hikayesi vardır. Ben de kendi hikayemi anlatmaya çalıştım.
+ Özgür yazılımı tercih etmek konusunda da herkesin görüşü aynı değil. Kimisi politik, kimisi ücretsiz olması,
+ kimisi kaliteli olması gibi tercih etme sebebi var. Benim tercih sebebim ise bütün sebeplerin hemen hemen hepsidir.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

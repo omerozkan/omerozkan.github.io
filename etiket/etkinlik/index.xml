@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Etkinlik on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/etkinlik/</link>
+    <description>Recent content in Etkinlik on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Thu, 09 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/etkinlik/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Gradle ile Proje İnşası Semineri</title>
+      <link>https://omerozkan.net/gradle-ile-proje-insasi-semineri/</link>
+      <pubDate>Thu, 09 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/gradle-ile-proje-insasi-semineri/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://www.ozguryazilimgunleri.org.tr/2015&#34;&gt;Özgür Yazılım ve Linux Günleri 2015&lt;/a&gt;, İstanbul Bilgi Üniversite&amp;rsquo;sinde gerçekleşti.&lt;/p&gt;
+
+&lt;p&gt;Bu etkinliğe ben de &amp;ldquo;Gradle ile Proje İnşası&amp;rdquo; başlıklı sunumum ile katıldım.&lt;/p&gt;
+
+&lt;h3 id=&#34;konu-özeti:a5b41cfc4337942d13e42c5c56de025f&#34;&gt;Konu Özeti&lt;/h3&gt;
+
+&lt;p&gt;Gradle, Java dünyasının popüler inşa sistemlerinden biridir.
+Popüler inşa sistemleri Ant ve Maven ile uyumlu olmakla beraber, bir programlama dili Groovy ile yapılandırılması sağlanarak esnek bir sistem sunar.
+Gradle&amp;rsquo;ın getirdiği yenilikler, bağımlılık yönetimi, derleme ve paketlemenin nasıl yapıldığı, esnek yapısı,
+maven ve ant ile kıyaslanması, task&amp;rsquo;ların nasıl yazıldığı, avantajları ve dezavantajları konular örneklerle anlatılmıştır.&lt;/p&gt;
+
+&lt;p&gt;Sunum dosyasına aşağıdaki bağlantılardan ulaşabilirsiniz:&lt;/p&gt;
+
+&lt;h3 id=&#34;slideshare:a5b41cfc4337942d13e42c5c56de025f&#34;&gt;Slideshare&lt;/h3&gt;
+
+&lt;div class=&#34;ui embed&#34;&gt;
+    &lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/69EIZbNvE07HIH&#34; width=&#34;595&#34; height=&#34;485&#34;
+            frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
+            style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;ui hidden divider&#34;&gt;&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Git ile Sürüm Takibi Semineri</title>
+      <link>https://omerozkan.net/git-ile-surum-takibi-semineri/</link>
+      <pubDate>Tue, 29 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/git-ile-surum-takibi-semineri/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://www.ozguryazilimgunleri.org.tr/2014/&#34;&gt;Özgür Yazılım ve Linux Günleri 2014&lt;/a&gt;, İstanbul Bahçeşehir Üniversite&amp;rsquo;sinde gerçekleşti.&lt;/p&gt;
+
+&lt;p&gt;Bu etkinliğe ben de &amp;ldquo;Git ile Sürüm Takibi&amp;rdquo; başlıklı sunumum ile katıldım.&lt;/p&gt;
+
+&lt;h3 id=&#34;konu-özeti:b564fd3e9d582c7db3f459c6b697741a&#34;&gt;Konu Özeti&lt;/h3&gt;
+
+&lt;p&gt;Yazılım projelerinde sürüm takip/kontrol sistemi (VCS) araçları olmazsa olmaz araçlardır.
+En popüler özgür sürüm takip sistemlerinden biri olan GIT ile nasıl sürüm takip yapıldığını,
+merkezi ve dağıtık sürüm takip sistemlerini, dağıtık yapısı,geliştiricilerin kendi yerellerinde de commit yapabilmesi,
+çalışma akışı, git ve svn karşılaştırması, conflict çözümü, uzak sunucu ile nasıl çalışıldığı,
+git ile çalışma yöntemleri,en sık kullanılan komutları, karşılaşılan bazı problemlerin çözümleri,
+özgür araçları ve Gitlab konuları anlatılmıştır.&lt;/p&gt;
+
+&lt;p&gt;Sunum dosyasına aşağıdaki bağlantılardan ulaşabilirsiniz:&lt;/p&gt;
+
+&lt;h3 id=&#34;pdf:b564fd3e9d582c7db3f459c6b697741a&#34;&gt;PDF&lt;/h3&gt;
+
+&lt;p&gt;Pdf dosyasını indirmek için &lt;a href=&#34;https://omerozkan.net/sunumlar/git-ile-surum-takibi.pdf&#34; target=&#34;_blank&#34;&gt;buraya&lt;/a&gt; tıklayınız.&lt;/p&gt;
+
+&lt;h3 id=&#34;slideshare:b564fd3e9d582c7db3f459c6b697741a&#34;&gt;Slideshare&lt;/h3&gt;
+
+&lt;p&gt;&lt;div class=&#34;ui embed&#34;&gt;
+    &lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/HxzDuKwnXS5vvD&#34; width=&#34;595&#34; height=&#34;485&#34;
+            frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
+            style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;ui hidden divider&#34;&gt;&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Özgür Yazılım ve Kurumsal Java Semineri</title>
+      <link>https://omerozkan.net/ozgur-yazilim-ve-javaee-semineri/</link>
+      <pubDate>Mon, 27 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/ozgur-yazilim-ve-javaee-semineri/</guid>
+      <description>
+
+&lt;p&gt;4 Mayıs 2013 tarihinde Mustafa Kemal Üniversite&amp;rsquo;sinde Özgür Yazılım &amp;amp; GNU/Linux ve KurumsalJava &amp;amp; Web Teknolojileri başlıklı seminerler verdim.
+Katılım sayısı hava sıcaklığından dolayı düşük olsa da yine de istediğim seminer ortamını buldum.
+Çünkü öğrenmek isteyenler olunca ben de elimden geleni yapmak istedim. Çoğunluk 1. sınıf öğrencilerinden oluşmaktaydı.
+Bu özgür yazılım semineri için güzel olsa da JavaEE semineri için dezavantajdı. Çünkü Java malesef okulumuzda 3. sınıfta anlatılıyor.&lt;/p&gt;
+
+&lt;p&gt;Öncelikle “Özgür Yazılım” semineri ile başladım. Özgür yazılımın ve açık kaynak yazılımların ne tür bir yazılım olduğunu
+ve lisanslarından bahsettim. Özgür yazılımın doğuşunun hikayesini de anlattım.
+Daha sonra GNU/Linux hakkında daha önce hiç Linux kullanmamış kişilere yönelik tanıtım gerçekleştirdim.
+Bu seminer zamanında tamamlamayı başardım ancak JavaEE semineri hiç de öyle olmadı :)
+Dinleyenlerin çoğunluğu 1. sınıf olduğu için Java teknolojilerinden bahsederken bazı kavramlar hakkında da bilgi vermek zorunda kaldım.
+Örneğin persistence katmanında kullanılan teknolojilerden bahsederken ORM’nin ne olduğunu anlatmak zorunda kaldım.
+Fakat beni baya yordu açıkçası. Süreyi de baya aşmak durumunda kaldım.
+Seminerlerin sonunda ise söz verdiğim gibi “Test Güdümlü Geliştirme”yi de anlattım. Birlikte roman rakamları katası yaptık.
+Katılımcıların hiç birinin Java bilmemesine rağmen, TDD’nin doğası gereği çok verimli geçti.&lt;/p&gt;
+
+&lt;p&gt;Hem katılımcılar için hem de benim için güzel tecrübe oldu.
+Katılımcıların yazılıma bakış açısını değiştirdiğimi düşünüyorum.
+En azından kurumsal java’yı tanıma fırsatı buldular. Umarım gelenler yazılıma hakkını vererek iyi bir yazılımcı olurlar.
+Benim açımdan da çok iyi bir tecrübe oldu. Özellikle JavaEE seminerini detaylı bir şekilde anlatabildiğimi görerek birçok
+konuda bilgi sahibi olduğumu anladım. Diğer taraftan da yaklaşık 4 saat ayakta kalmak da beni mahvetti.
+Linux yaz kampında Hakan hocanın (Hakan Uygun) neler yaşadığını anlayabiliyorum :)&lt;/p&gt;
+
+&lt;p&gt;Sunumların içeriğinin birçoğunu &lt;a href=&#34;https://www.ozguryazilim.com.tr&#34;&gt;Özgür Yazılım A.Ş.&lt;/a&gt; firmasının yaptığı &lt;a href=&#34;http://topluluk.ozguryazilim.com.tr/sunumlar&#34;&gt;sunumlar&lt;/a&gt;dan
+aldım. Seminerler konusunda da tavsiyelerini esirgemedikleri için burdan da teşekkür ediyorum.
+Sunumları aşağıdaki linklerden edinebilirsiniz.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://omerozkan.net/sunumlar/ozgur-yazilim.pdf&#34; target=&#34;_blank&#34;&gt;Özgür Yazılım ve Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://omerozkan.net/sunumlar/kurumsaljava.pdf&#34; target=&#34;_blank&#34;&gt;Kurumsal Java&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;slideshare:9bca51cfe4f1f522d373652315ef8a90&#34;&gt;Slideshare&lt;/h2&gt;
+
+&lt;h3 id=&#34;özgür-yazılım-ve-linux:9bca51cfe4f1f522d373652315ef8a90&#34;&gt;Özgür Yazılım ve Linux&lt;/h3&gt;
+
+&lt;div class=&#34;ui embed&#34;&gt;
+    &lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/Jj95uRITPMjhv8&#34; width=&#34;595&#34; height=&#34;485&#34;
+            frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
+            style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;ui hidden divider&#34;&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;kurumsal-java:9bca51cfe4f1f522d373652315ef8a90&#34;&gt;Kurumsal Java&lt;/h3&gt;
+
+&lt;p&gt;&lt;div class=&#34;ui embed&#34;&gt;
+    &lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/K1xxNf1LPcfYz4&#34; width=&#34;595&#34; height=&#34;485&#34;
+            frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
+            style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;ui hidden divider&#34;&gt;&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Akademik Bilişim 2013</title>
+      <link>https://omerozkan.net/akademik-bilisim-13/</link>
+      <pubDate>Tue, 29 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/akademik-bilisim-13/</guid>
+      <description>&lt;p&gt;Akademik Bilişim, 1999 yılından beri INETD tarafından her yıl organize ediliyor.
+Seminerler ve konferanslardan önce 4 günlük kurslar düzenleniyor.
+Ben de bu yıl akademik bilişimde yerimi aldım.&lt;/p&gt;
+
+&lt;p&gt;Akademik Bilişim 13, Antalya Akdeniz Üniversitesi’nde yapıldı. Katılmayı çok istediğim etkinliklerden biriydi.
+Yalnız bütünleme sınavları ile çakışması bizler için büyük bir problem oldu.
+Fakat Akademik Bilişim için riske değer diye bazı bütünlemeleri bıraktım ve akademik bilişime katılmayı tercih ettim.
+Kurs konusunda da kararsızdım. Çünkü birçok güzel kurslar vardı. Kurslar paralel olarak yapılıyor.
+Bu yüzden sadece birini seçmek zorundasınız. Zamanda yolculuk yapabilsem muhtemelen geriye dönüp bütün kurslara katılmayı tercih ederdim :).
+Kurslardan 3 tanesi uygun geldi: PostgreSQL, Android ve Clojure. Bir yazılımcı olduğum için Android ve Clojure daha ağır basıyordu.
+Bir yandan da PostgreSQL öğrenmek istiyorum. Çünkü bitirme projemin veritabanı postgres olacak.
+Android ise Javacı olmama rağmen framework’ünü sevmemiştim.
+Android’i bu şekilde eledim. Fakat yine kararsız kaldım.
+Ben de uzunca düşündüm ve veritabanı yöneticisi (DBA) olmak isteyen arkadaşların önünü kapatmama düşüncesi ile Clojure’u tercih ettim.
+Özellikle fonksiyonel programlamayı öğrenmek istiyordum. Clojure zaten öğrenmek istediğim programlama dillerinden biridir.
+Postgres’i de hem Devrim Gündüz’ü tanımak hem de veritabanını geliştirmek için düşünüyordum.
+Clojure’a kayıt oldum fakat yeterli sayıda olmadığı için tekrar bir tercih yapmam gerekiyordu.
+Hiç düşünmeden postgresi tercih ettim.&lt;/p&gt;
+
+&lt;p&gt;Antalya’ya birkaç arkadaş gidecektik fakat bütünleme sınavları ve diğer nedenlerden dolayı bana sadece İlhan* eşlik etti.
+Oraya ulaşmak için otobüsü tercih ettik. Hep Antalya yolundan (Hatay-Antalya) kötü diye bahsederlerdi. Gerçekten öyleymiş.
+Yol baya yorucu geçti. Antalya’ya vardığımızda Linux yaz kampında tanıştığım Nursel* ve arkadaşı Duygu* ile buluştuk.
+Kayıt, yurda yerleşme vs derken, yağmurda baya bir ıslandık. Gece doğru düzgün uyuyamadığım için yorgun düşmüştüm.
+Fakat bütün sınavlarım o gece açıklanması ve sonuçların olumlu olması kursa daha rahat katılmamı sağladı.&lt;/p&gt;
+
+&lt;p&gt;Öncelikle kurstan bahsedersem Devrim hoca sayesinde kurs baya eğlenceli geçti. Hem eğlendik hem öğrendik.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;ui left floated bordered medium image content-image&#34; src=&#34;https://omerozkan.net/images/post/akademik-bilisim-13/postgres-kursu1.jpg&#34;
+     alt=&#34;Postgresql sınıfı&#34; /&gt;
+Benim açımdan postgres kursu yazılımdan farklı konuları ele aldığımız için çok güzel geçti. Çünkü yeni şeyler öğrendim.
+Bu arada PostgreSQL’in kısa adı POSTGRES’tir. “Postgre” diye isimlendirenler ceza aldılar :)
+Kurs içeriği SQL veya veritabanı tasarımı değildi. SQL komutlarına az çok hakimim zaten.
+Tasarım da zaten bilgim olan konulardan biriydi. Böyle olması benim de işime geldi.
+Veritabanı yöneticiliği sandığımdan da farklı bir olaymış. Ama zevkli tarafı da var.
+Bir de oraya tıkla, şunu ekle, bunu yap yerine sadece terminalden işlemleri gerçekleştirdik. psql gerçekten çok güzel bir araç.
+Kursun sonunda da asenkron replikasyon yaptık. Postgresql in mimarisi hakkında da bilgi sahibi olduk.
+Benim açımdan dediğim gibi çok zevkli ve çok verimli geçti. Anlamakta hiç zorlanmadım.&lt;/p&gt;
+
+&lt;p&gt;Malesef yorgunluktan dolayı sadece üç seminere katılabildim. Zaten seminerlerin son gününe katılamayacaktık.
+İlk gün Linux sunucu yönetimi kursuna katıldım. Malesef bildiğim konulardı.
+Daha sonra sesini duymayı özlediğim Hakan Uygun’un alfresco seminerine katıldım.
+Elektronik imza da konu olduğu için baya zevkli geçti. Diğer seminer de tabiki Melih Sakarya’nın kurumsal java seminerleriydi.
+Gelmişken Melih Sakarya ile tanışmadan gitmeyelim dedik. Otobüsümüz ile seminer bitişi arasında 1 saat vardı.
+Melih Sakarya tanışmak istediğim Javacılardan biriydi. Bu sayede tanışmış oldum.
+Aynı zamanda seminer de kurumsal teknolojilerle beraber PrimeFaces’i tanımış olduk.
+JSF ve Primefaces konusunda ilerlemeye karar verdim. Melih hoca ile sohbetimiz yarım saate mal oldu.
+Otobüse zar zor yetiştik ama değdi.&lt;/p&gt;
+
+&lt;p&gt;&lt;img class=&#34;ui right floated bordered medium image content-image&#34; src=&#34;https://omerozkan.net/images/post/akademik-bilisim-13/postgres-kursu2.jpg&#34;
+     alt=&#34;Postgresql sınıfı&#34; /&gt;
+Antalya ise kışın havanın tutarsızlığı dışında çok güzel bir şehir.
+O sahili, denizi gördükten sonra İskenderun’daki ne diye düşündüm :).
+Kurslardan fazla gezmeye fırsatımız olmadı. Açıkçası yorgunluk yüzünden pek de gezmek istemedim.
+Benim aklım daha çok teknolojideydi her zamanki gibi. Ama nerdeyse hiç bir zamanımızı boş geçirmedik.
+Bu yüzden de seminerler için baya yorgun düştük. Daha sonra aramıza Adem* ve son gün Vahdet* katıldı.
+Nursel ile de nerdeyse her gün kavga ettik :) . Korelilerle sohbetimiz de güzeldi ;)&lt;/p&gt;
+
+&lt;p&gt;Akademik bilişim benim için gerçekten çok eğlenceli geçti. Özellikle okulun ve sınavların bütün stresini atmamı sağladı.
+Aynı zamanda yeni arkadaşlar edindik. Bu tür etkinlikler benim için çok faydalı ve çok eğlenceli geçiyor.
+Okulda yaşadığım bütün stresin, sıkıntının değeceğini görüyorum.
+Bu arada Özgür Yazılım A.Ş. yöneticileri (Hakan Uygun ve Doruk Fişek) benimle özel olarak ilgilendiler.
+İlgilerinden dolayı gerçekten onur duydum. Postgresql kursundan sonra yazılım geliştirmeyi ne kadar çok sevdiğimi farkettim.
+Kariyerim konusunda doğru bir tercih yaptığım için mutluyum. Özellikle Java seminerinde bunu daha çok anladım.
+Tabiki veritabanı yöneticiliği de benim için yazılım geliştirmek kadar olmasa da çok zevkli bir meslek.
+Zamanım kalırsa bu konuda da uzmanlaşmaya çalışacağım.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linux Yaz Kampı - 2</title>
+      <link>https://omerozkan.net/linux-yaz-kampi-2/</link>
+      <pubDate>Sun, 15 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/linux-yaz-kampi-2/</guid>
+      <description>&lt;p&gt;Bolu&amp;rsquo;da yaz kamp devam ederken, teorik eğitim sona ermişti. Artık kod yazmanın zamanı gelmişti.
+Yazacağımız uygulama Tekir ön muhasebe projesiydi. Bu arada sınıftaki öğrenci sayısı da azalmaya başlamıştı.
+Daha sonra ekiplere ayrıldık. Toplam 5 ekip vardı. Ben de controller (Java) sınıfı yazmak istediğim için ekip4&amp;rsquo;te yer almak istedim.
+Proje içerisinde kod satırı / gün sayısı hesabına göre az iş yapsak da Scrum çevik yöntemini uyguladık.
+Ekip olarak biz de çok az iş vardı. Öncelikle basit bir temel ayar sayfası ve JournalEntry nesnelerini kontrol eden bir Api yazacaktık.
+Ben tabiki Api yazan ekipte yer aldım. Ekibimiz 10 kişiydi, 6 kişi Api, diğer 4 kişi ise ekran sayfası üzerine yoğunlaştılar.
+Başlangıçta çok hevesliydim. Teorik kısımda kafamda soru işaretleri olduğu için ekip içerisinde aktif olmak istedim.
+İşe başlamadan önce  JournalEntry sınıfı ve ilişkili bütün sınıfların UML diyagramlarını çizerek Hakan Hoca&amp;rsquo;nın yanına gittim.
+Detaylı bir şekilde neleri kontrol edip edemeyeceğimizi öğrendik.
+Aslına bakarsanız oturup tek başıma 20dk da belki de daha kısa sürede bitirebileceğim bir işti :)
+Fakat diğer ekip arkadaşlarımın daha iyi öğrenmesi amacı ile ben kod yazmak istemedim. 6 kişi ile bir yumurta taşıyacaktık.
+Neyse işleri tam orta yerinden 2&amp;rsquo;ye böldük. 6 kişi, 3 er kişilik alt ekiplere bölünmüştü. Mehmet ve Nursel bizim ekipteydiler.
+Öncelikle Nursel&amp;rsquo;i bilgisayar başına geçirdik. Mehmet ve ben de yanında yazdırmaya devam ediyorduk.
+Nursel&amp;rsquo;den sonra Mehmet bilgisayar başına geçti ve işi kısa sürede bitirdik. Diğer alt ekip halen devam ediyordu.
+Bu sefer ben geçtim bilgisayar başına refactoring konusunda sadece fikir sahibi olmama rağmen kendi kodlarımıza refactoring uyguladım.
+Daha anlaşılır ve daha sade bir kod yapısı oluştu.&lt;/p&gt;
+
+&lt;p&gt;Diğer alt ekipte kendi kodlarını tamamladıktan sonra sınıfımız oluşmuş oldu.
+Fakat bu controller sınıfının (JournalEntryApi) doğru yazıp yazmadığımızı test etmemiz gerekliydi.
+Bunun için birim testleri uygulayacaktık (JUnit).
+Test güdümlü yazılımı (Test Driven Development) çok merak ettiğim için baya sevinmiştim.
+JournalEntryApi sınıfı ile ilgili bir detaya yer vermek istiyorum.
+Hataları bir liste içerisinde tutuyorduk ki ekip5 de verilerin XML, SOAP, MQ gibi servislerle import edilmesini sağlıyordu.
+Sonuçta hata varsa, hata kodlarına göre işlem yapmaları gerekmekteydi.
+Hem testlerde rahat edebilmemiz için hem de ekip5&amp;rsquo;in işini biraz daha kolaylaştırmak amacı ile kendi hata modelimizi yazdık.
+Bu modelimiz basit bir şekilde bir hata numarası ve hata açıklaması vardı. Testleri yaparken de sadece hata numarası ile yapacaktık elbette.
+Hata modelini yazarken bir ekip arkadaşımız, bana laf sokmaya kalkınca moralim baya bir bozuldu. Sonuçta ben de bir yazılım geliştiricisi olmak için çalışan biriyim.
+Yanlış da yapabilirim ki birçok hatam vardı elbette. Ama yine de kendi mesleğime,
+kişiliğime laf sokulması kesinlikle kabul edemeyeceğim bir olaydır. Yine kendisini rezil etmemek için olayı açıklamayacağım.&lt;/p&gt;
+
+&lt;p&gt;Moralim bozulunca geri çekildim ve ne yapabilecekler diye uzaktan bekledim.
+Ekip içerisindeki heyecanımın yok olduğunu ekiptekilerin bir kısmı farketti. Mehmet, JUnit ile ilgili güzel veriler edindi.
+Kafama takılan birkaç şeyi ona sordum. Sami ise JUnit testi yazmaya çalışıyordu. Bu arada Hakan hoca JUnit&amp;rsquo;i nasıl kullanacağımızı basitçe anlatmıştı.
+Günün sonunda kodları incelediğimde çok az kişinin uğraş verdiğini gördüm. Ben ise hayatımda hiç JUnit testleri yazmamıştım.
+Kendi kendime bu iş başa düştü dedim. Tabiki Mehmet ve Nursel&amp;rsquo;e de (kendi ekibime) gelin başlayalım dedim.
+Onların da işleri vardı. Saat akşam 8 civarıydı. Sen yaz sonra bize anlatırsın dediler.
+Ben de oturdum, kendi test sınıfımı yazmaya başladım. Tüm sınıfın testini yapacaktım.
+Fakat ekipteki arkadaşlar, &amp;ldquo;Tüm işi sen yaptın, bize bir iş bırakmadın.&amp;rdquo; dememeleri için kendi sınıfımı sürüm takip sistemine göndermedim.
+Test sınıfını yazarken birçok hata düzelttim. Bunları gecenin 2sinde sürüm takip sistemine gönderdim.
+Moralim bozulduğu için ayrıca ekipte bir sıkıntı çıkmasın diye başka iş almak istemedim.
+Tabi bu konuda kampın son günü Hakan hocadan fırça da yedik.&lt;/p&gt;
+
+&lt;p&gt;Yurttaki ortamımız da güzeldi. Oda arkadaşlarım ile güzel güzel sohbetler ettik, espriler yaptık.
+Hatta ekip içerisindeki yaşadığım olayı onlara da anlattım baya bir güldük :)
+Hepsine buradan çok teşekkür ederim onlardan çok şey öğrendim.
+Bu arada öğrenci hayatım boyunca ilk defa bir yurtta kalmış oldum :)&lt;/p&gt;
+
+&lt;p&gt;Başta yazılıma bakış açımı değiştiren Hakan Uygun ve kamp etkinliğini başlatan Mustafa Akgül hocamıza,
+organizasyonda emeği geçen herkese, yaşadığım sorunlarla uğraşmaktan bıkmayan,
+kurs içerisinde büyük sabır gösteren Deniz Korkmaz ve Umuthan Uyan&amp;rsquo;a,
+özellikle kendi ekibimde ve beraber takıldığım Mehmet,
+Sami ve Nursel&amp;rsquo;e bu güzel ortamı bana yaşattıkları için çok teşekkür ederim.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Linux Yaz Kampı - 1</title>
+      <link>https://omerozkan.net/linux-yaz-kampi-1/</link>
+      <pubDate>Thu, 28 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/linux-yaz-kampi-1/</guid>
+      <description>&lt;p&gt;Fatih projesinde yapacağım staja başlamadan önce faydalı olması amacı ile Linux Yaz Kampı&amp;rsquo;nda Java EE eğitimine başvurmuştum.
+Sonuç olumlu olunca İskenderun&amp;rsquo;dan Bolu&amp;rsquo;ya yolculuk başladı. Otobüste tanıştığım İsmail Abi ile sohbetlerimiz sayesinde yol daha az sıkıcı oldu.
+12 saat yolun ardından İzzet Baysal Üniversitesi&amp;rsquo;ne ulaştım.&lt;/p&gt;
+
+&lt;p&gt;Kampın ilk günü tanışma, neler yapılacak vs. ile geçti.
+2. gün ise Java EE&amp;rsquo;na giriş yaptık. Dersi anlatan Hakan Uygun, JSP, JPA, Hibernate, JSF gibi konuları teorik olarak anlattı.
+Daha sonraki günler EJB, Maven, JBoss Seam gibi teknolojiler hakkında bilgi sahibi olduk.
+Proje geliştirme sürecinde kullanacağımız araçları, Git, Redmine, Sonar gibi uygulamaları inceledik.
+Eğitimin ilk 4 günü bu şekilde geçti. Zend Framework ile çalıştığım MVC sistemi sayesinde bazı konuları kolayca anladım.
+Aslına bakarsanız birçok konuyu güzel bir şekilde anlasam da Java EE mimarisini tam olarak kavrayamadım.
+Umarım proje geliştirirken bütün bu soru işaretleri yok olur.&lt;/p&gt;
+
+&lt;p&gt;Bolu hakkında da açıkçası beğendiğim tek şeyi iklimi oldu. Serin ve güzel bir havası var. Yaz için ideal bir şehir.
+Fakat kampüs içinde yemekler gerçekten çok kötü. Zaten çok fazla alternatif yokç İnsanların damak tadı mı kötü bilemiyorum.
+Üstelik yemekler bir hayli pahalı. Belki de Hatay gibi yemekleri çok güzel olan bir yerden geldiğim için de bana öyle gelmiş olabilir.
+Bugün Abant gölüne gittik gezmek için. Piknik yapmak için güzel bir yer. Fakat baya sıkıldık.
+Piknik yapmadığımız için 6 saat fazla geldi. Yemekleri üniversitedekilerden daha da pahalıydı.&lt;/p&gt;
+
+&lt;p&gt;Java EE eğitimi ön muhasebe yazılımı geliştirme ile devam edeceğiz. Proje geliştirirken çevik yöntemler (Scrum) kullanacağız.
+Umarım en iyi şekilde katkı sağlarım.&lt;/p&gt;
+
+&lt;p&gt;Bolu ve kamp hakkında ilk izlenimlerim bunlar. Daha sonra yazmaya devam edeceğim.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

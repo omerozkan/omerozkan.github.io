@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Üniversite Hayatı on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/%C3%BCniversite-hayat%C4%B1/</link>
+    <description>Recent content in Üniversite Hayatı on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Sat, 02 Jun 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/%C3%BCniversite-hayat%C4%B1/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Üniversitede Yolun Yarısı</title>
+      <link>https://omerozkan.net/yolun-yarisi/</link>
+      <pubDate>Sat, 02 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/yolun-yarisi/</guid>
+      <description>
+
+&lt;p&gt;Bilgisayar Mühendisliği bölümünde bir akademik yıl daha sona erdi ve böylece 3. sınıf öğrencisi olmuş oldum.
+Aslında bu yazı kimseyi eleştirmek veya suçlamak değil özeleştiri yapmaktır.
+İyi bir yazılım mühendisi olma yolundaki maceramın yarısında elime ne geçmiş bir bakalım.
+Bu tablo ne öğrendiğimi kimseye değil kendime göstermektir.
+Ne kadar az şey öğrendiğimi görmek ve yaptığım hataları bir daha tekrar etmemek içindir.&lt;/p&gt;
+
+&lt;h3 id=&#34;1-sınıf:c8aaf05fbd3af9757414a9a329fbfcfc&#34;&gt;1. Sınıf&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Konular&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Algoritma konusunda gelişme&lt;/li&gt;
+&lt;li&gt;Hızlı ve etkin algoritma üretme&lt;/li&gt;
+&lt;li&gt;Nesne esaslı programlama temelleri&lt;/li&gt;
+&lt;li&gt;PHP-5 ve Mysqli Kütüphanesi&lt;/li&gt;
+&lt;li&gt;Temel C++&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Kitaplar&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Nesne Yönelimli C++ Kılavuzu (Robert Lafore)&lt;/li&gt;
+&lt;li&gt;Uzmanlar için PHP&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Kısacası 1. Sınıfta okul dönemi boyunca algoritma derslerindeki kolaylık ve rahatlık yüzünden resmen yattım.
+Halbuki bu zamanı İngilizce ile değerlendirebilirdim. Malesef bunu yapmak yerine 1. sınıfı boş geçirdim.
+Yukardaki 1 madde hariç hepsi yazın tatilde çalıştım. En azından bunu yapabildiğim için mutluyum.&lt;/p&gt;
+
+&lt;p&gt;2. Sınıf başlamadan önce bir karar verdim. 2. Sınıf özellikle bizim okulda en zor 2 dönemden oluşuyor.
+Elektronik ve matematik derslerinin yoğunluğu insanı bunaltmaya yeter. Ayrıca şunu belirteyim bir matematik sevdalısıyımdır.
+Buna rağmen böyle. Bu yüzden tüm sosyal etkinlikleri bıraktım. Kurucusu olduğum dergiyi, topluluktaki işleri vs.
+2. Sınıfa başlamadan önce C# dersi göreceğimizi biliyordum.
+Ben bu dili derste ne kadar öğrenirsem o kadardır diye düşünüp Java ve Python öğrenmeye karar verdim.
+Kaynak arayışlarım bir süredir devam etti.
+Aslına bakarsanız algoritma değil de hızlıca bir dili öğreten bir kitap istiyordum.&lt;/p&gt;
+
+&lt;p&gt;İlk &amp;ldquo;Aramıza hoş geldin&amp;rdquo; diyen Fatih Karatana ile yoğun görüşmeye başladım. Tabi kaynak konusunda onun da görüşlerini istedim.
+Tabiki de İngilizce kitapları önerdi. Aslına bakarsanız ilk başta baya moralim bozuldu.
+İngilizcem iyi değildi çünkü. Oysaki lisede Serkan Hocam (Serkan Doğruer)  ne güzel öğretmişti İngilizce&amp;rsquo;yi.
+Ama aradan 4 yıl geçince İngilizce&amp;rsquo;m kötü bir hale döndü. Ben de o gün bir karar aldım.
+Ne olursa olsun gerekirse kitaptaki bilmediğim bütün kelimelere bakarım, geç öğrenirim belki ama
+en azından İngilizce&amp;rsquo;mi biraz geliştiririm diye düşündüm.
+İlk yaptığım şey kullandığım Ubuntu işletim sistemini İngilizce&amp;rsquo;ye çevirmek oldu. Ve çalışmalara başladım.&lt;/p&gt;
+
+&lt;p&gt;Başlangıçta çok zorlandım. Ama birçok teorik kelimeler öğrendim.
+Ayrıca Java&amp;rsquo;yıda çok güzel bir şekilde öğrenmekle kalmadım aynı zamanda Deitel hocam sayesinde OOP&amp;rsquo;nin 4 temel özelliğini
+(kapsülleme, kalıtım, soyutlama, polimorfizm) de tam olarak öğrenmiş oldum.
+Daha sonra PHP ile MVC sistemlerine ilgi duyup Zend Framework konusunda birşeyler üretmeye çalıştım.
+Başlangıçta güzeldi ama vizeler, finaller derken karanlık bir süreç başlamış oldu. Sadece bu kadar çalışabildim yazılıma.
+Aslında çalışmadım! Sınav döneminde yaklaşık 1 ay çalışmayı bırakıp sınavlardan sonra devam edebileceğimi düşündüm.
+Ama tam bir fiyasko oldu. Kitap okumayı bıraktıktan sonra toparlamak gerçekten çok zor oldu.
+Toparladığım anda yine sınavlar… 2. Sınıfın da kısaca tablosuna bakarsak:&lt;/p&gt;
+
+&lt;h3 id=&#34;2-sınıf:c8aaf05fbd3af9757414a9a329fbfcfc&#34;&gt;2. Sınıf&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Konular&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Nesne esaslı programlama&lt;/li&gt;
+&lt;li&gt;Temel düzeyde MVC ve 3 katmanlı yazılım geliştirme&lt;/li&gt;
+&lt;li&gt;Temel Java&lt;/li&gt;
+&lt;li&gt;Birazcık daha İngilizce&lt;/li&gt;
+&lt;li&gt;Başlangıç düzeyinde Zend Framework&lt;/li&gt;
+&lt;li&gt;HTML5 Uygulama&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Kitaplar&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Deitel, How to Program Java&lt;/li&gt;
+&lt;li&gt;Yazın okuyabileceğim diğer kitaplar&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bir yazılımcı adayı yılda en az 6 yazılım kitabı bitirmek zorundaymış. Ben ise 1 yılda toplasanız 2.5 kitap ancak okumuşum.
+Rezalet! Aynı zamanda ara sınavlarım da çok kötü geçmiş. Bu daha da moralimi bozmuştur. Moralimi bozan tabiki de aldığım notlar değil,
+bu derslerden kalacak olmam sonucunda yazılım çalışabileceğim zamanları bu derslerle tekrar uğraşarak heba edeceğimdi.
+Derken KurumsalJava.com web sayfasını gezerken seminerlere rastladım.
+Özcan Acar tarafından verilen Bilge Programcı seminerleri ile ne öğrenmem gerektiğini keşfettim.
+Bu programda öğrenilmesi gerekenler kuşaklara ayrılmış, bu kuşaklar karate kuşakları gibi renklendirilmişti.
+Ayrıca test güdümlü yazılım, refactoring, çevik programlama gibi düşüncelerin, metodların varlığını öğrenince bir hayli sevindim.
+KurumsalJava ve BilgeProgramci.com adreslerinden bu konuda bilgi edinebilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;Bırakın yaz okulunu, bütünlemeye kalmaya bile tahammülüm yoktu. Çünkü yazılım öğrenmek istiyordum.
+2 yılın hatasını telafi edebilmek ve daha fazla zaman kaybetme lüksüm yoktu.
+Bu yüzden ilk defa derslere bu kadar sınavlara çalıştım ve çok şükür tüm dersleri başımdan saldım.
+Artık yazılım çalışabilirim.&lt;/p&gt;
+
+&lt;p&gt;Evet lisans öğretim hayatımın yarısı böyle geçti. Derslerden geçsem de yazılım konusunda 2 defa sınıfta kaldım.
+Malesef geçen zaman bir daha geri gelmeyecektir. O yüzden bundan sonrası için daha çok çalışmalı, aynı hataları yapmamam gerekiyor.
+Çünkü sadece 2 yıl kaldı. Bugün beyaz kuşak programcı olarak yoluma devam ediyorum.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

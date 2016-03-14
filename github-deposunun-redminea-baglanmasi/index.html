@@ -1,0 +1,308 @@
+<!doctype html>
+<html>
+<head lang="tr">
+    <title>Github Depolarının Redmine&#39;a Entegre Edilmesi</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta name="description" content="Github depolarının Redmine iş takip sistemine entegre edilmesi">
+    <meta name="keywords"
+          content="git,github,redmine,linux">
+    <meta name="author" content="Ömer Özkan">
+    <meta property="og:site_name" content="Ömer Özkan"/>
+    <meta property="og:title" content="Ömer Özkan"/>
+    <meta property="og:description" content="Github depolarının Redmine iş takip sistemine entegre edilmesi"/>
+    <meta property="og:url" content="https://omerozkan.net/github-deposunun-redminea-baglanmasi/">
+    <meta property="og:type" content="blog"/>
+    <meta property="og:image" content="github-deposunun-redminea-baglanmasi.jpg" />
+    <meta name="generator" content="Hugo 0.15" />
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/semantic.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/style.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://omerozkan.net/js/semantic.min.js"></script>
+    
+    <link rel="apple-touch-icon" sizes="57x57" href="https://omerozkan.net/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://omerozkan.net/img/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://omerozkan.net/img/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://omerozkan.net/img/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://omerozkan.net/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://omerozkan.net/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://omerozkan.net/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://omerozkan.net/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://omerozkan.net/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="https://omerozkan.net/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://omerozkan.net/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://omerozkan.net/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://omerozkan.net/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://omerozkan.net/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#009688">
+    <meta name="msapplication-TileImage" content="https://omerozkan.net/img/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#009688">
+</head>
+<body>
+<section id="main">
+    <section id="header-container" class="ui grid">
+        <header class="ten wide mobile ten wide tablet eight wide computer column centered">
+            <div class="row">
+                <div class="ui grid">
+                    <section id="header"
+                             class="ten wide mobile three wide tablet three wide computer centered column">
+                        <div class="row">
+                            <h1>
+                                <a href="https://omerozkan.net/">Ömer Özkan .net</a>
+                            </h1>
+                        </div>
+                    </section>
+                    <div class="nine wide computer only column right aligned">
+                        <section id="menu" class="row">
+                            <nav class="ui teal compact inverted menu">
+                                
+                                <a href="https://omerozkan.net/hakkimda/" class="link item">
+                                    Hakkımda
+                                </a>
+                                
+                                <a href="https://omerozkan.net/iletisim/" class="link item">
+                                    İletişim
+                                </a>
+                                
+                            </nav>
+                        </section>
+                        <section id="media-links" class="row">
+                            <nav class="ui icon secondary inverted menu">
+                                <div class="right menu">
+                                
+                                    <a class="item" href="https://twitter.com/omerozkan_" target="_blank">
+                                        <i class="twitter icon"></i>
+                                    </a>
+                                
+                                    <a class="item" href="https://www.linkedin.com/in/omerozkan" target="_blank">
+                                        <i class="linkedin icon"></i>
+                                    </a>
+                                
+                                    <a class="item" href="https://www.facebook.com/omerozkan" target="_blank">
+                                        <i class="facebook icon"></i>
+                                    </a>
+                                
+                                    <a class="item" href="https://github.com/omerozkan" target="_blank">
+                                        <i class="github icon"></i>
+                                    </a>
+                                
+                                </div>
+                            </nav>
+                        </section>
+                    </div>
+                    <div class="two wide mobile nine wide tablet only column right aligned">
+                        <button id="menu-button" class="ui teal icon button" data-transition="overlay">
+                            <i id="menu-icon" class="sidebar icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+
+    <nav id="mobile-menu" class="ui right floating sidebar green inverted vertical menu">
+        
+            <a class="header item" href="https://omerozkan.net/hakkimda/">Hakkımda</a>
+        
+            <a class="header item" href="https://omerozkan.net/iletisim/">İletişim</a>
+        
+        
+            <a class="item" href="https://omerozkan.net/kategori/etkinlikler/">Etkinlikler</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/genel-konular/">Genel Konular</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/java/">Java</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/linux/">Linux</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/seyir-defteri/">Seyir Defteri</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/sunumlar/">Sunumlar</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/videolar/">Videolar</a>
+        
+            <a class="item" href="https://omerozkan.net/kategori/yazilim-metotlari/">Yazılım Metotları</a>
+        
+    </nav>
+
+    <section id="navbar" class="ui grid">
+        <div class="tablet mobile only column empty-nav"></div>
+        <nav class="eight wide computer only column centered">
+            <div class="ui inverted menu nav-menu">
+                
+                <a class="item" href="https://omerozkan.net/kategori/etkinlikler/">
+                    Etkinlikler
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/genel-konular/">
+                    Genel Konular
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/java/">
+                    Java
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/linux/">
+                    Linux
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/seyir-defteri/">
+                    Seyir Defteri
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/sunumlar/">
+                    Sunumlar
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/videolar/">
+                    Videolar
+                </a>
+                
+                <a class="item" href="https://omerozkan.net/kategori/yazilim-metotlari/">
+                    Yazılım Metotları
+                </a>
+                
+            </div>
+        </nav>
+    </section>
+<section id="content-main" class="ui internally grid centered">
+    <article class="ten wide mobile ten wide tablet eight wide computer column single">
+        <div class="ui basic segment">
+            <h1 class="ui green header">Github Depolarının Redmine&#39;a Entegre Edilmesi</h1>
+            
+            <p class="metadata">
+                
+                <a class="ui image label">
+                    <img src="http://s.gravatar.com/avatar/deb32ea991fee11136e3c72aee30be78?s=150">
+                    Ömer Özkan
+                </a>
+                
+
+                <a class="ui label">
+                    <i class="calendar icon"></i>
+                    02.12.2013
+                </a>
+            </p>
+            
+
+            
+            
+            <img class="ui right floated top aligned rounded medium image bordered right"
+                 src="https://omerozkan.net/images/thumb/github-deposunun-redminea-baglanmasi.jpg"
+                 alt="Github Depolarının Redmine&#39;a Entegre Edilmesi"/>
+            
+            
+
+            <p>İş takip sistemi Redmine&rsquo;ı ve sürüm takip sistemi git&rsquo;i kullanıyorum. Git, SVN gibi sürüm takip sistemlerindeki depoları
+redmine&rsquo;a bağlayabiliyorsunuz. Github ise açık kaynak projelere ücretsiz alan sağlıyor.
+Github&rsquo;daki bir projemi Redmine&rsquo;a bağlamak istedim. Kendi uğraşımdan sonra <a href="https://eventualis.org/">Samed Beyribey</a>&lsquo;den yardım istedim.
+Kendisi nasıl entegre edebileceğimi anlattı. Sizler için de faydalı olacağını düşünerekten bu yazıyı paylaşmak istedim.</p>
+
+<p>Github depolarınızı Redmine&rsquo;a entegre etmek için aşağıdaki adımları uygulamanız yeterlidir.</p>
+
+<p>Öncelikle Github deposunu Redmine&rsquo;ın kurulu olduğu sunucuda dilediğiniz bir dizine git projenizi mirror parametresi ile klonlayın.</p>
+
+<p><code>git clone https://github.com/omerozkan/vipera.git --mirror</code></p>
+
+<p>Eğer projeniz private ise http yerine ssh ile klonlayabilirsiniz.
+Klonlama işleminden sonra redmine panelinden Yönetim -&gt; Ayarlar sayfasına gidin ve Depolar sekmesinden bir API Key oluşturun.</p>
+
+<p>Eklemek istediğiniz projeye gidip projede Ayarlar -&gt; Depolar &lsquo;a tıklayıp yeni bir depo oluşturun.
+Burda &ldquo;Path to repository&rdquo; değerine klonladığınız git dizininin tam yolunu yazın.
+Klonladığınız git dizinine redmine&rsquo;nın sistemdeki kullanıcısının erişebilmesi gerekiyor. İzinleri ona göre yapılandırın.
+Bu işlemi gerçekleştirdikten sonra git deposundaki son değişiklikleri alması ve redmine&rsquo;ın bu değişiklikleri okuması için cron oluşturmak gerekiyor.
+Cron oluşturmak için</p>
+
+<p><code>crontab -e</code></p>
+
+<p>komutunu girdiğinizde karşınıza vi editoru çıkacaktır. Cron ayarlarınızı vi editorüne girip kaydedebilirsiniz.
+Örneğin her saat başı güncellemeleri almak istiyorsanız aşağıdaki cron ayarlarını kullanabilirsiniz.</p>
+
+<div class="clear"></div>
+<script src="//gist.github.com/omerozkan/1d0ecc2af86e3d4eb312.js?file=cron"></script>
+
+<p>Böylelikle github projenizi redmine&rsquo;a entegre etmiş olursunuz.
+Standart olarak &ldquo;refs #işnumarası&rdquo; şeklinde gönderdiğiniz commitler redmine&rsquo;da o işe bağlanacaktır.</p>
+
+<p>Bir sonraki yazıda görüşmek üzere&hellip;</p>
+
+
+            <div class="clear"></div>
+            
+            <section id="comment">
+                <div class="ui section divider"></div>
+                <div id="disqus_thread"></div>
+<script>
+     var disqus_config = function () {
+     this.page.url = 'https:\/\/omerozkan.net\/github-deposunun-redminea-baglanmasi\/'; 
+     this.page.identifier = 'github-deposunun-redminea-baglanmasi';
+     };
+    (function() {
+        var d = document, s = d.createElement('script');
+
+        var disqus_shortname = 'omerozkan';
+        s.src = '//' + disqus_shortname +'.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </section>
+            
+            <div class="ui section divider"></div>
+            
+            
+            <div class="ui tag labels">
+                
+                <span class="ui teal label">
+                    git
+                </span>
+                
+                <span class="ui teal label">
+                    github
+                </span>
+                
+                <span class="ui teal label">
+                    redmine
+                </span>
+                
+                <span class="ui teal label">
+                    linux
+                </span>
+                
+            </div>
+            
+        </div>
+
+    </article>
+</section>
+</section>
+
+<section class="footer-container">
+    <footer class="ui grid">
+        <div class="ten wide mobile ten wide tablet eight wide computer column centered">
+            <div class="ui grid">
+                <div class="twelve wide mobile two wide tablet two wide computer centered column center aligned">
+                    <img id="footer-logo" src="https://omerozkan.net/img/footer-logo.png" alt="Footer lan ne bakiyon" class="ui image">
+                </div>
+                <div class="twelve wide mobile eight wide tablet eight wide computer middle aligned centered column center aligned">
+                    © 2008 Ömer Özkan. Tüm hakları saklıdır. <br/><a href="https://omerozkan.net">Ömer Özkan</a> is licensed under a <a
+                        href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                    Commons Attribution-ShareAlike 4.0 International License.</a>
+                </div>
+                <div class="twelve wide mobile two wide tablet two wide computer middle aligned centered column">
+                    <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+                        <img id="cc-logo" alt="Creative Commons License" style="border-width:0"
+                             class="ui image centered"
+                             src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+
+<script src="https://omerozkan.net/js/scripts.js"></script>
+</body>
+</html>

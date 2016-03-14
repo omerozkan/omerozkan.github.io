@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sunum on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/sunum/</link>
+    <description>Recent content in Sunum on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Thu, 09 Apr 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/sunum/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Gradle ile Proje İnşası Semineri</title>
+      <link>https://omerozkan.net/gradle-ile-proje-insasi-semineri/</link>
+      <pubDate>Thu, 09 Apr 2015 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/gradle-ile-proje-insasi-semineri/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://www.ozguryazilimgunleri.org.tr/2015&#34;&gt;Özgür Yazılım ve Linux Günleri 2015&lt;/a&gt;, İstanbul Bilgi Üniversite&amp;rsquo;sinde gerçekleşti.&lt;/p&gt;
+
+&lt;p&gt;Bu etkinliğe ben de &amp;ldquo;Gradle ile Proje İnşası&amp;rdquo; başlıklı sunumum ile katıldım.&lt;/p&gt;
+
+&lt;h3 id=&#34;konu-özeti:a5b41cfc4337942d13e42c5c56de025f&#34;&gt;Konu Özeti&lt;/h3&gt;
+
+&lt;p&gt;Gradle, Java dünyasının popüler inşa sistemlerinden biridir.
+Popüler inşa sistemleri Ant ve Maven ile uyumlu olmakla beraber, bir programlama dili Groovy ile yapılandırılması sağlanarak esnek bir sistem sunar.
+Gradle&amp;rsquo;ın getirdiği yenilikler, bağımlılık yönetimi, derleme ve paketlemenin nasıl yapıldığı, esnek yapısı,
+maven ve ant ile kıyaslanması, task&amp;rsquo;ların nasıl yazıldığı, avantajları ve dezavantajları konular örneklerle anlatılmıştır.&lt;/p&gt;
+
+&lt;p&gt;Sunum dosyasına aşağıdaki bağlantılardan ulaşabilirsiniz:&lt;/p&gt;
+
+&lt;h3 id=&#34;slideshare:a5b41cfc4337942d13e42c5c56de025f&#34;&gt;Slideshare&lt;/h3&gt;
+
+&lt;div class=&#34;ui embed&#34;&gt;
+    &lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/69EIZbNvE07HIH&#34; width=&#34;595&#34; height=&#34;485&#34;
+            frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
+            style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;ui hidden divider&#34;&gt;&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Git ile Sürüm Takibi Semineri</title>
+      <link>https://omerozkan.net/git-ile-surum-takibi-semineri/</link>
+      <pubDate>Tue, 29 Apr 2014 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/git-ile-surum-takibi-semineri/</guid>
+      <description>
+
+&lt;p&gt;&lt;a href=&#34;http://www.ozguryazilimgunleri.org.tr/2014/&#34;&gt;Özgür Yazılım ve Linux Günleri 2014&lt;/a&gt;, İstanbul Bahçeşehir Üniversite&amp;rsquo;sinde gerçekleşti.&lt;/p&gt;
+
+&lt;p&gt;Bu etkinliğe ben de &amp;ldquo;Git ile Sürüm Takibi&amp;rdquo; başlıklı sunumum ile katıldım.&lt;/p&gt;
+
+&lt;h3 id=&#34;konu-özeti:b564fd3e9d582c7db3f459c6b697741a&#34;&gt;Konu Özeti&lt;/h3&gt;
+
+&lt;p&gt;Yazılım projelerinde sürüm takip/kontrol sistemi (VCS) araçları olmazsa olmaz araçlardır.
+En popüler özgür sürüm takip sistemlerinden biri olan GIT ile nasıl sürüm takip yapıldığını,
+merkezi ve dağıtık sürüm takip sistemlerini, dağıtık yapısı,geliştiricilerin kendi yerellerinde de commit yapabilmesi,
+çalışma akışı, git ve svn karşılaştırması, conflict çözümü, uzak sunucu ile nasıl çalışıldığı,
+git ile çalışma yöntemleri,en sık kullanılan komutları, karşılaşılan bazı problemlerin çözümleri,
+özgür araçları ve Gitlab konuları anlatılmıştır.&lt;/p&gt;
+
+&lt;p&gt;Sunum dosyasına aşağıdaki bağlantılardan ulaşabilirsiniz:&lt;/p&gt;
+
+&lt;h3 id=&#34;pdf:b564fd3e9d582c7db3f459c6b697741a&#34;&gt;PDF&lt;/h3&gt;
+
+&lt;p&gt;Pdf dosyasını indirmek için &lt;a href=&#34;https://omerozkan.net/sunumlar/git-ile-surum-takibi.pdf&#34; target=&#34;_blank&#34;&gt;buraya&lt;/a&gt; tıklayınız.&lt;/p&gt;
+
+&lt;h3 id=&#34;slideshare:b564fd3e9d582c7db3f459c6b697741a&#34;&gt;Slideshare&lt;/h3&gt;
+
+&lt;p&gt;&lt;div class=&#34;ui embed&#34;&gt;
+    &lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/HxzDuKwnXS5vvD&#34; width=&#34;595&#34; height=&#34;485&#34;
+            frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
+            style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;ui hidden divider&#34;&gt;&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Özgür Yazılım ve Kurumsal Java Semineri</title>
+      <link>https://omerozkan.net/ozgur-yazilim-ve-javaee-semineri/</link>
+      <pubDate>Mon, 27 May 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/ozgur-yazilim-ve-javaee-semineri/</guid>
+      <description>
+
+&lt;p&gt;4 Mayıs 2013 tarihinde Mustafa Kemal Üniversite&amp;rsquo;sinde Özgür Yazılım &amp;amp; GNU/Linux ve KurumsalJava &amp;amp; Web Teknolojileri başlıklı seminerler verdim.
+Katılım sayısı hava sıcaklığından dolayı düşük olsa da yine de istediğim seminer ortamını buldum.
+Çünkü öğrenmek isteyenler olunca ben de elimden geleni yapmak istedim. Çoğunluk 1. sınıf öğrencilerinden oluşmaktaydı.
+Bu özgür yazılım semineri için güzel olsa da JavaEE semineri için dezavantajdı. Çünkü Java malesef okulumuzda 3. sınıfta anlatılıyor.&lt;/p&gt;
+
+&lt;p&gt;Öncelikle “Özgür Yazılım” semineri ile başladım. Özgür yazılımın ve açık kaynak yazılımların ne tür bir yazılım olduğunu
+ve lisanslarından bahsettim. Özgür yazılımın doğuşunun hikayesini de anlattım.
+Daha sonra GNU/Linux hakkında daha önce hiç Linux kullanmamış kişilere yönelik tanıtım gerçekleştirdim.
+Bu seminer zamanında tamamlamayı başardım ancak JavaEE semineri hiç de öyle olmadı :)
+Dinleyenlerin çoğunluğu 1. sınıf olduğu için Java teknolojilerinden bahsederken bazı kavramlar hakkında da bilgi vermek zorunda kaldım.
+Örneğin persistence katmanında kullanılan teknolojilerden bahsederken ORM’nin ne olduğunu anlatmak zorunda kaldım.
+Fakat beni baya yordu açıkçası. Süreyi de baya aşmak durumunda kaldım.
+Seminerlerin sonunda ise söz verdiğim gibi “Test Güdümlü Geliştirme”yi de anlattım. Birlikte roman rakamları katası yaptık.
+Katılımcıların hiç birinin Java bilmemesine rağmen, TDD’nin doğası gereği çok verimli geçti.&lt;/p&gt;
+
+&lt;p&gt;Hem katılımcılar için hem de benim için güzel tecrübe oldu.
+Katılımcıların yazılıma bakış açısını değiştirdiğimi düşünüyorum.
+En azından kurumsal java’yı tanıma fırsatı buldular. Umarım gelenler yazılıma hakkını vererek iyi bir yazılımcı olurlar.
+Benim açımdan da çok iyi bir tecrübe oldu. Özellikle JavaEE seminerini detaylı bir şekilde anlatabildiğimi görerek birçok
+konuda bilgi sahibi olduğumu anladım. Diğer taraftan da yaklaşık 4 saat ayakta kalmak da beni mahvetti.
+Linux yaz kampında Hakan hocanın (Hakan Uygun) neler yaşadığını anlayabiliyorum :)&lt;/p&gt;
+
+&lt;p&gt;Sunumların içeriğinin birçoğunu &lt;a href=&#34;https://www.ozguryazilim.com.tr&#34;&gt;Özgür Yazılım A.Ş.&lt;/a&gt; firmasının yaptığı &lt;a href=&#34;http://topluluk.ozguryazilim.com.tr/sunumlar&#34;&gt;sunumlar&lt;/a&gt;dan
+aldım. Seminerler konusunda da tavsiyelerini esirgemedikleri için burdan da teşekkür ediyorum.
+Sunumları aşağıdaki linklerden edinebilirsiniz.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://omerozkan.net/sunumlar/ozgur-yazilim.pdf&#34; target=&#34;_blank&#34;&gt;Özgür Yazılım ve Linux&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://omerozkan.net/sunumlar/kurumsaljava.pdf&#34; target=&#34;_blank&#34;&gt;Kurumsal Java&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;slideshare:9bca51cfe4f1f522d373652315ef8a90&#34;&gt;Slideshare&lt;/h2&gt;
+
+&lt;h3 id=&#34;özgür-yazılım-ve-linux:9bca51cfe4f1f522d373652315ef8a90&#34;&gt;Özgür Yazılım ve Linux&lt;/h3&gt;
+
+&lt;div class=&#34;ui embed&#34;&gt;
+    &lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/Jj95uRITPMjhv8&#34; width=&#34;595&#34; height=&#34;485&#34;
+            frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
+            style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;ui hidden divider&#34;&gt;&lt;/div&gt;
+
+&lt;h3 id=&#34;kurumsal-java:9bca51cfe4f1f522d373652315ef8a90&#34;&gt;Kurumsal Java&lt;/h3&gt;
+
+&lt;p&gt;&lt;div class=&#34;ui embed&#34;&gt;
+    &lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/K1xxNf1LPcfYz4&#34; width=&#34;595&#34; height=&#34;485&#34;
+            frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
+            style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
+    &lt;/iframe&gt;
+&lt;/div&gt;
+
+&lt;div class=&#34;ui hidden divider&#34;&gt;&lt;/div&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
