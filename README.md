@@ -1,1 +1,1 @@
-# omerozkan.github.io
+# Ömer Özkan Kişisel Günlük
