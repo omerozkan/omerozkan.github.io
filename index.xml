@@ -6,8 +6,50 @@
     <description>Recent content on Ömer Özkan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
-    <lastBuildDate>Tue, 16 Feb 2016 06:40:52 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 15 Mar 2016 05:48:56 +0200</lastBuildDate>
     <atom:link href="https://omerozkan.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Yeni Tasarım Yeni Blog</title>
+      <link>https://omerozkan.net/yeni-tasarim-yeni-blog/</link>
+      <pubDate>Tue, 15 Mar 2016 05:48:56 +0200</pubDate>
+      
+      <guid>https://omerozkan.net/yeni-tasarim-yeni-blog/</guid>
+      <description>&lt;p&gt;Merhabalar&lt;/p&gt;
+
+&lt;p&gt;Uzun zamandır blog yazmıyordum. Bunun en büyük sebebi iş hayatı vs dışında yeni bir yapıya geçmek istememdi.
+Bu yüzden öncelikle öncelikle hem tasarımı hem de blog altyapısı değiştirdim.
+Yoğunluğun da verdiği etki yüzünden gecikmeli de olsa bugün yeni tasarımı yayınladım.&lt;/p&gt;
+
+&lt;p&gt;İlk blogumu 2008 yılında yayınlamıştım. O zamanlar bloglar popüler olmaya başlamıştı. Bense sadece kendim için bir
+web sayfası oluşturmak istedim. Daha sonra yazılım mühendisliği ile ilgilenmem ve üniversite ile birlikte birçok
+içeriği çöpe atıp tekrar tekrar yeni yazılar yayınladım. Bu arada birçoğunun tasarımını da kendim yapıp front-end
+implementasyonlarını da kendim yaptım. Bu blog da öyle :)&lt;/p&gt;
+
+&lt;p&gt;Önceki tasarımı yaptığım zamanlar, mobil cihazlar popülerleşmeye başlasa da mobil siteler henüz popüler değildi.
+Bootstrap CSS framework&amp;rsquo;u o zamanlar hatırlıyorum. Fakat genelde kendi stillerimi oluşturmayı tercih etmiştim.
+Benim ilk front-end&amp;rsquo;le uğraştığım zamanlarda tablo ile yapılan sitelerin sayısı az değildi.
+Mezun olduktan sonra o temayı yeniledim fakat yine mobil cihazlar için uygun değildi. Önceki temayı geliştirdikten
+sonra tamamen back-end teknolojilerle ilgilendim. Uzun bir aradan sonra tekrar front-end e girdim. Normalde daha koyu
+renkleri seviyordum bu tasarımda Sadık&amp;rsquo;ın da baskısıyla daha açık renkleri tercih ettim. Yine aynı şekilde sade bir
+tasarım tercih ettim. Tamamen yazıyı okuma odaklı bir tasarım oldu. İlk defa bir CSS framework u Semantic UI&amp;rsquo;yu tercih ettim.
+Artık günümüzde bu araçlar başarılı ve kesinlikle kullanılması gerekiyor.&lt;/p&gt;
+
+&lt;p&gt;Bu değişimde altyapı da değişti. Şu an bu web sayfası tamamen statik dosyalardan oluşuyor. Evet Wordpress kullanmayı
+bıraktım. Bir daha da kullanmayı düşünmüyorum. Php ile ilgili tek bağım da ortadan kalkmış oldu. Statik dosyalardan
+oluştuğu için birçok yerde host edebilirim. Şimdilik github ile devam edeceğim. Bu arada gitlab&amp;rsquo;ın da bu konuda
+başarılı olduğunu ve ücretsiz private depo verdiğini de söylemeden geçmeyeyim.&lt;/p&gt;
+
+&lt;p&gt;Bu arada içeriklerin bir kısmını da restore ettiğimi söylemeliyim. Bazı yazıları tamamen kaldırdım. Bazıları ise yenilenmek
+üzere bekliyor.&lt;/p&gt;
+
+&lt;p&gt;Bu benim yeni blogumda ilk yazım. Bundan sonra yazılımla ilgili birçok konuda paylaşımda bulunacağım. İlerde video da
+paylaşmayı düşünüyorum. Çok yoğun bir insanım ama zaman buldukça paylaşım yapmaya devam edeceğim. Aynı şekilde bu tasarımda
+farklı farklı değişikliklere uğrayabilir.&lt;/p&gt;
+
+&lt;p&gt;Bir sonraki yazıda görüşmek üzere&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>İletişim</title>
@@ -1033,80 +1075,6 @@ Bu da benim için ayrı bir avantaj. 2. sınıfta .net öğrenmek yerine Java’
 &lt;p&gt;Linux ile ilgili herkesin bir hikayesi vardır. Ben de kendi hikayemi anlatmaya çalıştım.
  Özgür yazılımı tercih etmek konusunda da herkesin görüşü aynı değil. Kimisi politik, kimisi ücretsiz olması,
  kimisi kaliteli olması gibi tercih etme sebebi var. Benim tercih sebebim ise bütün sebeplerin hemen hemen hepsidir.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Akademik Bilişim 2013</title>
-      <link>https://omerozkan.net/akademik-bilisim-13/</link>
-      <pubDate>Tue, 29 Jan 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://omerozkan.net/akademik-bilisim-13/</guid>
-      <description>&lt;p&gt;Akademik Bilişim, 1999 yılından beri INETD tarafından her yıl organize ediliyor.
-Seminerler ve konferanslardan önce 4 günlük kurslar düzenleniyor.
-Ben de bu yıl akademik bilişimde yerimi aldım.&lt;/p&gt;
-
-&lt;p&gt;Akademik Bilişim 13, Antalya Akdeniz Üniversitesi’nde yapıldı. Katılmayı çok istediğim etkinliklerden biriydi.
-Yalnız bütünleme sınavları ile çakışması bizler için büyük bir problem oldu.
-Fakat Akademik Bilişim için riske değer diye bazı bütünlemeleri bıraktım ve akademik bilişime katılmayı tercih ettim.
-Kurs konusunda da kararsızdım. Çünkü birçok güzel kurslar vardı. Kurslar paralel olarak yapılıyor.
-Bu yüzden sadece birini seçmek zorundasınız. Zamanda yolculuk yapabilsem muhtemelen geriye dönüp bütün kurslara katılmayı tercih ederdim :).
-Kurslardan 3 tanesi uygun geldi: PostgreSQL, Android ve Clojure. Bir yazılımcı olduğum için Android ve Clojure daha ağır basıyordu.
-Bir yandan da PostgreSQL öğrenmek istiyorum. Çünkü bitirme projemin veritabanı postgres olacak.
-Android ise Javacı olmama rağmen framework’ünü sevmemiştim.
-Android’i bu şekilde eledim. Fakat yine kararsız kaldım.
-Ben de uzunca düşündüm ve veritabanı yöneticisi (DBA) olmak isteyen arkadaşların önünü kapatmama düşüncesi ile Clojure’u tercih ettim.
-Özellikle fonksiyonel programlamayı öğrenmek istiyordum. Clojure zaten öğrenmek istediğim programlama dillerinden biridir.
-Postgres’i de hem Devrim Gündüz’ü tanımak hem de veritabanını geliştirmek için düşünüyordum.
-Clojure’a kayıt oldum fakat yeterli sayıda olmadığı için tekrar bir tercih yapmam gerekiyordu.
-Hiç düşünmeden postgresi tercih ettim.&lt;/p&gt;
-
-&lt;p&gt;Antalya’ya birkaç arkadaş gidecektik fakat bütünleme sınavları ve diğer nedenlerden dolayı bana sadece İlhan* eşlik etti.
-Oraya ulaşmak için otobüsü tercih ettik. Hep Antalya yolundan (Hatay-Antalya) kötü diye bahsederlerdi. Gerçekten öyleymiş.
-Yol baya yorucu geçti. Antalya’ya vardığımızda Linux yaz kampında tanıştığım Nursel* ve arkadaşı Duygu* ile buluştuk.
-Kayıt, yurda yerleşme vs derken, yağmurda baya bir ıslandık. Gece doğru düzgün uyuyamadığım için yorgun düşmüştüm.
-Fakat bütün sınavlarım o gece açıklanması ve sonuçların olumlu olması kursa daha rahat katılmamı sağladı.&lt;/p&gt;
-
-&lt;p&gt;Öncelikle kurstan bahsedersem Devrim hoca sayesinde kurs baya eğlenceli geçti. Hem eğlendik hem öğrendik.&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&#34;ui left floated bordered medium image content-image&#34; src=&#34;https://omerozkan.net/images/post/akademik-bilisim-13/postgres-kursu1.jpg&#34;
-     alt=&#34;Postgresql sınıfı&#34; /&gt;
-Benim açımdan postgres kursu yazılımdan farklı konuları ele aldığımız için çok güzel geçti. Çünkü yeni şeyler öğrendim.
-Bu arada PostgreSQL’in kısa adı POSTGRES’tir. “Postgre” diye isimlendirenler ceza aldılar :)
-Kurs içeriği SQL veya veritabanı tasarımı değildi. SQL komutlarına az çok hakimim zaten.
-Tasarım da zaten bilgim olan konulardan biriydi. Böyle olması benim de işime geldi.
-Veritabanı yöneticiliği sandığımdan da farklı bir olaymış. Ama zevkli tarafı da var.
-Bir de oraya tıkla, şunu ekle, bunu yap yerine sadece terminalden işlemleri gerçekleştirdik. psql gerçekten çok güzel bir araç.
-Kursun sonunda da asenkron replikasyon yaptık. Postgresql in mimarisi hakkında da bilgi sahibi olduk.
-Benim açımdan dediğim gibi çok zevkli ve çok verimli geçti. Anlamakta hiç zorlanmadım.&lt;/p&gt;
-
-&lt;p&gt;Malesef yorgunluktan dolayı sadece üç seminere katılabildim. Zaten seminerlerin son gününe katılamayacaktık.
-İlk gün Linux sunucu yönetimi kursuna katıldım. Malesef bildiğim konulardı.
-Daha sonra sesini duymayı özlediğim Hakan Uygun’un alfresco seminerine katıldım.
-Elektronik imza da konu olduğu için baya zevkli geçti. Diğer seminer de tabiki Melih Sakarya’nın kurumsal java seminerleriydi.
-Gelmişken Melih Sakarya ile tanışmadan gitmeyelim dedik. Otobüsümüz ile seminer bitişi arasında 1 saat vardı.
-Melih Sakarya tanışmak istediğim Javacılardan biriydi. Bu sayede tanışmış oldum.
-Aynı zamanda seminer de kurumsal teknolojilerle beraber PrimeFaces’i tanımış olduk.
-JSF ve Primefaces konusunda ilerlemeye karar verdim. Melih hoca ile sohbetimiz yarım saate mal oldu.
-Otobüse zar zor yetiştik ama değdi.&lt;/p&gt;
-
-&lt;p&gt;&lt;img class=&#34;ui right floated bordered medium image content-image&#34; src=&#34;https://omerozkan.net/images/post/akademik-bilisim-13/postgres-kursu2.jpg&#34;
-     alt=&#34;Postgresql sınıfı&#34; /&gt;
-Antalya ise kışın havanın tutarsızlığı dışında çok güzel bir şehir.
-O sahili, denizi gördükten sonra İskenderun’daki ne diye düşündüm :).
-Kurslardan fazla gezmeye fırsatımız olmadı. Açıkçası yorgunluk yüzünden pek de gezmek istemedim.
-Benim aklım daha çok teknolojideydi her zamanki gibi. Ama nerdeyse hiç bir zamanımızı boş geçirmedik.
-Bu yüzden de seminerler için baya yorgun düştük. Daha sonra aramıza Adem* ve son gün Vahdet* katıldı.
-Nursel ile de nerdeyse her gün kavga ettik :) . Korelilerle sohbetimiz de güzeldi ;)&lt;/p&gt;
-
-&lt;p&gt;Akademik bilişim benim için gerçekten çok eğlenceli geçti. Özellikle okulun ve sınavların bütün stresini atmamı sağladı.
-Aynı zamanda yeni arkadaşlar edindik. Bu tür etkinlikler benim için çok faydalı ve çok eğlenceli geçiyor.
-Okulda yaşadığım bütün stresin, sıkıntının değeceğini görüyorum.
-Bu arada Özgür Yazılım A.Ş. yöneticileri (Hakan Uygun ve Doruk Fişek) benimle özel olarak ilgilendiler.
-İlgilerinden dolayı gerçekten onur duydum. Postgresql kursundan sonra yazılım geliştirmeyi ne kadar çok sevdiğimi farkettim.
-Kariyerim konusunda doğru bir tercih yaptığım için mutluyum. Özellikle Java seminerinde bunu daha çok anladım.
-Tabiki veritabanı yöneticiliği de benim için yazılım geliştirmek kadar olmasa da çok zevkli bir meslek.
-Zamanım kalırsa bu konuda da uzmanlaşmaya çalışacağım.&lt;/p&gt;
 </description>
     </item>
     

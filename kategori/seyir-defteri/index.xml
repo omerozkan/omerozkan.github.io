@@ -6,8 +6,50 @@
     <description>Recent content in Seyir Defteri on Ömer Özkan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
-    <lastBuildDate>Wed, 24 Sep 2014 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Mar 2016 05:48:56 +0200</lastBuildDate>
     <atom:link href="https://omerozkan.net/kategori/seyir-defteri/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Yeni Tasarım Yeni Blog</title>
+      <link>https://omerozkan.net/yeni-tasarim-yeni-blog/</link>
+      <pubDate>Tue, 15 Mar 2016 05:48:56 +0200</pubDate>
+      
+      <guid>https://omerozkan.net/yeni-tasarim-yeni-blog/</guid>
+      <description>&lt;p&gt;Merhabalar&lt;/p&gt;
+
+&lt;p&gt;Uzun zamandır blog yazmıyordum. Bunun en büyük sebebi iş hayatı vs dışında yeni bir yapıya geçmek istememdi.
+Bu yüzden öncelikle öncelikle hem tasarımı hem de blog altyapısı değiştirdim.
+Yoğunluğun da verdiği etki yüzünden gecikmeli de olsa bugün yeni tasarımı yayınladım.&lt;/p&gt;
+
+&lt;p&gt;İlk blogumu 2008 yılında yayınlamıştım. O zamanlar bloglar popüler olmaya başlamıştı. Bense sadece kendim için bir
+web sayfası oluşturmak istedim. Daha sonra yazılım mühendisliği ile ilgilenmem ve üniversite ile birlikte birçok
+içeriği çöpe atıp tekrar tekrar yeni yazılar yayınladım. Bu arada birçoğunun tasarımını da kendim yapıp front-end
+implementasyonlarını da kendim yaptım. Bu blog da öyle :)&lt;/p&gt;
+
+&lt;p&gt;Önceki tasarımı yaptığım zamanlar, mobil cihazlar popülerleşmeye başlasa da mobil siteler henüz popüler değildi.
+Bootstrap CSS framework&amp;rsquo;u o zamanlar hatırlıyorum. Fakat genelde kendi stillerimi oluşturmayı tercih etmiştim.
+Benim ilk front-end&amp;rsquo;le uğraştığım zamanlarda tablo ile yapılan sitelerin sayısı az değildi.
+Mezun olduktan sonra o temayı yeniledim fakat yine mobil cihazlar için uygun değildi. Önceki temayı geliştirdikten
+sonra tamamen back-end teknolojilerle ilgilendim. Uzun bir aradan sonra tekrar front-end e girdim. Normalde daha koyu
+renkleri seviyordum bu tasarımda Sadık&amp;rsquo;ın da baskısıyla daha açık renkleri tercih ettim. Yine aynı şekilde sade bir
+tasarım tercih ettim. Tamamen yazıyı okuma odaklı bir tasarım oldu. İlk defa bir CSS framework u Semantic UI&amp;rsquo;yu tercih ettim.
+Artık günümüzde bu araçlar başarılı ve kesinlikle kullanılması gerekiyor.&lt;/p&gt;
+
+&lt;p&gt;Bu değişimde altyapı da değişti. Şu an bu web sayfası tamamen statik dosyalardan oluşuyor. Evet Wordpress kullanmayı
+bıraktım. Bir daha da kullanmayı düşünmüyorum. Php ile ilgili tek bağım da ortadan kalkmış oldu. Statik dosyalardan
+oluştuğu için birçok yerde host edebilirim. Şimdilik github ile devam edeceğim. Bu arada gitlab&amp;rsquo;ın da bu konuda
+başarılı olduğunu ve ücretsiz private depo verdiğini de söylemeden geçmeyeyim.&lt;/p&gt;
+
+&lt;p&gt;Bu arada içeriklerin bir kısmını da restore ettiğimi söylemeliyim. Bazı yazıları tamamen kaldırdım. Bazıları ise yenilenmek
+üzere bekliyor.&lt;/p&gt;
+
+&lt;p&gt;Bu benim yeni blogumda ilk yazım. Bundan sonra yazılımla ilgili birçok konuda paylaşımda bulunacağım. İlerde video da
+paylaşmayı düşünüyorum. Çok yoğun bir insanım ama zaman buldukça paylaşım yapmaya devam edeceğim. Aynı şekilde bu tasarımda
+farklı farklı değişikliklere uğrayabilir.&lt;/p&gt;
+
+&lt;p&gt;Bir sonraki yazıda görüşmek üzere&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Bir Proje Hikayesi: Vipera</title>

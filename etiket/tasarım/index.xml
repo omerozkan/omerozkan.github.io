@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blog on Ömer Özkan</title>
-    <link>https://omerozkan.net/etiket/blog/</link>
-    <description>Recent content in Blog on Ömer Özkan</description>
+    <title>Tasarım on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/tasar%C4%B1m/</link>
+    <description>Recent content in Tasarım on Ömer Özkan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
     <lastBuildDate>Tue, 15 Mar 2016 05:48:56 +0200</lastBuildDate>
-    <atom:link href="https://omerozkan.net/etiket/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://omerozkan.net/etiket/tasar%C4%B1m/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Yeni Tasarım Yeni Blog</title>
@@ -48,33 +48,6 @@ paylaşmayı düşünüyorum. Çok yoğun bir insanım ama zaman buldukça payla
 farklı farklı değişikliklere uğrayabilir.&lt;/p&gt;
 
 &lt;p&gt;Bir sonraki yazıda görüşmek üzere&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Yeni Kişisel Günlüğüm</title>
-      <link>https://omerozkan.net/yeni-kisisel-gunlugum/</link>
-      <pubDate>Fri, 18 May 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://omerozkan.net/yeni-kisisel-gunlugum/</guid>
-      <description>&lt;p&gt;Genelde hayatımızda olumsuz veya olumlu olaylarla karşılaşırsınız. Bu olay bakış açımızı veya yaşama biçimimizi değiştirir.
-Herşeye sil baştan başlamak istersiniz. Yeni bir sayfa açıp, geçmişi unutmak istersiniz.
-Ama aslında hiç bir zaman sıfırdan başlayamayız. Sadece şekil değiştiririz veya belki de o bile olmaz.
-Benim için de buna benzer olaylar oldu.&lt;/p&gt;
-
-&lt;p&gt;Bundan önceki günlüğümün temasını yaklaşık 7 ay önce tasarlamıştım.
-Ama malesef o günlüğe sadece 2-3 yazı girebildim. Bunun sebebi biraz tembellik biraz da yoğunluktan kaynaklandı.
-Sürekli eski tema üzerinde değişiklik yapmak istiyordum. Niketim bu düşünce yeni bir tasarıma götürdü.
-Sanırım yaşadığım olayların bir sonucu olarak da eskide kalan tüm içeriği tamamen sildim.
-Artık daha profesyonel bir günlüğüm olsun istedim. Bunun için yoğunluğun arasında yeni tasarıma başladım.
-Bunun sonucunda böyle bir çalışma ortaya çıktı. Umarım tasarımı beğenmişsinizdir.
-Tabi Mici IE9&amp;rsquo;u yayınlayınca, HTML5 ile kodlayayım dedim. IE8 için de görebildiğim kadarıyla pek bir sıkıntı yok.
-Ama sanırım biraz fazla kod yazdım. Bu da aslında front-end işlerinde o kadar da iyi olmadığımı gösterir :)&lt;br /&gt;
-Bazı eksiklikler var ama onları da zaman buldukça düzelteceğim.&lt;/p&gt;
-
-&lt;p&gt;Belki çoğu zaman kendim yazıp kendim okuyacağım yazıları.
-Ama bunun bir önemi yok. Hiç olmazsa kendim için güzel bir yazılım günlüğü oluşturmuş olurum.
-Neyse yeni bir yazıda görüşürüz :)&lt;/p&gt;
 </description>
     </item>
     
