@@ -6,8 +6,51 @@
     <description>Recent content in Posts on Ömer Özkan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
-    <lastBuildDate>Tue, 15 Mar 2016 05:48:56 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 18 May 2016 06:47:18 +0300</lastBuildDate>
     <atom:link href="https://omerozkan.net/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Neden Wordpress&#39;i Bıraktım</title>
+      <link>https://omerozkan.net/neden-wordpressi-biraktim/</link>
+      <pubDate>Wed, 18 May 2016 06:47:18 +0300</pubDate>
+      
+      <guid>https://omerozkan.net/neden-wordpressi-biraktim/</guid>
+      <description>&lt;p&gt;Birkaç ay önce yeni tasarımla beraber hugo&amp;rsquo;ya geçtiğimi duyurmuştum. Bu yazıda&amp;rsquo;da neden artık wordpress kullanmadığımı
+anlatmaya çalışacağım.&lt;/p&gt;
+
+&lt;p&gt;Uzun süredir yazı yazmadığımı farkedince bunun nedenini araştırmaya başladım. Tabiki kişisel problemlerin de buna büyük
+bir etkisi var. Yeni bir blog tasarımının beni bu konuda daha çok motive edeceğini düşündüm ve yeni bir tasarıma karar
+verdim. Bununla beraber farklı bir yapıya geçmeyi düşünürken GoLang ile yazılmış Hugo&amp;rsquo;yu bir arkadaşımın tavsiyesi
+üzerine inceledim ve denemeye karar verdim. Sonrasında bu site ortaya çıkmış oldu.&lt;/p&gt;
+
+&lt;p&gt;Wordpress&amp;rsquo;i kendi sunucumda host ediyordum. Yoğunluk içerisinde bunun bakımını yapmak, sadece wordpress dışında PHP
+ve MySQL&amp;rsquo;in güncellemelerini takip etmek vs gibi işler beni bunaltıyordu. Bir güncelleme ile web sayfasının
+çevrimdışı olduğu zamanlar bile oluyordu.&lt;/p&gt;
+
+&lt;p&gt;Kullanımıma göre Wordpress&amp;rsquo;in yazı yazmak dışında hiç bir özelliğini kullanmadığımı farkettim. Bunun dışında markdown
+oldukça sevdiğim bir format. Markdown kullanırsam herhangi bir html editorü kullanma zorunluluğumu da ortadan kaldırıyordu.
+Başlangıçta Wordpress&amp;rsquo;i markdown ile kullanmayı düşünüyordum. Fakat sonradan bu kararım da değişti.
+Önyüz tasarımını değiştirmek zaten zamanımı alacaktı. Bu yüzden kullandığım sistemi de değiştirmek istedim. Ayrıca tüm yazıları markdown&amp;rsquo;a çevirerek
+aynı zamanda yazıları da tekrar inceleme fırsatım olacaktı.&lt;/p&gt;
+
+&lt;p&gt;Hugo&amp;rsquo;yu incelediğimde gereksinimlerimin nerdeyse tamamını karşılıyordu. Jekyll&amp;rsquo;da olduğu gibi markdown ile yazıyorsun.
+Basit bir command-line ile html üretiyor. Özellikle yapısı ve özelliklerini beğendim.
+Jekyll daha önce kullanmadım ama okuduğum kadarıyla birkaç problemi beraberinde getiriyor.
+Hugo&amp;rsquo;nun da beğenmediğim bir çok özelliği olmasına rağmen gereksiminlerimi bir şekilde karşıladım.&lt;/p&gt;
+
+&lt;p&gt;Hugo bir komut-satırı (command-line) aracı sunuyor. Hızlı bir şekilde derleme işlemini yapabildiği gibi değişiklikleri canlı olarak görmek için
+ bir sunucu da ayağa kaldırabiliyor. Ayrıca komut satırından Web sayfa tamamen statik dosyalardan oluştuğu için istediğiniz yerde host edebilirsiniz.
+ Github, Gitlab, Amazon S3 gibi.Yeni bir yazı yayınladığınızda otomatik yayınlanması için de ücretsiz servisler bulunmakta fakat ben Jenkins
+ile bunu yapmayı tercih ettim. Yeni bir yazıyı bir git deposuna gönderdikten github üzerindeki başka bir depoya yüklenmesini
+sağlıyorum bu şekilde yeni yazı yayınlanıyor.&lt;/p&gt;
+
+&lt;p&gt;Eğer bir basit blogunuz varsa, git vb gibi kavramlarla aranız iyi ise ve sadece içerik üretmeye odaklanmak istiyorsanız hugo&amp;rsquo;yu tavsiye ederim.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Bir sonraki yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Yeni Tasarım Yeni Blog</title>
@@ -1088,125 +1131,6 @@ Bu arada Özgür Yazılım A.Ş. yöneticileri (Hakan Uygun ve Doruk Fişek) ben
 Kariyerim konusunda doğru bir tercih yaptığım için mutluyum. Özellikle Java seminerinde bunu daha çok anladım.
 Tabiki veritabanı yöneticiliği de benim için yazılım geliştirmek kadar olmasa da çok zevkli bir meslek.
 Zamanım kalırsa bu konuda da uzmanlaşmaya çalışacağım.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>OOP: Polimorfizm</title>
-      <link>https://omerozkan.net/oop-polimorfizm/</link>
-      <pubDate>Tue, 13 Nov 2012 00:00:00 +0000</pubDate>
-      
-      <guid>https://omerozkan.net/oop-polimorfizm/</guid>
-      <description>
-
-&lt;p&gt;&lt;a href=&#34;https://omerozkan.net/oop-kapsulleme/&#34;&gt;Kapsülleme&lt;/a&gt; ve &lt;a href=&#34;https://omerozkan.net/oop-kalitim/&#34;&gt;kalıtım&lt;/a&gt; konularından sonra sıra geldi polimorfizme.
-Polimorfizm, Türkçe&amp;rsquo;de çok biçimlilik olarak çevriliyor.
-Polimorfizmi anlatmak için JUnit in Action kitabında gördüğüm güzel bir örneği vereceğim.
-Bu örnek sayesinde polimorfizm&amp;rsquo;in kullanım amacını da göstermiş olacağım. Örnek göstererek anlatmayı daha uygun buldum.
-Ben önce örnekleri inceleyip sonra açıklamaları okurdum. Bu sayede daha kolay kavrıyorum.
-Aynı yöntemi burda da uygulayacağım. Bu konuyu kavramanız için kalıtım konusuna hakim olmanız gerekmektedir.&lt;/p&gt;
-
-&lt;p&gt;Örneğimizde bir yazıcımız var. Bu yazıcı kelime işlemci ve pdf belgelerini basabiliyor.&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf1.java&#34;&gt;&lt;/script&gt;
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=word1.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;PDF ve Word sınıfları getPrintableText() isimli bir metodu içeriyor. Şimdi de yazıcı (Printer) sınıfımıza bakalım.&lt;/p&gt;
-
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printer1.java&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Printer sınıfımızın ise iki metodu var. printPDF metodu PDF dökümanını, printWord metodu ise word dökümanını yazdırıyor.
-Bu metodlar bu nesneleri parametre olarak alıp, PDF ve Word sınıflarının getPrintableText metodunu kullanarak ekrana yazabiliyor.&lt;/p&gt;
-
-&lt;p&gt;Bu tasarım başlangıçta güzel gözükse de aslında bir çok problemi beraberinde getiriyor. &lt;strong&gt;printPDF&lt;/strong&gt; ve &lt;strong&gt;printWord&lt;/strong&gt; metotları
-nerdeyse birbirinin aynısı. Yani duplicated kod barındırıyor. Diğer bir problem diyelim ki müşteriniz Excel tablolarını
-da yazdırmak istedi. Ne yapmanız gerekiyor. Öncelikle bir Excel sınıfı ekleyip ardından &lt;strong&gt;Printer&lt;/strong&gt; sınıfına &lt;strong&gt;printExcel()&lt;/strong&gt; adlı
-yine aynı işi yapan bir metot eklemeniz gerekiyor. Bu sefer üç tane metod aynı işi yapmış olacak. Yer yeni bir belge türü
-eklediğimizde Printer sınıfını sürekli değiştirmemiz gerekiyor. Bu durum Open-Close (Açık-Kapalı) prensibine aykırı bir durum.
-Open-Close prensibi yazdığımız sınıfların gelişime açık fakat değişime kapalı olması gerektiğini tanımlar. Bu durumu
-polimorfizm ile düzeltebiliriz.&lt;/p&gt;
-
-&lt;p&gt;Öncelikle daha önceden öğrendiğimiz kalıtımı(yemek tarifi gibi oldu :)) kullanarak sınıflarımızı yeniden yapılandıralım.
-&lt;strong&gt;PDF&lt;/strong&gt; sınıfıda &lt;strong&gt;Word&lt;/strong&gt; sınıfıda aslında birer belge yani &lt;strong&gt;Document&lt;/strong&gt; özelliğini taşıyor.&lt;/p&gt;
-
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=document.java&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Şimdi Word ve PDF sınıflarını Document sınıfını &lt;strong&gt;extend&lt;/strong&gt; edebilir.&lt;/p&gt;
-
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=word2.java&#34;&gt;&lt;/script&gt;
-
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf2.java&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Override anotasyonunu (annotation) görüyorsunuz. Anotasyonlar Java 1.5&amp;rsquo;ten sonra gelen bir özelliktir.
-Buradaki Override anotasyonu, Word ve PDF&amp;rsquo;te bulunan getPrintableText metodlarının ata sınıfın (Document) print metodunun değiştirildiği anlamına gelir.&lt;/p&gt;
-
-&lt;p&gt;Şimdi &lt;strong&gt;Printer&lt;/strong&gt; sınıfını da yeniden düzenleyelim.&lt;/p&gt;
-
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printer2.java&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Şimdi daha iyi anlamanız için bir test sınıfı yazalım.&lt;/p&gt;
-
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printerTest.java&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Eğer sonucu görmediyseniz lütfen sonucu tahmin etmeye çalışın.&lt;/p&gt;
-
-&lt;p&gt;Bu kodun ekran çıktısı aşağıdaki gibi olacaktır.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;This is a document&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;This is a PDF document&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;This is a Word document&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;4. satırda yeni bir yazıcı sınıfı ürettik.
-6. satırda bir döküman nesnesini yazdırdık. Beklediğimiz gibi Document sınıfında tanımladığımız metni yazdırdı.
-8. satırda ise bir pdf belgesini yazdırmak istedik. Printer sınıfının parametre referans tipine baktığınızda Document olduğunu
-görüyorsunuz. PDF de bir document nesnesi olduğu için bu nesneyi bu metoda geçirebildik(passing). Bu polimorfizmin birinci
-durumu. Yani Document sınıfını extend eden herhangi bir nesneyi Document referansı ile kullabiliriz. Bunu şu şekilde de
-tanımlayabilirdik.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;Document document = new PDF()&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Yani Document dışında farklı sınıfların nesnelerini de Document referansı ile tanımlayabiliriz. Bunu polimorfizm sağlar.
-Polimorfizmin sağladı diğer bir güzellik ise ekranda gördüğünüz &amp;ldquo;This is a PDF document&amp;rdquo; yazısıdır. Document sınıfında
-tanımlanan varsayılan davranış yerine PDF sınıfında bu davranışı değiştirerek farklı metin yazmasına sebep olduk. Bu şekilde
-her nesnenin bir metod veya herhangi bir interface(java&amp;rsquo;daki interface&amp;rsquo;leri kastetmiyorum) için farklı davranış göstermesine &lt;strong&gt;polimorfizm&lt;/strong&gt; diyoruz.&lt;/p&gt;
-
-&lt;p&gt;10. satırda aynı durum Word sınıfı için geçerli. Ayrıca Printer sınıfının tek bağımlılığı Document sınıfına oldu. Yani
-Printer ve Document sınıfını bir jar içerisinde müşteriye teslim edebiliriz. Bu da bize esnek bir yapı sağlar.&lt;/p&gt;
-
-&lt;p&gt;Şimdi gelelim müşterinin isteğine, müşteri bir Excel dosyası yazdırmak istemişti. Artık Printer sınıfına dokunmamıza bile gerek yok.
-Yeni bir Excel sınıfı ekleyelim.&lt;/p&gt;
-
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=excel.java&#34;&gt;&lt;/script&gt;
-
-&lt;h3 id=&#34;super-anahtar-kelimesi:1e4f0b0da4b93aa40114849c5b8e437e&#34;&gt;super anahtar kelimesi&lt;/h3&gt;
-
-&lt;p&gt;Java&amp;rsquo;da nesneyi üst sınıfın interface i ile kullanmak isterseniz. &lt;code&gt;super&lt;/code&gt; anahtar kelisini (keyword) kullanabilirsiniz.
-Örneğimize bakarsak PDF sınıfı Document&amp;rsquo;in print metodunun üzerine kendi &lt;strong&gt;getPrintableText()&lt;/strong&gt; metodunu deği davranışını
-değiştirmiş oldu ve Document sınıfında tanımlanan print metodunun davranışını iptal etti.
-Peki PDF sınıfı atasından (Document) aldığı &lt;strong&gt;getPrintableText()&lt;/strong&gt; metodunu kullanmak isterse ne yapmalıyız?
-İşte burda super anahtar kelimesini kullanabiliriz. PDF sınıfını aşağıdaki şekilde değiştirelim.&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf3.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;Bunun sonucunda &lt;strong&gt;getPrintableText()&lt;/strong&gt; metodu &amp;ldquo;This is a document\nThis is a PDF document\n&amp;rdquo; değerlerini döndermiş olur.&lt;/p&gt;
-
-&lt;p&gt;Polimorfizm kavrami OOP&amp;rsquo;ye özgür bir özellik değildir. OOP ile uygulanabilir.&lt;/p&gt;
-
-&lt;p&gt;Bu yazımda polimorfizmi yüzeysel olarak anlatmaya çalıştım. Umarım faydalı olmuştur.&lt;/p&gt;
-
-&lt;p&gt;Bir sonraki yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     

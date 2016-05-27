@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/hugo/</link>
+    <description>Recent content in Hugo on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Wed, 18 May 2016 06:47:18 +0300</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/hugo/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Neden Wordpress&#39;i Bıraktım</title>
+      <link>https://omerozkan.net/neden-wordpressi-biraktim/</link>
+      <pubDate>Wed, 18 May 2016 06:47:18 +0300</pubDate>
+      
+      <guid>https://omerozkan.net/neden-wordpressi-biraktim/</guid>
+      <description>&lt;p&gt;Birkaç ay önce yeni tasarımla beraber hugo&amp;rsquo;ya geçtiğimi duyurmuştum. Bu yazıda&amp;rsquo;da neden artık wordpress kullanmadığımı
+anlatmaya çalışacağım.&lt;/p&gt;
+
+&lt;p&gt;Uzun süredir yazı yazmadığımı farkedince bunun nedenini araştırmaya başladım. Tabiki kişisel problemlerin de buna büyük
+bir etkisi var. Yeni bir blog tasarımının beni bu konuda daha çok motive edeceğini düşündüm ve yeni bir tasarıma karar
+verdim. Bununla beraber farklı bir yapıya geçmeyi düşünürken GoLang ile yazılmış Hugo&amp;rsquo;yu bir arkadaşımın tavsiyesi
+üzerine inceledim ve denemeye karar verdim. Sonrasında bu site ortaya çıkmış oldu.&lt;/p&gt;
+
+&lt;p&gt;Wordpress&amp;rsquo;i kendi sunucumda host ediyordum. Yoğunluk içerisinde bunun bakımını yapmak, sadece wordpress dışında PHP
+ve MySQL&amp;rsquo;in güncellemelerini takip etmek vs gibi işler beni bunaltıyordu. Bir güncelleme ile web sayfasının
+çevrimdışı olduğu zamanlar bile oluyordu.&lt;/p&gt;
+
+&lt;p&gt;Kullanımıma göre Wordpress&amp;rsquo;in yazı yazmak dışında hiç bir özelliğini kullanmadığımı farkettim. Bunun dışında markdown
+oldukça sevdiğim bir format. Markdown kullanırsam herhangi bir html editorü kullanma zorunluluğumu da ortadan kaldırıyordu.
+Başlangıçta Wordpress&amp;rsquo;i markdown ile kullanmayı düşünüyordum. Fakat sonradan bu kararım da değişti.
+Önyüz tasarımını değiştirmek zaten zamanımı alacaktı. Bu yüzden kullandığım sistemi de değiştirmek istedim. Ayrıca tüm yazıları markdown&amp;rsquo;a çevirerek
+aynı zamanda yazıları da tekrar inceleme fırsatım olacaktı.&lt;/p&gt;
+
+&lt;p&gt;Hugo&amp;rsquo;yu incelediğimde gereksinimlerimin nerdeyse tamamını karşılıyordu. Jekyll&amp;rsquo;da olduğu gibi markdown ile yazıyorsun.
+Basit bir command-line ile html üretiyor. Özellikle yapısı ve özelliklerini beğendim.
+Jekyll daha önce kullanmadım ama okuduğum kadarıyla birkaç problemi beraberinde getiriyor.
+Hugo&amp;rsquo;nun da beğenmediğim bir çok özelliği olmasına rağmen gereksiminlerimi bir şekilde karşıladım.&lt;/p&gt;
+
+&lt;p&gt;Hugo bir komut-satırı (command-line) aracı sunuyor. Hızlı bir şekilde derleme işlemini yapabildiği gibi değişiklikleri canlı olarak görmek için
+ bir sunucu da ayağa kaldırabiliyor. Ayrıca komut satırından Web sayfa tamamen statik dosyalardan oluştuğu için istediğiniz yerde host edebilirsiniz.
+ Github, Gitlab, Amazon S3 gibi.Yeni bir yazı yayınladığınızda otomatik yayınlanması için de ücretsiz servisler bulunmakta fakat ben Jenkins
+ile bunu yapmayı tercih ettim. Yeni bir yazıyı bir git deposuna gönderdikten github üzerindeki başka bir depoya yüklenmesini
+sağlıyorum bu şekilde yeni yazı yayınlanıyor.&lt;/p&gt;
+
+&lt;p&gt;Eğer bir basit blogunuz varsa, git vb gibi kavramlarla aranız iyi ise ve sadece içerik üretmeye odaklanmak istiyorsanız hugo&amp;rsquo;yu tavsiye ederim.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34;&gt;https://gohugo.io/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Bir sonraki yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
