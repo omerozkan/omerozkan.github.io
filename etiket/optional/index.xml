@@ -114,7 +114,7 @@ değeri döner. Örneğin &lt;code&gt;null&lt;/code&gt; almak istiyorsanız &lt;
 &lt;/ul&gt;
 
 &lt;p&gt;Bunun gibi birçok metodu var. Aynı zamanda fonksiyonel özellikler de taşıyor. Java 8 ile beraber gelmesi bir raslantı değil :)
-Dikkat etmeniz gereken başlangıçta metodları kullanırken mutlaka javadoc ile inceleyin. &lt;code&gt;get()&lt;/code&gt; metodunda olduğu gibi
+Başlangıçta metodları kullanırken mutlaka javadoc ile inceleyin. &lt;code&gt;get()&lt;/code&gt; metodunda olduğu gibi
 exception alabilirsiniz. Ayrıca eğer Java 8 de Stream Api ile tanıştıysanız muhtemelen Optional sınıfını kullanmışsınızdır.
 Stream Api&amp;rsquo;de oldukça fazla kullanılır. Primitive tipler için de &lt;code&gt;OptionalInt&lt;/code&gt;, &lt;code&gt;OptionalDouble&lt;/code&gt; gibi sınıfları da kullanabilirsiniz.&lt;/p&gt;
 
