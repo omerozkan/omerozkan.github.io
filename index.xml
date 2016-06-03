@@ -6,8 +6,123 @@
     <description>Recent content on Ömer Özkan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
-    <lastBuildDate>Wed, 18 May 2016 06:47:18 +0300</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jun 2016 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://omerozkan.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Java 8 Optional ve null dönebilen metotlar</title>
+      <link>https://omerozkan.net/java-8-optional/</link>
+      <pubDate>Fri, 03 Jun 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://omerozkan.net/java-8-optional/</guid>
+      <description>&lt;p&gt;Merhabalar, bu yazıda sizlere Java 8 ile beraber gelen Optional sınıfından bahsedeceğim. Bu yazı ile birlikte Java
+programlama dili ve teknolojileri konusunda ufak bilgiler paylaşmaya devam edeceğim. Umarım faydalı olur.&lt;/p&gt;
+
+&lt;p&gt;Optional sınıfının kullanımına bir örnek vererek anlatacağım. Doğrudan anlatabilecek kadar basit bir sınıf olmasına rağmen
+örnek üzerinden gitmenin daha kalıcı olduğunu düşünüyorum. Örneğimizde bir UserRepository sınıfı tasarlayacağız.
+Interface&amp;rsquo;imiz şu şekilde:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepository1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;UserRepository interface&amp;rsquo;inde &lt;code&gt;getByUsername()&lt;/code&gt; metodunun tanımlandığını görüyoruz. Adından da anlaşılacağı üzere kullanıcı
+adı ile veritabanında kayıtlı bir kullanıcıyı bulmak istiyoruz. Basitçe aşağıdaki implementasyonu yapabiliriz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Herhangi bir persistent api kullanarak kullanıcı listesini aldık. Eğer liste boş dönerse girdiğimiz kullanıcı adına sahip
+bir kullanıcı olmadığı anlamına geldiğinden &lt;code&gt;null&lt;/code&gt; object döndük. Eğer kullanıcı varsa listenin ilk elemanını dönüyoruz.
+Kullandığınız api&amp;rsquo;nin ne olduğunun bir önemi yok. Bundan farklı bir implementasyonda olabilirdi. Burda dikkat etmemiz gereken
+eğer veritabanında kullanıcı yoksa ne döneceğimiz. Bu tasarımda &lt;code&gt;null&lt;/code&gt; dönmüş olduk.&lt;/p&gt;
+
+&lt;p&gt;Başlangıçta tasarım kusursuz görünse de &lt;code&gt;null&lt;/code&gt; dönmenin dezavantajları var. Bu sınıfı kullanan istemciye bir sorumluluk yükledik.
+İstemci kullanıcıyı sorguladıktan sonra ayrıca bir de &lt;code&gt;null&lt;/code&gt;dönüp dönmediğini kontrol etmek zorunda. Aksi takdirde
+NullPointerException&amp;rsquo;a sebep olur. Ayrıca bu aslında bir implementasyon detayı. İstemci açısından interface&amp;rsquo;e baktığınızda
+aslında &lt;code&gt;null&lt;/code&gt; bir değer bekleyemeyiz. Basitçe bir metot var ve kullanıcı adı verip kullanıcı nesnesi alıyoruz. Yani interface
+de &lt;code&gt;null&lt;/code&gt; obje gelebileceğine dair herhangi bir tanımlama yok. Javadoc veya yorum satırı mı geldi aklınıza? Burdaki javadoc
+veya yorum satırı kötü koda sebep olur. Ayrıca kod açısından yine istemciyi bağlayan birşey yok. Bir diğer sorun ise null
+dönülmesi bir implementasyon detayı. İmplementasyon yüzünden defensif programlama yapmak zorunda kalıyoruz.&lt;/p&gt;
+
+&lt;p&gt;Burdaki durumda aslında kullanıcı nesnesinin &lt;code&gt;null&lt;/code&gt; gelebileceğini tahmin edebiliriz. Mantıken baktığınızda kullanıcı
+veritabanında yoksa ne olur diye düşündüğünüzde &lt;code&gt;null&lt;/code&gt; dönebileceğini anlayabilirsiniz.
+Fakat her durumda bu kadar basit bir durumda olmayabilir. Daha karmaşık bir implementasyonda istemci olarak bunu görmek
+daha zordur. &lt;code&gt;null&lt;/code&gt; dönmek yerine exception kullanarak bir tasarım yapabiliriz:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;interface&amp;rsquo;i de şu şekilde değiştiriyoruz:&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepository2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu implementasyon yukarıda bahsettiğim sorunu çözüyor. Burada basit bir şekilde kullanıcı yoksa UserNotFoundException&amp;rsquo;u
+fırlattık. Ayrıca checked exception olduğundan istemci bu metodu çağırırken exception&amp;rsquo;u handle etmek zorunda veya bir üst
+katmana bırakabilir. Sonuç olarak implementasyona bakmadan interface bize exception fırlatabileceğini tanımlar.&lt;/p&gt;
+
+&lt;p&gt;Bu tasarımın da yine dezavantajları var. İstemci taraf ya bir try-catch bloğu yazmak zorunda. Yani exception mekanizmasını
+bir istisna durumu için değil normal akışın bir parçası olarak kullandık. Burada örneğin veritabanı bağlantısı kesilirse
+exception atabilirdik veya istemci geçersiz bir kullanıcı adı gönderdiğinde IllegalArgumentException gibi bir exception
+fırlatabilirdik. Fakat burdaki durum ne istemciye bağlı bir input hatası ne de beklenmeyen bir durum. O yüzden bu tarz
+yapılarda Exception kullanmamalıyız.&lt;/p&gt;
+
+&lt;p&gt;Çözüm olarak yine ilk tasarımımıza dönüp User entity&amp;rsquo;si dönmek yerine bir Result objesi dönebiliriz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl3.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;User entity&amp;rsquo;sini doğrudan dönmek yerine araya başka bir sınıf yerleştirerek ilk durumdaki sorunu çözmüş oluyoruz. Artık kullanıcının
+veritabanında olmayacağını daha net bir şekilde ifade ettik. Bu tür Result sınıflarını immutable tanımlarsak daha iyi bir
+tasarım yapmış oluruz. Constructor&amp;rsquo;lara isim veremediğimiz için burada static metod kullanmayı tercih ettim. UserResult sınıfı&amp;rsquo;da aşağıdaki gibi.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userResult.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;İstemci taraf doesUserExist() metodu ile kontrol edip gereken işlemi yapabilir. Bu şekilde tasarımımız daha stabil oldu.
+Àyrıca bunun büyük bir proje olacağını düşünürsek UserResult sınıfını daha generic olarak tasarlayabiliriz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=entityResult.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;UserRepositoryImpl sınıfımızı da düzenleyelim.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl4.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;EntityResult gibi result objeleri farklı implementasyonlar da içerebilir. Burda &lt;code&gt;null&lt;/code&gt;dönme problemini için kullandık.
+Özellikle katmanlar arası iletişim bu şekilde yapılmalıdır.&lt;/p&gt;
+
+&lt;p&gt;Java7 ile geliştirme yapsaydık eğer muhtemelen bu şekilde geliştirme yapacağız. Fakat Java 8 de bunun için &lt;code&gt;java.util&lt;/code&gt;
+paketinin içerisinde &lt;code&gt;Optional&lt;/code&gt; diye bir sınıf eklendi. Kendi EntityResult gibi sınıflar yazmak yerine null dönebilen
+metodlar için return type&amp;rsquo;ı Optional olarak tanımlayabiliriz.&lt;/p&gt;
+
+&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl5.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Optional yine tasarladığımız EntityResult gibi generic ve immutable bir sınıf. Yine &lt;code&gt;Optional.empty()&lt;/code&gt; aynı şekilde boş bir result dönüyor.
+&lt;code&gt;null&lt;/code&gt; dönebilen yerlerde bunu kullanmalıyız. &lt;code&gt;Optional.of()&lt;/code&gt; metodunu da kullanırken dikkatli olmak gerekiyor. Eğer parametre
+olarak verdiğiniz objenin değeri &lt;code&gt;null&lt;/code&gt; ise NullPointerException alırsınız. Eğer bir nesne &lt;code&gt;null&lt;/code&gt; olabilirse `Optional.ofNullable
+metodunu kullanın. Diğer metodlarına da kısaca değinirsem:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;isPresent()&lt;/strong&gt; : eğer empty ise false diğer durumda true döner. İlk tasarımımızdaki null kontrolü yerine kullanılabilir.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;get()&lt;/strong&gt; : Empty olmayan durumlarda Optional içerisinde tanımlanan nesneyi döner. Mutlaka get den önce &lt;code&gt;isPresent()&lt;/code&gt; ile kontrol edilmesi
+gerekiyor. Aksi takdirde değer empty ise NoSuchElementException alırsınız.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;orElse(T value)&lt;/strong&gt; : Eğer varsayılan bir değeriniz varsa kullanabilirsiniz. empty ise verdiğiniz değeri, değilse tanımlanan
+değeri döner. Örneğin &lt;code&gt;null&lt;/code&gt; almak istiyorsanız &lt;code&gt;orElse(null)&lt;/code&gt; şeklinde nesneyi alabilirsiniz.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Bunun gibi birçok metodu var. Aynı zamanda fonksiyonel özellikler de taşıyor. Java 8 ile beraber gelmesi bir raslantı değil :)
+Dikkat etmeniz gereken başlangıçta metodları kullanırken mutlaka javadoc ile inceleyin. &lt;code&gt;get()&lt;/code&gt; metodunda olduğu gibi
+exception alabilirsiniz. Ayrıca eğer Java 8 de Stream Api ile tanıştıysanız muhtemelen Optional sınıfını kullanmışsınızdır.
+Stream Api&amp;rsquo;de oldukça fazla kullanılır. Primitive tipler için de &lt;code&gt;OptionalInt&lt;/code&gt;, &lt;code&gt;OptionalDouble&lt;/code&gt; gibi sınıfları da kullanabilirsiniz.&lt;/p&gt;
+
+&lt;p&gt;Bu yazımda örnek bir tasarım ile Optional sınıfını anlatmaya çalıştım. Umarım faydalı olmuştur.&lt;/p&gt;
+
+&lt;p&gt;Bir sonraki yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Wordpress&#39;i Neden Bıraktım</title>
@@ -927,71 +1042,6 @@ Aşağıdaki komutu girerek karşınıza çıkan pencerede xbindkeys i ekleyerek
 &lt;p&gt;Bu komut sadece gnome tabanlı masaüstü yöneticilerinde çalışacaktır. KDE kullanıyorsanız, nasıl yapıldığını öğrenmeniz gerekir.&lt;/p&gt;
 
 &lt;p&gt;Bir başka yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Özgür Yazılım ve Kurumsal Java Semineri</title>
-      <link>https://omerozkan.net/ozgur-yazilim-ve-javaee-semineri/</link>
-      <pubDate>Mon, 27 May 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://omerozkan.net/ozgur-yazilim-ve-javaee-semineri/</guid>
-      <description>
-
-&lt;p&gt;4 Mayıs 2013 tarihinde Mustafa Kemal Üniversite&amp;rsquo;sinde Özgür Yazılım &amp;amp; GNU/Linux ve KurumsalJava &amp;amp; Web Teknolojileri başlıklı seminerler verdim.
-Katılım sayısı hava sıcaklığından dolayı düşük olsa da yine de istediğim seminer ortamını buldum.
-Çünkü öğrenmek isteyenler olunca ben de elimden geleni yapmak istedim. Çoğunluk 1. sınıf öğrencilerinden oluşmaktaydı.
-Bu özgür yazılım semineri için güzel olsa da JavaEE semineri için dezavantajdı. Çünkü Java malesef okulumuzda 3. sınıfta anlatılıyor.&lt;/p&gt;
-
-&lt;p&gt;Öncelikle “Özgür Yazılım” semineri ile başladım. Özgür yazılımın ve açık kaynak yazılımların ne tür bir yazılım olduğunu
-ve lisanslarından bahsettim. Özgür yazılımın doğuşunun hikayesini de anlattım.
-Daha sonra GNU/Linux hakkında daha önce hiç Linux kullanmamış kişilere yönelik tanıtım gerçekleştirdim.
-Bu seminer zamanında tamamlamayı başardım ancak JavaEE semineri hiç de öyle olmadı :)
-Dinleyenlerin çoğunluğu 1. sınıf olduğu için Java teknolojilerinden bahsederken bazı kavramlar hakkında da bilgi vermek zorunda kaldım.
-Örneğin persistence katmanında kullanılan teknolojilerden bahsederken ORM’nin ne olduğunu anlatmak zorunda kaldım.
-Fakat beni baya yordu açıkçası. Süreyi de baya aşmak durumunda kaldım.
-Seminerlerin sonunda ise söz verdiğim gibi “Test Güdümlü Geliştirme”yi de anlattım. Birlikte roman rakamları katası yaptık.
-Katılımcıların hiç birinin Java bilmemesine rağmen, TDD’nin doğası gereği çok verimli geçti.&lt;/p&gt;
-
-&lt;p&gt;Hem katılımcılar için hem de benim için güzel tecrübe oldu.
-Katılımcıların yazılıma bakış açısını değiştirdiğimi düşünüyorum.
-En azından kurumsal java’yı tanıma fırsatı buldular. Umarım gelenler yazılıma hakkını vererek iyi bir yazılımcı olurlar.
-Benim açımdan da çok iyi bir tecrübe oldu. Özellikle JavaEE seminerini detaylı bir şekilde anlatabildiğimi görerek birçok
-konuda bilgi sahibi olduğumu anladım. Diğer taraftan da yaklaşık 4 saat ayakta kalmak da beni mahvetti.
-Linux yaz kampında Hakan hocanın (Hakan Uygun) neler yaşadığını anlayabiliyorum :)&lt;/p&gt;
-
-&lt;p&gt;Sunumların içeriğinin birçoğunu &lt;a href=&#34;https://www.ozguryazilim.com.tr&#34;&gt;Özgür Yazılım A.Ş.&lt;/a&gt; firmasının yaptığı &lt;a href=&#34;http://topluluk.ozguryazilim.com.tr/sunumlar&#34;&gt;sunumlar&lt;/a&gt;dan
-aldım. Seminerler konusunda da tavsiyelerini esirgemedikleri için burdan da teşekkür ediyorum.
-Sunumları aşağıdaki linklerden edinebilirsiniz.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://omerozkan.net/sunumlar/ozgur-yazilim.pdf&#34; target=&#34;_blank&#34;&gt;Özgür Yazılım ve Linux&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://omerozkan.net/sunumlar/kurumsaljava.pdf&#34; target=&#34;_blank&#34;&gt;Kurumsal Java&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&#34;slideshare:9bca51cfe4f1f522d373652315ef8a90&#34;&gt;Slideshare&lt;/h2&gt;
-
-&lt;h3 id=&#34;özgür-yazılım-ve-linux:9bca51cfe4f1f522d373652315ef8a90&#34;&gt;Özgür Yazılım ve Linux&lt;/h3&gt;
-
-&lt;div class=&#34;ui embed&#34;&gt;
-    &lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/Jj95uRITPMjhv8&#34; width=&#34;595&#34; height=&#34;485&#34;
-            frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
-            style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
-    &lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;div class=&#34;ui hidden divider&#34;&gt;&lt;/div&gt;
-
-&lt;h3 id=&#34;kurumsal-java:9bca51cfe4f1f522d373652315ef8a90&#34;&gt;Kurumsal Java&lt;/h3&gt;
-
-&lt;p&gt;&lt;div class=&#34;ui embed&#34;&gt;
-    &lt;iframe src=&#34;//www.slideshare.net/slideshow/embed_code/key/K1xxNf1LPcfYz4&#34; width=&#34;595&#34; height=&#34;485&#34;
-            frameborder=&#34;0&#34; marginwidth=&#34;0&#34; marginheight=&#34;0&#34; scrolling=&#34;no&#34;
-            style=&#34;border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;&#34; allowfullscreen&gt;
-    &lt;/iframe&gt;
-&lt;/div&gt;
-
-&lt;div class=&#34;ui hidden divider&#34;&gt;&lt;/div&gt;&lt;/p&gt;
 </description>
     </item>
     
