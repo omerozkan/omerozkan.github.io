@@ -8,19 +8,26 @@
     <meta name="description" content="Test güdümlü geliştirme hakkında kendi öğrendiğim kadar giriş seviyesinde bilgiler">
     <meta name="keywords"
           content="test,junit,refactoring,clean,code,test,driven,development,tdd">
+
+    <meta name="generator" content="Hugo 0.15" />
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/semantic.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/error.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://omerozkan.net/js/semantic.min.js"></script>
+
     <meta name="author" content="Ömer Özkan">
+
     <meta property="og:site_name" content="Ömer Özkan"/>
     <meta property="og:title" content="Ömer Özkan"/>
     <meta property="og:description" content="Test güdümlü geliştirme hakkında kendi öğrendiğim kadar giriş seviyesinde bilgiler"/>
     <meta property="og:url" content="https://omerozkan.net/test-gudumlu-yazilim-gelistirmeye-merhaba/">
     <meta property="og:type" content="blog"/>
     <meta property="og:image" content="tdd.jpg" />
-    <meta name="generator" content="Hugo 0.15" />
-    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/semantic.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/style.css">
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="https://omerozkan.net/js/semantic.min.js"></script>
+
     
     <link rel="apple-touch-icon" sizes="57x57" href="https://omerozkan.net/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://omerozkan.net/img/favicon/apple-icon-60x60.png">
@@ -39,6 +46,9 @@
     <meta name="msapplication-TileColor" content="#009688">
     <meta name="msapplication-TileImage" content="https://omerozkan.net/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#009688">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#009688">
 </head>
 <body>
 <section id="main">
@@ -70,29 +80,6 @@
                                     İletişim
                                 </a>
                                 
-                            </nav>
-                        </section>
-                        <section id="media-links" class="row">
-                            <nav class="ui icon secondary inverted menu">
-                                <div class="right menu">
-                                
-                                    <a class="item" href="https://twitter.com/omerozkan_" target="_blank">
-                                        <i class="twitter icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://www.linkedin.com/in/omerozkan" target="_blank">
-                                        <i class="linkedin icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://www.facebook.com/omerozkan" target="_blank">
-                                        <i class="facebook icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://github.com/omerozkan" target="_blank">
-                                        <i class="github icon"></i>
-                                    </a>
-                                
-                                </div>
                             </nav>
                         </section>
                     </div>
@@ -193,6 +180,8 @@
             </p>
             
 
+            <div class="clear"></div>
+
             
             
             <img class="ui right floated top aligned rounded medium image bordered right"
@@ -248,7 +237,7 @@ Kata hakkında bilgi almak için ise <a href="http://www.kurumsaljava.com/2012/0
 
 <p>Öncelikle RomanNumeral sınıfı için test sınıfı (RomanNumeralTest) oluşturuyoruz ve bir test metodu yazıyoruz.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest1.java"></script>
 
 <p>Anlaşılacağı gibi &ldquo;I&rdquo; değerini verdiğimde sonuç olarak 1 değerini döndermesi gerekir. Bunu için assertThat metodunu kullandım.
@@ -259,12 +248,12 @@ Burda kodun okunmasını kolaylaştırmak amacı ile CoreMatchers.is ve CoreMatc
 Test kodlarını çalıştırdığımızda başarısız olduğunu görüyoruz. Bu testi geçmek için çok detaylı diğer roman rakamlarını da düşünerek kod yazmıyoruz.
 Sadece bu testin gerçekleşmesi için gereken kodu yazıyoruz.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/bef51d11659da5f094d.js?file=romanNumeral1.java"></script>
 
 <p><code>return 1</code> ifadesini eklemek testlerin başarılı olmasını sağlayacaktır. Bunu gerçekleştirdikten sonra 2. bir test daha ekliyoruz.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest2.java"></script>
 
 <p>Burda dikkat ederseniz roman nesnesini yerel değişken olarak kullanmak yerine sınıf değişkeni yani &ldquo;field&rdquo; olarak kullanıyorum.
@@ -274,22 +263,22 @@ Yukarda bahsettiğim gibi öncelikle niyetimizi yazıyoruz.
 convert metodunda değişiklik yaparken bu sefer her 2 testin de çalışmasına dikkat etmemiz gerekiyor.
 O yüzden RomanNumeral sınıfımız aşağıdaki gibi olacaktır.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral2.java"></script>
 
 <p>metodumuza bir if ekleyerek 2 testin de başarılı olmasını sağladık. Aynı şeyi &ldquo;X&rdquo; -&gt; 10 için de yapıyoruz.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest3.java"></script>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral3.java"></script>
 
 <p>3. testimizi yazıp gereken değişiklikleri yaptık. convert metoduna baktığımızda istenmeyen bir durum görüyoruz.
 Her yeni test için sürekli bir <code>if</code> ekleyemeyiz. O yüzden RomanNumeral sınıfını <code>Map</code> kullanarak aşağıdaki şekilde düzenliyoruz.
 Böylece metodu tek satıra düşürebiliriz.</p>
 
-<p><div class="clear"></div>
+<p><div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral3Refactor.java"></script></p>
 
 <p>Burada adım adım giderek refactoring işlemlerini de adım adım yaptık. Test güdümlü geliştirdiğimiz için testlerden
@@ -297,27 +286,6 @@ yola çıkarak geliştirdik. Katanın devamı için <a href="http://kodkata.com/
 
 
             <div class="clear"></div>
-            
-            <section id="comment">
-                <div class="ui section divider"></div>
-                <div id="disqus_thread"></div>
-<script>
-     var disqus_config = function () {
-     this.page.url = 'https:\/\/omerozkan.net\/test-gudumlu-yazilim-gelistirmeye-merhaba\/'; 
-     this.page.identifier = 'test-gudumlu-yazilim-gelistirmeye-merhaba';
-     };
-    (function() {
-        var d = document, s = d.createElement('script');
-
-        var disqus_shortname = 'omerozkan';
-        s.src = '//' + disqus_shortname +'.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-            </section>
-            
             <div class="ui section divider"></div>
             
             
@@ -349,6 +317,29 @@ yola çıkarak geliştirdik. Katanın devamı için <a href="http://kodkata.com/
                 
             </div>
             
+
+            
+            <section id="comment">
+                <div class="ui section divider"></div>
+                <div id="disqus_thread"></div>
+<script>
+     var disqus_config = function () {
+     this.page.url = 'https:\/\/omerozkan.net\/test-gudumlu-yazilim-gelistirmeye-merhaba\/'; 
+     this.page.identifier = 'test-gudumlu-yazilim-gelistirmeye-merhaba';
+     };
+    (function() {
+        var d = document, s = d.createElement('script');
+
+        var disqus_shortname = 'omerozkan';
+        s.src = '//' + disqus_shortname +'.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </section>
+            
+
         </div>
 
     </article>
@@ -360,7 +351,7 @@ yola çıkarak geliştirdik. Katanın devamı için <a href="http://kodkata.com/
         <div class="ten wide mobile ten wide tablet eight wide computer column centered">
             <div class="ui grid">
                 <div class="twelve wide mobile two wide tablet two wide computer centered column center aligned">
-                    <img id="footer-logo" src="https://omerozkan.net/img/footer-logo.png" alt="Footer lan ne bakiyon" class="ui image">
+                    <img id="footer-logo" src="https://omerozkan.net/img/footer-logo.png" alt="Ömer Özkan Logo" class="ui image">
                 </div>
                 <div class="twelve wide mobile eight wide tablet eight wide computer middle aligned centered column center aligned">
                     © 2008 Ömer Özkan. Tüm hakları saklıdır. <br/><a href="https://omerozkan.net">Ömer Özkan</a> is licensed under a <a

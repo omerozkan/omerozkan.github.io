@@ -40,7 +40,7 @@ Cron oluşturmak için&lt;/p&gt;
 &lt;p&gt;komutunu girdiğinizde karşınıza vi editoru çıkacaktır. Cron ayarlarınızı vi editorüne girip kaydedebilirsiniz.
 Örneğin her saat başı güncellemeleri almak istiyorsanız aşağıdaki cron ayarlarını kullanabilirsiniz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/1d0ecc2af86e3d4eb312.js?file=cron&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Böylelikle github projenizi redmine&amp;rsquo;a entegre etmiş olursunuz.

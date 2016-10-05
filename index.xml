@@ -6,8 +6,64 @@
     <description>Recent content on Ömer Özkan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
-    <lastBuildDate>Fri, 03 Jun 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Oct 2016 22:29:03 +0300</lastBuildDate>
     <atom:link href="https://omerozkan.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Java&#39;da Override Anotasyonu</title>
+      <link>https://omerozkan.net/java-override-anotasyonu/</link>
+      <pubDate>Tue, 04 Oct 2016 22:29:03 +0300</pubDate>
+      
+      <guid>https://omerozkan.net/java-override-anotasyonu/</guid>
+      <description>&lt;p&gt;Merhabalar,&lt;/p&gt;
+
+&lt;p&gt;Daha önce Java 8 ile gelen Optional sınıfından bahsetmiştim. Java ile ilgili ufak detay bilgiler vermeye devam edeceğim. Bu yazımızda Java Override anotasyonunun öneminden bahsedeceğim.&lt;/p&gt;
+
+&lt;p&gt;Java ile herhangi bir IDE kullandıysanız karşınıza mutlaka çıkmıştır. Bilmeyenler için kısaca açıklarsak Java&amp;rsquo;da bir sınıfın interface ve ata sınıfında yer alan metodları implement etmek veya değiştirmek için yazdığımız metodu &lt;code&gt;@Override&lt;/code&gt; annotasyonu ile işaretleyerek bunu belirtmiş oluruz.  Bir sınıf içerisinde Override anotasyonu metodun üst sınıflardan geldiğini bilmek için güzel bir araçtır. Varolmasının en temel amacı da budur.&lt;/p&gt;
+
+&lt;p&gt;Fakat Java&amp;rsquo;da bu anotasyonu kullanmak zorunda değilsiniz. Bu anotasyonu kaldırdığınızda herhangi bir compile hatası almazsınız. Fakat bu anotasyonun sağladığı önemli bir avantajı daha var. Bunun için çok kısa ve kolay bir örnek yapalım. Özellikle yeni başlayanların hata yaptığı konulardan biri:&lt;/p&gt;
+
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=member1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Basit bir üye sınıfımız var. Bu sınıfın son metodunu incelerseniz bir &lt;code&gt;equals&lt;/code&gt; metodu tanımladık. Bu metodu bir test edelim.&lt;/p&gt;
+
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=memberTest1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu testi çalıştırdığınızda ekranda &lt;code&gt;true&lt;/code&gt; yazdığını görüyoruz. &lt;code&gt;equals&lt;/code&gt; metodumuz çalışıyor. Şimdi testimizde ufak bir değişiklik yapalım.&lt;/p&gt;
+
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=memberTest2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Referanslarımızı üst sınıfa yani &lt;code&gt;Object&lt;/code&gt; sınıfına çektik. Bu testi çalıştırdığımızda da ekranda &lt;code&gt;true&lt;/code&gt; beklerken birden &lt;code&gt;false&lt;/code&gt; değerini aldık.  Anladınız değil mi hatayı? Java&amp;rsquo;ya yeni başlayanların durumu anlaması biraz zor olabilir.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Object.equals&lt;/code&gt; metodunun işaretin(signature)&amp;lsquo;e bakalım: &lt;code&gt;public boolean equals(Object obj)&lt;/code&gt; Member sınıfında implement ettiğimiz metod ise &lt;code&gt;public boolean equals(Member m)&lt;/code&gt; gördüğünüz gibi bu iki metod birbirinden farklıdır. Java&amp;rsquo;da metod parametrelerini üst sınıftan altsınıflara çekemezsiniz. Yani &lt;code&gt;Object.equals&lt;/code&gt; metodunu override etmek yerine yeni bir metod eklemiş olduk.&lt;/p&gt;
+
+&lt;p&gt;Burda belirtmek istediğim bir durum daha var. &lt;code&gt;equals&lt;/code&gt; metodu &lt;code&gt;Object&lt;/code&gt; referansı ile farklı &lt;code&gt;Member&lt;/code&gt; referansı ile farklı sonuçlar verdi. &lt;code&gt;Member.equals&lt;/code&gt; metodu üst sınıf olan &lt;code&gt;Object&lt;/code&gt; in yerine geçemedi. Bu Liskov yerine geçme prensibi(Liskov Subsitution Principle)&amp;lsquo;ne aykırıdır.&lt;/p&gt;
+
+&lt;p&gt;Şimdi geldik asıl sorumuza: &lt;code&gt;@Override&lt;/code&gt; anotasyonu ne işimize yarayacak? &lt;code&gt;Member.equals&lt;/code&gt; metoduna bu anotasyonu tanımlayalım.&lt;/p&gt;
+
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=memberEquals1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu kodu derlemeye çalıştığnızda , &lt;strong&gt;&lt;em&gt;method does not override or implement a method from a supertype&lt;/em&gt;&lt;/strong&gt; hatasını alırsınız. Bu sayede bu anotasyon yanlışı compile zamanında size göstermiş oldu. Bu dikkatsizlik yayında daha kötü sonuçlara sebep olabilir.&lt;/p&gt;
+
+&lt;p&gt;Object sınıfı en çok bilinen sınıflardan biri olduğu için &lt;code&gt;Object.equals&lt;/code&gt; elzem bir durum oluşturmayabilir. Fakat kendi yazdığınız interface ve üst sınıflar veya kullandığınız framework&amp;rsquo;lerde bu hatayı yapabilir, uygulamanızı tutarsız hale getirebilirsiniz. Yine yeni başlayanlar için düzgün bir &lt;code&gt;Member.equals&lt;/code&gt; örneği de vereyim.&lt;/p&gt;
+
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=memberEquals2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu kodu kendim yazmadım. Günümüzde Java IDE&amp;rsquo;leri bu kodu otomatik olarak üretebiliyor. Bu arada farklı bir yazıda anlatacağım fakat ek bilgi olarak belirteyim. Java&amp;rsquo;da &lt;code&gt;equals&lt;/code&gt; metodu tanımlarken mutlaka &lt;code&gt;hashCode&lt;/code&gt; metodunu da tanımlamalısınız. Java 7 ve sonrası için bunu yapmak oldukça kolay:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=hashCode.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu sebeple bu anotasyonu kullanın, kullandırın!&lt;/p&gt;
+
+&lt;p&gt;Başka bir yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Java 8 Optional ve null dönebilen metotlar</title>
@@ -22,13 +78,13 @@ programlama dili ve teknolojileri konusunda ufak bilgiler paylaşmaya devam edec
 örnek üzerinden gitmenin daha kalıcı olduğunu düşünüyorum. Örneğimizde bir UserRepository sınıfı tasarlayacağız.
 Interface&amp;rsquo;imiz şu şekilde:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepository1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;UserRepository interface&amp;rsquo;inde &lt;code&gt;getByUsername()&lt;/code&gt; metodunun tanımlandığını görüyoruz. Adından da anlaşılacağı üzere kullanıcı
 adı ile veritabanında kayıtlı bir kullanıcıyı bulmak istiyoruz. Basitçe aşağıdaki implementasyonu yapabiliriz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Herhangi bir persistent api kullanarak kullanıcı listesini aldık. Eğer liste boş dönerse girdiğimiz kullanıcı adına sahip
@@ -49,12 +105,12 @@ veritabanında yoksa ne olur diye düşündüğünüzde &lt;code&gt;null&lt;/cod
 Fakat her durumda bu kadar basit bir durumda olmayabilir. Daha karmaşık bir implementasyonda istemci olarak bunu görmek
 daha zordur. &lt;code&gt;null&lt;/code&gt; dönmek yerine exception kullanarak bir tasarım yapabiliriz:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;interface&amp;rsquo;i de şu şekilde değiştiriyoruz:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepository2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Bu implementasyon yukarıda bahsettiğim sorunu çözüyor. Burada basit bir şekilde kullanıcı yoksa UserNotFoundException&amp;rsquo;u
@@ -69,25 +125,25 @@ yapılarda Exception kullanmamalıyız.&lt;/p&gt;
 
 &lt;p&gt;Çözüm olarak yine ilk tasarımımıza dönüp User entity&amp;rsquo;si dönmek yerine bir Result objesi dönebiliriz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl3.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;User entity&amp;rsquo;sini doğrudan dönmek yerine araya başka bir sınıf yerleştirerek ilk durumdaki sorunu çözmüş oluyoruz. Artık kullanıcının
 veritabanında olmayacağını daha net bir şekilde ifade ettik. Bu tür Result sınıflarını immutable tanımlarsak daha iyi bir
 tasarım yapmış oluruz. Constructor&amp;rsquo;lara isim veremediğimiz için burada static metod kullanmayı tercih ettim. UserResult sınıfı&amp;rsquo;da aşağıdaki gibi.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userResult.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;İstemci taraf doesUserExist() metodu ile kontrol edip gereken işlemi yapabilir. Bu şekilde tasarımımız daha stabil oldu.
 Àyrıca bunun büyük bir proje olacağını düşünürsek UserResult sınıfını daha generic olarak tasarlayabiliriz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=entityResult.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;UserRepositoryImpl sınıfımızı da düzenleyelim.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl4.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;EntityResult gibi result objeleri farklı implementasyonlar da içerebilir. Burda &lt;code&gt;null&lt;/code&gt;dönme problemini için kullandık.
@@ -97,7 +153,7 @@ tasarım yapmış oluruz. Constructor&amp;rsquo;lara isim veremediğimiz için b
 paketinin içerisinde &lt;code&gt;Optional&lt;/code&gt; diye bir sınıf eklendi. Kendi EntityResult gibi sınıflar yazmak yerine null dönebilen
 metodlar için return type&amp;rsquo;ı Optional olarak tanımlayabiliriz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl5.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Optional yine tasarladığımız EntityResult gibi generic ve immutable bir sınıf. Yine &lt;code&gt;Optional.empty()&lt;/code&gt; aynı şekilde boş bir result dönüyor.
@@ -867,7 +923,7 @@ git ile çalışma yöntemleri,en sık kullanılan komutları, karşılaşılan 
       <description>&lt;p&gt;JSF Bean sınıflarında FacesContext gibi nesneler kullandığınızda ve bu sınıflara mock nesneler ile birim testleri yazdığınızda
 &lt;a href=&#34;https://github.com/mockito/mockito&#34;&gt;Mockito&lt;/a&gt;, JMock gibi araçlar yeterli olmayacaktır. Örnek olarak aşağıdaki metodu inceleyelim.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginAction.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Bu metod basit bir login işlemi gerçekleştirmektedir.
@@ -894,7 +950,7 @@ PowerMock ile statik metodlara hatta private alanlara müdahale edebiliyorsunuz.
 
 &lt;p&gt;Öncelikle bir setUp metodu oluşturalım:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginBeanTest.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;32&lt;/strong&gt;. satır da FacesContext sınıfı Mockito ile mock&amp;rsquo;lanmaktadır. 37. satırda benzer şekilde LoginManager sınıfı mocklanmaktadır.
@@ -904,7 +960,7 @@ PowerMock ile statik metodlara hatta private alanlara müdahale edebiliyorsunuz.
 &lt;strong&gt;34-35&lt;/strong&gt;. satırlarda PowerMockito.doReturn() metodu ile &lt;em&gt;FacesContex.getCurrentInstance()&lt;/em&gt; statik metodunun davranışı değiştirilmiştir.
 Bu sayede birim testlerimizi çalıştırabiliriz. Örnek olarak bir test metodu ekleyelim:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginWithEmptyUsername.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;4-6&lt;/strong&gt;. satırlarda gerekli test verileri girilip login işlemi gerçekleştirilmiştir. &lt;strong&gt;7&lt;/strong&gt;. satırda ise Mockito ile
@@ -913,7 +969,7 @@ Bu sayede birim testlerimizi çalıştırabiliriz. Örnek olarak bir test metodu
 &lt;p&gt;Bu şekilde testler çalıştırıldığında olumsuz sonuç alırız.
 PowerMockito&amp;rsquo;nun gereken sınıfları taklit etmesi için test sınıfının başına aşağıdaki gibi anotasyonlar tanımlanmalıdır:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginBeanTest2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; satırda testlerin PowerMockRunner ile çalışmasını ve &lt;strong&gt;2&lt;/strong&gt;. satırda ise &lt;strong&gt;FacesContext&lt;/strong&gt; sınıfına ait statik metodun mock&amp;rsquo;lanmasını sağladık.
@@ -954,94 +1010,13 @@ Cron oluşturmak için&lt;/p&gt;
 &lt;p&gt;komutunu girdiğinizde karşınıza vi editoru çıkacaktır. Cron ayarlarınızı vi editorüne girip kaydedebilirsiniz.
 Örneğin her saat başı güncellemeleri almak istiyorsanız aşağıdaki cron ayarlarını kullanabilirsiniz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/1d0ecc2af86e3d4eb312.js?file=cron&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Böylelikle github projenizi redmine&amp;rsquo;a entegre etmiş olursunuz.
 Standart olarak &amp;ldquo;refs #işnumarası&amp;rdquo; şeklinde gönderdiğiniz commitler redmine&amp;rsquo;da o işe bağlanacaktır.&lt;/p&gt;
 
 &lt;p&gt;Bir sonraki yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Linux&#39;da Fare Butonlarına İşlev Atama</title>
-      <link>https://omerozkan.net/linuxda-fare-butonlarina-islev-atama/</link>
-      <pubDate>Sun, 16 Jun 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://omerozkan.net/linuxda-fare-butonlarina-islev-atama/</guid>
-      <description>&lt;p&gt;Uzun süreden beri Logitech fare kullanıyorum. Farenin standart tuşları dışında scroll&amp;rsquo;un sağ ve solunda iki ayrı tuşu daha vardı.
-Film izlerken VLC player ile filmi ileri geri alabiliyordum. Fakat bunun dışında bu iki tuşu kullanmadığımı farkettim.
-VLC dışındaki bir uygulama ile film izlerken sürekli ses kısıp açma ihtiyacım oldu.
-Bu ihtiyaçtan dolayı ki bu iki tuşa ses azaltma ve arttırma özelliği ekledim.
-Siz de aşağıdaki adımları uygulayarak fare tuşlarınıza işlev atayabilirsiniz.
-Kullandığım Linux dağıtımı Fedora 18, fakat diğer dağıtımlar için de aynı şekilde yapılır.
-Öncelikle &lt;code&gt;xbindkeys&lt;/code&gt; ve &lt;code&gt;xev&lt;/code&gt; uygulamalarını kuralım.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Redhat tabanlı dağıtımlar için&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;yum install xbindkeys xev&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Debian(Ubuntu,Mint etc) tabanlı dağıtımlar için&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;sudo apt-get install xbindkeys xev&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;komutları ile xev ve xbindkeys uygulamalarını sistemimize yükleyelim. Daha sonra xbindkeys komutunu çalıştıralım:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;xbindkeys&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Bu komutu çalıştırdıktan sonra aşağıdaki gibi bir hata alabilirsiniz:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;Error : /home/omer/.xbindkeysrc not found or reading not allowed.
-please, create one with &amp;lsquo;xbindkeys –defaults &amp;gt; /home/omer/.xbindkeysrc&amp;rsquo;.
-or, if you want scheme configuration style,
-with &amp;lsquo;xbindkeys –defaults-guile &amp;gt; /home/omer/.xbindkeysrc.scm&amp;rsquo;.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;.xbindkeysrc dosyasını bulamadığından dolayı böyle bir hataya rastlayabilirsiniz. Dosya oluşturmak için yukardaki çıktıda gördüğnüz gibi:&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;xbindkeys –defaults &amp;gt; .xbindkeysrc&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Bu komutu girdikten sonra .xindkeysrc dosyası oluşacaktır. Fare butonlarına işlev atamadan önce butonların numaralarını öğrenelim.
-Bunun için xen uygulamasından faydalanacağız.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;xen&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Bu komutu girdiğinizde karşınıza bir &amp;ldquo;Event Tester&amp;rdquo; penceresi açılacaktır.
-Bu pencere üzerinde fare ile bastığınız her tuşun numarasını uçbirim ekranından görebilirsiniz. Örneğin sola tıkladığımda:&lt;/p&gt;
-
-&lt;blockquote&gt;
-&lt;p&gt;ButtonRelease event, serial 28, synthetic NO, window 0x2a00001,
-  root 0x1db, subw 0x2a00002, time 7219539, (43,47), root:(293,488),
-  state 0x100, button 1, same_screen YES&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Aşağıda button 1 yazısı farenin sol tuşun numarasının 1 olduğunu gösterir.
-Örneğin benim atama yapmak istediğim scroll&amp;rsquo;un tuşların numarası 6 ve 7&amp;rsquo;dir.
-Sizin de aynı olmayabilir. Bu tuşlara işlev atamak için .xbindkeysrc dosyasını istediğiniz bir editörle açabilirsiniz.&lt;/p&gt;
-
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;//gist.github.com/omerozkan/0846f89e4223f2481eb8.js?file=xbindkeysrc&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Burada &amp;ldquo;komut&amp;rdquo; yerine neyi gerçekleştirmesini istiyorsanız onu giriyorsunuz.
-Bu satırı eklediğimde 6. butona bastığımda istediğim komutu gerçekleştirecektir.
-Ben 6. buton için ses azaltma, 7. buton için ses arttırma özelliklerini ekledim:&lt;/p&gt;
-
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;//gist.github.com/omerozkan/0846f89e4223f2481eb8.js?file=xbindkeysrcfinal&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Dosyayı kaydedip kapattığınızda eğer xbindkeys uygulaması çalışmıyorsa, xbindkeys komutunu tekrar girebilirsiniz.
-Eğer sisteminiz her açıldığında xbindkeys uygulamasının aktif olmasını istiyorsanız.
-Aşağıdaki komutu girerek karşınıza çıkan pencerede xbindkeys i ekleyerek bu işlemi gerçekleştirebilirsiniz.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;gnome-session-properties&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&#34;https://omerozkan.net/images/post/linux/gnomesessionproperties.png&#34; alt=&#34;Gnome Session Properties&#34; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Bu komut sadece gnome tabanlı masaüstü yöneticilerinde çalışacaktır. KDE kullanıyorsanız, nasıl yapıldığını öğrenmeniz gerekir.&lt;/p&gt;
-
-&lt;p&gt;Bir başka yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     

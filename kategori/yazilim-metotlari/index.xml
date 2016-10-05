@@ -22,13 +22,13 @@ programlama dili ve teknolojileri konusunda ufak bilgiler paylaşmaya devam edec
 örnek üzerinden gitmenin daha kalıcı olduğunu düşünüyorum. Örneğimizde bir UserRepository sınıfı tasarlayacağız.
 Interface&amp;rsquo;imiz şu şekilde:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepository1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;UserRepository interface&amp;rsquo;inde &lt;code&gt;getByUsername()&lt;/code&gt; metodunun tanımlandığını görüyoruz. Adından da anlaşılacağı üzere kullanıcı
 adı ile veritabanında kayıtlı bir kullanıcıyı bulmak istiyoruz. Basitçe aşağıdaki implementasyonu yapabiliriz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Herhangi bir persistent api kullanarak kullanıcı listesini aldık. Eğer liste boş dönerse girdiğimiz kullanıcı adına sahip
@@ -49,12 +49,12 @@ veritabanında yoksa ne olur diye düşündüğünüzde &lt;code&gt;null&lt;/cod
 Fakat her durumda bu kadar basit bir durumda olmayabilir. Daha karmaşık bir implementasyonda istemci olarak bunu görmek
 daha zordur. &lt;code&gt;null&lt;/code&gt; dönmek yerine exception kullanarak bir tasarım yapabiliriz:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;interface&amp;rsquo;i de şu şekilde değiştiriyoruz:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepository2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Bu implementasyon yukarıda bahsettiğim sorunu çözüyor. Burada basit bir şekilde kullanıcı yoksa UserNotFoundException&amp;rsquo;u
@@ -69,25 +69,25 @@ yapılarda Exception kullanmamalıyız.&lt;/p&gt;
 
 &lt;p&gt;Çözüm olarak yine ilk tasarımımıza dönüp User entity&amp;rsquo;si dönmek yerine bir Result objesi dönebiliriz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl3.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;User entity&amp;rsquo;sini doğrudan dönmek yerine araya başka bir sınıf yerleştirerek ilk durumdaki sorunu çözmüş oluyoruz. Artık kullanıcının
 veritabanında olmayacağını daha net bir şekilde ifade ettik. Bu tür Result sınıflarını immutable tanımlarsak daha iyi bir
 tasarım yapmış oluruz. Constructor&amp;rsquo;lara isim veremediğimiz için burada static metod kullanmayı tercih ettim. UserResult sınıfı&amp;rsquo;da aşağıdaki gibi.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userResult.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;İstemci taraf doesUserExist() metodu ile kontrol edip gereken işlemi yapabilir. Bu şekilde tasarımımız daha stabil oldu.
 Àyrıca bunun büyük bir proje olacağını düşünürsek UserResult sınıfını daha generic olarak tasarlayabiliriz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=entityResult.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;UserRepositoryImpl sınıfımızı da düzenleyelim.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl4.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;EntityResult gibi result objeleri farklı implementasyonlar da içerebilir. Burda &lt;code&gt;null&lt;/code&gt;dönme problemini için kullandık.
@@ -97,7 +97,7 @@ tasarım yapmış oluruz. Constructor&amp;rsquo;lara isim veremediğimiz için b
 paketinin içerisinde &lt;code&gt;Optional&lt;/code&gt; diye bir sınıf eklendi. Kendi EntityResult gibi sınıflar yazmak yerine null dönebilen
 metodlar için return type&amp;rsquo;ı Optional olarak tanımlayabiliriz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl5.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Optional yine tasarladığımız EntityResult gibi generic ve immutable bir sınıf. Yine &lt;code&gt;Optional.empty()&lt;/code&gt; aynı şekilde boş bir result dönüyor.
@@ -264,14 +264,14 @@ Aynı yöntemi burda da uygulayacağım. Bu konuyu kavramanız için kalıtım k
 
 &lt;p&gt;Örneğimizde bir yazıcımız var. Bu yazıcı kelime işlemci ve pdf belgelerini basabiliyor.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf1.java&#34;&gt;&lt;/script&gt;
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=word1.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;PDF ve Word sınıfları getPrintableText() isimli bir metodu içeriyor. Şimdi de yazıcı (Printer) sınıfımıza bakalım.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printer1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Printer sınıfımızın ise iki metodu var. printPDF metodu PDF dökümanını, printWord metodu ise word dökümanını yazdırıyor.
@@ -288,15 +288,15 @@ polimorfizm ile düzeltebiliriz.&lt;/p&gt;
 &lt;p&gt;Öncelikle daha önceden öğrendiğimiz kalıtımı(yemek tarifi gibi oldu :)) kullanarak sınıflarımızı yeniden yapılandıralım.
 &lt;strong&gt;PDF&lt;/strong&gt; sınıfıda &lt;strong&gt;Word&lt;/strong&gt; sınıfıda aslında birer belge yani &lt;strong&gt;Document&lt;/strong&gt; özelliğini taşıyor.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=document.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Şimdi Word ve PDF sınıflarını Document sınıfını &lt;strong&gt;extend&lt;/strong&gt; edebilir.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=word2.java&#34;&gt;&lt;/script&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Override anotasyonunu (annotation) görüyorsunuz. Anotasyonlar Java 1.5&amp;rsquo;ten sonra gelen bir özelliktir.
@@ -304,12 +304,12 @@ Buradaki Override anotasyonu, Word ve PDF&amp;rsquo;te bulunan getPrintableText 
 
 &lt;p&gt;Şimdi &lt;strong&gt;Printer&lt;/strong&gt; sınıfını da yeniden düzenleyelim.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printer2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Şimdi daha iyi anlamanız için bir test sınıfı yazalım.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printerTest.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Eğer sonucu görmediyseniz lütfen sonucu tahmin etmeye çalışın.&lt;/p&gt;
@@ -342,7 +342,7 @@ Printer ve Document sınıfını bir jar içerisinde müşteriye teslim edebilir
 &lt;p&gt;Şimdi gelelim müşterinin isteğine, müşteri bir Excel dosyası yazdırmak istemişti. Artık Printer sınıfına dokunmamıza bile gerek yok.
 Yeni bir Excel sınıfı ekleyelim.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=excel.java&#34;&gt;&lt;/script&gt;
 
 &lt;h3 id=&#34;super-anahtar-kelimesi:1e4f0b0da4b93aa40114849c5b8e437e&#34;&gt;super anahtar kelimesi&lt;/h3&gt;
@@ -353,7 +353,7 @@ değiştirmiş oldu ve Document sınıfında tanımlanan print metodunun davran�
 Peki PDF sınıfı atasından (Document) aldığı &lt;strong&gt;getPrintableText()&lt;/strong&gt; metodunu kullanmak isterse ne yapmalıyız?
 İşte burda super anahtar kelimesini kullanabiliriz. PDF sınıfını aşağıdaki şekilde değiştirelim.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf3.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Bunun sonucunda &lt;strong&gt;getPrintableText()&lt;/strong&gt; metodu &amp;ldquo;This is a document\nThis is a PDF document\n&amp;rdquo; değerlerini döndermiş olur.&lt;/p&gt;
@@ -383,10 +383,10 @@ Bir üniversitedeki öğretim görevlilerini ve öğrencileri modelleyen iki sı
 Öğretim görevlisi sınıfı ise öğretim görevlisinin adını, soyadını, hangi bölümün kadrosunda yer aldığını,
 T.C. kimlik numarasını ve akademik ünvanını içersin. Bunu Java kodları ile ifade edersek:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=lecturer1.java&#34;&gt;&lt;/script&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=student1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;Student&lt;/strong&gt; ve &lt;strong&gt;Lecturer&lt;/strong&gt; adında Java sınıflarımız var.
@@ -398,7 +398,7 @@ sebep olur. Bu durum &lt;strong&gt;DRY (Don&amp;rsquo;t Repeat Yourself)&lt;/str
 &lt;p&gt;Bu sorunu kalıtım (inheritance) kullanarak çözebiliriz. Bunun için öncelikle Person adlı bir sınıf tanımlıyoruz ve bu sınıfa
 &lt;strong&gt;Lecturer&lt;/strong&gt; ve &lt;strong&gt;Student&lt;/strong&gt; sınıfların ortak özelliklerini yerleştiriyoruz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=person.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Gördüğünüz gibi Person sınıfımız önceki tanımladığımızın iki sınıfın özelliklerini içeriyor.
@@ -406,10 +406,10 @@ Burada dikkat ederseniz bölümü eklemedim. Bunun sebebi uygulamamıza ekleyece
 Ama her personelin T.C kimlik numarası, adı ve soyadı olmak zorunda.
 Student ve Lecturer sınıflarını aşağıdaki gibi değiştirebiliriz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=lecturer2.java&#34;&gt;&lt;/script&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=student2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Student ve Lecturer sınıflarının tanımlarına dikkat edersek &lt;strong&gt;extends Person&lt;/strong&gt; ifadesini görüyoruz.
@@ -495,12 +495,12 @@ olursunuz. Yani package veya package-private gibi kelimeler kullanılmaz.&lt;/p&
 
 &lt;p&gt;Bunlara kullanarak örnek bir sınıf tasarlayalım.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=accessModifierTest.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Payı (numerator) ve paydası (denominator) olan basit bir Rational (rasyonel) sınıfı tanımlayalım.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rational.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Bu sınıfın iki değişkeni var: &lt;strong&gt;&lt;em&gt;numerator&lt;/em&gt;&lt;/strong&gt; ve &lt;strong&gt;&lt;em&gt;denominator&lt;/em&gt;&lt;/strong&gt;.
@@ -509,7 +509,7 @@ Bu iki alanın erişim belirleyicisini &lt;strong&gt;private&lt;/strong&gt; olar
 Bu sayede sınıf dışından erişimi kapatmış olduk.
 Örneğin başka bir sınıftan aşağıdaki gibi bir kullanım hatalı olacaktır.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rationalClient.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Ayrıca dikkatlice incelerseniz &lt;strong&gt;&lt;em&gt;Rational&lt;/em&gt;&lt;/strong&gt; sınıfında &lt;strong&gt;&lt;em&gt;IllegalDenominator&lt;/em&gt;&lt;/strong&gt; sınıfı da tanımlanmış. Bu tür sınıflara
@@ -519,7 +519,7 @@ Bu sayede sınıf dışından erişimi kapatmış olduk.
 Bu metodların erişim belirleyicisi de &lt;strong&gt;&lt;em&gt;public&lt;/em&gt;&lt;/strong&gt; yani dışardan erişime açık.
 Bu sayede numerator ve denominator değişkenlerine bu metodlar aracılığı ile değer atanabilir. Aşağıdaki kullanım doğru olacaktır.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rationalClient2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;setNumerator&lt;/em&gt;&lt;/strong&gt; ve &lt;strong&gt;&lt;em&gt;setDenominator&lt;/em&gt;&lt;/strong&gt; sayesinde numerator ve denominator değişkenlerine değer atanmış oldu.
@@ -536,7 +536,7 @@ Her alan için getter ve setter metodları tanımlamak zorundayız diye de düş
 Böyle bir zorunluluk yok. getter ve setter metodlar olmadan farklı metodlar aracılığı ile de erişimi kontrol altına alabilirsiniz.
 Örneğin sınıfımıza 3 tane constructor metod ekleyelim.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rational2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Bu tasarımımız da farklı bir örnek oldu. Dikkat ederseniz bu tasarımımızda setter metodları kaldırdık.
@@ -601,7 +601,7 @@ Kata hakkında bilgi almak için ise &lt;a href=&#34;http://www.kurumsaljava.com
 
 &lt;p&gt;Öncelikle RomanNumeral sınıfı için test sınıfı (RomanNumeralTest) oluşturuyoruz ve bir test metodu yazıyoruz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Anlaşılacağı gibi &amp;ldquo;I&amp;rdquo; değerini verdiğimde sonuç olarak 1 değerini döndermesi gerekir. Bunu için assertThat metodunu kullandım.
@@ -612,12 +612,12 @@ Burda kodun okunmasını kolaylaştırmak amacı ile CoreMatchers.is ve CoreMatc
 Test kodlarını çalıştırdığımızda başarısız olduğunu görüyoruz. Bu testi geçmek için çok detaylı diğer roman rakamlarını da düşünerek kod yazmıyoruz.
 Sadece bu testin gerçekleşmesi için gereken kodu yazıyoruz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d11659da5f094d.js?file=romanNumeral1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;code&gt;return 1&lt;/code&gt; ifadesini eklemek testlerin başarılı olmasını sağlayacaktır. Bunu gerçekleştirdikten sonra 2. bir test daha ekliyoruz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Burda dikkat ederseniz roman nesnesini yerel değişken olarak kullanmak yerine sınıf değişkeni yani &amp;ldquo;field&amp;rdquo; olarak kullanıyorum.
@@ -627,22 +627,22 @@ Yukarda bahsettiğim gibi öncelikle niyetimizi yazıyoruz.
 convert metodunda değişiklik yaparken bu sefer her 2 testin de çalışmasına dikkat etmemiz gerekiyor.
 O yüzden RomanNumeral sınıfımız aşağıdaki gibi olacaktır.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;metodumuza bir if ekleyerek 2 testin de başarılı olmasını sağladık. Aynı şeyi &amp;ldquo;X&amp;rdquo; -&amp;gt; 10 için de yapıyoruz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest3.java&#34;&gt;&lt;/script&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral3.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;3. testimizi yazıp gereken değişiklikleri yaptık. convert metoduna baktığımızda istenmeyen bir durum görüyoruz.
 Her yeni test için sürekli bir &lt;code&gt;if&lt;/code&gt; ekleyemeyiz. O yüzden RomanNumeral sınıfını &lt;code&gt;Map&lt;/code&gt; kullanarak aşağıdaki şekilde düzenliyoruz.
 Böylece metodu tek satıra düşürebiliriz.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral3Refactor.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Burada adım adım giderek refactoring işlemlerini de adım adım yaptık. Test güdümlü geliştirdiğimiz için testlerden

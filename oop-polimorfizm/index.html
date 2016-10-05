@@ -8,19 +8,26 @@
     <meta name="description" content="OOP ile Polimorfizm nasıl yapılır? Polimorfizm nedir?">
     <meta name="keywords"
           content="java,oop,polymorphism,polimorfizm,printer,kalıtım,nesne,yönelimli,programlama">
+
+    <meta name="generator" content="Hugo 0.15" />
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/semantic.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/error.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://omerozkan.net/js/semantic.min.js"></script>
+
     <meta name="author" content="Ömer Özkan">
+
     <meta property="og:site_name" content="Ömer Özkan"/>
     <meta property="og:title" content="Ömer Özkan"/>
     <meta property="og:description" content="OOP ile Polimorfizm nasıl yapılır? Polimorfizm nedir?"/>
     <meta property="og:url" content="https://omerozkan.net/oop-polimorfizm/">
     <meta property="og:type" content="blog"/>
     <meta property="og:image" content="oop-polimorfizm.jpg" />
-    <meta name="generator" content="Hugo 0.15" />
-    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/semantic.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/style.css">
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="https://omerozkan.net/js/semantic.min.js"></script>
+
     
     <link rel="apple-touch-icon" sizes="57x57" href="https://omerozkan.net/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://omerozkan.net/img/favicon/apple-icon-60x60.png">
@@ -39,6 +46,9 @@
     <meta name="msapplication-TileColor" content="#009688">
     <meta name="msapplication-TileImage" content="https://omerozkan.net/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#009688">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#009688">
 </head>
 <body>
 <section id="main">
@@ -70,29 +80,6 @@
                                     İletişim
                                 </a>
                                 
-                            </nav>
-                        </section>
-                        <section id="media-links" class="row">
-                            <nav class="ui icon secondary inverted menu">
-                                <div class="right menu">
-                                
-                                    <a class="item" href="https://twitter.com/omerozkan_" target="_blank">
-                                        <i class="twitter icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://www.linkedin.com/in/omerozkan" target="_blank">
-                                        <i class="linkedin icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://www.facebook.com/omerozkan" target="_blank">
-                                        <i class="facebook icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://github.com/omerozkan" target="_blank">
-                                        <i class="github icon"></i>
-                                    </a>
-                                
-                                </div>
                             </nav>
                         </section>
                     </div>
@@ -193,6 +180,8 @@
             </p>
             
 
+            <div class="clear"></div>
+
             
             
             <img class="ui right floated top aligned rounded medium image bordered right"
@@ -212,14 +201,14 @@ Aynı yöntemi burda da uygulayacağım. Bu konuyu kavramanız için kalıtım k
 
 <p>Örneğimizde bir yazıcımız var. Bu yazıcı kelime işlemci ve pdf belgelerini basabiliyor.</p>
 
-<p><div class="clear"></div>
+<p><div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf1.java"></script>
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=word1.java"></script></p>
 
 <p>PDF ve Word sınıfları getPrintableText() isimli bir metodu içeriyor. Şimdi de yazıcı (Printer) sınıfımıza bakalım.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printer1.java"></script>
 
 <p>Printer sınıfımızın ise iki metodu var. printPDF metodu PDF dökümanını, printWord metodu ise word dökümanını yazdırıyor.
@@ -236,15 +225,15 @@ polimorfizm ile düzeltebiliriz.</p>
 <p>Öncelikle daha önceden öğrendiğimiz kalıtımı(yemek tarifi gibi oldu :)) kullanarak sınıflarımızı yeniden yapılandıralım.
 <strong>PDF</strong> sınıfıda <strong>Word</strong> sınıfıda aslında birer belge yani <strong>Document</strong> özelliğini taşıyor.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=document.java"></script>
 
 <p>Şimdi Word ve PDF sınıflarını Document sınıfını <strong>extend</strong> edebilir.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=word2.java"></script>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf2.java"></script>
 
 <p>Override anotasyonunu (annotation) görüyorsunuz. Anotasyonlar Java 1.5&rsquo;ten sonra gelen bir özelliktir.
@@ -252,12 +241,12 @@ Buradaki Override anotasyonu, Word ve PDF&rsquo;te bulunan getPrintableText meto
 
 <p>Şimdi <strong>Printer</strong> sınıfını da yeniden düzenleyelim.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printer2.java"></script>
 
 <p>Şimdi daha iyi anlamanız için bir test sınıfı yazalım.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printerTest.java"></script>
 
 <p>Eğer sonucu görmediyseniz lütfen sonucu tahmin etmeye çalışın.</p>
@@ -290,7 +279,7 @@ Printer ve Document sınıfını bir jar içerisinde müşteriye teslim edebilir
 <p>Şimdi gelelim müşterinin isteğine, müşteri bir Excel dosyası yazdırmak istemişti. Artık Printer sınıfına dokunmamıza bile gerek yok.
 Yeni bir Excel sınıfı ekleyelim.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=excel.java"></script>
 
 <h3 id="super-anahtar-kelimesi:1e4f0b0da4b93aa40114849c5b8e437e">super anahtar kelimesi</h3>
@@ -301,7 +290,7 @@ değiştirmiş oldu ve Document sınıfında tanımlanan print metodunun davran�
 Peki PDF sınıfı atasından (Document) aldığı <strong>getPrintableText()</strong> metodunu kullanmak isterse ne yapmalıyız?
 İşte burda super anahtar kelimesini kullanabiliriz. PDF sınıfını aşağıdaki şekilde değiştirelim.</p>
 
-<p><div class="clear"></div>
+<p><div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf3.java"></script></p>
 
 <p>Bunun sonucunda <strong>getPrintableText()</strong> metodu &ldquo;This is a document\nThis is a PDF document\n&rdquo; değerlerini döndermiş olur.</p>
@@ -314,27 +303,6 @@ Peki PDF sınıfı atasından (Document) aldığı <strong>getPrintableText()</s
 
 
             <div class="clear"></div>
-            
-            <section id="comment">
-                <div class="ui section divider"></div>
-                <div id="disqus_thread"></div>
-<script>
-     var disqus_config = function () {
-     this.page.url = 'https:\/\/omerozkan.net\/oop-polimorfizm\/'; 
-     this.page.identifier = 'oop-polimorfizm';
-     };
-    (function() {
-        var d = document, s = d.createElement('script');
-
-        var disqus_shortname = 'omerozkan';
-        s.src = '//' + disqus_shortname +'.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-            </section>
-            
             <div class="ui section divider"></div>
             
             
@@ -370,6 +338,29 @@ Peki PDF sınıfı atasından (Document) aldığı <strong>getPrintableText()</s
                 
             </div>
             
+
+            
+            <section id="comment">
+                <div class="ui section divider"></div>
+                <div id="disqus_thread"></div>
+<script>
+     var disqus_config = function () {
+     this.page.url = 'https:\/\/omerozkan.net\/oop-polimorfizm\/'; 
+     this.page.identifier = 'oop-polimorfizm';
+     };
+    (function() {
+        var d = document, s = d.createElement('script');
+
+        var disqus_shortname = 'omerozkan';
+        s.src = '//' + disqus_shortname +'.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </section>
+            
+
         </div>
 
     </article>
@@ -381,7 +372,7 @@ Peki PDF sınıfı atasından (Document) aldığı <strong>getPrintableText()</s
         <div class="ten wide mobile ten wide tablet eight wide computer column centered">
             <div class="ui grid">
                 <div class="twelve wide mobile two wide tablet two wide computer centered column center aligned">
-                    <img id="footer-logo" src="https://omerozkan.net/img/footer-logo.png" alt="Footer lan ne bakiyon" class="ui image">
+                    <img id="footer-logo" src="https://omerozkan.net/img/footer-logo.png" alt="Ömer Özkan Logo" class="ui image">
                 </div>
                 <div class="twelve wide mobile eight wide tablet eight wide computer middle aligned centered column center aligned">
                     © 2008 Ömer Özkan. Tüm hakları saklıdır. <br/><a href="https://omerozkan.net">Ömer Özkan</a> is licensed under a <a

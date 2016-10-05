@@ -8,19 +8,26 @@
     <meta name="description" content="Java 8 ile gelen Optional sınıfı kullanımına bir örnek">
     <meta name="keywords"
           content="java,java8,optional">
+
+    <meta name="generator" content="Hugo 0.15" />
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/semantic.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/error.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://omerozkan.net/js/semantic.min.js"></script>
+
     <meta name="author" content="Ömer Özkan">
+
     <meta property="og:site_name" content="Ömer Özkan"/>
     <meta property="og:title" content="Ömer Özkan"/>
     <meta property="og:description" content="Java 8 ile gelen Optional sınıfı kullanımına bir örnek"/>
     <meta property="og:url" content="https://omerozkan.net/java-8-optional/">
     <meta property="og:type" content="blog"/>
     <meta property="og:image" content="java-8-optional.png" />
-    <meta name="generator" content="Hugo 0.15" />
-    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/semantic.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/style.css">
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="https://omerozkan.net/js/semantic.min.js"></script>
+
     
     <link rel="apple-touch-icon" sizes="57x57" href="https://omerozkan.net/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://omerozkan.net/img/favicon/apple-icon-60x60.png">
@@ -39,6 +46,9 @@
     <meta name="msapplication-TileColor" content="#009688">
     <meta name="msapplication-TileImage" content="https://omerozkan.net/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#009688">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#009688">
 </head>
 <body>
 <section id="main">
@@ -70,29 +80,6 @@
                                     İletişim
                                 </a>
                                 
-                            </nav>
-                        </section>
-                        <section id="media-links" class="row">
-                            <nav class="ui icon secondary inverted menu">
-                                <div class="right menu">
-                                
-                                    <a class="item" href="https://twitter.com/omerozkan_" target="_blank">
-                                        <i class="twitter icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://www.linkedin.com/in/omerozkan" target="_blank">
-                                        <i class="linkedin icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://www.facebook.com/omerozkan" target="_blank">
-                                        <i class="facebook icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://github.com/omerozkan" target="_blank">
-                                        <i class="github icon"></i>
-                                    </a>
-                                
-                                </div>
                             </nav>
                         </section>
                     </div>
@@ -193,6 +180,8 @@
             </p>
             
 
+            <div class="clear"></div>
+
             
             
             <img class="ui right floated top aligned rounded medium image bordered right"
@@ -208,13 +197,13 @@ programlama dili ve teknolojileri konusunda ufak bilgiler paylaşmaya devam edec
 örnek üzerinden gitmenin daha kalıcı olduğunu düşünüyorum. Örneğimizde bir UserRepository sınıfı tasarlayacağız.
 Interface&rsquo;imiz şu şekilde:</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepository1.java"></script>
 
 <p>UserRepository interface&rsquo;inde <code>getByUsername()</code> metodunun tanımlandığını görüyoruz. Adından da anlaşılacağı üzere kullanıcı
 adı ile veritabanında kayıtlı bir kullanıcıyı bulmak istiyoruz. Basitçe aşağıdaki implementasyonu yapabiliriz.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl1.java"></script>
 
 <p>Herhangi bir persistent api kullanarak kullanıcı listesini aldık. Eğer liste boş dönerse girdiğimiz kullanıcı adına sahip
@@ -235,12 +224,12 @@ veritabanında yoksa ne olur diye düşündüğünüzde <code>null</code> döneb
 Fakat her durumda bu kadar basit bir durumda olmayabilir. Daha karmaşık bir implementasyonda istemci olarak bunu görmek
 daha zordur. <code>null</code> dönmek yerine exception kullanarak bir tasarım yapabiliriz:</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl2.java"></script>
 
 <p>interface&rsquo;i de şu şekilde değiştiriyoruz:</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepository2.java"></script>
 
 <p>Bu implementasyon yukarıda bahsettiğim sorunu çözüyor. Burada basit bir şekilde kullanıcı yoksa UserNotFoundException&rsquo;u
@@ -255,25 +244,25 @@ yapılarda Exception kullanmamalıyız.</p>
 
 <p>Çözüm olarak yine ilk tasarımımıza dönüp User entity&rsquo;si dönmek yerine bir Result objesi dönebiliriz.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl3.java"></script>
 
 <p>User entity&rsquo;sini doğrudan dönmek yerine araya başka bir sınıf yerleştirerek ilk durumdaki sorunu çözmüş oluyoruz. Artık kullanıcının
 veritabanında olmayacağını daha net bir şekilde ifade ettik. Bu tür Result sınıflarını immutable tanımlarsak daha iyi bir
 tasarım yapmış oluruz. Constructor&rsquo;lara isim veremediğimiz için burada static metod kullanmayı tercih ettim. UserResult sınıfı&rsquo;da aşağıdaki gibi.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userResult.java"></script>
 
 <p>İstemci taraf doesUserExist() metodu ile kontrol edip gereken işlemi yapabilir. Bu şekilde tasarımımız daha stabil oldu.
 Àyrıca bunun büyük bir proje olacağını düşünürsek UserResult sınıfını daha generic olarak tasarlayabiliriz.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=entityResult.java"></script>
 
 <p>UserRepositoryImpl sınıfımızı da düzenleyelim.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl4.java"></script>
 
 <p>EntityResult gibi result objeleri farklı implementasyonlar da içerebilir. Burda <code>null</code>dönme problemini için kullandık.
@@ -283,7 +272,7 @@ tasarım yapmış oluruz. Constructor&rsquo;lara isim veremediğimiz için burad
 paketinin içerisinde <code>Optional</code> diye bir sınıf eklendi. Kendi EntityResult gibi sınıflar yazmak yerine null dönebilen
 metodlar için return type&rsquo;ı Optional olarak tanımlayabiliriz.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl5.java"></script>
 
 <p>Optional yine tasarladığımız EntityResult gibi generic ve immutable bir sınıf. Yine <code>Optional.empty()</code> aynı şekilde boş bir result dönüyor.
@@ -310,6 +299,26 @@ Stream Api&rsquo;de oldukça fazla kullanılır. Primitive tipler için de <code
 
 
             <div class="clear"></div>
+            <div class="ui section divider"></div>
+            
+            
+            <div class="ui tag labels">
+                
+                <span class="ui teal label">
+                    java
+                </span>
+                
+                <span class="ui teal label">
+                    java8
+                </span>
+                
+                <span class="ui teal label">
+                    optional
+                </span>
+                
+            </div>
+            
+
             
             <section id="comment">
                 <div class="ui section divider"></div>
@@ -331,25 +340,7 @@ Stream Api&rsquo;de oldukça fazla kullanılır. Primitive tipler için de <code
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
             </section>
             
-            <div class="ui section divider"></div>
-            
-            
-            <div class="ui tag labels">
-                
-                <span class="ui teal label">
-                    java
-                </span>
-                
-                <span class="ui teal label">
-                    java8
-                </span>
-                
-                <span class="ui teal label">
-                    optional
-                </span>
-                
-            </div>
-            
+
         </div>
 
     </article>
@@ -361,7 +352,7 @@ Stream Api&rsquo;de oldukça fazla kullanılır. Primitive tipler için de <code
         <div class="ten wide mobile ten wide tablet eight wide computer column centered">
             <div class="ui grid">
                 <div class="twelve wide mobile two wide tablet two wide computer centered column center aligned">
-                    <img id="footer-logo" src="https://omerozkan.net/img/footer-logo.png" alt="Footer lan ne bakiyon" class="ui image">
+                    <img id="footer-logo" src="https://omerozkan.net/img/footer-logo.png" alt="Ömer Özkan Logo" class="ui image">
                 </div>
                 <div class="twelve wide mobile eight wide tablet eight wide computer middle aligned centered column center aligned">
                     © 2008 Ömer Özkan. Tüm hakları saklıdır. <br/><a href="https://omerozkan.net">Ömer Özkan</a> is licensed under a <a

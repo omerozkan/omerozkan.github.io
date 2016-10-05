@@ -64,7 +64,7 @@ ve sonraki iki atışta vurulan labut sayısı kadar bonus skor kazanılır.&lt;
       <description>&lt;p&gt;JSF Bean sınıflarında FacesContext gibi nesneler kullandığınızda ve bu sınıflara mock nesneler ile birim testleri yazdığınızda
 &lt;a href=&#34;https://github.com/mockito/mockito&#34;&gt;Mockito&lt;/a&gt;, JMock gibi araçlar yeterli olmayacaktır. Örnek olarak aşağıdaki metodu inceleyelim.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginAction.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Bu metod basit bir login işlemi gerçekleştirmektedir.
@@ -91,7 +91,7 @@ PowerMock ile statik metodlara hatta private alanlara müdahale edebiliyorsunuz.
 
 &lt;p&gt;Öncelikle bir setUp metodu oluşturalım:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginBeanTest.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;32&lt;/strong&gt;. satır da FacesContext sınıfı Mockito ile mock&amp;rsquo;lanmaktadır. 37. satırda benzer şekilde LoginManager sınıfı mocklanmaktadır.
@@ -101,7 +101,7 @@ PowerMock ile statik metodlara hatta private alanlara müdahale edebiliyorsunuz.
 &lt;strong&gt;34-35&lt;/strong&gt;. satırlarda PowerMockito.doReturn() metodu ile &lt;em&gt;FacesContex.getCurrentInstance()&lt;/em&gt; statik metodunun davranışı değiştirilmiştir.
 Bu sayede birim testlerimizi çalıştırabiliriz. Örnek olarak bir test metodu ekleyelim:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginWithEmptyUsername.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;4-6&lt;/strong&gt;. satırlarda gerekli test verileri girilip login işlemi gerçekleştirilmiştir. &lt;strong&gt;7&lt;/strong&gt;. satırda ise Mockito ile
@@ -110,7 +110,7 @@ Bu sayede birim testlerimizi çalıştırabiliriz. Örnek olarak bir test metodu
 &lt;p&gt;Bu şekilde testler çalıştırıldığında olumsuz sonuç alırız.
 PowerMockito&amp;rsquo;nun gereken sınıfları taklit etmesi için test sınıfının başına aşağıdaki gibi anotasyonlar tanımlanmalıdır:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginBeanTest2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; satırda testlerin PowerMockRunner ile çalışmasını ve &lt;strong&gt;2&lt;/strong&gt;. satırda ise &lt;strong&gt;FacesContext&lt;/strong&gt; sınıfına ait statik metodun mock&amp;rsquo;lanmasını sağladık.
@@ -173,7 +173,7 @@ Kata hakkında bilgi almak için ise &lt;a href=&#34;http://www.kurumsaljava.com
 
 &lt;p&gt;Öncelikle RomanNumeral sınıfı için test sınıfı (RomanNumeralTest) oluşturuyoruz ve bir test metodu yazıyoruz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Anlaşılacağı gibi &amp;ldquo;I&amp;rdquo; değerini verdiğimde sonuç olarak 1 değerini döndermesi gerekir. Bunu için assertThat metodunu kullandım.
@@ -184,12 +184,12 @@ Burda kodun okunmasını kolaylaştırmak amacı ile CoreMatchers.is ve CoreMatc
 Test kodlarını çalıştırdığımızda başarısız olduğunu görüyoruz. Bu testi geçmek için çok detaylı diğer roman rakamlarını da düşünerek kod yazmıyoruz.
 Sadece bu testin gerçekleşmesi için gereken kodu yazıyoruz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d11659da5f094d.js?file=romanNumeral1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;code&gt;return 1&lt;/code&gt; ifadesini eklemek testlerin başarılı olmasını sağlayacaktır. Bunu gerçekleştirdikten sonra 2. bir test daha ekliyoruz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Burda dikkat ederseniz roman nesnesini yerel değişken olarak kullanmak yerine sınıf değişkeni yani &amp;ldquo;field&amp;rdquo; olarak kullanıyorum.
@@ -199,22 +199,22 @@ Yukarda bahsettiğim gibi öncelikle niyetimizi yazıyoruz.
 convert metodunda değişiklik yaparken bu sefer her 2 testin de çalışmasına dikkat etmemiz gerekiyor.
 O yüzden RomanNumeral sınıfımız aşağıdaki gibi olacaktır.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;metodumuza bir if ekleyerek 2 testin de başarılı olmasını sağladık. Aynı şeyi &amp;ldquo;X&amp;rdquo; -&amp;gt; 10 için de yapıyoruz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest3.java&#34;&gt;&lt;/script&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral3.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;3. testimizi yazıp gereken değişiklikleri yaptık. convert metoduna baktığımızda istenmeyen bir durum görüyoruz.
 Her yeni test için sürekli bir &lt;code&gt;if&lt;/code&gt; ekleyemeyiz. O yüzden RomanNumeral sınıfını &lt;code&gt;Map&lt;/code&gt; kullanarak aşağıdaki şekilde düzenliyoruz.
 Böylece metodu tek satıra düşürebiliriz.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral3Refactor.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Burada adım adım giderek refactoring işlemlerini de adım adım yaptık. Test güdümlü geliştirdiğimiz için testlerden

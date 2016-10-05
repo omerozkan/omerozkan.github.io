@@ -6,8 +6,64 @@
     <description>Recent content in Java on Ömer Özkan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
-    <lastBuildDate>Fri, 03 Jun 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Oct 2016 22:29:03 +0300</lastBuildDate>
     <atom:link href="https://omerozkan.net/kategori/java/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Java&#39;da Override Anotasyonu</title>
+      <link>https://omerozkan.net/java-override-anotasyonu/</link>
+      <pubDate>Tue, 04 Oct 2016 22:29:03 +0300</pubDate>
+      
+      <guid>https://omerozkan.net/java-override-anotasyonu/</guid>
+      <description>&lt;p&gt;Merhabalar,&lt;/p&gt;
+
+&lt;p&gt;Daha önce Java 8 ile gelen Optional sınıfından bahsetmiştim. Java ile ilgili ufak detay bilgiler vermeye devam edeceğim. Bu yazımızda Java Override anotasyonunun öneminden bahsedeceğim.&lt;/p&gt;
+
+&lt;p&gt;Java ile herhangi bir IDE kullandıysanız karşınıza mutlaka çıkmıştır. Bilmeyenler için kısaca açıklarsak Java&amp;rsquo;da bir sınıfın interface ve ata sınıfında yer alan metodları implement etmek veya değiştirmek için yazdığımız metodu &lt;code&gt;@Override&lt;/code&gt; annotasyonu ile işaretleyerek bunu belirtmiş oluruz.  Bir sınıf içerisinde Override anotasyonu metodun üst sınıflardan geldiğini bilmek için güzel bir araçtır. Varolmasının en temel amacı da budur.&lt;/p&gt;
+
+&lt;p&gt;Fakat Java&amp;rsquo;da bu anotasyonu kullanmak zorunda değilsiniz. Bu anotasyonu kaldırdığınızda herhangi bir compile hatası almazsınız. Fakat bu anotasyonun sağladığı önemli bir avantajı daha var. Bunun için çok kısa ve kolay bir örnek yapalım. Özellikle yeni başlayanların hata yaptığı konulardan biri:&lt;/p&gt;
+
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=member1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Basit bir üye sınıfımız var. Bu sınıfın son metodunu incelerseniz bir &lt;code&gt;equals&lt;/code&gt; metodu tanımladık. Bu metodu bir test edelim.&lt;/p&gt;
+
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=memberTest1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu testi çalıştırdığınızda ekranda &lt;code&gt;true&lt;/code&gt; yazdığını görüyoruz. &lt;code&gt;equals&lt;/code&gt; metodumuz çalışıyor. Şimdi testimizde ufak bir değişiklik yapalım.&lt;/p&gt;
+
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=memberTest2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Referanslarımızı üst sınıfa yani &lt;code&gt;Object&lt;/code&gt; sınıfına çektik. Bu testi çalıştırdığımızda da ekranda &lt;code&gt;true&lt;/code&gt; beklerken birden &lt;code&gt;false&lt;/code&gt; değerini aldık.  Anladınız değil mi hatayı? Java&amp;rsquo;ya yeni başlayanların durumu anlaması biraz zor olabilir.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Object.equals&lt;/code&gt; metodunun işaretin(signature)&amp;lsquo;e bakalım: &lt;code&gt;public boolean equals(Object obj)&lt;/code&gt; Member sınıfında implement ettiğimiz metod ise &lt;code&gt;public boolean equals(Member m)&lt;/code&gt; gördüğünüz gibi bu iki metod birbirinden farklıdır. Java&amp;rsquo;da metod parametrelerini üst sınıftan altsınıflara çekemezsiniz. Yani &lt;code&gt;Object.equals&lt;/code&gt; metodunu override etmek yerine yeni bir metod eklemiş olduk.&lt;/p&gt;
+
+&lt;p&gt;Burda belirtmek istediğim bir durum daha var. &lt;code&gt;equals&lt;/code&gt; metodu &lt;code&gt;Object&lt;/code&gt; referansı ile farklı &lt;code&gt;Member&lt;/code&gt; referansı ile farklı sonuçlar verdi. &lt;code&gt;Member.equals&lt;/code&gt; metodu üst sınıf olan &lt;code&gt;Object&lt;/code&gt; in yerine geçemedi. Bu Liskov yerine geçme prensibi(Liskov Subsitution Principle)&amp;lsquo;ne aykırıdır.&lt;/p&gt;
+
+&lt;p&gt;Şimdi geldik asıl sorumuza: &lt;code&gt;@Override&lt;/code&gt; anotasyonu ne işimize yarayacak? &lt;code&gt;Member.equals&lt;/code&gt; metoduna bu anotasyonu tanımlayalım.&lt;/p&gt;
+
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=memberEquals1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu kodu derlemeye çalıştığnızda , &lt;strong&gt;&lt;em&gt;method does not override or implement a method from a supertype&lt;/em&gt;&lt;/strong&gt; hatasını alırsınız. Bu sayede bu anotasyon yanlışı compile zamanında size göstermiş oldu. Bu dikkatsizlik yayında daha kötü sonuçlara sebep olabilir.&lt;/p&gt;
+
+&lt;p&gt;Object sınıfı en çok bilinen sınıflardan biri olduğu için &lt;code&gt;Object.equals&lt;/code&gt; elzem bir durum oluşturmayabilir. Fakat kendi yazdığınız interface ve üst sınıflar veya kullandığınız framework&amp;rsquo;lerde bu hatayı yapabilir, uygulamanızı tutarsız hale getirebilirsiniz. Yine yeni başlayanlar için düzgün bir &lt;code&gt;Member.equals&lt;/code&gt; örneği de vereyim.&lt;/p&gt;
+
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=memberEquals2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu kodu kendim yazmadım. Günümüzde Java IDE&amp;rsquo;leri bu kodu otomatik olarak üretebiliyor. Bu arada farklı bir yazıda anlatacağım fakat ek bilgi olarak belirteyim. Java&amp;rsquo;da &lt;code&gt;equals&lt;/code&gt; metodu tanımlarken mutlaka &lt;code&gt;hashCode&lt;/code&gt; metodunu da tanımlamalısınız. Java 7 ve sonrası için bunu yapmak oldukça kolay:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=hashCode.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu sebeple bu anotasyonu kullanın, kullandırın!&lt;/p&gt;
+
+&lt;p&gt;Başka bir yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Java 8 Optional ve null dönebilen metotlar</title>
@@ -22,13 +78,13 @@ programlama dili ve teknolojileri konusunda ufak bilgiler paylaşmaya devam edec
 örnek üzerinden gitmenin daha kalıcı olduğunu düşünüyorum. Örneğimizde bir UserRepository sınıfı tasarlayacağız.
 Interface&amp;rsquo;imiz şu şekilde:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepository1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;UserRepository interface&amp;rsquo;inde &lt;code&gt;getByUsername()&lt;/code&gt; metodunun tanımlandığını görüyoruz. Adından da anlaşılacağı üzere kullanıcı
 adı ile veritabanında kayıtlı bir kullanıcıyı bulmak istiyoruz. Basitçe aşağıdaki implementasyonu yapabiliriz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Herhangi bir persistent api kullanarak kullanıcı listesini aldık. Eğer liste boş dönerse girdiğimiz kullanıcı adına sahip
@@ -49,12 +105,12 @@ veritabanında yoksa ne olur diye düşündüğünüzde &lt;code&gt;null&lt;/cod
 Fakat her durumda bu kadar basit bir durumda olmayabilir. Daha karmaşık bir implementasyonda istemci olarak bunu görmek
 daha zordur. &lt;code&gt;null&lt;/code&gt; dönmek yerine exception kullanarak bir tasarım yapabiliriz:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;interface&amp;rsquo;i de şu şekilde değiştiriyoruz:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepository2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Bu implementasyon yukarıda bahsettiğim sorunu çözüyor. Burada basit bir şekilde kullanıcı yoksa UserNotFoundException&amp;rsquo;u
@@ -69,25 +125,25 @@ yapılarda Exception kullanmamalıyız.&lt;/p&gt;
 
 &lt;p&gt;Çözüm olarak yine ilk tasarımımıza dönüp User entity&amp;rsquo;si dönmek yerine bir Result objesi dönebiliriz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl3.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;User entity&amp;rsquo;sini doğrudan dönmek yerine araya başka bir sınıf yerleştirerek ilk durumdaki sorunu çözmüş oluyoruz. Artık kullanıcının
 veritabanında olmayacağını daha net bir şekilde ifade ettik. Bu tür Result sınıflarını immutable tanımlarsak daha iyi bir
 tasarım yapmış oluruz. Constructor&amp;rsquo;lara isim veremediğimiz için burada static metod kullanmayı tercih ettim. UserResult sınıfı&amp;rsquo;da aşağıdaki gibi.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userResult.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;İstemci taraf doesUserExist() metodu ile kontrol edip gereken işlemi yapabilir. Bu şekilde tasarımımız daha stabil oldu.
 Àyrıca bunun büyük bir proje olacağını düşünürsek UserResult sınıfını daha generic olarak tasarlayabiliriz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=entityResult.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;UserRepositoryImpl sınıfımızı da düzenleyelim.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl4.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;EntityResult gibi result objeleri farklı implementasyonlar da içerebilir. Burda &lt;code&gt;null&lt;/code&gt;dönme problemini için kullandık.
@@ -97,7 +153,7 @@ tasarım yapmış oluruz. Constructor&amp;rsquo;lara isim veremediğimiz için b
 paketinin içerisinde &lt;code&gt;Optional&lt;/code&gt; diye bir sınıf eklendi. Kendi EntityResult gibi sınıflar yazmak yerine null dönebilen
 metodlar için return type&amp;rsquo;ı Optional olarak tanımlayabiliriz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0ef7a9c175d40cdbea57ea72de25140e.js?file=userRepositoryImpl5.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Optional yine tasarladığımız EntityResult gibi generic ve immutable bir sınıf. Yine &lt;code&gt;Optional.empty()&lt;/code&gt; aynı şekilde boş bir result dönüyor.
@@ -133,7 +189,7 @@ Stream Api&amp;rsquo;de oldukça fazla kullanılır. Primitive tipler için de &
       <description>&lt;p&gt;JSF Bean sınıflarında FacesContext gibi nesneler kullandığınızda ve bu sınıflara mock nesneler ile birim testleri yazdığınızda
 &lt;a href=&#34;https://github.com/mockito/mockito&#34;&gt;Mockito&lt;/a&gt;, JMock gibi araçlar yeterli olmayacaktır. Örnek olarak aşağıdaki metodu inceleyelim.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginAction.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Bu metod basit bir login işlemi gerçekleştirmektedir.
@@ -160,7 +216,7 @@ PowerMock ile statik metodlara hatta private alanlara müdahale edebiliyorsunuz.
 
 &lt;p&gt;Öncelikle bir setUp metodu oluşturalım:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginBeanTest.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;32&lt;/strong&gt;. satır da FacesContext sınıfı Mockito ile mock&amp;rsquo;lanmaktadır. 37. satırda benzer şekilde LoginManager sınıfı mocklanmaktadır.
@@ -170,7 +226,7 @@ PowerMock ile statik metodlara hatta private alanlara müdahale edebiliyorsunuz.
 &lt;strong&gt;34-35&lt;/strong&gt;. satırlarda PowerMockito.doReturn() metodu ile &lt;em&gt;FacesContex.getCurrentInstance()&lt;/em&gt; statik metodunun davranışı değiştirilmiştir.
 Bu sayede birim testlerimizi çalıştırabiliriz. Örnek olarak bir test metodu ekleyelim:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginWithEmptyUsername.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;4-6&lt;/strong&gt;. satırlarda gerekli test verileri girilip login işlemi gerçekleştirilmiştir. &lt;strong&gt;7&lt;/strong&gt;. satırda ise Mockito ile
@@ -179,7 +235,7 @@ Bu sayede birim testlerimizi çalıştırabiliriz. Örnek olarak bir test metodu
 &lt;p&gt;Bu şekilde testler çalıştırıldığında olumsuz sonuç alırız.
 PowerMockito&amp;rsquo;nun gereken sınıfları taklit etmesi için test sınıfının başına aşağıdaki gibi anotasyonlar tanımlanmalıdır:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/c9bd44aa073505b3514c.js?file=loginBeanTest2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;1.&lt;/strong&gt; satırda testlerin PowerMockRunner ile çalışmasını ve &lt;strong&gt;2&lt;/strong&gt;. satırda ise &lt;strong&gt;FacesContext&lt;/strong&gt; sınıfına ait statik metodun mock&amp;rsquo;lanmasını sağladık.
@@ -206,14 +262,14 @@ Aynı yöntemi burda da uygulayacağım. Bu konuyu kavramanız için kalıtım k
 
 &lt;p&gt;Örneğimizde bir yazıcımız var. Bu yazıcı kelime işlemci ve pdf belgelerini basabiliyor.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf1.java&#34;&gt;&lt;/script&gt;
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=word1.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;PDF ve Word sınıfları getPrintableText() isimli bir metodu içeriyor. Şimdi de yazıcı (Printer) sınıfımıza bakalım.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printer1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Printer sınıfımızın ise iki metodu var. printPDF metodu PDF dökümanını, printWord metodu ise word dökümanını yazdırıyor.
@@ -230,15 +286,15 @@ polimorfizm ile düzeltebiliriz.&lt;/p&gt;
 &lt;p&gt;Öncelikle daha önceden öğrendiğimiz kalıtımı(yemek tarifi gibi oldu :)) kullanarak sınıflarımızı yeniden yapılandıralım.
 &lt;strong&gt;PDF&lt;/strong&gt; sınıfıda &lt;strong&gt;Word&lt;/strong&gt; sınıfıda aslında birer belge yani &lt;strong&gt;Document&lt;/strong&gt; özelliğini taşıyor.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=document.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Şimdi Word ve PDF sınıflarını Document sınıfını &lt;strong&gt;extend&lt;/strong&gt; edebilir.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=word2.java&#34;&gt;&lt;/script&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Override anotasyonunu (annotation) görüyorsunuz. Anotasyonlar Java 1.5&amp;rsquo;ten sonra gelen bir özelliktir.
@@ -246,12 +302,12 @@ Buradaki Override anotasyonu, Word ve PDF&amp;rsquo;te bulunan getPrintableText 
 
 &lt;p&gt;Şimdi &lt;strong&gt;Printer&lt;/strong&gt; sınıfını da yeniden düzenleyelim.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printer2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Şimdi daha iyi anlamanız için bir test sınıfı yazalım.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printerTest.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Eğer sonucu görmediyseniz lütfen sonucu tahmin etmeye çalışın.&lt;/p&gt;
@@ -284,7 +340,7 @@ Printer ve Document sınıfını bir jar içerisinde müşteriye teslim edebilir
 &lt;p&gt;Şimdi gelelim müşterinin isteğine, müşteri bir Excel dosyası yazdırmak istemişti. Artık Printer sınıfına dokunmamıza bile gerek yok.
 Yeni bir Excel sınıfı ekleyelim.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=excel.java&#34;&gt;&lt;/script&gt;
 
 &lt;h3 id=&#34;super-anahtar-kelimesi:1e4f0b0da4b93aa40114849c5b8e437e&#34;&gt;super anahtar kelimesi&lt;/h3&gt;
@@ -295,7 +351,7 @@ değiştirmiş oldu ve Document sınıfında tanımlanan print metodunun davran�
 Peki PDF sınıfı atasından (Document) aldığı &lt;strong&gt;getPrintableText()&lt;/strong&gt; metodunu kullanmak isterse ne yapmalıyız?
 İşte burda super anahtar kelimesini kullanabiliriz. PDF sınıfını aşağıdaki şekilde değiştirelim.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf3.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Bunun sonucunda &lt;strong&gt;getPrintableText()&lt;/strong&gt; metodu &amp;ldquo;This is a document\nThis is a PDF document\n&amp;rdquo; değerlerini döndermiş olur.&lt;/p&gt;
@@ -325,10 +381,10 @@ Bir üniversitedeki öğretim görevlilerini ve öğrencileri modelleyen iki sı
 Öğretim görevlisi sınıfı ise öğretim görevlisinin adını, soyadını, hangi bölümün kadrosunda yer aldığını,
 T.C. kimlik numarasını ve akademik ünvanını içersin. Bunu Java kodları ile ifade edersek:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=lecturer1.java&#34;&gt;&lt;/script&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=student1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;Student&lt;/strong&gt; ve &lt;strong&gt;Lecturer&lt;/strong&gt; adında Java sınıflarımız var.
@@ -340,7 +396,7 @@ sebep olur. Bu durum &lt;strong&gt;DRY (Don&amp;rsquo;t Repeat Yourself)&lt;/str
 &lt;p&gt;Bu sorunu kalıtım (inheritance) kullanarak çözebiliriz. Bunun için öncelikle Person adlı bir sınıf tanımlıyoruz ve bu sınıfa
 &lt;strong&gt;Lecturer&lt;/strong&gt; ve &lt;strong&gt;Student&lt;/strong&gt; sınıfların ortak özelliklerini yerleştiriyoruz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=person.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Gördüğünüz gibi Person sınıfımız önceki tanımladığımızın iki sınıfın özelliklerini içeriyor.
@@ -348,10 +404,10 @@ Burada dikkat ederseniz bölümü eklemedim. Bunun sebebi uygulamamıza ekleyece
 Ama her personelin T.C kimlik numarası, adı ve soyadı olmak zorunda.
 Student ve Lecturer sınıflarını aşağıdaki gibi değiştirebiliriz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=lecturer2.java&#34;&gt;&lt;/script&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=student2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Student ve Lecturer sınıflarının tanımlarına dikkat edersek &lt;strong&gt;extends Person&lt;/strong&gt; ifadesini görüyoruz.
@@ -437,12 +493,12 @@ olursunuz. Yani package veya package-private gibi kelimeler kullanılmaz.&lt;/p&
 
 &lt;p&gt;Bunlara kullanarak örnek bir sınıf tasarlayalım.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=accessModifierTest.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Payı (numerator) ve paydası (denominator) olan basit bir Rational (rasyonel) sınıfı tanımlayalım.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rational.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Bu sınıfın iki değişkeni var: &lt;strong&gt;&lt;em&gt;numerator&lt;/em&gt;&lt;/strong&gt; ve &lt;strong&gt;&lt;em&gt;denominator&lt;/em&gt;&lt;/strong&gt;.
@@ -451,7 +507,7 @@ Bu iki alanın erişim belirleyicisini &lt;strong&gt;private&lt;/strong&gt; olar
 Bu sayede sınıf dışından erişimi kapatmış olduk.
 Örneğin başka bir sınıftan aşağıdaki gibi bir kullanım hatalı olacaktır.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rationalClient.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Ayrıca dikkatlice incelerseniz &lt;strong&gt;&lt;em&gt;Rational&lt;/em&gt;&lt;/strong&gt; sınıfında &lt;strong&gt;&lt;em&gt;IllegalDenominator&lt;/em&gt;&lt;/strong&gt; sınıfı da tanımlanmış. Bu tür sınıflara
@@ -461,7 +517,7 @@ Bu sayede sınıf dışından erişimi kapatmış olduk.
 Bu metodların erişim belirleyicisi de &lt;strong&gt;&lt;em&gt;public&lt;/em&gt;&lt;/strong&gt; yani dışardan erişime açık.
 Bu sayede numerator ve denominator değişkenlerine bu metodlar aracılığı ile değer atanabilir. Aşağıdaki kullanım doğru olacaktır.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rationalClient2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;setNumerator&lt;/em&gt;&lt;/strong&gt; ve &lt;strong&gt;&lt;em&gt;setDenominator&lt;/em&gt;&lt;/strong&gt; sayesinde numerator ve denominator değişkenlerine değer atanmış oldu.
@@ -478,7 +534,7 @@ Her alan için getter ve setter metodları tanımlamak zorundayız diye de düş
 Böyle bir zorunluluk yok. getter ve setter metodlar olmadan farklı metodlar aracılığı ile de erişimi kontrol altına alabilirsiniz.
 Örneğin sınıfımıza 3 tane constructor metod ekleyelim.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rational2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Bu tasarımımız da farklı bir örnek oldu. Dikkat ederseniz bu tasarımımızda setter metodları kaldırdık.

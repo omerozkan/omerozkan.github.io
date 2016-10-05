@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Override on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/override/</link>
+    <description>Recent content in Override on Ömer Özkan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>tr</language>
+    <lastBuildDate>Tue, 04 Oct 2016 22:29:03 +0300</lastBuildDate>
+    <atom:link href="https://omerozkan.net/etiket/override/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Java&#39;da Override Anotasyonu</title>
+      <link>https://omerozkan.net/java-override-anotasyonu/</link>
+      <pubDate>Tue, 04 Oct 2016 22:29:03 +0300</pubDate>
+      
+      <guid>https://omerozkan.net/java-override-anotasyonu/</guid>
+      <description>&lt;p&gt;Merhabalar,&lt;/p&gt;
+
+&lt;p&gt;Daha önce Java 8 ile gelen Optional sınıfından bahsetmiştim. Java ile ilgili ufak detay bilgiler vermeye devam edeceğim. Bu yazımızda Java Override anotasyonunun öneminden bahsedeceğim.&lt;/p&gt;
+
+&lt;p&gt;Java ile herhangi bir IDE kullandıysanız karşınıza mutlaka çıkmıştır. Bilmeyenler için kısaca açıklarsak Java&amp;rsquo;da bir sınıfın interface ve ata sınıfında yer alan metodları implement etmek veya değiştirmek için yazdığımız metodu &lt;code&gt;@Override&lt;/code&gt; annotasyonu ile işaretleyerek bunu belirtmiş oluruz.  Bir sınıf içerisinde Override anotasyonu metodun üst sınıflardan geldiğini bilmek için güzel bir araçtır. Varolmasının en temel amacı da budur.&lt;/p&gt;
+
+&lt;p&gt;Fakat Java&amp;rsquo;da bu anotasyonu kullanmak zorunda değilsiniz. Bu anotasyonu kaldırdığınızda herhangi bir compile hatası almazsınız. Fakat bu anotasyonun sağladığı önemli bir avantajı daha var. Bunun için çok kısa ve kolay bir örnek yapalım. Özellikle yeni başlayanların hata yaptığı konulardan biri:&lt;/p&gt;
+
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=member1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Basit bir üye sınıfımız var. Bu sınıfın son metodunu incelerseniz bir &lt;code&gt;equals&lt;/code&gt; metodu tanımladık. Bu metodu bir test edelim.&lt;/p&gt;
+
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=memberTest1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu testi çalıştırdığınızda ekranda &lt;code&gt;true&lt;/code&gt; yazdığını görüyoruz. &lt;code&gt;equals&lt;/code&gt; metodumuz çalışıyor. Şimdi testimizde ufak bir değişiklik yapalım.&lt;/p&gt;
+
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=memberTest2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Referanslarımızı üst sınıfa yani &lt;code&gt;Object&lt;/code&gt; sınıfına çektik. Bu testi çalıştırdığımızda da ekranda &lt;code&gt;true&lt;/code&gt; beklerken birden &lt;code&gt;false&lt;/code&gt; değerini aldık.  Anladınız değil mi hatayı? Java&amp;rsquo;ya yeni başlayanların durumu anlaması biraz zor olabilir.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;Object.equals&lt;/code&gt; metodunun işaretin(signature)&amp;lsquo;e bakalım: &lt;code&gt;public boolean equals(Object obj)&lt;/code&gt; Member sınıfında implement ettiğimiz metod ise &lt;code&gt;public boolean equals(Member m)&lt;/code&gt; gördüğünüz gibi bu iki metod birbirinden farklıdır. Java&amp;rsquo;da metod parametrelerini üst sınıftan altsınıflara çekemezsiniz. Yani &lt;code&gt;Object.equals&lt;/code&gt; metodunu override etmek yerine yeni bir metod eklemiş olduk.&lt;/p&gt;
+
+&lt;p&gt;Burda belirtmek istediğim bir durum daha var. &lt;code&gt;equals&lt;/code&gt; metodu &lt;code&gt;Object&lt;/code&gt; referansı ile farklı &lt;code&gt;Member&lt;/code&gt; referansı ile farklı sonuçlar verdi. &lt;code&gt;Member.equals&lt;/code&gt; metodu üst sınıf olan &lt;code&gt;Object&lt;/code&gt; in yerine geçemedi. Bu Liskov yerine geçme prensibi(Liskov Subsitution Principle)&amp;lsquo;ne aykırıdır.&lt;/p&gt;
+
+&lt;p&gt;Şimdi geldik asıl sorumuza: &lt;code&gt;@Override&lt;/code&gt; anotasyonu ne işimize yarayacak? &lt;code&gt;Member.equals&lt;/code&gt; metoduna bu anotasyonu tanımlayalım.&lt;/p&gt;
+
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=memberEquals1.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu kodu derlemeye çalıştığnızda , &lt;strong&gt;&lt;em&gt;method does not override or implement a method from a supertype&lt;/em&gt;&lt;/strong&gt; hatasını alırsınız. Bu sayede bu anotasyon yanlışı compile zamanında size göstermiş oldu. Bu dikkatsizlik yayında daha kötü sonuçlara sebep olabilir.&lt;/p&gt;
+
+&lt;p&gt;Object sınıfı en çok bilinen sınıflardan biri olduğu için &lt;code&gt;Object.equals&lt;/code&gt; elzem bir durum oluşturmayabilir. Fakat kendi yazdığınız interface ve üst sınıflar veya kullandığınız framework&amp;rsquo;lerde bu hatayı yapabilir, uygulamanızı tutarsız hale getirebilirsiniz. Yine yeni başlayanlar için düzgün bir &lt;code&gt;Member.equals&lt;/code&gt; örneği de vereyim.&lt;/p&gt;
+
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=memberEquals2.java&#34;&gt;&lt;/script&gt;
+
+&lt;p&gt;Bu kodu kendim yazmadım. Günümüzde Java IDE&amp;rsquo;leri bu kodu otomatik olarak üretebiliyor. Bu arada farklı bir yazıda anlatacağım fakat ek bilgi olarak belirteyim. Java&amp;rsquo;da &lt;code&gt;equals&lt;/code&gt; metodu tanımlarken mutlaka &lt;code&gt;hashCode&lt;/code&gt; metodunu da tanımlamalısınız. Java 7 ve sonrası için bunu yapmak oldukça kolay:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
+&lt;script src=&#34;//gist.github.com/omerozkan/3e3687873617c00380018445d27dc567.js?file=hashCode.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;Bu sebeple bu anotasyonu kullanın, kullandırın!&lt;/p&gt;
+
+&lt;p&gt;Başka bir yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

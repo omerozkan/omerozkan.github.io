@@ -66,14 +66,14 @@ Bu pencere üzerinde fare ile bastığınız her tuşun numarasını uçbirim ek
 Örneğin benim atama yapmak istediğim scroll&amp;rsquo;un tuşların numarası 6 ve 7&amp;rsquo;dir.
 Sizin de aynı olmayabilir. Bu tuşlara işlev atamak için .xbindkeysrc dosyasını istediğiniz bir editörle açabilirsiniz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0846f89e4223f2481eb8.js?file=xbindkeysrc&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Burada &amp;ldquo;komut&amp;rdquo; yerine neyi gerçekleştirmesini istiyorsanız onu giriyorsunuz.
 Bu satırı eklediğimde 6. butona bastığımda istediğim komutu gerçekleştirecektir.
 Ben 6. buton için ses azaltma, 7. buton için ses arttırma özelliklerini ekledim:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0846f89e4223f2481eb8.js?file=xbindkeysrcfinal&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Dosyayı kaydedip kapattığınızda eğer xbindkeys uygulaması çalışmıyorsa, xbindkeys komutunu tekrar girebilirsiniz.

@@ -26,10 +26,10 @@ Bir üniversitedeki öğretim görevlilerini ve öğrencileri modelleyen iki sı
 Öğretim görevlisi sınıfı ise öğretim görevlisinin adını, soyadını, hangi bölümün kadrosunda yer aldığını,
 T.C. kimlik numarasını ve akademik ünvanını içersin. Bunu Java kodları ile ifade edersek:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=lecturer1.java&#34;&gt;&lt;/script&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=student1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;Student&lt;/strong&gt; ve &lt;strong&gt;Lecturer&lt;/strong&gt; adında Java sınıflarımız var.
@@ -41,7 +41,7 @@ sebep olur. Bu durum &lt;strong&gt;DRY (Don&amp;rsquo;t Repeat Yourself)&lt;/str
 &lt;p&gt;Bu sorunu kalıtım (inheritance) kullanarak çözebiliriz. Bunun için öncelikle Person adlı bir sınıf tanımlıyoruz ve bu sınıfa
 &lt;strong&gt;Lecturer&lt;/strong&gt; ve &lt;strong&gt;Student&lt;/strong&gt; sınıfların ortak özelliklerini yerleştiriyoruz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=person.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Gördüğünüz gibi Person sınıfımız önceki tanımladığımızın iki sınıfın özelliklerini içeriyor.
@@ -49,10 +49,10 @@ Burada dikkat ederseniz bölümü eklemedim. Bunun sebebi uygulamamıza ekleyece
 Ama her personelin T.C kimlik numarası, adı ve soyadı olmak zorunda.
 Student ve Lecturer sınıflarını aşağıdaki gibi değiştirebiliriz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=lecturer2.java&#34;&gt;&lt;/script&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=student2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Student ve Lecturer sınıflarının tanımlarına dikkat edersek &lt;strong&gt;extends Person&lt;/strong&gt; ifadesini görüyoruz.

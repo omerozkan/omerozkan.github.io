@@ -1,0 +1,50 @@
+.bg {
+  height: 100% !important;
+  width: 100% !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -99;
+}
+.error .pattern {
+  width: 100% !important;
+  height: 100% !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -90;
+  color: #fff;
+  background-image: url(../img/pattern-dotted.png);
+}
+.bg-image {
+  background-size: cover !important;
+  background: url(../img/error.jpg) no-repeat center center fixed;
+}
+h1.error {
+  font-size: 3rem;
+  color: #cccccc;
+  margin-top: 2rem;
+}
+h1.mobile {
+  margin-top: 2rem;
+  color: #fff !important;
+}
+#error-header h1 a {
+  display: block;
+  text-indent: -1000em;
+  background-size: 100%;
+  background-image: url(../img/logo.png);
+  width: 101px;
+  height: 46px;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
+#error-main {
+  color: #ccc !important;
+  background-color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  padding: 1rem !important;
+}
+#error-main a {
+  color: #fff;
+}

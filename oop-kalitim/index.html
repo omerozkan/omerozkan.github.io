@@ -8,19 +8,26 @@
     <meta name="description" content="OOP Kalıtım nedir? Student, Lecturer örneği">
     <meta name="keywords"
           content="java,oop,kalıtım,inheritance">
+
+    <meta name="generator" content="Hugo 0.15" />
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/semantic.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/error.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://omerozkan.net/js/semantic.min.js"></script>
+
     <meta name="author" content="Ömer Özkan">
+
     <meta property="og:site_name" content="Ömer Özkan"/>
     <meta property="og:title" content="Ömer Özkan"/>
     <meta property="og:description" content="OOP Kalıtım nedir? Student, Lecturer örneği"/>
     <meta property="og:url" content="https://omerozkan.net/oop-kalitim/">
     <meta property="og:type" content="blog"/>
     <meta property="og:image" content="oop-inheritance.jpg" />
-    <meta name="generator" content="Hugo 0.15" />
-    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/semantic.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/style.css">
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="https://omerozkan.net/js/semantic.min.js"></script>
+
     
     <link rel="apple-touch-icon" sizes="57x57" href="https://omerozkan.net/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://omerozkan.net/img/favicon/apple-icon-60x60.png">
@@ -39,6 +46,9 @@
     <meta name="msapplication-TileColor" content="#009688">
     <meta name="msapplication-TileImage" content="https://omerozkan.net/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#009688">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#009688">
 </head>
 <body>
 <section id="main">
@@ -70,29 +80,6 @@
                                     İletişim
                                 </a>
                                 
-                            </nav>
-                        </section>
-                        <section id="media-links" class="row">
-                            <nav class="ui icon secondary inverted menu">
-                                <div class="right menu">
-                                
-                                    <a class="item" href="https://twitter.com/omerozkan_" target="_blank">
-                                        <i class="twitter icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://www.linkedin.com/in/omerozkan" target="_blank">
-                                        <i class="linkedin icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://www.facebook.com/omerozkan" target="_blank">
-                                        <i class="facebook icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://github.com/omerozkan" target="_blank">
-                                        <i class="github icon"></i>
-                                    </a>
-                                
-                                </div>
                             </nav>
                         </section>
                     </div>
@@ -193,6 +180,8 @@
             </p>
             
 
+            <div class="clear"></div>
+
             
             
             <img class="ui right floated top aligned rounded medium image bordered right"
@@ -212,10 +201,10 @@ Bir üniversitedeki öğretim görevlilerini ve öğrencileri modelleyen iki sı
 Öğretim görevlisi sınıfı ise öğretim görevlisinin adını, soyadını, hangi bölümün kadrosunda yer aldığını,
 T.C. kimlik numarasını ve akademik ünvanını içersin. Bunu Java kodları ile ifade edersek:</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=lecturer1.java"></script>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=student1.java"></script>
 
 <p><strong>Student</strong> ve <strong>Lecturer</strong> adında Java sınıflarımız var.
@@ -227,7 +216,7 @@ sebep olur. Bu durum <strong>DRY (Don&rsquo;t Repeat Yourself)</strong> prensibi
 <p>Bu sorunu kalıtım (inheritance) kullanarak çözebiliriz. Bunun için öncelikle Person adlı bir sınıf tanımlıyoruz ve bu sınıfa
 <strong>Lecturer</strong> ve <strong>Student</strong> sınıfların ortak özelliklerini yerleştiriyoruz.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=person.java"></script>
 
 <p>Gördüğünüz gibi Person sınıfımız önceki tanımladığımızın iki sınıfın özelliklerini içeriyor.
@@ -235,10 +224,10 @@ Burada dikkat ederseniz bölümü eklemedim. Bunun sebebi uygulamamıza ekleyece
 Ama her personelin T.C kimlik numarası, adı ve soyadı olmak zorunda.
 Student ve Lecturer sınıflarını aşağıdaki gibi değiştirebiliriz.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=lecturer2.java"></script>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=student2.java"></script>
 
 <p>Student ve Lecturer sınıflarının tanımlarına dikkat edersek <strong>extends Person</strong> ifadesini görüyoruz.
@@ -259,27 +248,6 @@ Sadece genişletilen (türetilen) sınıflardan (Student ve Lecturer) erişmek i
 
 
             <div class="clear"></div>
-            
-            <section id="comment">
-                <div class="ui section divider"></div>
-                <div id="disqus_thread"></div>
-<script>
-     var disqus_config = function () {
-     this.page.url = 'https:\/\/omerozkan.net\/oop-kalitim\/'; 
-     this.page.identifier = 'oop-kalitim';
-     };
-    (function() {
-        var d = document, s = d.createElement('script');
-
-        var disqus_shortname = 'omerozkan';
-        s.src = '//' + disqus_shortname +'.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-            </section>
-            
             <div class="ui section divider"></div>
             
             
@@ -303,6 +271,29 @@ Sadece genişletilen (türetilen) sınıflardan (Student ve Lecturer) erişmek i
                 
             </div>
             
+
+            
+            <section id="comment">
+                <div class="ui section divider"></div>
+                <div id="disqus_thread"></div>
+<script>
+     var disqus_config = function () {
+     this.page.url = 'https:\/\/omerozkan.net\/oop-kalitim\/'; 
+     this.page.identifier = 'oop-kalitim';
+     };
+    (function() {
+        var d = document, s = d.createElement('script');
+
+        var disqus_shortname = 'omerozkan';
+        s.src = '//' + disqus_shortname +'.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </section>
+            
+
         </div>
 
     </article>
@@ -314,7 +305,7 @@ Sadece genişletilen (türetilen) sınıflardan (Student ve Lecturer) erişmek i
         <div class="ten wide mobile ten wide tablet eight wide computer column centered">
             <div class="ui grid">
                 <div class="twelve wide mobile two wide tablet two wide computer centered column center aligned">
-                    <img id="footer-logo" src="https://omerozkan.net/img/footer-logo.png" alt="Footer lan ne bakiyon" class="ui image">
+                    <img id="footer-logo" src="https://omerozkan.net/img/footer-logo.png" alt="Ömer Özkan Logo" class="ui image">
                 </div>
                 <div class="twelve wide mobile eight wide tablet eight wide computer middle aligned centered column center aligned">
                     © 2008 Ömer Özkan. Tüm hakları saklıdır. <br/><a href="https://omerozkan.net">Ömer Özkan</a> is licensed under a <a

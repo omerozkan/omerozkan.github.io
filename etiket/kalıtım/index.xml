@@ -26,14 +26,14 @@ Aynı yöntemi burda da uygulayacağım. Bu konuyu kavramanız için kalıtım k
 
 &lt;p&gt;Örneğimizde bir yazıcımız var. Bu yazıcı kelime işlemci ve pdf belgelerini basabiliyor.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf1.java&#34;&gt;&lt;/script&gt;
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=word1.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;PDF ve Word sınıfları getPrintableText() isimli bir metodu içeriyor. Şimdi de yazıcı (Printer) sınıfımıza bakalım.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printer1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Printer sınıfımızın ise iki metodu var. printPDF metodu PDF dökümanını, printWord metodu ise word dökümanını yazdırıyor.
@@ -50,15 +50,15 @@ polimorfizm ile düzeltebiliriz.&lt;/p&gt;
 &lt;p&gt;Öncelikle daha önceden öğrendiğimiz kalıtımı(yemek tarifi gibi oldu :)) kullanarak sınıflarımızı yeniden yapılandıralım.
 &lt;strong&gt;PDF&lt;/strong&gt; sınıfıda &lt;strong&gt;Word&lt;/strong&gt; sınıfıda aslında birer belge yani &lt;strong&gt;Document&lt;/strong&gt; özelliğini taşıyor.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=document.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Şimdi Word ve PDF sınıflarını Document sınıfını &lt;strong&gt;extend&lt;/strong&gt; edebilir.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=word2.java&#34;&gt;&lt;/script&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Override anotasyonunu (annotation) görüyorsunuz. Anotasyonlar Java 1.5&amp;rsquo;ten sonra gelen bir özelliktir.
@@ -66,12 +66,12 @@ Buradaki Override anotasyonu, Word ve PDF&amp;rsquo;te bulunan getPrintableText 
 
 &lt;p&gt;Şimdi &lt;strong&gt;Printer&lt;/strong&gt; sınıfını da yeniden düzenleyelim.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printer2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Şimdi daha iyi anlamanız için bir test sınıfı yazalım.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=printerTest.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Eğer sonucu görmediyseniz lütfen sonucu tahmin etmeye çalışın.&lt;/p&gt;
@@ -104,7 +104,7 @@ Printer ve Document sınıfını bir jar içerisinde müşteriye teslim edebilir
 &lt;p&gt;Şimdi gelelim müşterinin isteğine, müşteri bir Excel dosyası yazdırmak istemişti. Artık Printer sınıfına dokunmamıza bile gerek yok.
 Yeni bir Excel sınıfı ekleyelim.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=excel.java&#34;&gt;&lt;/script&gt;
 
 &lt;h3 id=&#34;super-anahtar-kelimesi:1e4f0b0da4b93aa40114849c5b8e437e&#34;&gt;super anahtar kelimesi&lt;/h3&gt;
@@ -115,7 +115,7 @@ değiştirmiş oldu ve Document sınıfında tanımlanan print metodunun davran�
 Peki PDF sınıfı atasından (Document) aldığı &lt;strong&gt;getPrintableText()&lt;/strong&gt; metodunu kullanmak isterse ne yapmalıyız?
 İşte burda super anahtar kelimesini kullanabiliriz. PDF sınıfını aşağıdaki şekilde değiştirelim.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/753829850b1fd08184d3.js?file=pdf3.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Bunun sonucunda &lt;strong&gt;getPrintableText()&lt;/strong&gt; metodu &amp;ldquo;This is a document\nThis is a PDF document\n&amp;rdquo; değerlerini döndermiş olur.&lt;/p&gt;
@@ -145,10 +145,10 @@ Bir üniversitedeki öğretim görevlilerini ve öğrencileri modelleyen iki sı
 Öğretim görevlisi sınıfı ise öğretim görevlisinin adını, soyadını, hangi bölümün kadrosunda yer aldığını,
 T.C. kimlik numarasını ve akademik ünvanını içersin. Bunu Java kodları ile ifade edersek:&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=lecturer1.java&#34;&gt;&lt;/script&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=student1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;Student&lt;/strong&gt; ve &lt;strong&gt;Lecturer&lt;/strong&gt; adında Java sınıflarımız var.
@@ -160,7 +160,7 @@ sebep olur. Bu durum &lt;strong&gt;DRY (Don&amp;rsquo;t Repeat Yourself)&lt;/str
 &lt;p&gt;Bu sorunu kalıtım (inheritance) kullanarak çözebiliriz. Bunun için öncelikle Person adlı bir sınıf tanımlıyoruz ve bu sınıfa
 &lt;strong&gt;Lecturer&lt;/strong&gt; ve &lt;strong&gt;Student&lt;/strong&gt; sınıfların ortak özelliklerini yerleştiriyoruz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=person.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Gördüğünüz gibi Person sınıfımız önceki tanımladığımızın iki sınıfın özelliklerini içeriyor.
@@ -168,10 +168,10 @@ Burada dikkat ederseniz bölümü eklemedim. Bunun sebebi uygulamamıza ekleyece
 Ama her personelin T.C kimlik numarası, adı ve soyadı olmak zorunda.
 Student ve Lecturer sınıflarını aşağıdaki gibi değiştirebiliriz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=lecturer2.java&#34;&gt;&lt;/script&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/84daffabbbc96abca820.js?file=student2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Student ve Lecturer sınıflarının tanımlarına dikkat edersek &lt;strong&gt;extends Person&lt;/strong&gt; ifadesini görüyoruz.

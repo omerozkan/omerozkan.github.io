@@ -8,19 +8,26 @@
     <meta name="description" content="Linux&#39;da fare butonlarına işlev atama örneği">
     <meta name="keywords"
           content="linux,xbindkeys,linux,masaüstü">
+
+    <meta name="generator" content="Hugo 0.15" />
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/semantic.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/error.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://omerozkan.net/js/semantic.min.js"></script>
+
     <meta name="author" content="Ömer Özkan">
+
     <meta property="og:site_name" content="Ömer Özkan"/>
     <meta property="og:title" content="Ömer Özkan"/>
     <meta property="og:description" content="Linux&#39;da fare butonlarına işlev atama örneği"/>
     <meta property="og:url" content="https://omerozkan.net/linuxda-fare-butonlarina-islev-atama/">
     <meta property="og:type" content="blog"/>
     <meta property="og:image" content="linuxda-fare-butonlarina-islev-atama.png" />
-    <meta name="generator" content="Hugo 0.15" />
-    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/semantic.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/style.css">
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="https://omerozkan.net/js/semantic.min.js"></script>
+
     
     <link rel="apple-touch-icon" sizes="57x57" href="https://omerozkan.net/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://omerozkan.net/img/favicon/apple-icon-60x60.png">
@@ -39,6 +46,9 @@
     <meta name="msapplication-TileColor" content="#009688">
     <meta name="msapplication-TileImage" content="https://omerozkan.net/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#009688">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#009688">
 </head>
 <body>
 <section id="main">
@@ -70,29 +80,6 @@
                                     İletişim
                                 </a>
                                 
-                            </nav>
-                        </section>
-                        <section id="media-links" class="row">
-                            <nav class="ui icon secondary inverted menu">
-                                <div class="right menu">
-                                
-                                    <a class="item" href="https://twitter.com/omerozkan_" target="_blank">
-                                        <i class="twitter icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://www.linkedin.com/in/omerozkan" target="_blank">
-                                        <i class="linkedin icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://www.facebook.com/omerozkan" target="_blank">
-                                        <i class="facebook icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://github.com/omerozkan" target="_blank">
-                                        <i class="github icon"></i>
-                                    </a>
-                                
-                                </div>
                             </nav>
                         </section>
                     </div>
@@ -193,6 +180,8 @@
             </p>
             
 
+            <div class="clear"></div>
+
             
             
             <img class="ui right floated top aligned rounded medium image bordered right"
@@ -252,14 +241,14 @@ Bu pencere üzerinde fare ile bastığınız her tuşun numarasını uçbirim ek
 Örneğin benim atama yapmak istediğim scroll&rsquo;un tuşların numarası 6 ve 7&rsquo;dir.
 Sizin de aynı olmayabilir. Bu tuşlara işlev atamak için .xbindkeysrc dosyasını istediğiniz bir editörle açabilirsiniz.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/0846f89e4223f2481eb8.js?file=xbindkeysrc"></script>
 
 <p>Burada &ldquo;komut&rdquo; yerine neyi gerçekleştirmesini istiyorsanız onu giriyorsunuz.
 Bu satırı eklediğimde 6. butona bastığımda istediğim komutu gerçekleştirecektir.
 Ben 6. buton için ses azaltma, 7. buton için ses arttırma özelliklerini ekledim:</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/0846f89e4223f2481eb8.js?file=xbindkeysrcfinal"></script>
 
 <p>Dosyayı kaydedip kapattığınızda eğer xbindkeys uygulaması çalışmıyorsa, xbindkeys komutunu tekrar girebilirsiniz.
@@ -276,6 +265,26 @@ Aşağıdaki komutu girerek karşınıza çıkan pencerede xbindkeys i ekleyerek
 
 
             <div class="clear"></div>
+            <div class="ui section divider"></div>
+            
+            
+            <div class="ui tag labels">
+                
+                <span class="ui teal label">
+                    linux
+                </span>
+                
+                <span class="ui teal label">
+                    xbindkeys
+                </span>
+                
+                <span class="ui teal label">
+                    linux masaüstü
+                </span>
+                
+            </div>
+            
+
             
             <section id="comment">
                 <div class="ui section divider"></div>
@@ -297,25 +306,7 @@ Aşağıdaki komutu girerek karşınıza çıkan pencerede xbindkeys i ekleyerek
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
             </section>
             
-            <div class="ui section divider"></div>
-            
-            
-            <div class="ui tag labels">
-                
-                <span class="ui teal label">
-                    linux
-                </span>
-                
-                <span class="ui teal label">
-                    xbindkeys
-                </span>
-                
-                <span class="ui teal label">
-                    linux masaüstü
-                </span>
-                
-            </div>
-            
+
         </div>
 
     </article>
@@ -327,7 +318,7 @@ Aşağıdaki komutu girerek karşınıza çıkan pencerede xbindkeys i ekleyerek
         <div class="ten wide mobile ten wide tablet eight wide computer column centered">
             <div class="ui grid">
                 <div class="twelve wide mobile two wide tablet two wide computer centered column center aligned">
-                    <img id="footer-logo" src="https://omerozkan.net/img/footer-logo.png" alt="Footer lan ne bakiyon" class="ui image">
+                    <img id="footer-logo" src="https://omerozkan.net/img/footer-logo.png" alt="Ömer Özkan Logo" class="ui image">
                 </div>
                 <div class="twelve wide mobile eight wide tablet eight wide computer middle aligned centered column center aligned">
                     © 2008 Ömer Özkan. Tüm hakları saklıdır. <br/><a href="https://omerozkan.net">Ömer Özkan</a> is licensed under a <a

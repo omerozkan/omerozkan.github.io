@@ -8,19 +8,26 @@
     <meta name="description" content="OOP&#39;de Kapsülleme ve Java&#39;da erişim belirteçleri">
     <meta name="keywords"
           content="oop,encapsulation,java,public,private,package-private,protected">
+
+    <meta name="generator" content="Hugo 0.15" />
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/semantic.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/error.css">
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+    <script src="https://omerozkan.net/js/semantic.min.js"></script>
+
     <meta name="author" content="Ömer Özkan">
+
     <meta property="og:site_name" content="Ömer Özkan"/>
     <meta property="og:title" content="Ömer Özkan"/>
     <meta property="og:description" content="OOP&#39;de Kapsülleme ve Java&#39;da erişim belirteçleri"/>
     <meta property="og:url" content="https://omerozkan.net/oop-kapsulleme/">
     <meta property="og:type" content="blog"/>
     <meta property="og:image" content="oop-kapsulleme.jpg" />
-    <meta name="generator" content="Hugo 0.15" />
-    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/semantic.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
-    <link rel="stylesheet" type="text/css" href="https://omerozkan.net/css/style.css">
-    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <script src="https://omerozkan.net/js/semantic.min.js"></script>
+
     
     <link rel="apple-touch-icon" sizes="57x57" href="https://omerozkan.net/img/favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="https://omerozkan.net/img/favicon/apple-icon-60x60.png">
@@ -39,6 +46,9 @@
     <meta name="msapplication-TileColor" content="#009688">
     <meta name="msapplication-TileImage" content="https://omerozkan.net/img/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#009688">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#009688">
 </head>
 <body>
 <section id="main">
@@ -70,29 +80,6 @@
                                     İletişim
                                 </a>
                                 
-                            </nav>
-                        </section>
-                        <section id="media-links" class="row">
-                            <nav class="ui icon secondary inverted menu">
-                                <div class="right menu">
-                                
-                                    <a class="item" href="https://twitter.com/omerozkan_" target="_blank">
-                                        <i class="twitter icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://www.linkedin.com/in/omerozkan" target="_blank">
-                                        <i class="linkedin icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://www.facebook.com/omerozkan" target="_blank">
-                                        <i class="facebook icon"></i>
-                                    </a>
-                                
-                                    <a class="item" href="https://github.com/omerozkan" target="_blank">
-                                        <i class="github icon"></i>
-                                    </a>
-                                
-                                </div>
                             </nav>
                         </section>
                     </div>
@@ -193,6 +180,8 @@
             </p>
             
 
+            <div class="clear"></div>
+
             
             
             <img class="ui right floated top aligned rounded medium image bordered right"
@@ -260,12 +249,12 @@ olursunuz. Yani package veya package-private gibi kelimeler kullanılmaz.</p></l
 
 <p>Bunlara kullanarak örnek bir sınıf tasarlayalım.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=accessModifierTest.java"></script>
 
 <p>Payı (numerator) ve paydası (denominator) olan basit bir Rational (rasyonel) sınıfı tanımlayalım.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rational.java"></script>
 
 <p>Bu sınıfın iki değişkeni var: <strong><em>numerator</em></strong> ve <strong><em>denominator</em></strong>.
@@ -274,7 +263,7 @@ Bu iki alanın erişim belirleyicisini <strong>private</strong> olarak belirledi
 Bu sayede sınıf dışından erişimi kapatmış olduk.
 Örneğin başka bir sınıftan aşağıdaki gibi bir kullanım hatalı olacaktır.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rationalClient.java"></script>
 
 <p>Ayrıca dikkatlice incelerseniz <strong><em>Rational</em></strong> sınıfında <strong><em>IllegalDenominator</em></strong> sınıfı da tanımlanmış. Bu tür sınıflara
@@ -284,7 +273,7 @@ Bu sayede sınıf dışından erişimi kapatmış olduk.
 Bu metodların erişim belirleyicisi de <strong><em>public</em></strong> yani dışardan erişime açık.
 Bu sayede numerator ve denominator değişkenlerine bu metodlar aracılığı ile değer atanabilir. Aşağıdaki kullanım doğru olacaktır.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rationalClient2.java"></script>
 
 <p><strong><em>setNumerator</em></strong> ve <strong><em>setDenominator</em></strong> sayesinde numerator ve denominator değişkenlerine değer atanmış oldu.
@@ -301,7 +290,7 @@ Her alan için getter ve setter metodları tanımlamak zorundayız diye de düş
 Böyle bir zorunluluk yok. getter ve setter metodlar olmadan farklı metodlar aracılığı ile de erişimi kontrol altına alabilirsiniz.
 Örneğin sınıfımıza 3 tane constructor metod ekleyelim.</p>
 
-<div class="clear"></div>
+<div class="clear code"></div>
 <script src="//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rational2.java"></script>
 
 <p>Bu tasarımımız da farklı bir örnek oldu. Dikkat ederseniz bu tasarımımızda setter metodları kaldırdık.
@@ -313,27 +302,6 @@ değerini değiştiremez. Bu tarz sınıflara <strong>immutable</strong> sınıf
 
 
             <div class="clear"></div>
-            
-            <section id="comment">
-                <div class="ui section divider"></div>
-                <div id="disqus_thread"></div>
-<script>
-     var disqus_config = function () {
-     this.page.url = 'https:\/\/omerozkan.net\/oop-kapsulleme\/'; 
-     this.page.identifier = 'oop-kapsulleme';
-     };
-    (function() {
-        var d = document, s = d.createElement('script');
-
-        var disqus_shortname = 'omerozkan';
-        s.src = '//' + disqus_shortname +'.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-            </section>
-            
             <div class="ui section divider"></div>
             
             
@@ -369,6 +337,29 @@ değerini değiştiremez. Bu tarz sınıflara <strong>immutable</strong> sınıf
                 
             </div>
             
+
+            
+            <section id="comment">
+                <div class="ui section divider"></div>
+                <div id="disqus_thread"></div>
+<script>
+     var disqus_config = function () {
+     this.page.url = 'https:\/\/omerozkan.net\/oop-kapsulleme\/'; 
+     this.page.identifier = 'oop-kapsulleme';
+     };
+    (function() {
+        var d = document, s = d.createElement('script');
+
+        var disqus_shortname = 'omerozkan';
+        s.src = '//' + disqus_shortname +'.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+            </section>
+            
+
         </div>
 
     </article>
@@ -380,7 +371,7 @@ değerini değiştiremez. Bu tarz sınıflara <strong>immutable</strong> sınıf
         <div class="ten wide mobile ten wide tablet eight wide computer column centered">
             <div class="ui grid">
                 <div class="twelve wide mobile two wide tablet two wide computer centered column center aligned">
-                    <img id="footer-logo" src="https://omerozkan.net/img/footer-logo.png" alt="Footer lan ne bakiyon" class="ui image">
+                    <img id="footer-logo" src="https://omerozkan.net/img/footer-logo.png" alt="Ömer Özkan Logo" class="ui image">
                 </div>
                 <div class="twelve wide mobile eight wide tablet eight wide computer middle aligned centered column center aligned">
                     © 2008 Ömer Özkan. Tüm hakları saklıdır. <br/><a href="https://omerozkan.net">Ömer Özkan</a> is licensed under a <a

@@ -289,7 +289,7 @@ Kata hakkında bilgi almak için ise &lt;a href=&#34;http://www.kurumsaljava.com
 
 &lt;p&gt;Öncelikle RomanNumeral sınıfı için test sınıfı (RomanNumeralTest) oluşturuyoruz ve bir test metodu yazıyoruz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Anlaşılacağı gibi &amp;ldquo;I&amp;rdquo; değerini verdiğimde sonuç olarak 1 değerini döndermesi gerekir. Bunu için assertThat metodunu kullandım.
@@ -300,12 +300,12 @@ Burda kodun okunmasını kolaylaştırmak amacı ile CoreMatchers.is ve CoreMatc
 Test kodlarını çalıştırdığımızda başarısız olduğunu görüyoruz. Bu testi geçmek için çok detaylı diğer roman rakamlarını da düşünerek kod yazmıyoruz.
 Sadece bu testin gerçekleşmesi için gereken kodu yazıyoruz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d11659da5f094d.js?file=romanNumeral1.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;code&gt;return 1&lt;/code&gt; ifadesini eklemek testlerin başarılı olmasını sağlayacaktır. Bunu gerçekleştirdikten sonra 2. bir test daha ekliyoruz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Burda dikkat ederseniz roman nesnesini yerel değişken olarak kullanmak yerine sınıf değişkeni yani &amp;ldquo;field&amp;rdquo; olarak kullanıyorum.
@@ -315,22 +315,22 @@ Yukarda bahsettiğim gibi öncelikle niyetimizi yazıyoruz.
 convert metodunda değişiklik yaparken bu sefer her 2 testin de çalışmasına dikkat etmemiz gerekiyor.
 O yüzden RomanNumeral sınıfımız aşağıdaki gibi olacaktır.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;metodumuza bir if ekleyerek 2 testin de başarılı olmasını sağladık. Aynı şeyi &amp;ldquo;X&amp;rdquo; -&amp;gt; 10 için de yapıyoruz.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeralTest3.java&#34;&gt;&lt;/script&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral3.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;3. testimizi yazıp gereken değişiklikleri yaptık. convert metoduna baktığımızda istenmeyen bir durum görüyoruz.
 Her yeni test için sürekli bir &lt;code&gt;if&lt;/code&gt; ekleyemeyiz. O yüzden RomanNumeral sınıfını &lt;code&gt;Map&lt;/code&gt; kullanarak aşağıdaki şekilde düzenliyoruz.
 Böylece metodu tek satıra düşürebiliriz.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;p&gt;&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/bef51d116509da5f094d.js?file=romanNumeral3Refactor.java&#34;&gt;&lt;/script&gt;&lt;/p&gt;
 
 &lt;p&gt;Burada adım adım giderek refactoring işlemlerini de adım adım yaptık. Test güdümlü geliştirdiğimiz için testlerden

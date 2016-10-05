@@ -74,12 +74,12 @@ olursunuz. Yani package veya package-private gibi kelimeler kullanılmaz.&lt;/p&
 
 &lt;p&gt;Bunlara kullanarak örnek bir sınıf tasarlayalım.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=accessModifierTest.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Payı (numerator) ve paydası (denominator) olan basit bir Rational (rasyonel) sınıfı tanımlayalım.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rational.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Bu sınıfın iki değişkeni var: &lt;strong&gt;&lt;em&gt;numerator&lt;/em&gt;&lt;/strong&gt; ve &lt;strong&gt;&lt;em&gt;denominator&lt;/em&gt;&lt;/strong&gt;.
@@ -88,7 +88,7 @@ Bu iki alanın erişim belirleyicisini &lt;strong&gt;private&lt;/strong&gt; olar
 Bu sayede sınıf dışından erişimi kapatmış olduk.
 Örneğin başka bir sınıftan aşağıdaki gibi bir kullanım hatalı olacaktır.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rationalClient.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Ayrıca dikkatlice incelerseniz &lt;strong&gt;&lt;em&gt;Rational&lt;/em&gt;&lt;/strong&gt; sınıfında &lt;strong&gt;&lt;em&gt;IllegalDenominator&lt;/em&gt;&lt;/strong&gt; sınıfı da tanımlanmış. Bu tür sınıflara
@@ -98,7 +98,7 @@ Bu sayede sınıf dışından erişimi kapatmış olduk.
 Bu metodların erişim belirleyicisi de &lt;strong&gt;&lt;em&gt;public&lt;/em&gt;&lt;/strong&gt; yani dışardan erişime açık.
 Bu sayede numerator ve denominator değişkenlerine bu metodlar aracılığı ile değer atanabilir. Aşağıdaki kullanım doğru olacaktır.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rationalClient2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;setNumerator&lt;/em&gt;&lt;/strong&gt; ve &lt;strong&gt;&lt;em&gt;setDenominator&lt;/em&gt;&lt;/strong&gt; sayesinde numerator ve denominator değişkenlerine değer atanmış oldu.
@@ -115,7 +115,7 @@ Her alan için getter ve setter metodları tanımlamak zorundayız diye de düş
 Böyle bir zorunluluk yok. getter ve setter metodlar olmadan farklı metodlar aracılığı ile de erişimi kontrol altına alabilirsiniz.
 Örneğin sınıfımıza 3 tane constructor metod ekleyelim.&lt;/p&gt;
 
-&lt;div class=&#34;clear&#34;&gt;&lt;/div&gt;
+&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
 &lt;script src=&#34;//gist.github.com/omerozkan/0e06db9d134e6d5699ba.js?file=rational2.java&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;Bu tasarımımız da farklı bir örnek oldu. Dikkat ederseniz bu tasarımımızda setter metodları kaldırdık.
