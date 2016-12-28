@@ -6,8 +6,88 @@
     <description>Recent content on Ömer Özkan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
-    <lastBuildDate>Tue, 04 Oct 2016 22:29:03 +0300</lastBuildDate>
+    <lastBuildDate>Tue, 27 Dec 2016 21:26:03 +0300</lastBuildDate>
     <atom:link href="https://omerozkan.net/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AB 17 ve Temiz Kod Kursu</title>
+      <link>https://omerozkan.net/ab-17/</link>
+      <pubDate>Tue, 27 Dec 2016 21:26:03 +0300</pubDate>
+      
+      <guid>https://omerozkan.net/ab-17/</guid>
+      <description>
+
+&lt;p&gt;Her yıl düzenlenen Akademik Bilişim 17, Aksaray&amp;rsquo;da 4 - 11 Şubat tarihleri arasında düzenleniyor.&lt;/p&gt;
+
+&lt;p&gt;Geçen yıl olduğu gibi bu yılda &lt;strong&gt;&lt;em&gt;Temiz Kod&lt;/em&gt;&lt;/strong&gt; kursu ve &lt;strong&gt;&lt;em&gt;RESTFul Web Servisleri&lt;/em&gt;&lt;/strong&gt; semineri ile etkinliğe katılıyorum. Bu yıl ikincisini düzenleyeceğim &amp;ldquo;Temiz Kod&amp;rdquo; kursun geçen seneye göre daha verimli olacağını düşünüyorum.&lt;/p&gt;
+
+&lt;p&gt;Kurslar ve seminerler tamamen &lt;strong&gt;&lt;em&gt;ücretsiz&lt;/em&gt;&lt;/strong&gt; olup herkese açıktır. Katılımcılar dilerlerse KYK yurtlarında uygun fiyatlara konaklayabilirler.  Kurs kayıtları &lt;a href=&#34;https://kayit.ab.org.tr/&#34;&gt;https://kayit.ab.org.tr/&lt;/a&gt; üzerinden 2 - 10 Ocak tarihleri arasında yapılacaktır.&lt;/p&gt;
+
+&lt;p&gt;Açılan diğer kurslar hakkında bilgiyi &lt;a href=&#34;http://ab.org.tr/ab17/kurs.html&#34;&gt;buradan&lt;/a&gt; bulabilirsiniz. Temiz kod kursuna gelirsek:&lt;/p&gt;
+
+&lt;h3 id=&#34;kurs-hakkında:1bddc67295093770280394596bf680ba&#34;&gt;Kurs Hakkında&lt;/h3&gt;
+
+&lt;p&gt;Bir yazılımın bakımını yapmak geliştirmekten daha zordur. Kod altyapısının temiz olması ürünün bakımını kolaylaştırır. Bu açıdan temiz kod akımı yazılımda oldukça önemli ve popüler bir hale gelmiştir.&lt;/p&gt;
+
+&lt;p&gt;Temiz kod üretebilmek ve yeniden yapılandırmak (refactoring) için gerekli kurallar ve teknikler Java programlama dili ve araçları kullanılarak uygulamalı olarak anlatılacaktır. Kurs temel olarak &lt;strong&gt;&lt;em&gt;temiz kod prensipleri&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;temel yazılım prensipleri&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;yeniden yapılandırma teknikleri&lt;/em&gt;&lt;/strong&gt; ve &lt;strong&gt;&lt;em&gt;test kavramları&lt;/em&gt;&lt;/strong&gt; konularından oluşmaktadır.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Not:&lt;/strong&gt; Bu kurs yazılım geliştiricileri veya mühendisleri içindir. Test mühendisliği ile ilgilenen adaylar için bu kurs uygun değildir.&lt;/p&gt;
+
+&lt;h3 id=&#34;katılımcılar-için-ön-koşullar:1bddc67295093770280394596bf680ba&#34;&gt;Katılımcılar için Ön Koşullar&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Temel düzeyde nesne yönelimli programlama (OOP) bilgisi olan&lt;/li&gt;
+&lt;li&gt;Okuduğunu anlayacak düzeyde İngilizce bilgisi olan&lt;/li&gt;
+&lt;li&gt;Temiz kod ve yeniden yapılandırma (refactoring) gibi kavramlara meraklı&lt;/li&gt;
+&lt;li&gt;Herhangi bir nesne yönelimli bir dil ile proje geliştiren,&lt;/li&gt;
+&lt;li&gt;Tercihen Java programlama diline hakim kişiler hedeflenmiştir.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;katılımcılardan-istenenler:1bddc67295093770280394596bf680ba&#34;&gt;Katılımcılardan İstenenler&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dizüstü bilgisayarlarının yanında getirmeleri,&lt;/li&gt;
+&lt;li&gt;Sistemlerine JDK 8 (Java Development Kit) ve Eclipse for JavaEE (Neon) kurmaları gerekmektedir. Dileyenler IntellijIdea&amp;rsquo;nın topluluk versiyonunu Apache License kullanabilirler.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;kontenjan:1bddc67295093770280394596bf680ba&#34;&gt;Kontenjan&lt;/h3&gt;
+
+&lt;p&gt;Kontenjan &lt;strong&gt;16&lt;/strong&gt; kişi ile sınırlıdır.&lt;/p&gt;
+
+&lt;h3 id=&#34;kursiyer-seçimi:1bddc67295093770280394596bf680ba&#34;&gt;Kursiyer Seçimi&lt;/h3&gt;
+
+&lt;p&gt;Katılımcıların seviyesini ve/veya kursiyer seçimi için kurstan önce çevrimiçi bir sınav uygulaması yapılacaktır. Bütün katılımcıların sınava dahil olması zorunludur.&lt;/p&gt;
+
+&lt;h3 id=&#34;konular:1bddc67295093770280394596bf680ba&#34;&gt;Konular&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Temiz kod nedir?&lt;/li&gt;
+&lt;li&gt;Kod Konvansiyonu (Code Convention)&lt;/li&gt;
+&lt;li&gt;İsimlendirme&lt;/li&gt;
+&lt;li&gt;Fonksiyonlar / Metodlar&lt;/li&gt;
+&lt;li&gt;Yorum Satırları&lt;/li&gt;
+&lt;li&gt;Kod Stili&lt;/li&gt;
+&lt;li&gt;SOLID&lt;/li&gt;
+&lt;li&gt;Exception / Error Handling&lt;/li&gt;
+&lt;li&gt;Sınıflar&lt;/li&gt;
+&lt;li&gt;Üçüncü parti bağımlılıklar&lt;/li&gt;
+&lt;li&gt;Yeniden yapılandırma (Refactoring)&lt;/li&gt;
+&lt;li&gt;Temel yeniden yapılandırma teknikleri&lt;/li&gt;
+&lt;li&gt;Eclipse ile yeniden yapılandırma&lt;/li&gt;
+&lt;li&gt;Yazılımda Test Kavramı ve JUnit&lt;/li&gt;
+&lt;li&gt;Test Güdümlü Geliştirme&lt;/li&gt;
+&lt;li&gt;Örnek Uygulama: Bowling Oyunu&lt;/li&gt;
+&lt;li&gt;Test prensipleri (FIRST)&lt;/li&gt;
+&lt;li&gt;Örnek Uygulama: Video Store&lt;/li&gt;
+&lt;li&gt;Testlerin temizlenmesi&lt;/li&gt;
+&lt;li&gt;Ürün kodunun temizlenmesi&lt;/li&gt;
+&lt;li&gt;Kodu gözden geçirme (Code Review)&lt;/li&gt;
+&lt;li&gt;Sistemler ve Yazılım Mimarisi&lt;/li&gt;
+&lt;li&gt;Microservice Mimari&lt;/li&gt;
+&lt;li&gt;Örnek Uygulamalar&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Java&#39;da Override Anotasyonu</title>
@@ -390,39 +470,43 @@ farklı farklı değişikliklere uğrayabilir.&lt;/p&gt;
       <pubDate>Tue, 16 Feb 2016 06:39:06 +0200</pubDate>
       
       <guid>https://omerozkan.net/hakkimda/</guid>
-      <description>&lt;p&gt;Merhabalar.&lt;/p&gt;
+      <description>&lt;p&gt;Merhabalar&lt;/p&gt;
 
 &lt;p&gt;&lt;img class=&#34;ui right floated bordered image content-image&#34; src=&#34;http://s.gravatar.com/avatar/deb32ea991fee11136e3c72aee30be78?s=150&#34;
      alt=&#34;Ömer Özkan&#34; /&gt;
-Bu site kendi duygu ve düşüncelerimi aktarmak için oluşturduğum kişisel bir web günlüğüdür.
-Bu sitede yazılım ile ilgili (özellikle java ve açık-kaynak teknolojileri) bilgiler,
-yazılım geliştirmenin derinlerine inerken yaşadığım olaylar, katıldığım etkinlikler
-ve diğer konulardaki kişisel düşüncelerim hakkında bilgiler bulabilirsiniz.&lt;/p&gt;
+Öncelikle hakkımda sayfasını ve siteyi ziyaret ettiğiniz için teşekkür ederim.
+Bu günlük (blog) genellikle yazılımla ilgili kendi duygu ve düşüncelerimi anlattığım bir web sayfasıdır. Bu sitede yazılım mühendisliği ile ilgili bilgileri, yaşadığım tecrübeleri, bazen de anılarımı bulabilirsiniz. Bazı yazılar, özellikle öğrenciyken yazmış olduklarım yanlış bilgi de içeriyor olabilirler. Birkaç istisna dışında yazıları değiştirmeyi sevmem. Onları arada sırada tekrar okuyup eski günleri anımsarım. O yüzden bu tür yazılara dikkat ediniz.&lt;/p&gt;
 
-&lt;p&gt;Kendimden kısaca bahsedersem:&lt;/p&gt;
+&lt;p&gt;Kendimden bahsedersem:&lt;/p&gt;
 
 &lt;ul&gt;
-&lt;li&gt;1990, Ceyhan doğumluyum,&lt;/li&gt;
+&lt;li&gt;1990, Adana / Ceyhan doğumluyum,&lt;/li&gt;
 &lt;li&gt;Yazılım mühendisiyim,&lt;/li&gt;
-&lt;li&gt;Mümkün olduğunca &amp;ldquo;Özgür&amp;rdquo; ve açık kaynak yazılım kullanırım ve geliştirmeye çalışırım.&lt;/li&gt;
-&lt;li&gt;2014 yılında &amp;ldquo;Bilgisayar Mühendisliği&amp;rdquo; bölümünden mezun oldum.&lt;/li&gt;
+&lt;li&gt;2014 yılında mezun oldum,&lt;/li&gt;
+&lt;li&gt;Çoğunlukla Java teknolojileri ile geliştiriyorum,&lt;/li&gt;
+&lt;li&gt;Mümkün olduğunca &amp;ldquo;Özgür&amp;rdquo; ve/veya açık kaynak teknolojiler kullanıyorum,&lt;/li&gt;
+&lt;li&gt;Kendimi tanıtırken Clean Code Developer* olarak tanıtırım.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Programlama dilleri ve teknolojiler arasında ayrım yapmamakla beraber favori ortamım Java&amp;rsquo;dır.
-Daha çok kurumsal uygulamaları severim. Clean code akimi, refactoring, çevik yöntemler benim için oldukça önemlidir.
-İmkan buldukça TDD uygularım.
-Yazılım geliştirme ile beraber yazılım mimarisi konusunda da uzmanlaşmaya çalışmaktayım.
-Düzenli olarak kitap okumaya ve kendimi geliştirmeye çalışırım. Öğrenmenin yanında öğretmeyi de severim.
-İmkan buldukça etkinliklerde konuşmacı ve eğitmen olarak yer alırım.&lt;/p&gt;
+&lt;p&gt;Mezun olduktan sonra OpsGenie&amp;rsquo;nin ekibine dahil oldum ve bu şirkette çalışmaya devam etmekteyim.&lt;/p&gt;
 
-&lt;p&gt;Özellikle &lt;a href=&#34;http://www.objectmentor.com/omTeam/martin_r.html&#34;&gt;Robert C. Martin (Uncle Bob)&lt;/a&gt;, &lt;a href=&#34;http://martinfowler.com/&#34;&gt;Martin Fowler&lt;/a&gt;,
-&lt;a href=&#34;http://www.threeriversinstitute.org/Kent%20Beck.htm&#34;&gt;Kent Beck&lt;/a&gt; gibi ustaları takip eder, onların görüşlerini savunurum.&lt;/p&gt;
+&lt;p&gt;Yeri gelmişken hemen açıklayayım,
+&amp;ldquo;Clean Code&amp;rdquo; yani Temiz Kod akımı Robert C. Martin (a.k.a. Uncle Bob) tarafından başlatılan bir akımdır.
+Bu akımda kodun temiz olması ve bakımı yapılabilir (maintainable) olması sürecin bir parçası olup bu konuda prensipler ve pratikler tanımlamıştır.
+Ben de hem özel işlerimde hem de iş hayatında bu prensiplere ve pratiklere önem veririm.
+Ayrıca yazılım hayatımda küçük şeylere bile oldukça takıntım vardır.&lt;/p&gt;
 
-&lt;p&gt;Müzik benim en sevdiğim hobilerimden biridir. Bir başlangıç serisi Ibanez gitarım ve Vox VT20 amfim var. Zaman buldukça öğreniyorum.&lt;/p&gt;
+&lt;p&gt;Boş zamanımda mutlaka yazılımla ilgili birşeyler okuyorum.
+İş hayatımda &lt;em&gt;Operations&lt;/em&gt; takımından kaçtıysam da arada sırada hobi olarak operasyon işleri ile uğraşmaktan zevk alır,
+bazen de front-end teknolojilerle uğraşırım.&lt;/p&gt;
 
-&lt;p&gt;Bu web sayfası 2008 den beri yayınlanmaktadır. Fakat bugüne kadar birçok değişikliğe uğramıştır.
-Bundan sonra tema dışında bir değişikliğe uğrayacağını sanmıyorum.
-Yazılar hakkında düşüncelerinizi yorum yazarak veya e-posta atarak bana iletebilirsiniz.&lt;/p&gt;
+&lt;p&gt;Müzikle de ilgileniyorum. Başlangıç serisi bir Ibanez gitarım ve masamda duran Vox VT20 amfim var. Selim Işık&amp;rsquo;ın &amp;ldquo;Elektro Gitar Metodu&amp;rdquo; ile öğrenmeye çalışıyorum.&lt;/p&gt;
+
+&lt;p&gt;Meraklılar için bu site &lt;a href=&#34;https://gohugo.io&#34;&gt;hugo&lt;/a&gt; ile üretilmektedir. &lt;a href=&#34;https://github.com/omerozkan/omerozkan.github.io&#34;&gt;Github&lt;/a&gt; üzerinden host edilmektedir. Temayı ise &lt;a href=&#34;http://semantic-ui.com/&#34;&gt;Semantic-ui&lt;/a&gt; ile geliştirdim.&lt;/p&gt;
+
+&lt;p&gt;Bana ulaşmak isterseniz eposta gönderebilirsiniz. Epostaları sürekli kontrol eden birisiyim. Mümkün olduğunca kısa sürede dönmeye çalışırım. Umarım paylaştığım bilgiler faydalı olur.&lt;/p&gt;
+
+&lt;p&gt;Yazılarda görüşmek üzere&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     
@@ -976,47 +1060,6 @@ PowerMockito&amp;rsquo;nun gereken sınıfları taklit etmesi için test sınıf
 Bu sayede testlerimiz çalışır hale gelmektedir.&lt;/p&gt;
 
 &lt;p&gt;Bir başka yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Github Depolarının Redmine&#39;a Entegre Edilmesi</title>
-      <link>https://omerozkan.net/github-deposunun-redminea-baglanmasi/</link>
-      <pubDate>Mon, 02 Dec 2013 00:00:00 +0000</pubDate>
-      
-      <guid>https://omerozkan.net/github-deposunun-redminea-baglanmasi/</guid>
-      <description>&lt;p&gt;İş takip sistemi Redmine&amp;rsquo;ı ve sürüm takip sistemi git&amp;rsquo;i kullanıyorum. Git, SVN gibi sürüm takip sistemlerindeki depoları
-redmine&amp;rsquo;a bağlayabiliyorsunuz. Github ise açık kaynak projelere ücretsiz alan sağlıyor.
-Github&amp;rsquo;daki bir projemi Redmine&amp;rsquo;a bağlamak istedim. Kendi uğraşımdan sonra &lt;a href=&#34;https://eventualis.org/&#34;&gt;Samed Beyribey&lt;/a&gt;&amp;lsquo;den yardım istedim.
-Kendisi nasıl entegre edebileceğimi anlattı. Sizler için de faydalı olacağını düşünerekten bu yazıyı paylaşmak istedim.&lt;/p&gt;
-
-&lt;p&gt;Github depolarınızı Redmine&amp;rsquo;a entegre etmek için aşağıdaki adımları uygulamanız yeterlidir.&lt;/p&gt;
-
-&lt;p&gt;Öncelikle Github deposunu Redmine&amp;rsquo;ın kurulu olduğu sunucuda dilediğiniz bir dizine git projenizi mirror parametresi ile klonlayın.&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;git clone https://github.com/omerozkan/vipera.git --mirror&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Eğer projeniz private ise http yerine ssh ile klonlayabilirsiniz.
-Klonlama işleminden sonra redmine panelinden Yönetim -&amp;gt; Ayarlar sayfasına gidin ve Depolar sekmesinden bir API Key oluşturun.&lt;/p&gt;
-
-&lt;p&gt;Eklemek istediğiniz projeye gidip projede Ayarlar -&amp;gt; Depolar &amp;lsquo;a tıklayıp yeni bir depo oluşturun.
-Burda &amp;ldquo;Path to repository&amp;rdquo; değerine klonladığınız git dizininin tam yolunu yazın.
-Klonladığınız git dizinine redmine&amp;rsquo;nın sistemdeki kullanıcısının erişebilmesi gerekiyor. İzinleri ona göre yapılandırın.
-Bu işlemi gerçekleştirdikten sonra git deposundaki son değişiklikleri alması ve redmine&amp;rsquo;ın bu değişiklikleri okuması için cron oluşturmak gerekiyor.
-Cron oluşturmak için&lt;/p&gt;
-
-&lt;p&gt;&lt;code&gt;crontab -e&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;komutunu girdiğinizde karşınıza vi editoru çıkacaktır. Cron ayarlarınızı vi editorüne girip kaydedebilirsiniz.
-Örneğin her saat başı güncellemeleri almak istiyorsanız aşağıdaki cron ayarlarını kullanabilirsiniz.&lt;/p&gt;
-
-&lt;div class=&#34;clear code&#34;&gt;&lt;/div&gt;
-&lt;script src=&#34;//gist.github.com/omerozkan/1d0ecc2af86e3d4eb312.js?file=cron&#34;&gt;&lt;/script&gt;
-
-&lt;p&gt;Böylelikle github projenizi redmine&amp;rsquo;a entegre etmiş olursunuz.
-Standart olarak &amp;ldquo;refs #işnumarası&amp;rdquo; şeklinde gönderdiğiniz commitler redmine&amp;rsquo;da o işe bağlanacaktır.&lt;/p&gt;
-
-&lt;p&gt;Bir sonraki yazıda görüşmek üzere&amp;hellip;&lt;/p&gt;
 </description>
     </item>
     

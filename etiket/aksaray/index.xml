@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Temiz Kod on Ömer Özkan</title>
-    <link>https://omerozkan.net/etiket/temiz-kod/</link>
-    <description>Recent content in Temiz Kod on Ömer Özkan</description>
+    <title>Aksaray on Ömer Özkan</title>
+    <link>https://omerozkan.net/etiket/aksaray/</link>
+    <description>Recent content in Aksaray on Ömer Özkan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
     <lastBuildDate>Tue, 27 Dec 2016 21:26:03 +0300</lastBuildDate>
-    <atom:link href="https://omerozkan.net/etiket/temiz-kod/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://omerozkan.net/etiket/aksaray/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>AB 17 ve Temiz Kod Kursu</title>
@@ -85,110 +85,6 @@
 &lt;li&gt;Sistemler ve Yazılım Mimarisi&lt;/li&gt;
 &lt;li&gt;Microservice Mimari&lt;/li&gt;
 &lt;li&gt;Örnek Uygulamalar&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>AB 16 Temiz Kod Kursu</title>
-      <link>https://omerozkan.net/ab-16-temiz-kod-kursu/</link>
-      <pubDate>Sat, 02 Jan 2016 00:00:00 +0000</pubDate>
-      
-      <guid>https://omerozkan.net/ab-16-temiz-kod-kursu/</guid>
-      <description>
-
-&lt;p&gt;Merhabalar&lt;/p&gt;
-
-&lt;p&gt;Bu yıl &lt;a href=&#34;http://sadikcetin.net/&#34;&gt;Sadık Çetin&lt;/a&gt; ile beraber, 30 Ocak – 2 Şubat arasında Aydın&amp;rsquo;da düzenlenecek
-Akademik Bilişim konferans öncesi kurslar kapsamında Temiz Kod kursu vereceğiz.
-Kurs tamamen ücretsiz olup herkese açıktır. Katılımcılar dilerlerse KYK yurtlarında da konaklayabilirler.
-Kurs genel olarak clean code, refactoring ve test driven development konularını içermektedir.&lt;/p&gt;
-
-&lt;p&gt;Kayıt için: &lt;a href=&#34;https://kayit.ab.org.tr&#34;&gt;https://kayit.ab.org.tr&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Kurs hakkında detaylı bilgiyi yazının devamında bulabilirsiniz.&lt;/p&gt;
-
-&lt;h3 id=&#34;kurs-hakkında:71bbf2088587004e82981ef7c8a5324f&#34;&gt;Kurs Hakkında&lt;/h3&gt;
-
-&lt;p&gt;Bir yazılımın bakımını yapmak geliştirmekten daha zordur. Kod altyapısının temiz olması ürünün bakımını kolaylaştırır.
-Bu açıdan temiz kod akımı yazılımda oldukça önemli ve popüler bir hale gelmiştir.&lt;/p&gt;
-
-&lt;p&gt;Temiz kod üretebilmek ve yeniden yapılandırmak (refactoring) için gerekli kurallar ve teknikler Java programlama dili ve araçları
-kullanılarak uygulamalı olarak anlatılacaktır.&lt;/p&gt;
-
-&lt;h3 id=&#34;katılımcılar-için-ön-şartlar:71bbf2088587004e82981ef7c8a5324f&#34;&gt;Katılımcılar İçin Ön Şartlar&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Temel düzeyde nesne yönelimli programlama (OOP) bilgisi olan&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Okuduğunu anlayacak düzeyde İngilizce bilgisi olan&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Temiz kod ve yeniden yapılandırma (refactoring) gibi kavramlara meraklı&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Herhangi bir nesne yönelimli bir dil ile proje geliştiren,&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Tercihen Java programlama diline hakim kişiler hedeflenmiştir.&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;katılımcılardan-istenenler:71bbf2088587004e82981ef7c8a5324f&#34;&gt;Katılımcılardan İstenenler&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;Dizüstü bilgisayarlarının yanında getirmeleri,&lt;/p&gt;&lt;/li&gt;
-
-&lt;li&gt;&lt;p&gt;Sistemlerine JDK 8 (Java Development Kit) ve Eclipse for JavaEE (Mars) kurmaları gerekmektedir,
-(Dileyenler IntellijIdea&amp;rsquo;nın topluluk versiyonunu kullanabilirler.)&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;kontenjan:71bbf2088587004e82981ef7c8a5324f&#34;&gt;Kontenjan&lt;/h3&gt;
-
-&lt;p&gt;Kontenjan 16 kişi ile sınırlıdır.&lt;/p&gt;
-
-&lt;h3 id=&#34;konular:71bbf2088587004e82981ef7c8a5324f&#34;&gt;Konular&lt;/h3&gt;
-
-&lt;h4 id=&#34;1-gün:71bbf2088587004e82981ef7c8a5324f&#34;&gt;1. Gün&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Temiz kod nedir?&lt;/li&gt;
-&lt;li&gt;Kod Konvansiyonu (Code Convention)&lt;/li&gt;
-&lt;li&gt;İsimlendirme&lt;/li&gt;
-&lt;li&gt;Fonksiyonlar / Metodlar&lt;/li&gt;
-&lt;li&gt;Yorum Satırları&lt;/li&gt;
-&lt;li&gt;Kod Stili&lt;/li&gt;
-&lt;li&gt;Nesneler ve Veri Yapıları&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;2-gün:71bbf2088587004e82981ef7c8a5324f&#34;&gt;2. Gün&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Exception / Error Handling&lt;/li&gt;
-&lt;li&gt;Sınıflar&lt;/li&gt;
-&lt;li&gt;Üçüncü parti bağımlılıklar&lt;/li&gt;
-&lt;li&gt;Yeniden yapılandırma (Refactoring)&lt;/li&gt;
-&lt;li&gt;Temel yeniden yapılandırma teknikleri&lt;/li&gt;
-&lt;li&gt;Eclipse ile yeniden yapılandırma&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;3-gün:71bbf2088587004e82981ef7c8a5324f&#34;&gt;3. Gün&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Testler ve JUnit&lt;/li&gt;
-&lt;li&gt;Temiz Testler&lt;/li&gt;
-&lt;li&gt;Test Güdümlü Geliştirme&lt;/li&gt;
-&lt;li&gt;Örnek Uygulama: Bowling Oyunu&lt;/li&gt;
-&lt;li&gt;Test prensipleri (FIRST)&lt;/li&gt;
-&lt;li&gt;Örnek Uygulama: Video Store&lt;/li&gt;
-&lt;li&gt;Testlerin temizlenmesi&lt;/li&gt;
-&lt;li&gt;Ürün kodunun temizlenmesi&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;4-gün:71bbf2088587004e82981ef7c8a5324f&#34;&gt;4. Gün&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Kodu gözden geçirme (Code Review)&lt;/li&gt;
-&lt;li&gt;Sistemler&lt;/li&gt;
-&lt;li&gt;Temiz Mimari&lt;/li&gt;
-&lt;li&gt;Eşli Programlama (Pair Programming)&lt;/li&gt;
-&lt;li&gt;Eşli Programlama Uygulaması: Roma Rakamları, Tenis Oyunu&lt;/li&gt;
 &lt;/ul&gt;
 </description>
     </item>

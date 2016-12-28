@@ -6,8 +6,88 @@
     <description>Recent content in Duyuru on Ömer Özkan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>tr</language>
-    <lastBuildDate>Sat, 02 Jan 2016 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Dec 2016 21:26:03 +0300</lastBuildDate>
     <atom:link href="https://omerozkan.net/etiket/duyuru/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>AB 17 ve Temiz Kod Kursu</title>
+      <link>https://omerozkan.net/ab-17/</link>
+      <pubDate>Tue, 27 Dec 2016 21:26:03 +0300</pubDate>
+      
+      <guid>https://omerozkan.net/ab-17/</guid>
+      <description>
+
+&lt;p&gt;Her yıl düzenlenen Akademik Bilişim 17, Aksaray&amp;rsquo;da 4 - 11 Şubat tarihleri arasında düzenleniyor.&lt;/p&gt;
+
+&lt;p&gt;Geçen yıl olduğu gibi bu yılda &lt;strong&gt;&lt;em&gt;Temiz Kod&lt;/em&gt;&lt;/strong&gt; kursu ve &lt;strong&gt;&lt;em&gt;RESTFul Web Servisleri&lt;/em&gt;&lt;/strong&gt; semineri ile etkinliğe katılıyorum. Bu yıl ikincisini düzenleyeceğim &amp;ldquo;Temiz Kod&amp;rdquo; kursun geçen seneye göre daha verimli olacağını düşünüyorum.&lt;/p&gt;
+
+&lt;p&gt;Kurslar ve seminerler tamamen &lt;strong&gt;&lt;em&gt;ücretsiz&lt;/em&gt;&lt;/strong&gt; olup herkese açıktır. Katılımcılar dilerlerse KYK yurtlarında uygun fiyatlara konaklayabilirler.  Kurs kayıtları &lt;a href=&#34;https://kayit.ab.org.tr/&#34;&gt;https://kayit.ab.org.tr/&lt;/a&gt; üzerinden 2 - 10 Ocak tarihleri arasında yapılacaktır.&lt;/p&gt;
+
+&lt;p&gt;Açılan diğer kurslar hakkında bilgiyi &lt;a href=&#34;http://ab.org.tr/ab17/kurs.html&#34;&gt;buradan&lt;/a&gt; bulabilirsiniz. Temiz kod kursuna gelirsek:&lt;/p&gt;
+
+&lt;h3 id=&#34;kurs-hakkında:1bddc67295093770280394596bf680ba&#34;&gt;Kurs Hakkında&lt;/h3&gt;
+
+&lt;p&gt;Bir yazılımın bakımını yapmak geliştirmekten daha zordur. Kod altyapısının temiz olması ürünün bakımını kolaylaştırır. Bu açıdan temiz kod akımı yazılımda oldukça önemli ve popüler bir hale gelmiştir.&lt;/p&gt;
+
+&lt;p&gt;Temiz kod üretebilmek ve yeniden yapılandırmak (refactoring) için gerekli kurallar ve teknikler Java programlama dili ve araçları kullanılarak uygulamalı olarak anlatılacaktır. Kurs temel olarak &lt;strong&gt;&lt;em&gt;temiz kod prensipleri&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;temel yazılım prensipleri&lt;/em&gt;&lt;/strong&gt;, &lt;strong&gt;&lt;em&gt;yeniden yapılandırma teknikleri&lt;/em&gt;&lt;/strong&gt; ve &lt;strong&gt;&lt;em&gt;test kavramları&lt;/em&gt;&lt;/strong&gt; konularından oluşmaktadır.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Not:&lt;/strong&gt; Bu kurs yazılım geliştiricileri veya mühendisleri içindir. Test mühendisliği ile ilgilenen adaylar için bu kurs uygun değildir.&lt;/p&gt;
+
+&lt;h3 id=&#34;katılımcılar-için-ön-koşullar:1bddc67295093770280394596bf680ba&#34;&gt;Katılımcılar için Ön Koşullar&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Temel düzeyde nesne yönelimli programlama (OOP) bilgisi olan&lt;/li&gt;
+&lt;li&gt;Okuduğunu anlayacak düzeyde İngilizce bilgisi olan&lt;/li&gt;
+&lt;li&gt;Temiz kod ve yeniden yapılandırma (refactoring) gibi kavramlara meraklı&lt;/li&gt;
+&lt;li&gt;Herhangi bir nesne yönelimli bir dil ile proje geliştiren,&lt;/li&gt;
+&lt;li&gt;Tercihen Java programlama diline hakim kişiler hedeflenmiştir.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;katılımcılardan-istenenler:1bddc67295093770280394596bf680ba&#34;&gt;Katılımcılardan İstenenler&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Dizüstü bilgisayarlarının yanında getirmeleri,&lt;/li&gt;
+&lt;li&gt;Sistemlerine JDK 8 (Java Development Kit) ve Eclipse for JavaEE (Neon) kurmaları gerekmektedir. Dileyenler IntellijIdea&amp;rsquo;nın topluluk versiyonunu Apache License kullanabilirler.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;kontenjan:1bddc67295093770280394596bf680ba&#34;&gt;Kontenjan&lt;/h3&gt;
+
+&lt;p&gt;Kontenjan &lt;strong&gt;16&lt;/strong&gt; kişi ile sınırlıdır.&lt;/p&gt;
+
+&lt;h3 id=&#34;kursiyer-seçimi:1bddc67295093770280394596bf680ba&#34;&gt;Kursiyer Seçimi&lt;/h3&gt;
+
+&lt;p&gt;Katılımcıların seviyesini ve/veya kursiyer seçimi için kurstan önce çevrimiçi bir sınav uygulaması yapılacaktır. Bütün katılımcıların sınava dahil olması zorunludur.&lt;/p&gt;
+
+&lt;h3 id=&#34;konular:1bddc67295093770280394596bf680ba&#34;&gt;Konular&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Temiz kod nedir?&lt;/li&gt;
+&lt;li&gt;Kod Konvansiyonu (Code Convention)&lt;/li&gt;
+&lt;li&gt;İsimlendirme&lt;/li&gt;
+&lt;li&gt;Fonksiyonlar / Metodlar&lt;/li&gt;
+&lt;li&gt;Yorum Satırları&lt;/li&gt;
+&lt;li&gt;Kod Stili&lt;/li&gt;
+&lt;li&gt;SOLID&lt;/li&gt;
+&lt;li&gt;Exception / Error Handling&lt;/li&gt;
+&lt;li&gt;Sınıflar&lt;/li&gt;
+&lt;li&gt;Üçüncü parti bağımlılıklar&lt;/li&gt;
+&lt;li&gt;Yeniden yapılandırma (Refactoring)&lt;/li&gt;
+&lt;li&gt;Temel yeniden yapılandırma teknikleri&lt;/li&gt;
+&lt;li&gt;Eclipse ile yeniden yapılandırma&lt;/li&gt;
+&lt;li&gt;Yazılımda Test Kavramı ve JUnit&lt;/li&gt;
+&lt;li&gt;Test Güdümlü Geliştirme&lt;/li&gt;
+&lt;li&gt;Örnek Uygulama: Bowling Oyunu&lt;/li&gt;
+&lt;li&gt;Test prensipleri (FIRST)&lt;/li&gt;
+&lt;li&gt;Örnek Uygulama: Video Store&lt;/li&gt;
+&lt;li&gt;Testlerin temizlenmesi&lt;/li&gt;
+&lt;li&gt;Ürün kodunun temizlenmesi&lt;/li&gt;
+&lt;li&gt;Kodu gözden geçirme (Code Review)&lt;/li&gt;
+&lt;li&gt;Sistemler ve Yazılım Mimarisi&lt;/li&gt;
+&lt;li&gt;Microservice Mimari&lt;/li&gt;
+&lt;li&gt;Örnek Uygulamalar&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>AB 16 Temiz Kod Kursu</title>
