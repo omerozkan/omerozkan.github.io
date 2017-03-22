@@ -470,7 +470,9 @@ farklı farklı değişikliklere uğrayabilir.&lt;/p&gt;
       <pubDate>Tue, 16 Feb 2016 06:39:06 +0200</pubDate>
       
       <guid>https://omerozkan.net/hakkimda/</guid>
-      <description>&lt;p&gt;Merhabalar&lt;/p&gt;
+      <description>
+
+&lt;p&gt;Merhabalar&lt;/p&gt;
 
 &lt;p&gt;&lt;img class=&#34;ui right floated bordered image content-image&#34; src=&#34;http://s.gravatar.com/avatar/deb32ea991fee11136e3c72aee30be78?s=150&#34;
      alt=&#34;Ömer Özkan&#34; /&gt;
@@ -500,11 +502,28 @@ Ayrıca yazılım hayatımda küçük şeylere bile oldukça takıntım vardır.
 İş hayatımda &lt;em&gt;Operations&lt;/em&gt; takımından kaçtıysam da arada sırada hobi olarak operasyon işleri ile uğraşmaktan zevk alır,
 bazen de front-end teknolojilerle uğraşırım.&lt;/p&gt;
 
-&lt;p&gt;Müzikle de ilgileniyorum. Başlangıç serisi bir Ibanez gitarım ve masamda duran Vox VT20 amfim var. Selim Işık&amp;rsquo;ın &amp;ldquo;Elektro Gitar Metodu&amp;rdquo; ile öğrenmeye çalışıyorum.&lt;/p&gt;
+&lt;p&gt;Müzikle de ilgileniyorum. Başlangıç serisi bir &lt;a href=&#34;http://www.ibanez.com/products/eg_detail17.php?year=2017&amp;amp;area_id=4&amp;amp;cat_id=1&amp;amp;series_id=9&amp;amp;data_id=281&amp;amp;color=CL01&#34;&gt;Ibanez&lt;/a&gt; gitarım ve masamda duran &lt;a href=&#34;http://www.voxamps.com/vt20+&#34;&gt;Vox VT20&lt;/a&gt; amfim var. Selim Işık&amp;rsquo;ın &lt;a href=&#34;http://www.kitapyurdu.com/kitap/elektro-gitar-metodu-1-amp-selim-isik-ile-gitar-dersleri/321320.html&#34;&gt;&amp;ldquo;Elektro Gitar Metodu&amp;rdquo;&lt;/a&gt; ile öğrenmeye çalışıyorum.&lt;/p&gt;
 
 &lt;p&gt;Meraklılar için bu site &lt;a href=&#34;https://gohugo.io&#34;&gt;hugo&lt;/a&gt; ile üretilmektedir. &lt;a href=&#34;https://github.com/omerozkan/omerozkan.github.io&#34;&gt;Github&lt;/a&gt; üzerinden host edilmektedir. Temayı ise &lt;a href=&#34;http://semantic-ui.com/&#34;&gt;Semantic-ui&lt;/a&gt; ile geliştirdim.&lt;/p&gt;
 
 &lt;p&gt;Bana ulaşmak isterseniz eposta gönderebilirsiniz. Epostaları sürekli kontrol eden birisiyim. Mümkün olduğunca kısa sürede dönmeye çalışırım. Umarım paylaştığım bilgiler faydalı olur.&lt;/p&gt;
+
+&lt;h2 id=&#34;sunumlar-ve-eğitimler:d2a47bf23c6793bf034cb3cc99e65dd5&#34;&gt;Sunumlar ve Eğitimler&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;RESTFul Web Servisleri&lt;/strong&gt; - Akademik Bilişim, Şubat 2017, Aksaray&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Temiz Kod&lt;/strong&gt; - Akademik Bilişim, Şubat 2017, Aksaray&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Geliştiriciler için Git&lt;/strong&gt; - AnkaraPHP Meetup, Aralık 2016, Ankara&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Yeni Başlayanlar için Git&lt;/strong&gt; - AnkaraPHP Meetup, Aralık 2016, Ankara&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Temiz Kod&lt;/strong&gt; - Akademik Bilişim, Şubat 2016, Aydın&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;SpringMVC ile Web Uygulamaları Geliştirme&lt;/strong&gt;, Linux Yaz Kampı, Ağustos 2015, Bolu&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Gradle ile Proje İnşası&lt;/strong&gt; - Özgür Yazılım ve Linux Günleri, Mart 2015, İstanbul&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Java 101&lt;/strong&gt; - Akademik Bilişim, Şubat 2015, Eskişehir&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Java Programlamaya Giriş&lt;/strong&gt; - Linux Yaz Kampı, Ağustos 2014, Bolu&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vipera&lt;/strong&gt; - TUBİTAK Yazılım Projeleri Yarışması, Haziran 2014, Ankara&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git ile Sürüm Takibi&lt;/strong&gt; - Özgür Yazılım ve Linux Günleri, Mart 2014, İstanbul&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Git Sürüm Takip Sistemi&lt;/strong&gt; - Akademik Bilişim, Şubat 2014, Mersin&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;Yazılarda görüşmek üzere&amp;hellip;&lt;/p&gt;
 </description>
